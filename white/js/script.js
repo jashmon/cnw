@@ -1,4 +1,4 @@
-/* CNW Com, site behaviour (v2). No scroll listeners: state changes come from IntersectionObserver. */
+/* Cables and Wireless Co., site behaviour (v2). No scroll listeners: state changes come from IntersectionObserver. */
 
 (function () {
 
