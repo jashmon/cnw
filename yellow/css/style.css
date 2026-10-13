@@ -175,15 +175,14 @@ p { text-wrap: pretty; }
 
 /* ------------------------------------------------------------ brand */
 
-.brand { display: inline-flex; align-items: center; gap: 14px; }
+.brand { display: inline-flex; align-items: center; }
 .brand-name {
     display: flex; flex-direction: column;
-    font-size: 0.875rem; font-weight: 800; font-stretch: 115%; line-height: 1.04;
+    font-size: 1.0625rem; font-weight: 800; font-stretch: 115%; line-height: 1.04;
     letter-spacing: 0.01em; text-transform: uppercase; white-space: nowrap;
     color: var(--logo-a);
 }
-.footer-logo .brand { gap: 18px; }
-.footer-logo .brand-name { font-size: 1.25rem; }
+.footer-logo .brand-name { font-size: 1.625rem; }
 .cw-mark { display: block; height: 44px; width: auto; aspect-ratio: 342.1 / 131.8; }
 .lg-w { fill: var(--logo-a); }
 .lg-y { fill: var(--logo-b); }
@@ -245,6 +244,16 @@ p { text-wrap: pretty; }
 .dropdown-submenu-menu a { display: block; padding: 3px 0; font-size: 0.875rem; color: var(--on-dark-2); }
 .dropdown-submenu-menu a:hover { color: var(--white); }
 
+.mode-toggle {
+    flex: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px;
+    border: 1px solid var(--line-d); color: var(--on-dark);
+    font-size: 0.875rem; font-weight: 600; white-space: nowrap;
+    transition: border-color 160ms ease, background-color 160ms ease;
+}
+.mode-toggle:hover { border-color: var(--on-dark); }
+.mode-toggle .ic { width: 18px; height: 18px; }
+.mode-toggle .ic-sun, .mode-toggle[aria-pressed="true"] .ic-moon { display: none; }
+.mode-toggle[aria-pressed="true"] .ic-sun { display: block; }
 .header-actions { flex: none; }
 .header-actions .btn { min-height: 44px; }
 
@@ -721,11 +730,15 @@ p { text-wrap: pretty; }
 
 @media (max-width: 1240px) {
     .mega-grid { columns: 4; }
+    .hero-foot { grid-template-columns: minmax(0, 1fr); }
+    .mode-toggle { width: 44px; padding: 0; justify-content: center; }
+    .mode-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 }
 
 @media (max-width: 1099px) {
     .main-nav { display: none; }
-    .header-actions { margin-left: auto; }
+    .header-inner > .mode-toggle { margin-left: auto; }
+    .header-inner { gap: 16px; }
     .mobile-button { display: inline-grid; }
     .tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 320px; }
     .tile-xl { grid-column: span 2; grid-row: span 1; }
@@ -776,7 +789,6 @@ p { text-wrap: pretty; }
 
 @media (max-width: 479px) {
     .header-actions { display: none; }
-    .mobile-button { margin-left: auto; }
     .hero-buttons .btn { flex: 1 1 100%; }
     .hero-object { min-height: 240px; }
     .footer-main { grid-template-columns: 1fr; }
@@ -794,104 +806,76 @@ p { text-wrap: pretty; }
     .header, .hero-nav, .footer-word { display: none; }
 }
 
-/* ================================================================ theme: yellow-heavy
-   Loaded after the base (black-heavy) sheet. Only overrides. Safety yellow becomes the
-   main surface, supported by a pale butter tint, a deeper gold, graphite and white.
-   Graphite takes over as the action colour wherever a button sits on yellow. */
-
-:root {
+/* light version overrides; [data-mode="dark"] turns them off */
+html:not([data-mode="dark"]) {
     --y-pale: #FFF6D1;
     --y-light: #FFE15C;
     --y-deep: #F5BE00;
     --ink-on-y-2: #4A4120;
     --paper: var(--y-pale);
     --steel: var(--y-light);
-    --lift-warm: drop-shadow(0 22px 26px rgba(96, 72, 0, 0.30)) drop-shadow(0 4px 6px rgba(96, 72, 0, 0.18));
-}
-::selection { background: var(--ink); color: var(--yellow); }
-html { scrollbar-color: #C9A400 var(--y-pale); }
-
-/* yellow sections: hero, about, inner intro, footer */
-.hero, .about, .intro, .footer {
+    --lift-warm: drop-shadow(0 22px 26px rgba(96, 72, 0, 0.30)) drop-shadow(0 4px 6px rgba(96, 72, 0, 0.18)); }
+html:not([data-mode="dark"]) ::selection { background: var(--ink); color: var(--yellow); }
+html:not([data-mode="dark"]) { scrollbar-color: #C9A400 var(--y-pale); }
+html:not([data-mode="dark"]) .hero, html:not([data-mode="dark"]) .about, html:not([data-mode="dark"]) .intro, html:not([data-mode="dark"]) .footer {
     --on-dark: var(--ink);
     --on-dark-2: var(--ink-on-y-2);
     --line-d: rgba(12, 13, 14, 0.2);
-    --white: var(--ink);
-}
-.hero :focus-visible, .about :focus-visible, .intro :focus-visible, .footer :focus-visible { outline-color: var(--ink); }
-.hero .btn-primary, .about .btn-primary, .intro .btn-primary { background: var(--ink); color: var(--yellow); }
-.hero .btn-primary:hover, .about .btn-primary:hover, .intro .btn-primary:hover { background: #2A2E32; }
-.btn-ghost:hover { background: var(--ink); color: var(--yellow); border-color: var(--ink); }
-.contact .btn-ghost:hover { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
-.hero .icon-btn:hover { background: var(--ink); color: var(--yellow); border-color: var(--ink); }
-
-.plate-yellow .is-cut img, .plate-steel .is-cut img, .plate-white .is-cut img,
-.hero .is-cut img, .about .is-cut img, .intro .is-cut img, .sol-media.is-cut img { filter: var(--lift-warm); }
-.hero .is-panel img, .intro .is-panel img { box-shadow: 0 26px 40px -16px rgba(96, 72, 0, 0.45), 0 2px 6px rgba(96, 72, 0, 0.2); }
-
-/* hero */
-.hero {
+    --white: var(--ink); }
+html:not([data-mode="dark"]) .hero :focus-visible, html:not([data-mode="dark"]) .about :focus-visible, html:not([data-mode="dark"]) .intro :focus-visible, html:not([data-mode="dark"]) .footer :focus-visible { outline-color: var(--ink); }
+html:not([data-mode="dark"]) .hero .btn-primary, html:not([data-mode="dark"]) .about .btn-primary, html:not([data-mode="dark"]) .intro .btn-primary { background: var(--ink); color: var(--yellow); }
+html:not([data-mode="dark"]) .hero .btn-primary:hover, html:not([data-mode="dark"]) .about .btn-primary:hover, html:not([data-mode="dark"]) .intro .btn-primary:hover { background: #2A2E32; }
+html:not([data-mode="dark"]) .btn-ghost:hover { background: var(--ink); color: var(--yellow); border-color: var(--ink); }
+html:not([data-mode="dark"]) .contact .btn-ghost:hover { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
+html:not([data-mode="dark"]) .hero .icon-btn:hover { background: var(--ink); color: var(--yellow); border-color: var(--ink); }
+html:not([data-mode="dark"]) .plate-yellow .is-cut img, html:not([data-mode="dark"]) .plate-steel .is-cut img, html:not([data-mode="dark"]) .plate-white .is-cut img, html:not([data-mode="dark"]) .hero .is-cut img, html:not([data-mode="dark"]) .about .is-cut img, html:not([data-mode="dark"]) .intro .is-cut img, html:not([data-mode="dark"]) .sol-media.is-cut img { filter: var(--lift-warm); }
+html:not([data-mode="dark"]) .hero .is-panel img, html:not([data-mode="dark"]) .intro .is-panel img { box-shadow: 0 26px 40px -16px rgba(96, 72, 0, 0.45), 0 2px 6px rgba(96, 72, 0, 0.2); }
+html:not([data-mode="dark"]) .hero {
     background:
         radial-gradient(50% 62% at 76% 46%, #FFE97A 0%, rgba(255, 233, 122, 0) 72%),
-        var(--yellow);
-}
-.hero-title span:last-child {
+        var(--yellow); }
+html:not([data-mode="dark"]) .hero-title span:last-child {
     width: fit-content;
     color: var(--ink);
     padding-bottom: 0.12em;
-    background: linear-gradient(#FFFFFF, #FFFFFF) 0 100% / 100% 0.13em no-repeat;
-}
-.hero-text { color: var(--ink-on-y-2); }
-.hero-tab { color: rgba(12, 13, 14, 0.62); }
-.hero-tab:hover, .hero-tab.is-active { color: var(--ink); }
-.hero-tab-bar { background: rgba(12, 13, 14, 0.18); }
-.hero-tab-bar i { background: var(--ink); }
-
-/* catalogue on pale butter */
-.products { background: var(--y-pale); }
-.plate-steel { background: var(--y-light); }
-
-/* solutions flip to graphite with a yellow product stage */
-.solutions { background: var(--ink); color: var(--on-dark); }
-.sol-tabs { border-top-color: var(--yellow); }
-.sol-tab { color: #8E959B; border-bottom-color: var(--line-d); }
-.sol-tab:hover { color: var(--white); }
-.sol-tab.is-active { color: var(--ink); background: var(--yellow); }
-.sol-media { background: var(--yellow); }
-.solution-body > p { color: #C3C8CC; }
-.ranges { border-top-color: var(--yellow); }
-.ranges li { border-bottom-color: var(--line-d); }
-.solution-body .link-action { color: var(--yellow); }
-
-/* about on yellow */
-.about { background: var(--yellow); }
-.statement { color: var(--ink); }
-.disciplines > div { border-top-color: var(--ink); }
-
-.projects { background: var(--y-pale); }
-.why { background: var(--y-deep); }
-.why-head p, .why-points p { color: var(--ink-on-y-2); }
-
-/* contact stays graphite, with a white form */
-.contact-form { border-top: 4px solid var(--yellow); }
-
-/* inner pages */
-.intro {
+    background: linear-gradient(#FFFFFF, #FFFFFF) 0 100% / 100% 0.13em no-repeat; }
+html:not([data-mode="dark"]) .hero-text { color: var(--ink-on-y-2); }
+html:not([data-mode="dark"]) .hero-tab { color: rgba(12, 13, 14, 0.62); }
+html:not([data-mode="dark"]) .hero-tab:hover, html:not([data-mode="dark"]) .hero-tab.is-active { color: var(--ink); }
+html:not([data-mode="dark"]) .hero-tab-bar { background: rgba(12, 13, 14, 0.18); }
+html:not([data-mode="dark"]) .hero-tab-bar i { background: var(--ink); }
+html:not([data-mode="dark"]) .products { background: var(--y-pale); }
+html:not([data-mode="dark"]) .plate-steel { background: var(--y-light); }
+html:not([data-mode="dark"]) .solutions { background: var(--ink); color: var(--on-dark); }
+html:not([data-mode="dark"]) .sol-tabs { border-top-color: var(--yellow); }
+html:not([data-mode="dark"]) .sol-tab { color: #8E959B; border-bottom-color: var(--line-d); }
+html:not([data-mode="dark"]) .sol-tab:hover { color: var(--white); }
+html:not([data-mode="dark"]) .sol-tab.is-active { color: var(--ink); background: var(--yellow); }
+html:not([data-mode="dark"]) .sol-media { background: var(--yellow); }
+html:not([data-mode="dark"]) .solution-body > p { color: #C3C8CC; }
+html:not([data-mode="dark"]) .ranges { border-top-color: var(--yellow); }
+html:not([data-mode="dark"]) .ranges li { border-bottom-color: var(--line-d); }
+html:not([data-mode="dark"]) .solution-body .link-action { color: var(--yellow); }
+html:not([data-mode="dark"]) .about { background: var(--yellow); }
+html:not([data-mode="dark"]) .statement { color: var(--ink); }
+html:not([data-mode="dark"]) .disciplines > div { border-top-color: var(--ink); }
+html:not([data-mode="dark"]) .projects { background: var(--y-pale); }
+html:not([data-mode="dark"]) .why { background: var(--y-deep); }
+html:not([data-mode="dark"]) .why-head p, html:not([data-mode="dark"]) .why-points p { color: var(--ink-on-y-2); }
+html:not([data-mode="dark"]) .contact-form { border-top: 4px solid var(--yellow); }
+html:not([data-mode="dark"]) .intro {
     background:
         radial-gradient(46% 70% at 78% 50%, #FFE97A 0%, rgba(255, 233, 122, 0) 72%),
-        var(--yellow);
-}
-.breadcrumb .sep { color: rgba(12, 13, 14, 0.35); }
-.intro-lead { color: #2C2810; }
-.facts dt { color: var(--ink-on-y-2); }
-.intro .text-link:hover { color: var(--ink); }
-.detail { background: var(--y-pale); }
-.related { background: #FFFFFF; }
-.related .tile { background: var(--y-pale); }
-
-/* footer on yellow; the logo turns graphite and white there */
-.footer { background: var(--yellow); color: var(--ink); }
-.footer { --logo-a: var(--ink); --logo-b: #FFFFFF; }
-.footer-column a:hover { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); }
-.footer-word span:first-child { color: var(--ink); }
-.footer-word span:last-child { color: var(--y-deep); }
+        var(--yellow); }
+html:not([data-mode="dark"]) .breadcrumb .sep { color: rgba(12, 13, 14, 0.35); }
+html:not([data-mode="dark"]) .intro-lead { color: #2C2810; }
+html:not([data-mode="dark"]) .facts dt { color: var(--ink-on-y-2); }
+html:not([data-mode="dark"]) .intro .text-link:hover { color: var(--ink); }
+html:not([data-mode="dark"]) .detail { background: var(--y-pale); }
+html:not([data-mode="dark"]) .related { background: #FFFFFF; }
+html:not([data-mode="dark"]) .related .tile { background: var(--y-pale); }
+html:not([data-mode="dark"]) .footer { background: var(--yellow); color: var(--ink); }
+html:not([data-mode="dark"]) .footer { --logo-a: var(--ink); --logo-b: #FFFFFF; }
+html:not([data-mode="dark"]) .footer-column a:hover { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); }
+html:not([data-mode="dark"]) .footer-word span:first-child { color: var(--ink); }
+html:not([data-mode="dark"]) .footer-word span:last-child { color: var(--y-deep); }

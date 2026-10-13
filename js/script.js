@@ -22,6 +22,28 @@
     }
 
 
+    /* ---------- dark mode: the light versions can switch to the dark design ---------- */
+
+    var root = document.documentElement;
+    var themeMeta = document.querySelector('meta[name="theme-color"]');
+    var lightColor = themeMeta ? themeMeta.getAttribute("content") : "";
+    var modeButtons = document.querySelectorAll("[data-mode-toggle]");
+
+    function setMode(dark, save) {
+        if (dark) root.setAttribute("data-mode", "dark"); else root.removeAttribute("data-mode");
+        for (var i = 0; i < modeButtons.length; i++) modeButtons[i].setAttribute("aria-pressed", dark ? "true" : "false");
+        if (themeMeta) themeMeta.setAttribute("content", dark ? "#0C0D0E" : lightColor);
+        if (save) { try { localStorage.setItem("cw-mode", dark ? "dark" : "light"); } catch (e) {} }
+    }
+
+    setMode(root.getAttribute("data-mode") === "dark", false);
+    for (var m = 0; m < modeButtons.length; m++) {
+        modeButtons[m].addEventListener("click", function () {
+            setMode(root.getAttribute("data-mode") !== "dark", true);
+        });
+    }
+
+
     /* ---------- mobile menu ---------- */
 
     var mobileButton = document.getElementById("mobileButton");
