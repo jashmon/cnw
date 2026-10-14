@@ -4,7 +4,8 @@
 export const company = {
   name: "Cables & Wireless Co.",
   brand: "SMART",
-  url: "http://localhost:3000",
+  // Canonical/OG base: the Vercel production domain when built there, localhost otherwise.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000"),
   tagline: "Industrial Communication Simplified",
   ceo: "Sanjay Gandhi",
   address: {

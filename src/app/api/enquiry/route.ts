@@ -22,10 +22,16 @@ export async function POST(req: Request) {
   if (kind !== "quote" && message.length < 5) errors.message = "A line or two about what you need helps us reply properly.";
   if (Object.keys(errors).length) return Response.json({ errors }, { status: 422 });
   const ref = `CW-${new Date().toISOString().slice(2, 10).replace(/-/g, "")}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+  // On hosts with a read-only filesystem (e.g. Vercel) the local store fails: answer 503 so the form shows its
+  // honest "couldn't send" state with the WhatsApp fallback, never a fake success. Email delivery replaces this at launch.
+  try {
   await append("enquiries.jsonl", {
     ref, kind, at: new Date().toISOString(), buyer: BUYER.includes(d.buyer) ? d.buyer : "other",
     name, company, phone, email, city: clip(d.city, 80), timeline: clip(d.timeline, 60), message, lines,
     brand: clip(d.brand, 80), oldModel: clip(d.oldModel, 80),
   });
+  } catch {
+    return Response.json({ error: "Online enquiries are not connected yet. Please call or WhatsApp." }, { status: 503 });
+  }
   return Response.json({ ok: true, ref });
 }
