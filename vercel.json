@@ -1,0 +1,9 @@
+{
+  "outputDirectory": "maintenance",
+  "redirects": [
+    { "source": "/:path+", "destination": "/", "permanent": false }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [ { "key": "X-Robots-Tag", "value": "noindex, nofollow" } ] }
+  ]
+}
