@@ -1,0 +1,326 @@
+{
+ "families": [
+  {
+   "slug": "telephones",
+   "name": "Telephones",
+   "cardLine": "Industrial, PA, weatherproof, IP, clean-room, hotline and rail phones",
+   "categories": [
+    {
+     "slug": "industrial-telephones",
+     "name": "Industrial Telephones",
+     "family": "Telephones",
+     "familySlug": "telephones",
+     "intro": "Line-powered and AC-powered telephones for noisy, dusty plant floors, in 16-gauge steel or ABS. Wall, desk, loud-hearing, vandal-resistant and GSM versions work on the SMART MCS-III or any plant EPABX.",
+     "cardLine": "Steel and desk phones for noisy plant floors, on any EPABX",
+     "seoTitle": "Industrial Telephones for Plants | SMART",
+     "metaDescription": "SMART industrial telephones: line-powered steel wall phones, desk, loud-hearing, vandal-resistant and GSM models for noisy plants on any EPABX.",
+     "products": [
+      "wmhs-iii",
+      "wmhs-iiipt",
+      "wmhs-iii-id",
+      "wmhs-iiiep",
+      "wmhs-iiilh",
+      "wmhf-iii",
+      "wmhf-iiigsm"
+     ]
+    },
+    {
+     "slug": "pa-telephones",
+     "name": "PA Telephones",
+     "family": "Telephones",
+     "familySlug": "telephones",
+     "intro": "Telephones that page. Each SMART PA telephone carries its own 30 W amplifier and horn, so a call is announced where the phone is and goes private when the handset is lifted.",
+     "cardLine": "Phones with a built-in 30 W amplifier that page their own horn",
+     "seoTitle": "PA Telephones with Built-in Amplifier | SMART",
+     "metaDescription": "SMART PA telephones with a built-in 30 W amplifier: dial to page the horn at that location, lift to talk privately. Handset, hands-free, desktop.",
+     "products": [
+      "wmhs-ii",
+      "wmhf-ii",
+      "wmhs-ii-id"
+     ]
+    },
+    {
+     "slug": "weatherproof-flameproof-telephones",
+     "name": "Weatherproof & Flameproof Telephones",
+     "family": "Telephones",
+     "familySlug": "telephones",
+     "intro": "Phones for open plant areas where water, dust and weather wreak havoc. Cast-aluminium housings with integrated canopies, in line-powered, PA and VoIP versions, plus a flameproof-housing PA telephone.",
+     "cardLine": "Cast-aluminium phones for rain, dust and open plant areas",
+     "seoTitle": "Weatherproof & Flameproof Telephones | SMART",
+     "metaDescription": "SMART weatherproof telephones in cast aluminium with integrated canopies: line-powered, PA and VoIP models, plus a flameproof-housing PA telephone.",
+     "products": [
+      "wmhs-iiwp",
+      "wmhs-iiwp-m",
+      "wmhs-iiiwp",
+      "wmhs-iiiwp-voip",
+      "flp"
+     ]
+    },
+    {
+     "slug": "ip-voip-telephones-systems",
+     "name": "IP / VoIP Telephones & Systems",
+     "family": "Telephones",
+     "familySlug": "telephones",
+     "intro": "SIP phones, IP PA telephones and VoIP PA master stations that run on the plant fibre, Ethernet or Wi-Fi already in place. Page across the plant from IP field phones, with PoE options.",
+     "cardLine": "SIP phones and VoIP PA systems on plant fibre and Wi-Fi",
+     "seoTitle": "IP & VoIP Industrial Phones and PA Systems | SMART",
+     "metaDescription": "SMART IP and VoIP equipment: SIP phones for any IP PABX, IP PA telephones with 30 W amplifiers, and VoIP PA systems over fibre, Ethernet or Wi-Fi.",
+     "products": [
+      "mcs-ip",
+      "wmhs-ip-pa-telephone",
+      "mcs-ii-ip",
+      "wmhs-ii-ip",
+      "wmhs-ip-sip-phone"
+     ]
+    },
+    {
+     "slug": "clean-room-phones",
+     "name": "Clean Room Phones",
+     "family": "Telephones",
+     "familySlug": "telephones",
+     "intro": "Flush-mount, hands-free phones for clean rooms, packing cubicles, dispensing areas and labs. Analogue and SIP versions, in powder-coated steel or full stainless steel.",
+     "cardLine": "Flush-mount hands-free phones for pharma clean rooms and labs",
+     "seoTitle": "Clean Room Phones for Pharma & Labs | SMART",
+     "metaDescription": "SMART clean room phones: flush-mount and hands-free, analogue or SIP, in powder-coated steel or full stainless steel. For pharma, packing and labs.",
+     "products": [
+      "cr-iiipe",
+      "cr-iiiad",
+      "cr-iii-ss",
+      "cr-iii-ip",
+      "cr-ip"
+     ]
+    },
+    {
+     "slug": "hotline-systems",
+     "name": "Hotline Systems",
+     "family": "Telephones",
+     "familySlug": "telephones",
+     "intro": "Direct lines with no dialling: lift the handset and the other end rings or pages. Copper, PA-paging and single-mode fibre versions, all with a SMART controller.",
+     "cardLine": "Lift-to-ring hotlines over copper or single-mode fibre",
+     "seoTitle": "Hotline Telephone Systems | SMART",
+     "metaDescription": "SMART hotline systems: lift a handset and the other end rings or pages, no dialling. Up to 4 phones on one pair, PA hotlines, fibre links to 10 km.",
+     "products": [
+      "ht-i",
+      "ht-a",
+      "ht-ip"
+     ]
+    },
+    {
+     "slug": "rail-metro-telephones",
+     "name": "Rail & Metro Telephones",
+     "family": "Telephones",
+     "familySlug": "telephones",
+     "intro": "Emergency telephones for railway and metro track lines, tunnels and stations, in IP 65 die-cast aluminium. Line-powered analogue and SIP versions, with or without keypad.",
+     "cardLine": "IP 65 die-cast emergency phones for rail and metro track",
+     "seoTitle": "Rail & Metro Emergency Telephones | SMART",
+     "metaDescription": "SMART emergency rail telephones for railway and metro track lines: IP 65 die-cast aluminium, analogue line-powered or SIP, keypad or non-keypad.",
+     "products": [
+      "wmhs-ert-a",
+      "wmhs-ert-i"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "plant-pa-paging",
+   "name": "Plant PA & Paging",
+   "cardLine": "Master stations, consoles, amplifiers, horns and crane links",
+   "categories": [
+    {
+     "slug": "plant-communication-pa-systems",
+     "name": "Plant Communication (PA) Systems",
+     "family": "Plant PA & Paging",
+     "familySlug": "plant-pa-paging",
+     "intro": "Paging and private talk across a whole plant. Distributed-amplifier MCS-II, central-amplifier MCS-III and the ISAS safety announcement system, plus stand-alone page/private and 1+1 pagephone sets.",
+     "cardLine": "Master stations and loop systems for plant-wide paging",
+     "seoTitle": "Plant PA & Paging Systems: MCS-II, MCS-III | SMART",
+     "metaDescription": "SMART plant communication systems: MCS-II distributed and MCS-III central-amplifier PA, ISAS safety announcements, page/private and 1+1 pagephones.",
+     "products": [
+      "mcs-ii",
+      "mini-mcs-ii",
+      "mcs-iii",
+      "isas",
+      "wmhs-iiad",
+      "wmhs-i",
+      "wmhf-i",
+      "wmhf-i-3w",
+      "wmhs-iv",
+      "wmhf-iv"
+     ]
+    },
+    {
+     "slug": "operator-consoles-amplifiers-loudspeakers",
+     "name": "Operator Consoles, Amplifiers & Loudspeakers",
+     "family": "Plant PA & Paging",
+     "familySlug": "plant-pa-paging",
+     "intro": "The control-room and loudspeaker end of a SMART PA system. Operator consoles for MCS-II, MCS-III and page/private systems, external and rack amplifiers, and indoor and outdoor speakers.",
+     "cardLine": "Control-room consoles, amplifiers and horns for SMART PA systems",
+     "seoTitle": "PA Operator Consoles, Amplifiers & Horns | SMART",
+     "metaDescription": "Operator consoles for SMART MCS-II, MCS-III and page/private systems, 100 W and 250 W paging amplifiers, outdoor horns and indoor box speakers.",
+     "products": [
+      "oc-dths-i",
+      "oc-dths-ii",
+      "oc-dths-iii",
+      "oc-dths-v",
+      "exa-i",
+      "exa-ii",
+      "exa-pa-250",
+      "lsod",
+      "lsin"
+     ]
+    },
+    {
+     "slug": "crane-communication",
+     "name": "Crane Communication",
+     "family": "Plant PA & Paging",
+     "familySlug": "plant-pa-paging",
+     "intro": "Talk and announce on giant and high cranes, where cabling or position rules out other communication. A walkie-talkie-based announcement unit and a cabin-to-crane talk link.",
+     "cardLine": "Announcement and talk links for giant and high cranes",
+     "seoTitle": "Crane Communication & Announcement Systems | SMART",
+     "metaDescription": "SMART crane communication: a walkie-talkie-based announcement unit and a cabin-to-crane talk link for up to 5 points, for giant and high cranes.",
+     "products": [
+      "cas-hf",
+      "ccs-hf"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "alarms-emergency",
+   "name": "Alarms & Emergency",
+   "cardLine": "SOS call boxes, hooters, flashers, voice alarms and lift alarm",
+   "categories": [
+    {
+     "slug": "emergency-call-boxes",
+     "name": "Emergency Call Boxes",
+     "family": "Alarms & Emergency",
+     "familySlug": "alarms-emergency",
+     "intro": "One-button SOS boxes for highways, stations, ports and docks, on GSM or VoIP, with solar options. The control-room rack and software log, record and monitor every box.",
+     "cardLine": "GSM and VoIP SOS call boxes with control-room logging",
+     "seoTitle": "Emergency Call Boxes for Highways & Rail | SMART",
+     "metaDescription": "SMART emergency call boxes: one-button hands-free SOS on GSM or VoIP with solar options, plus a server rack and software that log every call.",
+     "products": [
+      "gsm-ecb-box",
+      "ecb-gsm-cb",
+      "voip-ecb",
+      "gsm-ecb-server-rack",
+      "htms"
+     ]
+    },
+    {
+     "slug": "hooters-flashers-loud-ringers",
+     "name": "Hooters, Flashers & Loud Ringers",
+     "family": "Alarms & Emergency",
+     "familySlug": "alarms-emergency",
+     "intro": "Sound and light for alarms and incoming calls in noisy plant areas. Electronic hooters, a hooter cum LED flasher, a telephone loud ringer and a call flasher visible from 100 m.",
+     "cardLine": "Hooters, loud ringers and LED flashers for noisy plant areas",
+     "seoTitle": "Industrial Hooters, Flashers & Loud Ringers | SMART",
+     "metaDescription": "SMART hooters, flashers and loud ringers: 100 W six-tone hooter, 30 W hooter with LED flasher, telephone loud ringer, call flasher visible at 100 m.",
+     "products": [
+      "eh",
+      "eh-fl",
+      "tr-iii",
+      "fl-iii"
+     ]
+    },
+    {
+     "slug": "voice-alarms-messagers",
+     "name": "Voice Alarms & Messagers",
+     "family": "Alarms & Emergency",
+     "familySlug": "alarms-emergency",
+     "intro": "A recorded voice instead of a bare siren. Relay-triggered voice alarms from 1 to 32+ channels, and an outdoor voice messager in Hindi and English.",
+     "cardLine": "Relay-triggered voice alarms and outdoor message players",
+     "seoTitle": "Voice Alarms & Voice Messagers | SMART",
+     "metaDescription": "SMART voice alarms: a relay contact starts a siren and a recorded message, 1 to 32+ channels. Plus an outdoor voice messager in Hindi and English.",
+     "products": [
+      "va-1",
+      "va-1fl",
+      "voice-alarm-units",
+      "vm-1"
+     ]
+    },
+    {
+     "slug": "lift-alarm",
+     "name": "Lift Alarm",
+     "family": "Alarms & Emergency",
+     "familySlug": "alarms-emergency",
+     "intro": "A recordable voice module that plays while the lift door switch stays closed. Messages up to 40 s in English, Hindi or Marathi.",
+     "cardLine": "Recorded door-open reminder for lifts",
+     "seoTitle": "Lift Alarm System, Door-Open Voice Alert | SMART",
+     "metaDescription": "SMART LA-1 lift alarm: a recordable voice module that plays \"Please close the door\" in English, Hindi or Marathi while the lift door stays open.",
+     "products": [
+      "la-1"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "process-instruments",
+   "name": "Process Instruments",
+   "cardLine": "Bag counters for loading lines and 4–20 mA displays",
+   "categories": [
+    {
+     "slug": "bag-counters",
+     "name": "Bag Counters",
+     "family": "Process Instruments",
+     "familySlug": "process-instruments",
+     "intro": "Bag counters for truck and wagon loading in cement, fertiliser, rice and sugar plants. Eleven models with sensing-head, ultrasonic, diffused-optic and dual-optic sensors, from preset counters to network models with Ethernet output.",
+     "cardLine": "Bag counters for truck and wagon loading lines",
+     "seoTitle": "Bag Counters for Cement & Fertiliser Loading | SMART",
+     "metaDescription": "SMART bag counters for truck and wagon loading: 11 models, optical and non-contact sensors, totalisers, conveyor stop contacts and Ethernet output.",
+     "products": [
+      "bc-l01",
+      "bc-l02",
+      "bc-l03",
+      "bc-l-03",
+      "bc-l03-m",
+      "bc-l-ss",
+      "bc-l-nw-6",
+      "bc-l-nw",
+      "bc-do",
+      "bc-do-nw",
+      "bc-0"
+     ]
+    },
+    {
+     "slug": "display-units",
+     "name": "Display Units",
+     "family": "Process Instruments",
+     "familySlug": "process-instruments",
+     "intro": "Large LED displays that show a 4–20 mA process value in engineering units. 4-digit 4 in and 3-digit 8 in versions, factory calibrated.",
+     "cardLine": "Large LED displays for 4–20 mA process values",
+     "seoTitle": "4–20 mA Large LED Display Units | SMART",
+     "metaDescription": "SMART 4–20 mA display units: large LED digits show temperature, pressure or level in engineering units, ±0.25% accuracy, 4 in or 8 in digits.",
+     "products": [
+      "nsdu-44l",
+      "nsdu-83l"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "lighting",
+   "name": "Lighting",
+   "cardLine": "LED floodlights and an LED emergency light",
+   "categories": [
+    {
+     "slug": "led-lighting",
+     "name": "LED Lighting",
+     "family": "Lighting",
+     "familySlug": "lighting",
+     "intro": "LED floodlights from 30 W to 100 W that replace sodium and mercury vapour lamps in factory areas and walkways. Plus a 3 W LED emergency light with Li-ion battery backup.",
+     "cardLine": "LED floodlights and a Li-ion emergency light",
+     "seoTitle": "LED Floodlights & Emergency Light | SMART",
+     "metaDescription": "SMART LED lighting: 30 W to 100 W floodlights replacing sodium and mercury vapour lamps, IP 65 models, and a 3 W LED emergency light with Li-ion.",
+     "products": [
+      "el-3w",
+      "fl30",
+      "fl40",
+      "fl50",
+      "fl100"
+     ]
+    }
+   ]
+  }
+ ]
+}

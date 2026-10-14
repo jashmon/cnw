@@ -1,0 +1,2177 @@
+[
+ {
+  "slug": "wmhs-iiwp",
+  "model": "WMHS-IIWP",
+  "primary": {
+   "file": "processed/products/wmhs-iiwp/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1074,
+   "h": 1600,
+   "alt": "SMART Weatherproof PA Telephone (WMHS-IIWP): yellow die-cast weatherproof wall telephone with handset and keypad"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg",
+   "00-intake/voizlink/img/products/WMHS-IIWP_150.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg": "thumb 100x218",
+   "00-intake/voizlink/img/products/WMHS-IIWP_150.png": "thumb 150x150"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhs-iiwp-m",
+  "model": "WMHS-IIWP M",
+  "primary": {
+   "file": "processed/products/wmhs-iiwp-m/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1272,
+   "h": 1600,
+   "alt": "SMART Weatherproof PA Telephone (WMHS-IIWP M): grey die-cast weatherproof wall telephone with handset and blue keypad"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/WMHS-III M.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/WMHS-III M.jpg": "thumb 197x314"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhs-iiiwp",
+  "model": "WMHS-IIIWP",
+  "primary": {
+   "file": "processed/products/wmhs-iiiwp/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1074,
+   "h": 1600,
+   "alt": "SMART Industrial Weatherproof Telephone (WMHS-IIIWP): yellow die-cast weatherproof wall telephone with handset and keypad"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg",
+   "00-intake/voizlink/img/products/WMHS-IIWP_150.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg": "thumb 100x218",
+   "00-intake/voizlink/img/products/WMHS-IIWP_150.png": "thumb 150x150"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhs-iiiwp-voip",
+  "model": "WMHS-IIIWP-VOIP",
+  "primary": {
+   "file": "processed/products/wmhs-iiiwp-voip/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1074,
+   "h": 1600,
+   "alt": "SMART Industrial Weatherproof VoIP Telephone (WMHS-IIIWP-VOIP): yellow die-cast weatherproof VoIP wall telephone with handset and keypad"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg": "thumb 100x218"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "flp",
+  "model": "FLP",
+  "primary": {
+   "file": "processed/products/flp/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1263,
+   "h": 1600,
+   "alt": "SMART Flameproof PA Telephone (FLP): dark green flameproof cast telephone with bolted lid, keypad and hanging handset"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/FLAME PROOF TELEPHONE.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/FLAME PROOF TELEPHONE.jpg": "thumb 210x178"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhs-iii",
+  "model": "WMHS-III",
+  "primary": {
+   "file": "processed/products/wmhs-iii/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 901,
+   "h": 1600,
+   "alt": "SMART Industrial Telephone with Handset (WMHS-III): yellow hooded wall telephone with armoured-cord handset and keypad"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/wmhs-iii/gallery-1.jpg",
+    "source": "photo",
+    "w": 1067,
+    "h": 1600,
+    "alt": "SMART Industrial Telephone with Handset (WMHS-III): yellow hooded wall telephone with armoured-cord handset and keypad",
+    "original": "00-intake/voizlink/image/WMHS-III.jpg"
+   },
+   {
+    "file": "processed/products/wmhs-iii/gallery-2.jpg",
+    "source": "photo",
+    "w": 310,
+    "h": 452,
+    "alt": "SMART Industrial Telephone with Handset (WMHS-III): yellow hooded wall telephone with armoured-cord handset and keypad",
+    "original": "00-intake/cnwcom/image/wmhs_III.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/WMHS-III.jpg",
+   "00-intake/cnwcom/image/wmhs_III.png",
+   "00-intake/voizlink/image/wmhsiii.png",
+   "00-intake/cnwcom/image/WMHS-III.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/WMHS-III.jpg": "card 1200x1800",
+   "00-intake/cnwcom/image/wmhs_III.png": "card 310x452",
+   "00-intake/voizlink/image/wmhsiii.png": "thumb 209x294",
+   "00-intake/cnwcom/image/WMHS-III.jpg": "thumb 140x212"
+  },
+  "notes": "The 1200x1800 photo is large but posterised; kept as a gallery image, render is primary. voizlink/image/WMHS-III.jpg 1200x1800: card (posterised colour banding on hood and background)"
+ },
+ {
+  "slug": "wmhs-iiipt",
+  "model": "WMHS-IIIPT",
+  "primary": {
+   "file": "processed/products/wmhs-iiipt/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 901,
+   "h": 1600,
+   "alt": "SMART Industrial Telephone with Page & Talkback (WMHS-IIIPT): yellow hooded wall telephone with handset, keypad and PAGE and TALKBACK buttons"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/WMHS-III.jpg",
+   "00-intake/cnwcom/image/WMHS-III.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/WMHS-III.jpg": "card 1200x1800",
+   "00-intake/cnwcom/image/WMHS-III.jpg": "thumb 140x212"
+  },
+  "notes": "The product pages reuse the plain WMHS-III photo (no PAGE/TALKBACK buttons visible), so it is not shown in this gallery. voizlink/image/WMHS-III.jpg 1200x1800: card (posterised colour banding on hood and background)"
+ },
+ {
+  "slug": "wmhs-iii-id",
+  "model": "WMHS-III-ID",
+  "primary": {
+   "file": "processed/products/wmhs-iii-id/primary.jpg",
+   "source": "photo",
+   "placeholder": false,
+   "w": 631,
+   "h": 900,
+   "alt": "SMART Industrial Telephone, Indoor Type (WMHS-III-ID): black indoor desk telephone with display and memory keys",
+   "original": "00-intake/voizlink/image/WMHS III ID.jpg"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/wmhs-iii-id/gallery-1.png",
+    "source": "render",
+    "placeholder": true,
+    "w": 1422,
+    "h": 996,
+    "alt": "SMART Industrial Telephone, Indoor Type (WMHS-III-ID): black indoor desk telephone with display and memory keys"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/WMHS III ID.jpg",
+   "00-intake/cnwcom/image/WMHS III ID.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/WMHS III ID.jpg": "hero 631x900",
+   "00-intake/cnwcom/image/WMHS III ID.jpg": "card 300x428"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhs-iiiep",
+  "model": "WMHS-IIIEP",
+  "primary": {
+   "file": "processed/products/wmhs-iiiep/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 901,
+   "h": 1600,
+   "alt": "SMART Emergency Phone (WMHS-IIIEP): yellow hooded emergency telephone with handset, keypad and EMERGENCY side label"
+  },
+  "gallery": [],
+  "realPhotos": [],
+  "realPhotoGrades": {},
+  "notes": "No photo of this model: the product page shows DTHS-IIC, which is the desktop PA telephone (WMHS-II ID). Render side label follows the EMERGENCY call box print."
+ },
+ {
+  "slug": "wmhs-iiilh",
+  "model": "WMHS-IIILH",
+  "primary": {
+   "file": "processed/products/wmhs-iiilh/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1333,
+   "h": 1359,
+   "alt": "SMART Loud Hearing Phone (WMHS-IIILH): blue loud hearing telephone with handset, loudspeaker horn and red flasher"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/lh img.png",
+   "00-intake/voizlink/img/products/IP_Loud_Hearing_Phone_WMHS-IIILH.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/lh img.png": "thumb 336x394",
+   "00-intake/voizlink/img/products/IP_Loud_Hearing_Phone_WMHS-IIILH.jpg": "thumb 300x269"
+  },
+  "notes": "Two different real looks: grey cast phone (page image) and blue LOUD HEARING PHONE with horn and flasher (product photo); the render follows the blue set."
+ },
+ {
+  "slug": "wmhf-iii",
+  "model": "WMHF-III",
+  "primary": {
+   "file": "processed/products/wmhf-iii/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 999,
+   "h": 1600,
+   "alt": "SMART Pilfer-Proof (Vandal-Resistant) Telephone (WMHF-III): yellow hooded hands-free telephone with speaker, keypad and press-to-talk button"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/WMHF-III.jpg",
+   "00-intake/voizlink/img/products/Smart_Pilfer_Proof_Telephone.jpg",
+   "00-intake/cnwcom/img/VANDAL_RESISTANT_150.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/WMHF-III.jpg": "thumb 230x350",
+   "00-intake/voizlink/img/products/Smart_Pilfer_Proof_Telephone.jpg": "thumb 150x160",
+   "00-intake/cnwcom/img/VANDAL_RESISTANT_150.png": "thumb 150x150"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhf-iiigsm",
+  "model": "WMHF-IIIGSM",
+  "primary": {
+   "file": "processed/products/wmhf-iiigsm/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 833,
+   "h": 1600,
+   "alt": "SMART GSM Remote Location Telephone (WMHF-IIIGSM): yellow hooded hands-free GSM telephone with solar panel and antenna"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/wmhf-iiigsm/gallery-1.jpg",
+    "source": "photo",
+    "w": 254,
+    "h": 516,
+    "alt": "SMART GSM Remote Location Telephone (WMHF-IIIGSM): yellow hooded hands-free GSM telephone with solar panel and antenna",
+    "original": "00-intake/voizlink/image/remote_location.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/remote_location.png",
+   "00-intake/voizlink/img/products/GSM_WIRELESS_PHONE_WMHF-IIIGSM_350.jpg",
+   "00-intake/voizlink/img/products/GSM_Combined.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/remote_location.png": "card 254x516",
+   "00-intake/voizlink/img/products/GSM_WIRELESS_PHONE_WMHF-IIIGSM_350.jpg": "thumb 219x350",
+   "00-intake/voizlink/img/products/GSM_Combined.jpg": "thumb 150x153"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhs-ii",
+  "model": "WMHS-II",
+  "primary": {
+   "file": "processed/products/wmhs-ii/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 901,
+   "h": 1600,
+   "alt": "SMART PA Telephone (Handset Type) (WMHS-II): yellow hooded PA telephone with handset and keypad"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/wmhs-ii/gallery-1.jpg",
+    "source": "photo",
+    "w": 367,
+    "h": 443,
+    "alt": "SMART PA Telephone (Handset Type) (WMHS-II): yellow hooded PA telephone with handset and keypad",
+    "original": "00-intake/voizlink/image/wmhsii.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/wmhsii.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/wmhsii.png": "card 367x443"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhf-ii",
+  "model": "WMHF-II",
+  "primary": {
+   "file": "processed/products/wmhf-ii/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 999,
+   "h": 1600,
+   "alt": "SMART Pilfer-Proof PA Telephone (Handsfree) (WMHF-II): yellow hooded hands-free PA telephone with speaker, keypad and press-to-talk button"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/wmhf-ii/gallery-1.jpg",
+    "source": "photo",
+    "w": 360,
+    "h": 546,
+    "alt": "SMART Pilfer-Proof PA Telephone (Handsfree) (WMHF-II): yellow hooded hands-free PA telephone with speaker, keypad and press-to-talk button",
+    "original": "00-intake/voizlink/image/wmhf.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/wmhf.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/wmhf.png": "card 360x546"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhs-ii-id",
+  "model": "WMHS-II ID",
+  "primary": {
+   "file": "processed/products/wmhs-ii-id/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 964,
+   "alt": "SMART PA Telephone, Indoor / Desktop Type (WMHS-II ID): grey desktop PA telephone with handset across the top and blue keypad"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/wmhs-ii-id/gallery-1.jpg",
+    "source": "photo",
+    "w": 229,
+    "h": 501,
+    "alt": "SMART PA Telephone, Indoor / Desktop Type (WMHS-II ID): grey desktop PA telephone with handset across the top and blue keypad",
+    "original": "00-intake/voizlink/image/DTHS-IIC.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/indoorpa_telephone.png",
+   "00-intake/voizlink/image/DTHS-IIC.jpg",
+   "00-intake/voizlink/img/products/Desk_Top_PA_Telephone.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/indoorpa_telephone.png": "thumb 379x194",
+   "00-intake/voizlink/image/DTHS-IIC.jpg": "card 229x501",
+   "00-intake/voizlink/img/products/Desk_Top_PA_Telephone.jpg": "thumb 100x213"
+  },
+  "notes": "Render follows the indoor PA telephone page image (grey desk box). DTHS-IIC (red wall panel) is the same datasheet under another name."
+ },
+ {
+  "slug": "mcs-ip",
+  "model": "MCS-IP",
+  "primary": {
+   "file": "processed/products/mcs-ip/primary.jpg",
+   "source": "photo",
+   "placeholder": false,
+   "w": 1600,
+   "h": 238,
+   "alt": "SMART Industrial PA System on VoIP (MCS-IP): yellow 19-inch 1U master control station",
+   "original": "00-intake/voizlink/image/mcs_ip.jpg"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/mcs-ip/gallery-1.png",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 432,
+    "alt": "SMART Industrial PA System on VoIP (MCS-IP): yellow 19-inch 1U master control station"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/mcs_ip.jpg",
+   "00-intake/voizlink/image/mcsip.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/mcs_ip.jpg": "hero 4244x632",
+   "00-intake/voizlink/image/mcsip.png": "unusable 798x462"
+  },
+  "notes": "Photo primary is a very wide 1U strip (about 6.7:1); the render gives a 3/4 view for cards. voizlink/image/mcsip.png 798x462: unusable (system diagram, not a product photo)"
+ },
+ {
+  "slug": "wmhs-ip-pa-telephone",
+  "model": "WMHS-IP",
+  "primary": {
+   "file": "processed/products/wmhs-ip-pa-telephone/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 901,
+   "h": 1600,
+   "alt": "SMART IP PA Telephone (WMHS-IP): yellow hooded IP PA telephone with handset and keypad"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/mcsip.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/mcsip.png": "unusable 798x462"
+  },
+  "notes": "No photo; page shows only the system diagram. Render uses the WMHS-II housing with a WMHS-IP face label. voizlink/image/mcsip.png 798x462: unusable (system diagram, not a product photo)"
+ },
+ {
+  "slug": "mcs-ii-ip",
+  "model": "MCS-II-IP",
+  "primary": {
+   "file": "processed/products/mcs-ii-ip/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 1499,
+   "alt": "SMART Industrial PA System on VoIP (MCS II IP) (MCS-II-IP): wall rack with yellow MCS II IP controller and Ethernet switch units"
+  },
+  "gallery": [],
+  "realPhotos": [],
+  "realPhotoGrades": {},
+  "notes": "No photo or web page. Render shows a wall rack with an MCS II IP controller and Ethernet switch (from the datasheet)."
+ },
+ {
+  "slug": "wmhs-ii-ip",
+  "model": "WMHS-II-IP",
+  "primary": {
+   "file": "processed/products/wmhs-ii-ip/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 814,
+   "h": 1600,
+   "alt": "SMART Wireless / IP PA Telephone (WMHS II IP) (WMHS-II-IP): yellow hooded wireless PA telephone with handset, keypad and antenna"
+  },
+  "gallery": [],
+  "realPhotos": [],
+  "realPhotoGrades": {},
+  "notes": "No photo. Render: WMHS-II housing with Wi-Fi antenna and WMHS II IP face label."
+ },
+ {
+  "slug": "wmhs-ip-sip-phone",
+  "model": "WMHS-IP",
+  "primary": {
+   "file": "processed/products/wmhs-ip-sip-phone/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 901,
+   "h": 1600,
+   "alt": "SMART SIP VoIP Phone (WMHS-IP): yellow hooded SIP telephone with handset, keypad and LCD"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/SIP_VOIP_PHONE_WMHS-IP.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/SIP_VOIP_PHONE_WMHS-IP.jpg": "thumb 200x247"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "mcs-ii",
+  "model": "MCS-II",
+  "primary": {
+   "file": "processed/products/mcs-ii/primary.jpg",
+   "source": "photo",
+   "placeholder": false,
+   "w": 1600,
+   "h": 1534,
+   "alt": "SMART Industrial PA System \u2013 Distributed Amplifier, Non-Blocking (MCS-II): beige steel master control station cabinet with separate power supply",
+   "original": "00-intake/voizlink/image/MCS.jpg"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/mcs-ii/gallery-1.jpg",
+    "source": "photo",
+    "w": 834,
+    "h": 668,
+    "alt": "SMART Industrial PA System \u2013 Distributed Amplifier, Non-Blocking (MCS-II): beige steel master control station cabinet with separate power supply",
+    "original": "00-intake/voizlink/image/MCS-II WITH 19 valRACK.JPG"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/MCS.jpg",
+   "00-intake/voizlink/image/MCS-II WITH 19 valRACK.JPG",
+   "00-intake/voizlink/image/smart_distributed.png",
+   "00-intake/voizlink/img/products/PA_System_Communication_Non_Blocking_Type_300.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/MCS.jpg": "hero 1664x1595",
+   "00-intake/voizlink/image/MCS-II WITH 19 valRACK.JPG": "card 834x668",
+   "00-intake/voizlink/image/smart_distributed.png": "thumb 343x329",
+   "00-intake/voizlink/img/products/PA_System_Communication_Non_Blocking_Type_300.jpg": "thumb 300x288"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "mini-mcs-ii",
+  "model": "MINI MCS-II",
+  "primary": {
+   "file": "processed/products/mini-mcs-ii/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 1051,
+   "alt": "SMART Industrial PA System Mini MCS-II (MINI MCS-II): white steel control box"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/MINI MCS.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/MINI MCS.jpg": "thumb 288x163"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "mcs-iii",
+  "model": "MCS-III",
+  "primary": {
+   "file": "processed/products/mcs-iii/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1133,
+   "h": 1599,
+   "alt": "SMART Industrial PA System \u2013 Central Amplifier (MCS-III): floor rack with orange control, PCU and paging amplifier units behind a glass door"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/cnwcom/img/MCS-IIIV.png",
+   "00-intake/voizlink/image/MCS-IIIV-small.png",
+   "00-intake/voizlink/img/products/product5.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/cnwcom/img/MCS-IIIV.png": "thumb 148x241",
+   "00-intake/voizlink/image/MCS-IIIV-small.png": "thumb 150x150",
+   "00-intake/voizlink/img/products/product5.jpg": "thumb 150x150"
+  },
+  "notes": "Rack labels follow the real units: MASTER CONTROL STATION, PCU, PAGING AMPLIFIER EXA-250, POWER SUPPLY."
+ },
+ {
+  "slug": "isas",
+  "model": "ISAS",
+  "primary": {
+   "file": "processed/products/isas/primary.jpg",
+   "source": "photo",
+   "placeholder": false,
+   "w": 1449,
+   "h": 958,
+   "alt": "SMART Industrial Safety Announcement System (PAGA) (ISAS): 19-inch rack with paging amplifier and PCU",
+   "original": "00-intake/cnwcom/image/SMART_SAFETY_ANNOUNCEMENT_SYSTEM.png"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/isas/gallery-1.jpg",
+    "source": "photo",
+    "w": 272,
+    "h": 459,
+    "alt": "SMART Industrial Safety Announcement System (PAGA) (ISAS): 19-inch rack with paging amplifier and PCU",
+    "original": "00-intake/voizlink/image/model_isas.png"
+   },
+   {
+    "file": "processed/products/isas/gallery-2.png",
+    "source": "render",
+    "placeholder": true,
+    "w": 1452,
+    "h": 1458,
+    "alt": "SMART Industrial Safety Announcement System (PAGA) (ISAS): 19-inch rack with paging amplifier and PCU"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/cnwcom/image/SMART_SAFETY_ANNOUNCEMENT_SYSTEM.png",
+   "00-intake/voizlink/image/model_isas.png",
+   "00-intake/voizlink/img/products/ISAS-2AMP_150.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/cnwcom/image/SMART_SAFETY_ANNOUNCEMENT_SYSTEM.png": "hero 1449x958",
+   "00-intake/voizlink/image/model_isas.png": "card 272x459",
+   "00-intake/voizlink/img/products/ISAS-2AMP_150.jpg": "thumb 106x150"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhs-iiad",
+  "model": "WMHS-IIAD",
+  "primary": {
+   "file": "processed/products/wmhs-iiad/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 901,
+   "h": 1600,
+   "alt": "SMART Addressable PA Telephone (WMHS-IIAD): yellow hooded addressable PA telephone with handset, keypad and PANIC / ALL CALL button"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/wmhs-iiad/gallery-1.jpg",
+    "source": "photo",
+    "w": 367,
+    "h": 443,
+    "alt": "SMART Addressable PA Telephone (WMHS-IIAD): yellow hooded addressable PA telephone with handset, keypad and PANIC / ALL CALL button",
+    "original": "00-intake/voizlink/image/wmhs_iiAD.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/wmhs_iiAD.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/wmhs_iiAD.png": "card 367x443"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhs-i",
+  "model": "WMHS-I",
+  "primary": {
+   "file": "processed/products/wmhs-i/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 901,
+   "h": 1600,
+   "alt": "SMART Page/Private Telephone (Handset Type) (WMHS-I): yellow hooded pagephone with handset"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/wmhs-i/gallery-1.jpg",
+    "source": "photo",
+    "w": 343,
+    "h": 403,
+    "alt": "SMART Page/Private Telephone (Handset Type) (WMHS-I): yellow hooded pagephone with handset",
+    "original": "00-intake/voizlink/image/smart-WMHS-I.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/smart-WMHS-I.png",
+   "00-intake/voizlink/img/products/industrial_page_private_system_WMHS-I.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/smart-WMHS-I.png": "card 343x403",
+   "00-intake/voizlink/img/products/industrial_page_private_system_WMHS-I.jpg": "thumb 150x150"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhf-i",
+  "model": "WMHF-I",
+  "primary": {
+   "file": "processed/products/wmhf-i/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 999,
+   "h": 1600,
+   "alt": "SMART Pilfer-Proof Page/Private Telephone (Handsfree) (WMHF-I): yellow hooded hands-free pagephone with grip handle and push-to-talk button"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/wmhf-i/gallery-1.jpg",
+    "source": "photo",
+    "w": 343,
+    "h": 437,
+    "alt": "SMART Pilfer-Proof Page/Private Telephone (Handsfree) (WMHF-I): yellow hooded hands-free pagephone with grip handle and push-to-talk button",
+    "original": "00-intake/voizlink/image/smart_pravte_pageWMHF-I.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/smart_pravte_pageWMHF-I.png",
+   "00-intake/voizlink/img/products/PA_System_Page_Private_Vandal_Resistant_Type_3501.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/smart_pravte_pageWMHF-I.png": "card 343x437",
+   "00-intake/voizlink/img/products/PA_System_Page_Private_Vandal_Resistant_Type_3501.jpg": "thumb 209x350"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhf-i-3w",
+  "model": "WMHF-I-3W",
+  "primary": {
+   "file": "processed/products/wmhf-i-3w/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 999,
+   "h": 1600,
+   "alt": "SMART Page/Private System WMHF-I-3W: yellow hooded hands-free pagephone with speaker and PAGE, RELEASE and TALKBACK buttons"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/cnwcom/image/pps_wmhf_3f.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/cnwcom/image/pps_wmhf_3f.png": "unusable 207x353"
+  },
+  "notes": "cnwcom/image/pps_wmhf_3f.png 207x353: unusable (flat face-plate drawing)"
+ },
+ {
+  "slug": "wmhs-iv",
+  "model": "WMHS-IV",
+  "primary": {
+   "file": "processed/products/wmhs-iv/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 901,
+   "h": 1600,
+   "alt": "SMART Pagephone (1+1) with Handset (WMHS-IV): yellow hooded pagephone with handset"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/wmhs-iv/gallery-1.jpg",
+    "source": "photo",
+    "w": 363,
+    "h": 434,
+    "alt": "SMART Pagephone (1+1) with Handset (WMHS-IV): yellow hooded pagephone with handset",
+    "original": "00-intake/voizlink/image/smart_proofwmhsiv.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/smart_proofwmhsiv.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/smart_proofwmhsiv.png": "card 363x434"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhf-iv",
+  "model": "WMHF-IV",
+  "primary": {
+   "file": "processed/products/wmhf-iv/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 999,
+   "h": 1600,
+   "alt": "SMART Pilfer-Proof Pagephone (1+1, Handsfree) (WMHF-IV): yellow hooded hands-free pagephone with grip handle and push-to-talk button"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/wmhf-iv/gallery-1.jpg",
+    "source": "photo",
+    "w": 343,
+    "h": 402,
+    "alt": "SMART Pilfer-Proof Pagephone (1+1, Handsfree) (WMHF-IV): yellow hooded hands-free pagephone with grip handle and push-to-talk button",
+    "original": "00-intake/voizlink/image/smart-WMHF-IV.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/smart-WMHF-IV.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/smart-WMHF-IV.png": "card 343x402"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "oc-dths-i",
+  "model": "OC-DTHS-I",
+  "primary": {
+   "file": "processed/products/oc-dths-i/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1139,
+   "h": 1391,
+   "alt": "SMART Operator Console OC-DTHS-I (Page/Private System): grey desk operator console with handset and release/connect button"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/oc-dths-i/gallery-1.jpg",
+    "source": "photo",
+    "w": 285,
+    "h": 409,
+    "alt": "SMART Operator Console OC-DTHS-I (Page/Private System): grey desk operator console with handset and release/connect button",
+    "original": "00-intake/voizlink/image/DTHS-I.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/DTHS-I.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/DTHS-I.jpg": "card 285x409"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "oc-dths-ii",
+  "model": "OC-DTHS-II",
+  "primary": {
+   "file": "processed/products/oc-dths-ii/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 1079,
+   "alt": "SMART Operator Console OC-DTHS-II (for MCS-II): orange desk operator console with handset, zone keypad and ALL CALL key"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/DTHS-II.jpg",
+   "00-intake/cnwcom/img/AI_Operator_Console_MCSOCHF-II.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/DTHS-II.jpg": "thumb 288x294",
+   "00-intake/cnwcom/img/AI_Operator_Console_MCSOCHF-II.jpg": "thumb 304x288"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "oc-dths-iii",
+  "model": "OC-DTHS-III",
+  "primary": {
+   "file": "processed/products/oc-dths-iii/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1329,
+   "h": 1035,
+   "alt": "SMART Operator Console OC-DTHS-III (for MCS-III): black desk console telephone with display and gooseneck desk microphone"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/DTHS III OC.jpg",
+   "00-intake/voizlink/image/DTHS-III NEW (2).jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/DTHS III OC.jpg": "thumb 300x391",
+   "00-intake/voizlink/image/DTHS-III NEW (2).jpg": "thumb 235x267"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "oc-dths-v",
+  "model": "OC-DTHS-V",
+  "primary": {
+   "file": "processed/products/oc-dths-v/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1343,
+   "h": 1600,
+   "alt": "SMART Operator Console OC-DTHS-V (Page/Private System): cream desk console with zone keys and gooseneck microphone"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/oc-dths-v/gallery-1.jpg",
+    "source": "photo",
+    "w": 504,
+    "h": 870,
+    "alt": "SMART Operator Console OC-DTHS-V (Page/Private System): cream desk console with zone keys and gooseneck microphone",
+    "original": "00-intake/voizlink/image/DTSM-V.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/DTSM-V.jpg",
+   "00-intake/cnwcom/img/AI_Operator_Console_300_2.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/DTSM-V.jpg": "card 504x870",
+   "00-intake/cnwcom/img/AI_Operator_Console_300_2.jpg": "thumb 150x259"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "exa-i",
+  "model": "EXA-I",
+  "primary": {
+   "file": "processed/products/exa-i/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 999,
+   "h": 1600,
+   "alt": "SMART External Amplifier EXA-I: yellow hooded amplifier enclosure with grey door"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/exaII.jp.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/exaII.jp.png": "thumb 230x275"
+  },
+  "notes": "Render follows the real EXA page photo (hooded enclosure with door), not a 19-inch unit; EXA-I and EXA-II look identical."
+ },
+ {
+  "slug": "exa-ii",
+  "model": "EXA-II",
+  "primary": {
+   "file": "processed/products/exa-ii/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 999,
+   "h": 1600,
+   "alt": "SMART External Amplifier EXA-II: yellow hooded amplifier enclosure with grey door"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/exaII.jp.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/exaII.jp.png": "thumb 230x275"
+  },
+  "notes": "Same housing and render as EXA-I."
+ },
+ {
+  "slug": "exa-pa-250",
+  "model": "EXA PA 250",
+  "primary": {
+   "file": "processed/products/exa-pa-250/primary.png",
+   "source": "photo",
+   "placeholder": false,
+   "w": 1600,
+   "h": 408,
+   "alt": "SMART Paging Amplifier Module EXA PA 250: orange 19-inch paging amplifier front panel",
+   "original": "00-intake/voizlink/image/EXA 250.png"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/exa-pa-250/gallery-1.png",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 609,
+    "alt": "SMART Paging Amplifier Module EXA PA 250: orange 19-inch paging amplifier front panel"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/EXA 250.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/EXA 250.png": "hero 1626x415"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "lsod",
+  "model": "LSOD",
+  "primary": {
+   "file": "processed/products/lsod/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 1004,
+   "alt": "SMART Industrial Loudspeaker Horn (Outdoor) (LSOD): grey re-entrant horn loudspeaker with mounting bracket"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/lsod/gallery-1.jpg",
+    "source": "photo",
+    "w": 1600,
+    "h": 1271,
+    "alt": "SMART Industrial Loudspeaker Horn (Outdoor) (LSOD): horn loudspeaker with its round SMART LSOD label",
+    "original": "00-intake/voizlink/image/crans_comm_mdelccs_hf.png (crop (30, 150, 1830, 1580))"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/crans_comm_mdelccs_hf.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/crans_comm_mdelccs_hf.png": "card 3352x2064"
+  },
+  "notes": "Gallery photo is a crop of the CCS-HF photo showing the labelled LSOD horn. voizlink/image/crans_comm_mdelccs_hf.png 3352x2064: card (soft; shot on cardboard)"
+ },
+ {
+  "slug": "lsin",
+  "model": "LSIN",
+  "primary": {
+   "file": "processed/products/lsin/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1200,
+   "h": 1600,
+   "alt": "SMART Indoor Box Speaker (LSIN): light grey metal box speaker with L-clamp"
+  },
+  "gallery": [],
+  "realPhotos": [],
+  "realPhotoGrades": {},
+  "notes": "No client photo exists for this model."
+ },
+ {
+  "slug": "ht-i",
+  "model": "HT-I",
+  "primary": {
+   "file": "processed/products/ht-i/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1458,
+   "h": 802,
+   "alt": "SMART Hotline System with Normal Phones (HT-I): white hotline controller with three black desk telephones"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/hotline_normal_model_hti.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/hotline_normal_model_hti.png": "thumb 361x320"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "ht-a",
+  "model": "HT-A",
+  "primary": {
+   "file": "processed/products/ht-a/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1358,
+   "h": 929,
+   "alt": "SMART Hotline PA Telephone System (Addressable) (HT-A): grey HOT LINE PHONE controller with two white desk telephones"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/hotline_model_htA.png",
+   "00-intake/cnwcom/img/Smart_Hotline_PA_Telephone_System.jpg.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/hotline_model_htA.png": "unusable 394x414",
+   "00-intake/cnwcom/img/Smart_Hotline_PA_Telephone_System.jpg.png": "thumb 250x250"
+  },
+  "notes": "Page image is a line drawing; render follows the hotline PA system photo (grey HOT LINE PHONE box, white phones). voizlink/image/hotline_model_htA.png 394x414: unusable (front-view line drawing)"
+ },
+ {
+  "slug": "ht-ip",
+  "model": "HT-IP",
+  "primary": {
+   "file": "processed/products/ht-ip/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1358,
+   "h": 932,
+   "alt": "SMART Hotline Telephone System over Fibre (HT-IP / HT-VOIP): white IP hotline controller with two black desk telephones"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/ht-ip/gallery-1.jpg",
+    "source": "photo",
+    "w": 442,
+    "h": 224,
+    "alt": "SMART Hotline Telephone System over Fibre (HT-IP / HT-VOIP): white IP hotline controller with two black desk telephones",
+    "original": "00-intake/cnwcom/image/hotline-voip.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/cnwcom/image/hotline-voip.jpg",
+   "00-intake/voizlink/image/hotline-phone.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/cnwcom/image/hotline-voip.jpg": "card 442x224",
+   "00-intake/voizlink/image/hotline-phone.jpg": "thumb 279x230"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "cr-iiipe",
+  "model": "CR-IIIPE",
+  "primary": {
+   "file": "processed/products/cr-iiipe/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1235,
+   "h": 1375,
+   "alt": "SMART Clean Room Phone (Polyester Dial) (CR-IIIPE): blue flush-mount clean room phone with keypad"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/cr-iiipe/gallery-1.jpg",
+    "source": "photo",
+    "w": 462,
+    "h": 442,
+    "alt": "SMART Clean Room Phone (Polyester Dial) (CR-IIIPE): front dial print artwork",
+    "original": "00-intake/voizlink/image/CLEAN ROOM MODEL-CR-IIIPE.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/CLEAN ROOM MODEL-CR-IIIPE.png",
+   "00-intake/voizlink/image/c.png",
+   "00-intake/voizlink/image/clean_phone_crII PE.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/CLEAN ROOM MODEL-CR-IIIPE.png": "card 462x442",
+   "00-intake/voizlink/image/c.png": "thumb 398x396",
+   "00-intake/voizlink/image/clean_phone_crII PE.png": "thumb 386x383"
+  },
+  "notes": "The client images are the flat print artwork of the dial, not photos. voizlink/image/CLEAN ROOM MODEL-CR-IIIPE.png 462x442: card (flat print artwork)"
+ },
+ {
+  "slug": "cr-iiiad",
+  "model": "CR-IIIAD",
+  "primary": {
+   "file": "processed/products/cr-iiiad/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1235,
+   "h": 1375,
+   "alt": "SMART Clean Room Phone, Auto Activation (Hands-free) (CR-IIIAD): blue flush-mount hands-free clean room phone with keypad"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/cr-iiiad/gallery-1.jpg",
+    "source": "photo",
+    "w": 412,
+    "h": 336,
+    "alt": "SMART Clean Room Phone, Auto Activation (Hands-free) (CR-IIIAD): blue flush-mount hands-free clean room phone with keypad",
+    "original": "00-intake/voizlink/image/MODEL-CR-III AD.jpg"
+   },
+   {
+    "file": "processed/products/cr-iiiad/gallery-2.jpg",
+    "source": "photo",
+    "w": 336,
+    "h": 433,
+    "alt": "SMART Clean Room Phone, Auto Activation (Hands-free) (CR-IIIAD): blue flush-mount hands-free clean room phone with keypad",
+    "original": "00-intake/voizlink/image/CLEAN ROOM PHONE.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/MODEL-CR-III AD.jpg",
+   "00-intake/voizlink/image/CLEAN ROOM PHONE.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/MODEL-CR-III AD.jpg": "card 412x336",
+   "00-intake/voizlink/image/CLEAN ROOM PHONE.jpg": "card 336x433"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "cr-iii-ss",
+  "model": "CR-III-SS",
+  "primary": {
+   "file": "processed/products/cr-iii-ss/primary.jpg",
+   "source": "photo",
+   "placeholder": false,
+   "w": 931,
+   "h": 931,
+   "alt": "SMART Clean Room Phone, Full Stainless Steel (CR-III-SS): stainless steel flush-mount clean room phone with blue keypad",
+   "original": "00-intake/cnwcom/image/criiiss.jpg"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/cr-iii-ss/gallery-1.png",
+    "source": "render",
+    "placeholder": true,
+    "w": 1235,
+    "h": 1375,
+    "alt": "SMART Clean Room Phone, Full Stainless Steel (CR-III-SS): stainless steel flush-mount clean room phone with blue keypad"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/cnwcom/image/criiiss.jpg",
+   "00-intake/voizlink/image/CR-IIISS.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/cnwcom/image/criiiss.jpg": "hero 931x931",
+   "00-intake/voizlink/image/CR-IIISS.jpg": "thumb 259x250"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "cr-iii-ip",
+  "model": "CR-III-IP",
+  "primary": {
+   "file": "processed/products/cr-iii-ip/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1235,
+   "h": 1375,
+   "alt": "SMART Clean Room VoIP Phone (Polyester Dial) (CR-III-IP): blue flush-mount VoIP clean room phone with keypad"
+  },
+  "gallery": [],
+  "realPhotos": [],
+  "realPhotoGrades": {},
+  "notes": "No client photo exists for this model."
+ },
+ {
+  "slug": "cr-ip",
+  "model": "CR-IP",
+  "primary": {
+   "file": "processed/products/cr-ip/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1235,
+   "h": 1375,
+   "alt": "SMART IP Clean Room Phone (PoE, Full SS) (CR-IP): stainless steel flush-mount IP clean room phone with display and keypad"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/cr-ip/gallery-1.jpg",
+    "source": "photo",
+    "w": 400,
+    "h": 418,
+    "alt": "SMART IP Clean Room Phone (PoE, Full SS) (CR-IP): stainless steel flush-mount IP clean room phone with display and keypad",
+    "original": "00-intake/voizlink/image/CRIIIIP.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/CRIIIIP.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/CRIIIIP.jpg": "card 400x418"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "gsm-ecb-box",
+  "model": "GSM-ECB BOX",
+  "primary": {
+   "file": "processed/products/gsm-ecb-box/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1284,
+   "h": 1600,
+   "alt": "SMART Emergency Call Box \u2013 Metal Housing (GSM) (GSM-ECB BOX): grey steel emergency call box with push-for-help button"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/gsm-ecb-box/gallery-1.jpg",
+    "source": "photo",
+    "w": 336,
+    "h": 443,
+    "alt": "SMART Emergency Call Box \u2013 Metal Housing (GSM) (GSM-ECB BOX): grey steel emergency call box with push-for-help button",
+    "original": "00-intake/voizlink/image/ECB-COMPLETE BODY.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/ECB-COMPLETE BODY.jpg",
+   "00-intake/cnwcom/image/ecb_gsm_box.png",
+   "00-intake/voizlink/img/products/Emergency_Call_Box_200.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/ECB-COMPLETE BODY.jpg": "card 336x443",
+   "00-intake/cnwcom/image/ecb_gsm_box.png": "thumb 260x362",
+   "00-intake/voizlink/img/products/Emergency_Call_Box_200.jpg": "thumb 200x334"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "ecb-gsm-cb",
+  "model": "ECB-GSM-CB",
+  "primary": {
+   "file": "processed/products/ecb-gsm-cb/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1260,
+   "h": 1600,
+   "alt": "SMART Emergency Call Box \u2013 ABS Circuit Box (GSM) (ECB-GSM-CB): grey ABS circuit box with clear lid showing the electronics"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/ecb-gsm-cb/gallery-1.jpg",
+    "source": "photo",
+    "w": 1600,
+    "h": 1163,
+    "alt": "SMART Emergency Call Box \u2013 ABS Circuit Box (GSM) (ECB-GSM-CB): grey ABS circuit box with clear lid showing the electronics",
+    "original": "00-intake/voizlink/image/ECB-BOX.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/ECB-BOX.jpg",
+   "00-intake/voizlink/image/ecb_gsm_cb.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/ECB-BOX.jpg": "card 1425x1960",
+   "00-intake/voizlink/image/ecb_gsm_cb.png": "thumb 262x388"
+  },
+  "notes": "The real circuit box has no SMART print; render keeps it plain. voizlink/image/ECB-BOX.jpg 1425x1960: card (soft focus; open box showing wiring)"
+ },
+ {
+  "slug": "voip-ecb",
+  "model": "VOIP-ECB",
+  "primary": {
+   "file": "processed/products/voip-ecb/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1185,
+   "h": 1600,
+   "alt": "SMART VoIP Emergency Call Box (ABS Circuit Box) (VOIP-ECB): white ABS emergency call box"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/voip-ecb/gallery-1.jpg",
+    "source": "photo",
+    "w": 291,
+    "h": 448,
+    "alt": "SMART VoIP Emergency Call Box (ABS Circuit Box) (VOIP-ECB): white ABS emergency call box",
+    "original": "00-intake/voizlink/image/FRONT VIEW.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/FRONT VIEW.jpg",
+   "00-intake/voizlink/image/SIDE VIEW.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/FRONT VIEW.jpg": "card 291x448",
+   "00-intake/voizlink/image/SIDE VIEW.jpg": "thumb 201x314"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "gsm-ecb-server-rack",
+  "model": "GSM-ECB SERVER RACK",
+  "primary": {
+   "file": "processed/products/gsm-ecb-server-rack/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 1250,
+   "alt": "SMART Emergency Call Box Central Server Rack (GSM-ECB SERVER RACK): wall rack with orange message, voice and call logger units"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/gsm ecb server rack.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/gsm ecb server rack.jpg": "thumb 260x233"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "htms",
+  "model": "HTMS",
+  "primary": {
+   "file": "processed/products/htms/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 1180,
+   "alt": "SMART HTMS \u2013 Highway Toll Management System Software (ECB): monitor showing the HTMS software start screen"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/htms/gallery-1.jpg",
+    "source": "photo",
+    "w": 500,
+    "h": 269,
+    "alt": "SMART HTMS \u2013 Highway Toll Management System Software (ECB): screenshot of the HTMS call management software",
+    "original": "00-intake/voizlink/image/ecb-software.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/ecb-software.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/ecb-software.png": "card 500x269"
+  },
+  "notes": "Software. The render is a neutral start screen (SMART + HTMS); the real screenshot is the gallery image."
+ },
+ {
+  "slug": "cas-hf",
+  "model": "CAS-HF",
+  "primary": {
+   "file": "processed/products/cas-hf/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1454,
+   "h": 883,
+   "alt": "SMART Crane Announcement System (CAS-HF): black desk announcement unit with gooseneck microphone, foot switch and horn"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/crans_model_CASHF.png",
+   "00-intake/cnwcom/img/FWPA_HF_CCS.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/crans_model_CASHF.png": "thumb 316x175",
+   "00-intake/cnwcom/img/FWPA_HF_CCS.jpg": "thumb 246x201"
+  },
+  "notes": "Real desk unit is labelled FWPA-HF; render prints the catalogue model CAS-HF."
+ },
+ {
+  "slug": "ccs-hf",
+  "model": "CCS-HF",
+  "primary": {
+   "file": "processed/products/ccs-hf/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1504,
+   "h": 1157,
+   "alt": "SMART Crane Communication System (CCS-HF): grey crane master unit with speaker panel and press-to-talk button, beside a horn loudspeaker"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/ccs-hf/gallery-1.jpg",
+    "source": "photo",
+    "w": 1600,
+    "h": 985,
+    "alt": "SMART Crane Communication System (CCS-HF): LSOD horn loudspeaker and grey master unit with PRESS TO TALK button",
+    "original": "00-intake/voizlink/image/crans_comm_mdelccs_hf.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/crans_comm_mdelccs_hf.png",
+   "00-intake/voizlink/image/crans_communication.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/crans_comm_mdelccs_hf.png": "card 3352x2064",
+   "00-intake/voizlink/image/crans_communication.png": "thumb 317x213"
+  },
+  "notes": "voizlink/image/crans_comm_mdelccs_hf.png 3352x2064: card (soft; shot on cardboard)"
+ },
+ {
+  "slug": "eh",
+  "model": "EH",
+  "primary": {
+   "file": "processed/products/eh/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1583,
+   "h": 1154,
+   "alt": "SMART Electronic Hooter (EH): grey electronic hooter box with horn loudspeaker"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/eh/gallery-1.jpg",
+    "source": "photo",
+    "w": 805,
+    "h": 633,
+    "alt": "SMART Electronic Hooter (EH): grey electronic hooter box with horn loudspeaker",
+    "original": "00-intake/voizlink/image/ELECTRONIC HOOTER MODEL-EH.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/ELECTRONIC HOOTER MODEL-EH.jpg",
+   "00-intake/voizlink/image/ELECTRONIC HOOTER MODEL-EH.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/ELECTRONIC HOOTER MODEL-EH.jpg": "card 805x633",
+   "00-intake/voizlink/image/ELECTRONIC HOOTER MODEL-EH.png": "thumb 362x237"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "eh-fl",
+  "model": "EH-FL",
+  "primary": {
+   "file": "processed/products/eh-fl/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1584,
+   "h": 1166,
+   "alt": "SMART Electronic Hooter cum Flasher (EH-FL): grey hooter box with red flasher and two horn loudspeakers"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/electronic_el_hf.png",
+   "00-intake/voizlink/image/NEW ELECTRONIC HOOTER WITH FLASHER.1.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/electronic_el_hf.png": "thumb 362x234",
+   "00-intake/voizlink/image/NEW ELECTRONIC HOOTER WITH FLASHER.1.jpg": "thumb 260x100"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "tr-iii",
+  "model": "TR-III",
+  "primary": {
+   "file": "processed/products/tr-iii/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1241,
+   "h": 1600,
+   "alt": "SMART Hooter / Telephone Loud Ringer (TR-III): grey loud ringer box with round sounder on top"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/tr-iii/gallery-1.jpg",
+    "source": "photo",
+    "w": 303,
+    "h": 410,
+    "alt": "SMART Hooter / Telephone Loud Ringer (TR-III): grey loud ringer box with round sounder on top",
+    "original": "00-intake/voizlink/image/HOOTER-MODEL-TR-III.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/HOOTER-MODEL-TR-III.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/HOOTER-MODEL-TR-III.jpg": "card 303x410"
+  },
+  "notes": "Real label reads MODEL HU-III; render prints the catalogue model TR-III."
+ },
+ {
+  "slug": "fl-iii",
+  "model": "FL-III",
+  "primary": {
+   "file": "processed/products/fl-iii/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1252,
+   "h": 1600,
+   "alt": "SMART LED Flasher (FL-III): grey flasher box with red beacon"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/fl-iii/gallery-1.jpg",
+    "source": "photo",
+    "w": 343,
+    "h": 423,
+    "alt": "SMART LED Flasher (FL-III): grey flasher box with red beacon",
+    "original": "00-intake/voizlink/image/smart_fishers.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/smart_fishers.png",
+   "00-intake/voizlink/img/products/FLASHER_WITH_HOOTER_FL-III_HU_150.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/smart_fishers.png": "card 343x423",
+   "00-intake/voizlink/img/products/FLASHER_WITH_HOOTER_FL-III_HU_150.jpg": "thumb 150x102"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "va-1",
+  "model": "VA-1",
+  "primary": {
+   "file": "processed/products/va-1/primary.jpg",
+   "source": "photo",
+   "placeholder": false,
+   "w": 1600,
+   "h": 1293,
+   "alt": "SMART Single Channel Voice Alarm (VA-1): grey single-channel voice alarm box",
+   "original": "00-intake/voizlink/image/VOICE ALARM 1 CH.jpg"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/va-1/gallery-1.png",
+    "source": "render",
+    "placeholder": true,
+    "w": 1579,
+    "h": 1320,
+    "alt": "SMART Single Channel Voice Alarm (VA-1): grey single-channel voice alarm box"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/VOICE ALARM 1 CH.jpg",
+   "00-intake/voizlink/image/voice_alaram_VA1.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/VOICE ALARM 1 CH.jpg": "hero 2427x1961",
+   "00-intake/voizlink/image/voice_alaram_VA1.png": "thumb 321x261"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "va-1fl",
+  "model": "VA-1FL",
+  "primary": {
+   "file": "processed/products/va-1fl/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1568,
+   "h": 1201,
+   "alt": "SMART Single Channel Voice Alarm with Flasher (VA-1FL): grey voice alarm box with separate red flasher"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/va-1fl/gallery-1.jpg",
+    "source": "photo",
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART Single Channel Voice Alarm with Flasher (VA-1FL): voice alarm box and red flasher on a SMART base",
+    "original": "00-intake/voizlink/image/VOICE ALARM 1 CH WITH FLASHER.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/VOICE ALARM 1 CH WITH FLASHER.jpg",
+   "00-intake/voizlink/image/voice_va_fl.png",
+   "00-intake/voizlink/image/voice_allram_vs_fl.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/VOICE ALARM 1 CH WITH FLASHER.jpg": "card 2318x982",
+   "00-intake/voizlink/image/voice_va_fl.png": "thumb 283x229",
+   "00-intake/voizlink/image/voice_allram_vs_fl.png": "thumb 234x183"
+  },
+  "notes": "voizlink/image/VOICE ALARM 1 CH WITH FLASHER.jpg 2318x982: card (composite; flasher half is upscaled and blurred)"
+ },
+ {
+  "slug": "voice-alarm-units",
+  "model": null,
+  "primary": {
+   "file": "processed/products/voice-alarm-units/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 780,
+   "alt": "SMART Multi-Channel Voice Alarm System (1 to 32+ channels): orange multi-channel voice alarm chassis"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/voice-alarm-units/gallery-1.jpg",
+    "source": "photo",
+    "w": 562,
+    "h": 237,
+    "alt": "SMART Multi-Channel Voice Alarm System (1 to 32+ channels): orange multi-channel voice alarm chassis",
+    "original": "00-intake/voizlink/image/voice_alaram_sys.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/voice_alaram_sys.png",
+   "00-intake/cnwcom/img/voice_alarm_model.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/voice_alaram_sys.png": "card 562x237",
+   "00-intake/cnwcom/img/voice_alarm_model.jpg": "thumb 150x150"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "vm-1",
+  "model": "VM-1",
+  "primary": {
+   "file": "processed/products/vm-1/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1378,
+   "h": 1600,
+   "alt": "SMART Voice Messager (VM-1): yellow aluminium voice messager with HINDI and ENGLISH buttons and volume knob"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/VOICE_MESSANGER_VM-1.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/VOICE_MESSANGER_VM-1.jpg": "thumb 211x216"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "la-1",
+  "model": "LA-1",
+  "primary": {
+   "file": "processed/products/la-1/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1587,
+   "h": 1258,
+   "alt": "SMART Lift Alarm System (LA-1): yellow lift alarm box"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/LIFT ALM.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/LIFT ALM.jpg": "thumb 351x280"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "bc-l01",
+  "model": "BC-L01",
+  "primary": {
+   "file": "processed/products/bc-l01/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1548,
+   "h": 1110,
+   "alt": "SMART Weigh Log Bag Counter cum Totalizer (BC-L01): yellow-framed bag counter with count, totaliser and set displays and keypad"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/bagcounter_bc L01.png",
+   "00-intake/voizlink/img/products/WEIGH_LOG_BAG_COUNTER_CUM_TOTALIZER_UNIT.jpg",
+   "00-intake/voizlink/image/Bag-counter-L01.jpg",
+   "00-intake/voizlink/image/counter.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/bagcounter_bc L01.png": "thumb 391x204",
+   "00-intake/voizlink/img/products/WEIGH_LOG_BAG_COUNTER_CUM_TOTALIZER_UNIT.jpg": "thumb 278x132",
+   "00-intake/voizlink/image/Bag-counter-L01.jpg": "unusable 300x167",
+   "00-intake/voizlink/image/counter.jpg": "unusable 300x214"
+  },
+  "notes": "voizlink/image/Bag-counter-L01.jpg 300x167: unusable (video thumbnail with player chrome) voizlink/image/counter.jpg 300x214: unusable (video thumbnail with player chrome)"
+ },
+ {
+  "slug": "bc-l02",
+  "model": "BC-L02",
+  "primary": {
+   "file": "processed/products/bc-l02/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1548,
+   "h": 1110,
+   "alt": "SMART Bag Counter cum Totalizer (BC-L02): yellow-framed bag counter with 5-digit count, totaliser display and keypad"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/bc-l02/gallery-1.jpg",
+    "source": "photo",
+    "w": 431,
+    "h": 210,
+    "alt": "SMART Bag Counter cum Totalizer (BC-L02): yellow-framed bag counter with 5-digit count, totaliser display and keypad",
+    "original": "00-intake/voizlink/image/bagcounter_BC L02(2).png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/bagcounter_BC L02(2).png",
+   "00-intake/voizlink/bagcounter_BC L02(2).jpg",
+   "00-intake/cnwcom/image/indexbag.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/bagcounter_BC L02(2).png": "card 431x210",
+   "00-intake/voizlink/bagcounter_BC L02(2).jpg": "card 403x206",
+   "00-intake/cnwcom/image/indexbag.jpg": "thumb 200x102"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "bc-l03",
+  "model": "BC-L03",
+  "primary": {
+   "file": "processed/products/bc-l03/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1548,
+   "h": 1110,
+   "alt": "SMART Weigh Log Bag Counter cum Totalizer, Ultrasonic Sensor (BC-L03): white-framed bag counter with count, totaliser and set displays and keypad"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/bc-l03/gallery-1.jpg",
+    "source": "photo",
+    "w": 434,
+    "h": 206,
+    "alt": "SMART Weigh Log Bag Counter cum Totalizer, Ultrasonic Sensor (BC-L03): white-framed bag counter with count, totaliser and set displays and keypad",
+    "original": "00-intake/voizlink/image/bagcounter_BC L03.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/bagcounter_BC L03.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/bagcounter_BC L03.png": "card 434x206"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "bc-l-03",
+  "model": "BC-L-03",
+  "primary": {
+   "file": "processed/products/bc-l-03/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 868,
+   "alt": "SMART Bag Counter with 3-Line LED Display (BC-L-03): white-framed bag counter with three-line LED display"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/bagcounter-bc-L-03.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/bagcounter-bc-L-03.jpg": "thumb 280x113"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "bc-l03-m",
+  "model": "BC-L03-M",
+  "primary": {
+   "file": "processed/products/bc-l03-m/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 1035,
+   "alt": "SMART Bag Counter with 2-Line LED Display & RTC (BC L03-M) (BC-L03-M): yellow-framed bag counter with two-line LED display and keypad"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/bc-l03-m/gallery-1.jpg",
+    "source": "photo",
+    "w": 420,
+    "h": 180,
+    "alt": "SMART Bag Counter with 2-Line LED Display & RTC (BC L03-M) (BC-L03-M): yellow-framed bag counter with two-line LED display and keypad",
+    "original": "00-intake/voizlink/image/BAGCOUNTER _BC-L03-M.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/BAGCOUNTER _BC-L03-M.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/BAGCOUNTER _BC-L03-M.jpg": "card 420x180"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "bc-l-ss",
+  "model": "BC-L-SS",
+  "primary": {
+   "file": "processed/products/bc-l-ss/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 767,
+   "alt": "SMART Bag Counter, 304 Stainless Steel (BC-L-SS): stainless steel bag counter with 6-digit display"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/bc-l-ss/gallery-1.jpg",
+    "source": "photo",
+    "w": 500,
+    "h": 177,
+    "alt": "SMART Bag Counter, 304 Stainless Steel (BC-L-SS): stainless steel bag counter with 6-digit display",
+    "original": "00-intake/voizlink/image/bag_counter_ss.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/bag_counter_ss.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/bag_counter_ss.jpg": "card 500x177"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "bc-l-nw-6",
+  "model": "BC-L-NW-6",
+  "primary": {
+   "file": "processed/products/bc-l-nw-6/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 767,
+   "alt": "SMART Network Bag Counter, 6-Digit Mild Steel (BC-L-NW-6): grey powder-coated network bag counter with 6-digit display"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/bc-l-nw-6/gallery-1.jpg",
+    "source": "photo",
+    "w": 425,
+    "h": 150,
+    "alt": "SMART Network Bag Counter, 6-Digit Mild Steel (BC-L-NW-6): grey powder-coated network bag counter with 6-digit display",
+    "original": "00-intake/voizlink/image/bag_counter_ss.png"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/bag_counter_ss.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/bag_counter_ss.png": "card 425x150"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "bc-l-nw",
+  "model": "BC-L-NW",
+  "primary": {
+   "file": "processed/products/bc-l-nw/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1534,
+   "h": 1201,
+   "alt": "SMART Network Bag Counter (BC-L-NW): yellow-framed network bag counter with 4-digit count and set displays"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/bc-l-nw/gallery-1.jpg",
+    "source": "photo",
+    "w": 500,
+    "h": 232,
+    "alt": "SMART Network Bag Counter (BC-L-NW): yellow-framed network bag counter with 4-digit count and set displays",
+    "original": "00-intake/voizlink/image/network-bag.jpg"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/voizlink/image/network-bag.jpg",
+   "00-intake/voizlink/image/DO Bagcounter.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/network-bag.jpg": "card 500x232",
+   "00-intake/voizlink/image/DO Bagcounter.png": "thumb 300x160"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "bc-do",
+  "model": "BC-DO",
+  "primary": {
+   "file": "processed/products/bc-do/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 944,
+   "alt": "SMART Diffused Optic Sensor Bag Counter cum Totalizer (BC-DO): yellow-framed bag counter with displays, keypad and diffused optic sensor head"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/DO Counter with keypad.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/DO Counter with keypad.png": "thumb 305x150"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "bc-do-nw",
+  "model": "BC-DO-NW",
+  "primary": {
+   "file": "processed/products/bc-do-nw/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 1025,
+   "alt": "SMART Diffused Optic Sensor Network Bag Counter (BC-DO-NW): yellow-framed network bag counter with diffused optic sensor head"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/DO Bagcounter.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/DO Bagcounter.png": "thumb 300x160"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "bc-0",
+  "model": "BC-0",
+  "primary": {
+   "file": "processed/products/bc-0/primary.jpg",
+   "source": "photo",
+   "placeholder": false,
+   "w": 1600,
+   "h": 739,
+   "alt": "SMART Dual Optic Bag Counter (BC-0): grey bag counter panel with 4-digit display and MENU, UP, DOWN, RESET buttons",
+   "original": "00-intake/cnwcom/img/BAG COUNTER-DUAL OPTIC.JPG"
+  },
+  "gallery": [
+   {
+    "file": "processed/products/bc-0/gallery-1.jpg",
+    "source": "photo",
+    "w": 470,
+    "h": 226,
+    "alt": "SMART Dual Optic Bag Counter (BC-0): grey bag counter panel with 4-digit display and MENU, UP, DOWN, RESET buttons",
+    "original": "00-intake/voizlink/image/bag_counter_BC0.png"
+   },
+   {
+    "file": "processed/products/bc-0/gallery-2.png",
+    "source": "render",
+    "placeholder": true,
+    "w": 1572,
+    "h": 1003,
+    "alt": "SMART Dual Optic Bag Counter (BC-0): grey bag counter panel with 4-digit display and MENU, UP, DOWN, RESET buttons"
+   }
+  ],
+  "realPhotos": [
+   "00-intake/cnwcom/img/BAG COUNTER-DUAL OPTIC.JPG",
+   "00-intake/voizlink/image/BAG COUNTER-DUAL OPTIC MODEL-BCDU.JPG",
+   "00-intake/voizlink/image/bag_counter_BC0.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/cnwcom/img/BAG COUNTER-DUAL OPTIC.JPG": "hero 3929x1815",
+   "00-intake/voizlink/image/BAG COUNTER-DUAL OPTIC MODEL-BCDU.JPG": "card 640x296",
+   "00-intake/voizlink/image/bag_counter_BC0.png": "card 470x226"
+  },
+  "notes": "Photo primary matches the BC-0 page image."
+ },
+ {
+  "slug": "nsdu-44l",
+  "model": "NSDU-44L",
+  "primary": {
+   "file": "processed/products/nsdu-44l/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1587,
+   "h": 1007,
+   "alt": "SMART 4\u201320 mA Display Unit, 4-Digit 4 in (NSDU-44L): yellow-framed 4-digit LED process display"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/NUMERIC PRESSURE DISPLAY  MODEL NPD 4.JPG",
+   "00-intake/voizlink/image/NUMERIC PRESSURE DISPLAY MODEL NPD12 (2).JPG"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/NUMERIC PRESSURE DISPLAY  MODEL NPD 4.JPG": "thumb 317x230",
+   "00-intake/voizlink/image/NUMERIC PRESSURE DISPLAY MODEL NPD12 (2).JPG": "thumb 321x219"
+  },
+  "notes": "Display reading 0425 is illustrative."
+ },
+ {
+  "slug": "nsdu-83l",
+  "model": "NSDU-83L",
+  "primary": {
+   "file": "processed/products/nsdu-83l/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1539,
+   "h": 1090,
+   "alt": "SMART 4\u201320 mA Display Unit, 3-Digit 8 in (NSDU-83L): yellow-framed 3-digit large LED process display"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/NUMERIC PRESSURE DISPLAY MODEL NPD12 (2).JPG"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/NUMERIC PRESSURE DISPLAY MODEL NPD12 (2).JPG": "thumb 321x219"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "el-3w",
+  "model": "EL-3W",
+  "primary": {
+   "file": "processed/products/el-3w/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1600,
+   "h": 1245,
+   "alt": "SMART LED Emergency (Magnetic) Light (EL-3W): grey emergency light box with three LEDs"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/EL3w.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/EL3w.jpg": "thumb 343x268"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "fl30",
+  "model": "FL30",
+  "primary": {
+   "file": "processed/products/fl30/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1230,
+   "h": 998,
+   "alt": "SMART Lumens LED Flood Light 30 W (FL30): LED flood light with yoke bracket"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/20140204_151441.jpg",
+   "00-intake/voizlink/image/20140204_151227.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/20140204_151441.jpg": "thumb 287x235",
+   "00-intake/voizlink/image/20140204_151227.jpg": "thumb 296x235"
+  },
+  "notes": "Thumbnails only; LED count in the render is scaled down from the 40 W model."
+ },
+ {
+  "slug": "fl40",
+  "model": "FL40",
+  "primary": {
+   "file": "processed/products/fl40/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1238,
+   "h": 1007,
+   "alt": "SMART Lumens LED Flood Light 40 W (FL40): LED flood light with yoke bracket"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/fl_40.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/fl_40.png": "thumb 299x236"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "fl50",
+  "model": "FL50",
+  "primary": {
+   "file": "processed/products/fl50/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1245,
+   "h": 1006,
+   "alt": "SMART Lumens LED Flood Light 50 W (FL50): LED flood light with yoke bracket"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/fl_50.png",
+   "00-intake/voizlink/image/fl_50(2).png",
+   "00-intake/voizlink/image/fl_50(3).png",
+   "00-intake/voizlink/image/50watt.png"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/fl_50.png": "thumb 161x126",
+   "00-intake/voizlink/image/fl_50(2).png": "thumb 162x131",
+   "00-intake/voizlink/image/fl_50(3).png": "thumb 161x99",
+   "00-intake/voizlink/image/50watt.png": "thumb 241x173"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "fl100",
+  "model": "FL100",
+  "primary": {
+   "file": "processed/products/fl100/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1286,
+   "h": 970,
+   "alt": "SMART Lumens LED Flood Light 100 W (FL100): LED flood light with twin LED arrays and yoke bracket"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/fl_100.png",
+   "00-intake/voizlink/image/fl_100(2).png",
+   "00-intake/voizlink/image/fl_100(3).png",
+   "00-intake/voizlink/image/100watt.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/fl_100.png": "thumb 200x150",
+   "00-intake/voizlink/image/fl_100(2).png": "thumb 236x122",
+   "00-intake/voizlink/image/fl_100(3).png": "thumb 204x131",
+   "00-intake/voizlink/image/100watt.jpg": "thumb 358x270"
+  },
+  "notes": ""
+ },
+ {
+  "slug": "wmhs-ert-a",
+  "model": "WMHS-ERT-A",
+  "primary": {
+   "file": "processed/products/wmhs-ert-a/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1159,
+   "h": 1600,
+   "alt": "SMART Weatherproof Analog Emergency Rail Telephone (WMHS-ERT-A): yellow die-cast rail telephone with handset and blue keypad"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/PHONE PIC.jpeg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/PHONE PIC.jpeg": "thumb 200x254"
+  },
+  "notes": "ERT-A and ERT-I share one housing and render."
+ },
+ {
+  "slug": "wmhs-ert-i",
+  "model": "WMHS-ERT-I",
+  "primary": {
+   "file": "processed/products/wmhs-ert-i/primary.png",
+   "source": "render",
+   "placeholder": true,
+   "w": 1159,
+   "h": 1600,
+   "alt": "SMART Weatherproof VoIP Emergency Rail Telephone (WMHS-ERT-I): yellow die-cast rail VoIP telephone with handset and blue keypad"
+  },
+  "gallery": [],
+  "realPhotos": [
+   "00-intake/voizlink/image/PHONE PIC.jpeg",
+   "00-intake/voizlink/image/METRO_IP.jpg"
+  ],
+  "realPhotoGrades": {
+   "00-intake/voizlink/image/PHONE PIC.jpeg": "thumb 200x254",
+   "00-intake/voizlink/image/METRO_IP.jpg": "unusable 581x280"
+  },
+  "notes": "voizlink/image/METRO_IP.jpg 581x280: unusable (system diagram, not a product photo)"
+ }
+]

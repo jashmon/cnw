@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cables & Wireless Co: SMART website (localhost build)
 
-## Getting Started
+A Next.js 16 (App Router, TypeScript, CSS Modules) catalogue and enquiry site for Cables & Wireless Co. and its SMART product range. It is built from the pipeline folders next to this one (`../01-brief` … `../09-motion`).
 
-First, run the development server:
+**Not deployed.** It runs on localhost only, and the live cnwcom.in and voizlink.in sites are untouched.
+
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev            # http://localhost:3000
+npm run build && npm run start -- -p 3200   # production build, used for QA
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To refresh content after editing the copy deck or imagery:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+node scripts/sync-content.mjs     # catalogue, copy deck JSON, image manifest + processed images, datasheets, audio
+node scripts/build-redirects.mjs  # 301 map from the old cnwcom.in / voizlink.in URLs (330 URLs, 512 rules)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## What's where
 
-## Learn More
+- **Content** (`src/content/data/*.json`): synced, do not edit here. Product facts come from `01-brief/catalogue.json` and the wording from `06-voice/*.json`; `lib/catalogue.ts` merges them.
+- **Company details:** `src/content/company.ts`.
+- **Clients:** `src/content/clients.ts`. Names are hidden until `CLIENT_NAMES_CONSENT = true`.
+- **Legal copy:** `src/content/legal/*.md`, copied from `06-voice/copy`. "To confirm" highlights show the gaps.
+- **Brand:** `public/brand/`.
+  - The SMART wordmark is the exact Lithograph outline from the client's datasheets. It is never typeset.
+  - The company logo is Concept C, Signal Block, in Barlow Condensed.
+- **Tokens:** `src/styles/tokens.css`, generated from `04-tokens/tokens.json`.
+- **Motion:** `src/styles/buttons.css` and `src/motion/`, as specified in `09-motion/motion.md`.
 
-To learn more about Next.js, take a look at the following resources:
+## Enquiries
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The quote list is stored in localStorage. Forms post to `POST /api/enquiry`, which validates the input, returns a reference (CW-YYMMDD-XXXX) and appends to `.data/enquiries.jsonl` (gitignored).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**No email is sent.** To go live, add an email provider (for example the Resend free tier) inside `src/app/api/enquiry/route.ts`, and put the API key and inbox in `.env.local`. Never commit them.
 
-## Deploy on Vercel
+## Placeholders still to replace
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Product images:** 75 of the 83 products use **3D renders** labelled "3D render · placeholder" (see `07-imagery/manifest.md` and `shot-list.md`).
+- **Client gaps:** everything in `../CLIENT-TODO.md`, including legal entity, GST, founding year, certificates, client-name consent, the WhatsApp number and the enquiry inbox.
+- **FLP datasheet:** the download is withheld (`WITHHOLD_DATASHEET` in `lib/catalogue.ts`) until the client confirms which version is current.
+- **Datasheet contents:** the PDFs are the client's originals, with old contact details.
+- **Live URL:** `company.url` is `http://localhost:3000`. Set it to the production domain at launch, for canonical URLs, OG tags and the sitemap.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## QA
+
+See `../11-qa/report.md`. Re-run with:
+
+```bash
+node qa/a11y.mjs http://localhost:3200 ../11-qa/urls.txt
+node qa/flows.mjs http://localhost:3200
+node qa/links.mjs http://localhost:3200
+```

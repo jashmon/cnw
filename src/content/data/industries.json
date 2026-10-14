@@ -1,0 +1,501 @@
+[
+ {
+  "slug": "cement",
+  "name": "Cement",
+  "intro": "Cement is the largest group on the SMART client list: more than 20 Indian cement groups and plants in Egypt and Bangladesh (2014 list) [[NEEDS CLIENT: updated count]]. SMART phones, PA systems and bag counters work on loading lines and plant floors where dust and noise defeat ordinary equipment.",
+  "problems": [
+   "Dust and plant noise drown out an ordinary phone bell. WMHS-III and WMHS-IIIWP cancel background noise at the mouthpiece, and TR-III and FL-III make incoming calls heard and seen.",
+   "A team spread over a large plant needs paging, not just a call. MCS-II (loops up to 2000 m) and MCS-III give individual, zone and all-call paging.",
+   "Miscounted bags at truck and wagon loading. SMART bag counters hold a set count, warn at the last 10 bags and can stop the conveyor or loader."
+  ],
+  "recommendedProducts": [
+   "wmhs-iii",
+   "wmhs-iiiwp",
+   "wmhs-ii",
+   "mcs-ii",
+   "mcs-iii",
+   "bc-do",
+   "bc-l-03",
+   "bc-l01",
+   "ccs-hf",
+   "tr-iii",
+   "eh-fl"
+  ],
+  "clientsInSector": [
+   {
+    "name": "UltraTech Cement Ltd",
+    "sites": "Jafrabad (Gujarat), Kovaya (Amreli), Awarpur (Chandrapur), Durgapur (WB)",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Ambuja Cement Ltd",
+    "sites": "Gadchandur, Bhatapara, Pali, Kodinar, Gaja Kodinar, Muldwarka jetty, Surat, Jaladhulagiri, Dadri, Lakerwari, Rauri, Nalagarh, Suli, Ropar, Sanand",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "ACC Cement",
+    "sites": "Kymore, Chandrapur, Lakheri, Madukkarai, Bargarh",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Grasim Industries",
+    "sites": "Aditya Cement (Chittorgarh), Grasim Cement (Raipur)",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Birla Corporation",
+    "sites": "Satna",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Lafarge India Pvt Ltd",
+    "sites": "Majia, Sonadih, Arasmeta",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "J K Cement",
+    "sites": "Nimbahera, Mangrol",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Binani Cement Ltd",
+    "sites": "Sirohi, Neemkathana",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Jaypee Cement",
+    "sites": "Bela, Sewagram, Wanakbori",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "India Cements Ltd",
+    "sites": "Vishnupuram, Shankar Nagar, Yerraguntla",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Gujarat Sidhee Cement",
+    "sites": "Junagadh",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Saurashtra Cement",
+    "sites": "Porbandar",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Digvijay Cement Ltd",
+    "sites": "Jamnagar",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Sanghi Industries",
+    "sites": "Bhuj",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Mahi Cement",
+    "sites": "Wajwana",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Sagar Cement",
+    "sites": "Nalgonda",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "KCP",
+    "sites": "Macherla",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "My Home Cement",
+    "sites": "Nalgonda",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Madras Cement",
+    "sites": "Nalgonda",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Priyadarshini Cement",
+    "sites": "Nalgonda",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Zuari Cement Ltd",
+    "sites": "Nalgonda",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Deccan Cements Ltd",
+    "sites": "Nalgonda",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Anjani Portland Cement Ltd",
+    "sites": "Nalgonda",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Kesoram Cement",
+    "sites": "Vishnupuram",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Century Cement",
+    "sites": "Baikunth",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Manikgarh Cement",
+    "sites": "Chanda",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Orient Cement",
+    "sites": "Devapur",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Dalmia Cement",
+    "sites": "Trichy",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Egyptian Cement Co",
+    "sites": "Cairo",
+    "country": "Egypt",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Lafarge Cement Company",
+    "sites": "Cairo",
+    "country": "Egypt",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Holcim Bangladesh",
+    "sites": "",
+    "country": "Bangladesh",
+    "consent": "[[CONSENT]]"
+   }
+  ],
+  "clientsNote": "[[CONSENT]] Names from the \"Our Presence\" deck (about Nov 2014), shown only with client consent. Several have since been renamed or merged.",
+  "seoTitle": "Communication & Bag Counters for Cement Plants | SMART",
+  "metaDescription": "SMART for cement plants: noise-cancelling industrial phones, plant-wide PA paging, loud ringers and bag counters for truck and wagon loading lines."
+ },
+ {
+  "slug": "steel-metals",
+  "name": "Steel & Metals",
+  "intro": "Steel is one of the three core industries SMART has served, alongside cement and power. Our 2014 list includes SAIL, Tata Steel, Jindal Stainless and copper and aluminium producers [[NEEDS CLIENT: updated count]].",
+  "problems": [
+   "Shop floors so loud that a normal ring is never heard. WMHS-IIILH adds a 40 W loud ringer and a xenon flasher, and TR-III and FL-III fit any SMART phone.",
+   "Crane operators cut off by height and moving structures. CAS-HF announces over a walkie-talkie link, and CCS-HF links the cabin to up to 5 points on the crane.",
+   "Alarms that must reach a whole bay. EH-FL pairs a 107 dB hooter with a red LED flasher, and ISAS plays recorded or live announcements across the plant."
+  ],
+  "recommendedProducts": [
+   "wmhs-iii",
+   "wmhs-iiiwp",
+   "wmhs-iiilh",
+   "wmhf-ii",
+   "mcs-iii",
+   "ccs-hf",
+   "cas-hf",
+   "eh-fl",
+   "tr-iii",
+   "isas"
+  ],
+  "clientsInSector": [
+   {
+    "name": "SAIL",
+    "sites": "Bhilai Steel Plant; Alloy Steel Plant, Durgapur",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Tata Steel",
+    "sites": "Boisar",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Jindal Stainless Ltd",
+    "sites": "Hissar",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Usha Martin",
+    "sites": "Jamshedpur",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Monnet Ispat Ltd",
+    "sites": "Raipur; Raigarh",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Lloyds Metals",
+    "sites": "Ghugus",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Sarda Energy & Minerals Ltd",
+    "sites": "Raipur",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Jaiswals Neco",
+    "sites": "Raipur",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Hindalco Birla Copper",
+    "sites": "Dahej",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Aluminium Africa Limited",
+    "sites": "Dar es Salaam",
+    "country": "Tanzania",
+    "consent": "[[CONSENT]]"
+   }
+  ],
+  "clientsNote": "[[CONSENT]] Names from the \"Our Presence\" deck (about Nov 2014), shown only with client consent. Several have since been renamed or merged.",
+  "seoTitle": "Industrial Communication for Steel Plants | SMART",
+  "metaDescription": "SMART for steel and metal plants: loud-hearing phones, crane announcement and talk links, hooters with LED flashers and plant-wide PA systems."
+ },
+ {
+  "slug": "power",
+  "name": "Power",
+  "intro": "Power is one of the three core industries SMART has served, alongside cement and steel. Line-powered phones, PA systems and hotlines connect the control room with field and outdoor posts [[NEEDS CLIENT: updated count]].",
+  "problems": [
+   "Outdoor posts in rain and dust. WMHS-IIIWP is fully line powered in a cast-aluminium canopy housing, so there is no local supply to fail.",
+   "The control room needs a direct line to key posts. HT-I rings up to 4 phones on one pair, and HT-IP links two sites over single-mode fibre up to 10 km.",
+   "Announcements must reach the whole site. MCS-II and MCS-III give zone and all-call paging, and ISAS repeats recorded safety messages on a timer."
+  ],
+  "recommendedProducts": [
+   "wmhs-iii",
+   "wmhs-iiiwp",
+   "wmhs-ii",
+   "mcs-ii",
+   "mcs-iii",
+   "isas",
+   "ht-i",
+   "ht-ip",
+   "eh-fl"
+  ],
+  "clientsInSector": [
+   {
+    "name": "Punjab Biomass Power Ltd",
+    "sites": "Patiala, Punjab",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Hirakud Power",
+    "sites": "Hirakud, Orissa",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   }
+  ],
+  "clientsNote": "[[CONSENT]] Names from the \"Our Presence\" deck (about Nov 2014), shown only with client consent. Several have since been renamed or merged.",
+  "seoTitle": "Plant Communication for Power Stations | SMART",
+  "metaDescription": "SMART for power plants: line-powered weatherproof phones, MCS-II and MCS-III paging, ISAS safety announcements and hotlines over copper or fibre."
+ },
+ {
+  "slug": "pharma-clean-rooms",
+  "name": "Pharma & Clean Rooms",
+  "intro": "Clean rooms need phones that sit flush and work hands-free. SMART clean room phones serve packing cubicles, sampling and dispensing areas, labs and pharmaceutical units, in analogue and SIP versions.",
+  "problems": [
+   "Wall phones that stick out in a clean room. Every CR model mounts flush and keeps to one AUTO DIAL key and a 4 × 3 keypad.",
+   "Surfaces cleaned with solvents. CR-III-SS has a full stainless steel body and an SS 304 front under a solvent-resistant overlay.",
+   "Plants moving to VoIP. CR-IP is a SIP phone powered over Ethernet, and CR-III-IP brings the CR-III layout to an existing VoIP network."
+  ],
+  "recommendedProducts": [
+   "cr-iiipe",
+   "cr-iiiad",
+   "cr-iii-ss",
+   "cr-iii-ip",
+   "cr-ip"
+  ],
+  "clientsInSector": [
+   {
+    "name": "Pharmaceutical Solutions",
+    "sites": "",
+    "country": "Saudi Arabia",
+    "consent": "[[CONSENT]]"
+   }
+  ],
+  "clientsNote": "[[CONSENT]] Names from the \"Our Presence\" deck (about Nov 2014), shown only with client consent. Several have since been renamed or merged.",
+  "seoTitle": "Clean Room Phones for Pharma Plants | SMART",
+  "metaDescription": "SMART for pharma and clean rooms: flush-mount hands-free clean room phones in steel or full stainless steel, analogue or SIP with PoE, for packing."
+ },
+ {
+  "slug": "fertiliser-chemicals",
+  "name": "Fertiliser & Chemicals",
+  "intro": "Fertiliser and chemical plants combine corrosive air, outdoor process areas and alarms that must be understood. SMART supplies stainless steel bag counters, weatherproof phones and voice alarms to these sites [[NEEDS CLIENT: updated count]].",
+  "problems": [
+   "Corrosive urea and fertiliser atmospheres. BC-L-SS puts the bag counter and its sensing head in 304-grade stainless steel.",
+   "A siren alone does not say what went wrong. VA-1 and the multi-channel voice alarm play a recorded message for each relay contact until the fault clears.",
+   "Process areas exposed to weather. WMHS-IIIWP and WMHS-IIWP put line-powered or PA phones in cast-aluminium canopy housings."
+  ],
+  "recommendedProducts": [
+   "bc-l-ss",
+   "bc-l02",
+   "va-1",
+   "voice-alarm-units",
+   "wmhs-iiiwp",
+   "wmhs-iiwp",
+   "mcs-ii",
+   "eh-fl",
+   "isas"
+  ],
+  "clientsInSector": [
+   {
+    "name": "IFFCO",
+    "sites": "Paradeep, Orissa",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Godavari Fertiliser",
+    "sites": "Kakinada",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "United Phosphorus Ltd",
+    "sites": "Bharuch",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   }
+  ],
+  "clientsNote": "[[CONSENT]] Names from the \"Our Presence\" deck (about Nov 2014), shown only with client consent. Several have since been renamed or merged.",
+  "seoTitle": "Communication for Fertiliser & Chemical Plants | SMART",
+  "metaDescription": "SMART for fertiliser and chemical plants: 304 stainless steel bag counters, relay-triggered voice alarms and weatherproof cast-aluminium phones."
+ },
+ {
+  "slug": "ports-highways",
+  "name": "Ports & Highways",
+  "intro": "Highways, ports and docks need SOS points where there is no cable and a control room that knows who is calling. SMART emergency call boxes run on GSM or VoIP, with solar options, and report to a central rack and software.",
+  "problems": [
+   "No cable along the route. GSM-ECB BOX works on any GSM SIM network and runs on solar power with battery backup.",
+   "The control room must know which box is calling and that every box works. The ECB server rack and HTMS show caller ID with location, record every call and check boxes automatically.",
+   "Remote posts at ports and docks. WMHF-IIIGSM is a vandal-resistant GSM phone with solar and battery options."
+  ],
+  "recommendedProducts": [
+   "gsm-ecb-box",
+   "ecb-gsm-cb",
+   "voip-ecb",
+   "gsm-ecb-server-rack",
+   "htms",
+   "wmhf-iiigsm"
+  ],
+  "clientsInSector": [
+   {
+    "name": "Gujarat Port of Pipavav",
+    "sites": "Amreli",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   },
+   {
+    "name": "Ambuja Cement Ltd",
+    "sites": "Muldwarka jetty",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   }
+  ],
+  "clientsNote": "[[CONSENT]] Names from the \"Our Presence\" deck (about Nov 2014), shown only with client consent. Several have since been renamed or merged.",
+  "seoTitle": "Emergency Call Boxes for Highways & Ports | SMART",
+  "metaDescription": "SMART for highways, ports and docks: solar GSM and VoIP emergency call boxes, a control-room server rack and software with caller ID and recording."
+ },
+ {
+  "slug": "rail-metro",
+  "name": "Rail & Metro",
+  "intro": "Track lines, tunnels and stations need emergency phones that live outdoors and fit the network in place. SMART rail telephones come in line-powered analogue and SIP versions in IP 65 die-cast aluminium. [[NEEDS CLIENT: rail and metro references and any RDSO approvals]]",
+  "problems": [
+   "Trackside phones exposed to weather. WMHS-ERT-A and WMHS-ERT-I sit in IP 65 aluminium die-cast housings.",
+   "Networks moving to IP. WMHS-ERT-I is a SIP phone for any standard IP PABX; WMHS-ERT-A works on any two-wire line.",
+   "Stations and lines that need SOS points without new cable. GSM-ECB BOX and VOIP-ECB give one-button hands-free calls to the control room."
+  ],
+  "recommendedProducts": [
+   "wmhs-ert-a",
+   "wmhs-ert-i",
+   "gsm-ecb-box",
+   "voip-ecb",
+   "wmhf-iiigsm"
+  ],
+  "clientsInSector": [],
+  "clientsNote": "[[NEEDS CLIENT: references in this sector]]",
+  "seoTitle": "Rail & Metro Emergency Telephones | SMART",
+  "metaDescription": "SMART for rail and metro: IP 65 die-cast emergency rail telephones in analogue and SIP versions, plus GSM and VoIP emergency call boxes for stations."
+ },
+ {
+  "slug": "mining",
+  "name": "Mining",
+  "intro": "Mines need phones and signals that cope with dust, water and noise, and call points where there is no cable. SMART line-powered phones, GSM call points and hooters are listed for mines [[NEEDS CLIENT: updated count]].",
+  "problems": [
+   "Dust, water and noise. WMHS-III and WMHS-IIIWP are line powered, with noise-cancelling handsets and sealed keypads.",
+   "Remote mine locations without cabling. WMHF-IIIGSM and GSM-ECB BOX work on any GSM SIM network with solar options.",
+   "Warning and evacuation signals. EH gives six siren tones at 100 W, and EH-FL adds a red LED flasher visible from 100 m."
+  ],
+  "recommendedProducts": [
+   "wmhs-iii",
+   "wmhs-iiiwp",
+   "wmhs-ii",
+   "mcs-ii",
+   "wmhf-iiigsm",
+   "gsm-ecb-box",
+   "eh",
+   "eh-fl",
+   "ccs-hf"
+  ],
+  "clientsInSector": [
+   {
+    "name": "South Eastern Coal Limited (SECL)",
+    "sites": "Bilaspur",
+    "country": "India",
+    "consent": "[[CONSENT]]"
+   }
+  ],
+  "clientsNote": "[[CONSENT]] Names from the \"Our Presence\" deck (about Nov 2014), shown only with client consent. Several have since been renamed or merged.",
+  "seoTitle": "Industrial Communication for Mines | SMART",
+  "metaDescription": "SMART for mines: line-powered noise-cancelling phones, GSM phones and call boxes for sites without cabling, plus hooters with red LED flashers."
+ }
+]

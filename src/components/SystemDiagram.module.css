@@ -1,0 +1,13 @@
+.fig{background:var(--surface-2);border-radius:var(--radius-md);box-shadow:var(--shadow-inset-line);padding:clamp(12px,2vw,28px);overflow-x:auto}
+.svg{width:100%;min-width:720px;height:auto;display:block}
+.h{font-family:var(--font-display);font-weight:800;font-size:22px;fill:var(--ink)}
+.t{font-family:var(--font-display);font-weight:800;font-size:17px}
+.ts{font-family:var(--font-mono);font-size:11.5px;fill:var(--ink)}
+.tm{font-family:var(--font-mono);font-size:11px;fill:var(--ink)}
+.tag{font-family:var(--font-mono);font-size:12.5px;fill:var(--muted)}
+.led{font-family:var(--font-mono);font-weight:600;font-size:40px;fill:#ff3b26;letter-spacing:4px}
+.zone{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:6 6}
+.line{stroke-dasharray:1;stroke-dashoffset:0}
+.dash{stroke-dasharray:.012 .012}
+:global(.js) :global(.reveal) .line{stroke-dashoffset:1;transition:stroke-dashoffset 1.4s var(--ease-out) .2s}
+:global(.js) :global(.reveal.in) .line{stroke-dashoffset:0}

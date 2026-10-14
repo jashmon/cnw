@@ -1,0 +1,13 @@
+.card{background:var(--surface-2);border-radius:var(--radius-md);box-shadow:var(--shadow-inset-line);overflow:hidden;display:flex;flex-direction:column;position:relative}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--yellow);transform:scaleX(0);transform-origin:left;transition:transform var(--dur-ui) var(--ease-out);z-index:2}
+.card:hover::before,.card:focus-within::before{transform:scaleX(1)}
+.media{display:block;background:color-mix(in srgb,var(--surface) 55%,var(--surface-2));aspect-ratio:1/1;padding:8%;overflow:hidden}
+.well{width:100%;height:100%}
+.body{padding:16px 18px 18px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;flex:1}
+.name{font-size:1.375rem;font-weight:800;line-height:1.08}
+.title{text-decoration:none}
+.title::after{content:"";position:absolute;inset:0;z-index:1}
+.line{color:var(--muted);font-size:.9688rem;line-height:1.45}
+.act{margin-top:auto;padding-top:8px;position:relative;z-index:3}
+@media (hover:hover){.act{opacity:.0;transform:translateY(6px);transition:opacity var(--dur-ui) var(--ease-out),transform var(--dur-ui) var(--ease-out)}
+  .card:hover .act,.card:focus-within .act{opacity:1;transform:none}}
