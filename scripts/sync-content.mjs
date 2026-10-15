@@ -22,10 +22,12 @@ if (fs.existsSync(src)) { fs.cpSync(src, path.join(site, "public/media"), { recu
 
 // client logos (07-imagery/client-logos) → public/clients + data/client-logos.json
 const logos = path.join(proj, "07-imagery/client-logos");
-if (fs.existsSync(path.join(logos, "logos.json"))) {
-  const out = path.join(site, "public/clients"); fs.mkdirSync(out, { recursive: true });
-  const list = JSON.parse(fs.readFileSync(path.join(logos, "logos.json"), "utf8"));
-  for (const l of list) if (l.file) copy(path.join(logos, path.basename(l.file)), path.join(out, path.basename(l.file)));
+// prefers the rasterised, size-capped set (07-imagery/render/optimize-logos.mjs → client-logos/web, logos-web.json)
+const manifest = fs.existsSync(path.join(logos, "logos-web.json")) ? "logos-web.json" : "logos.json";
+if (fs.existsSync(path.join(logos, manifest))) {
+  const out = path.join(site, "public/clients"); fs.rmSync(out, { recursive: true, force: true }); fs.mkdirSync(out, { recursive: true });
+  const list = JSON.parse(fs.readFileSync(path.join(logos, manifest), "utf8"));
+  for (const l of list) if (l.file) copy(path.join(logos, l.file), path.join(out, path.basename(l.file)));
   fs.writeFileSync(path.join(data, "client-logos.json"), JSON.stringify(list, null, 1));
   console.log(`ok   ${list.length} client logos`);
 } else console.log("miss client logos");
