@@ -23,7 +23,7 @@ node scripts/build-redirects.mjs  # 301 map from the old cnwcom.in / voizlink.in
 
 - **Content** (`src/content/data/*.json`): synced, do not edit here. Product facts come from `01-brief/catalogue.json` and the wording from `06-voice/*.json`; `lib/catalogue.ts` merges them.
 - **Company details:** `src/content/company.ts`.
-- **Clients:** `src/content/clients.ts`. Names are hidden until `CLIENT_NAMES_CONSENT = true`.
+- **Clients:** `src/content/clients.ts`, from the client's 2025 user list (`00-intake/client-2025/USERSLIST-2025.pdf`). Logos are in `public/clients/`, synced from `07-imagery/client-logos/`.
 - **Legal copy:** `src/content/legal/*.md`, copied from `06-voice/copy`. "To confirm" highlights show the gaps.
 - **Brand:** `public/brand/`.
   - The SMART wordmark is the exact Lithograph outline from the client's datasheets. It is never typeset.

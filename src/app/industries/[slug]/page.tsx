@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Arrow } from "@/components/Brand";
 import { ProductCard } from "@/components/ProductCard";
-import { CLIENT_NAMES_CONSENT } from "@/content/clients";
+import { CLIENT_NAMES_CONSENT, domestic, type Client } from "@/content/clients";
 import { getIndustries, getProduct, getSystems } from "@/lib/catalogue";
 import { clean } from "@/lib/text";
 
@@ -15,12 +15,24 @@ export async function generateMetadata({ params }: PageProps<"/industries/[slug]
   return ind ? { title: ind.seoTitle, description: ind.metaDescription } : {};
 }
 
+// Industry → clients from the 2025 user list (src/content/clients.ts).
+const SECTOR_CLIENTS: Record<string, (c: Client) => boolean> = {
+  cement: (c) => c.sector === "Cement",
+  "steel-metals": (c) => c.sector === "Steel, Metals & Power" && !/power|thermal|coal|mines/i.test(c.name),
+  power: (c) => /power|thermal|energy/i.test(c.name) || (c.units ?? []).some((u) => /MW|power/i.test(u)),
+  "pharma-clean-rooms": (c) => c.sector === "Pharma & Clean Rooms",
+  "fertiliser-chemicals": (c) => c.sector === "Fertiliser & Chemicals",
+  "ports-highways": (c) => c.sector === "Shipping, Rigs & Defence",
+  mining: (c) => /mines|coal|zinc|vedanta/i.test(c.name),
+};
+
 // Industry template: dark hero with problems · recommended products · sector proof (names gated by consent) · related system.
 export default async function IndustryPage({ params }: PageProps<"/industries/[slug]">) {
   const { slug } = await params;
   const ind = getIndustries().find((x) => x.slug === slug);
   if (!ind) notFound();
   const prods = ind.recommendedProducts.map((p) => getProduct(p)).filter((p): p is NonNullable<typeof p> => !!p);
+  const sectorClients = SECTOR_CLIENTS[ind.slug] ? domestic.filter(SECTOR_CLIENTS[ind.slug]) : [];
   const sys = getSystems().find((sy) => sy.components.some((c) => ind.recommendedProducts.includes(c)));
   return (
     <>
@@ -38,10 +50,10 @@ export default async function IndustryPage({ params }: PageProps<"/industries/[s
         <h2 className="h-1" style={{ marginBottom: 20 }}>Recommended for {ind.name.toLowerCase()}</h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 14 }}>{prods.map((p) => <ProductCard key={p.slug} p={p} />)}</div>
       </section>
-      {ind.clientsInSector.length > 0 && (
+      {sectorClients.length > 0 && (
         <section className="band-yellow section"><div className="wrap" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
-          <div><p className="label">Installed in this sector</p><p className="h-1" style={{ marginTop: 6 }}>{ind.clientsInSector.length} client group{ind.clientsInSector.length > 1 ? "s" : ""} on the 2014 list</p>
-            {CLIENT_NAMES_CONSENT && <p style={{ marginTop: 10 }}>{ind.clientsInSector.map((c) => c.name).join(" · ")}</p>}</div>
+          <div><p className="label">Installed in this sector</p><p className="h-1" style={{ marginTop: 6 }}>{sectorClients.length} client group{sectorClients.length > 1 ? "s" : ""}</p>
+            {CLIENT_NAMES_CONSENT && <p style={{ marginTop: 10, maxWidth: "80ch" }}>{sectorClients.map((c) => c.name).join(" · ")}</p>}</div>
           <Link className="btn" href="/installed-at">Where SMART is installed <Arrow /></Link>
         </div></section>
       )}

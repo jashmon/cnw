@@ -1,0 +1,702 @@
+[
+ {
+  "brand": "UltraTech Cement",
+  "slug": "ultratech-cement",
+  "file": "ultratech-cement.svg",
+  "width": 16.24,
+  "height": 9.14,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/9/96/Ultratech_Cement_Logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Ultratech_Cement_Logo.svg"
+ },
+ {
+  "brand": "Ambuja Cements",
+  "slug": "ambuja-cements",
+  "file": "ambuja-cements.png",
+  "width": 1154,
+  "height": 970,
+  "source_url": "https://www.ambujacement.com/-/media/Project/AmbujaLimited/Common/Logo/Ambuja-Footer-1.ashx",
+  "license": "trademark — official website",
+  "notes": "Current Adani-era lockup 'adani Ambuja Cement' (website footer logo)"
+ },
+ {
+  "brand": "ACC Limited",
+  "slug": "acc-limited",
+  "file": "acc-limited.svg",
+  "width": 300,
+  "height": 102.86,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/ACC_Limited_logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:ACC_Limited_logo.svg"
+ },
+ {
+  "brand": "Shree Cement",
+  "slug": "shree-cement",
+  "file": "shree-cement.svg",
+  "width": 47,
+  "height": 14,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/d/d8/Shree_cement_logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Shree_cement_logo.svg"
+ },
+ {
+  "brand": "Dalmia Bharat",
+  "slug": "dalmia-bharat",
+  "file": "dalmia-bharat.svg",
+  "width": 1542.1,
+  "height": 806.8,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/8/83/Dalmia_Group.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "Also covers OCL India (merged into Dalmia Bharat); file page: https://en.wikipedia.org/wiki/File:Dalmia_Group.svg"
+ },
+ {
+  "brand": "JK Cement",
+  "slug": "jk-cement",
+  "file": "jk-cement.png",
+  "width": 561,
+  "height": 98,
+  "source_url": "https://www.jkcement.com/wp-content/themes/jkcement/images/new-logo.webp",
+  "license": "trademark — official website",
+  "notes": "Converted WebP to PNG (no other change)"
+ },
+ {
+  "brand": "JK Lakshmi Cement",
+  "slug": "jk-lakshmi-cement",
+  "file": "jk-lakshmi-cement.png",
+  "width": 300,
+  "height": 60,
+  "source_url": "https://www.jklakshmicement.com/wp-content/themes/jk-laxmi/images/jk-logo.png",
+  "license": "trademark — official website",
+  "notes": ""
+ },
+ {
+  "brand": "Nuvoco Vistas",
+  "slug": "nuvoco-vistas",
+  "file": "nuvoco-vistas.png",
+  "width": 225,
+  "height": 146,
+  "source_url": "https://www.nuvoco.com/static/media/logo.4ea493e1b272e146e560.png",
+  "license": "trademark — official website",
+  "notes": "From site JS bundle asset (React app header logo)"
+ },
+ {
+  "brand": "Heidelberg Materials India",
+  "slug": "heidelberg-materials",
+  "file": "heidelberg-materials.svg",
+  "width": 1003.61,
+  "height": 300.51,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/HeidelbergCement_2022_logo.svg",
+  "license": "Public domain",
+  "notes": "Commons file named 'HeidelbergCement 2022 logo' but shows current Heidelberg Materials mark; Zuari Cement is part of Heidelberg Materials India; file page: https://commons.wikimedia.org/wiki/File:HeidelbergCement_2022_logo.svg"
+ },
+ {
+  "brand": "Wonder Cement",
+  "slug": "wonder-cement",
+  "file": "wonder-cement.svg",
+  "width": 892.39,
+  "height": 558.81,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/2/2c/Wonder_Cement.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Wonder_Cement.svg"
+ },
+ {
+  "brand": "Orient Cement",
+  "slug": "orient-cement",
+  "file": "orient-cement.png",
+  "width": 1094,
+  "height": 350,
+  "source_url": "https://www.orientcement.com/wp-content/uploads/Orient-cement_1200X630.png",
+  "license": "trademark — official website",
+  "notes": "From og:image (1200x630 logo card), whitespace trimmed; Orient is now an Adani Cement company"
+ },
+ {
+  "brand": "The India Cements",
+  "slug": "india-cements",
+  "file": "india-cements.png",
+  "width": 271,
+  "height": 86,
+  "source_url": "https://www.indiacements.co.in/images/india-cements-logo.png",
+  "license": "trademark — official website",
+  "notes": "Current lockup reads 'A subsidiary of UltraTech Cement Limited'"
+ },
+ {
+  "brand": "Chettinad Cement",
+  "slug": "chettinad-cement",
+  "file": "chettinad-cement.png",
+  "width": 316,
+  "height": 102,
+  "source_url": "https://www.chettinadcement.com/wp-content/uploads/2024/07/cropped-chettinad-logo.png",
+  "license": "trademark — official website",
+  "notes": ""
+ },
+ {
+  "brand": "Sagar Cements",
+  "slug": "sagar-cements",
+  "file": "sagar-cements.svg",
+  "width": 765.75,
+  "height": 197.79,
+  "source_url": "https://sagarcements.in/wp-content/uploads/2020/12/Sagar_Cement_Logo_color.svg",
+  "license": "trademark — official website",
+  "notes": ""
+ },
+ {
+  "brand": "Century Textiles & Industries (now Aditya Birla Real Estate)",
+  "slug": "aditya-birla-real-estate",
+  "file": "aditya-birla-real-estate.svg",
+  "width": 110,
+  "height": 107,
+  "source_url": "https://www.adityabirlarealestate.com/assets/images/logo.svg",
+  "license": "trademark — official website",
+  "notes": "DOUBTFUL: Century Textiles renamed Aditya Birla Real Estate (2024); Century Cement brand went to UltraTech in 2019. Logo is the current ABREL mark"
+ },
+ {
+  "brand": "Kesoram Industries",
+  "slug": "kesoram-industries",
+  "file": "kesoram-industries.png",
+  "width": 230,
+  "height": 62,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/a/a7/Kesoram_logo.gif",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "GIF converted to PNG; Kesoram's cement business was merged into UltraTech in 2025; file page: https://en.wikipedia.org/wiki/File:Kesoram_logo.gif"
+ },
+ {
+  "brand": "JSW Cement",
+  "slug": "jsw-cement",
+  "file": "jsw-cement.svg",
+  "width": 300,
+  "height": 142.26,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/JSW_Group_logo.svg",
+  "license": "Public domain",
+  "notes": "JSW Group mark (used by JSW Cement); file page: https://commons.wikimedia.org/wiki/File:JSW_Group_logo.svg"
+ },
+ {
+  "brand": "Adani Group",
+  "slug": "adani-group",
+  "file": "adani-group.svg",
+  "width": 31.85,
+  "height": 11.15,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Adani_logo_2012.svg",
+  "license": "Public domain",
+  "notes": "Also covers Adani Cement; file page: https://commons.wikimedia.org/wiki/File:Adani_logo_2012.svg"
+ },
+ {
+  "brand": "Tata Steel",
+  "slug": "tata-steel",
+  "file": "tata-steel.svg",
+  "width": 1788,
+  "height": 233,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Tata_Steel_Logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Tata_Steel_Logo.svg"
+ },
+ {
+  "brand": "SAIL (Steel Authority of India)",
+  "slug": "sail",
+  "file": "sail.svg",
+  "width": 64.29,
+  "height": 67.42,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Steel_Authority_of_India_logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Steel_Authority_of_India_logo.svg"
+ },
+ {
+  "brand": "JSW Steel",
+  "slug": "jsw-steel",
+  "file": "jsw-steel.svg",
+  "width": 518.78,
+  "height": 164.7,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/1/1b/JSW_Steel_logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "Also covers JSW Ispat (formerly Monnet Ispat); file page: https://en.wikipedia.org/wiki/File:JSW_Steel_logo.svg"
+ },
+ {
+  "brand": "Jindal Stainless",
+  "slug": "jindal-stainless",
+  "file": "jindal-stainless.png",
+  "width": 900,
+  "height": 188,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Jindal-stainless.png",
+  "license": "CC BY-SA 4.0",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Jindal-stainless.png"
+ },
+ {
+  "brand": "Jindal Steel & Power (now Jindal Steel Ltd)",
+  "slug": "jindal-steel-power",
+  "file": "jindal-steel-power.png",
+  "width": 2498,
+  "height": 1178,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Jindal_Steel_Limited_Logo.png",
+  "license": "CC BY 4.0",
+  "notes": "2025 'Jindal Steel' logo after JSPL rename; whitespace trimmed; file page: https://commons.wikimedia.org/wiki/File:Jindal_Steel_Limited_Logo.png"
+ },
+ {
+  "brand": "Hindalco Industries",
+  "slug": "hindalco",
+  "file": "hindalco.svg",
+  "width": 3360,
+  "height": 3282.88,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/2/22/Hindalco_Logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Hindalco_Logo.svg"
+ },
+ {
+  "brand": "Vedanta",
+  "slug": "vedanta",
+  "file": "vedanta.svg",
+  "width": 370,
+  "height": 77,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/a/ac/Vedanta_Logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "DOUBTFUL: tagline reads transforming elements, but the current Vedanta lockup (e.g. on facorgroup.in) reads transforming for good. Also covers Electrosteel Steels (now ESL Steels, Vedanta); file page: https://en.wikipedia.org/wiki/File:Vedanta_Logo.svg"
+ },
+ {
+  "brand": "Hindustan Zinc",
+  "slug": "hindustan-zinc",
+  "file": "hindustan-zinc.png",
+  "width": 1444,
+  "height": 1122,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/HZL_Logo.png",
+  "license": "CC BY-SA 4.0",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:HZL_Logo.png"
+ },
+ {
+  "brand": "Usha Martin",
+  "slug": "usha-martin",
+  "file": "usha-martin.svg",
+  "width": 746.23,
+  "height": 206.08,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/d/d0/Usha_Martin.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Usha_Martin.svg"
+ },
+ {
+  "brand": "Lloyds Metals and Energy",
+  "slug": "lloyds-metals",
+  "file": "lloyds-metals.svg",
+  "width": 892.9,
+  "height": 113,
+  "source_url": "https://lloyds.in/wp-content/themes/lloyds-metals-new/img/lloyds-metals-logo.svg",
+  "license": "trademark — official website",
+  "notes": ""
+ },
+ {
+  "brand": "Sarda Energy & Minerals",
+  "slug": "sarda-energy",
+  "file": "sarda-energy.png",
+  "width": 226,
+  "height": 96,
+  "source_url": "https://www.seml.co.in/images/sardalogo.jpg",
+  "license": "trademark — official website",
+  "notes": "JPG converted to PNG; lockup includes CIN line"
+ },
+ {
+  "brand": "Jayaswal Neco Industries",
+  "slug": "jayaswal-neco",
+  "file": "jayaswal-neco.svg",
+  "width": 228,
+  "height": 48,
+  "source_url": "https://www.necoindia.com/wp-content/themes/jayaswal-neco-theme/images/logo.svg",
+  "license": "trademark — official website",
+  "notes": ""
+ },
+ {
+  "brand": "Coal India (South Eastern Coalfields)",
+  "slug": "coal-india",
+  "file": "coal-india.svg",
+  "width": 270.19,
+  "height": 366.89,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/4/49/Coal_India_Logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "Coal India parent logo (SECL is a Coal India subsidiary); file page: https://en.wikipedia.org/wiki/File:Coal_India_Logo.svg"
+ },
+ {
+  "brand": "Mahagenco",
+  "slug": "mahagenco",
+  "file": "mahagenco.png",
+  "width": 390,
+  "height": 196,
+  "source_url": "https://www.mahagenco.in/Content/images/demo-hosting-logo-black@2x.png",
+  "license": "trademark — official website",
+  "notes": ""
+ },
+ {
+  "brand": "FACOR",
+  "slug": "facor",
+  "file": "facor.png",
+  "width": 422,
+  "height": 50,
+  "source_url": "https://www.facorgroup.in/wp-content/themes/facor-home/images/facor-logo.png",
+  "license": "trademark — official website",
+  "notes": "Current lockup 'vedanta | FACOR' (FACOR is now a Vedanta company)"
+ },
+ {
+  "brand": "Sandoz",
+  "slug": "sandoz",
+  "file": "sandoz.svg",
+  "width": 200,
+  "height": 26.22,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Sandoz-Blue.svg",
+  "license": "Public domain",
+  "notes": "2023 post-spin-off logo; file page: https://commons.wikimedia.org/wiki/File:Sandoz-Blue.svg"
+ },
+ {
+  "brand": "Cipla",
+  "slug": "cipla",
+  "file": "cipla.svg",
+  "width": 128.13,
+  "height": 44.36,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Cipla_logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Cipla_logo.svg"
+ },
+ {
+  "brand": "Ranbaxy",
+  "slug": "ranbaxy",
+  "file": "ranbaxy.svg",
+  "width": 986,
+  "height": 135,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Ranbaxy_Logo.svg",
+  "license": "Public domain",
+  "notes": "Historic (Ranbaxy merged into Sun Pharma 2015); file page: https://commons.wikimedia.org/wiki/File:Ranbaxy_Logo.svg"
+ },
+ {
+  "brand": "Biocon",
+  "slug": "biocon",
+  "file": "biocon.svg",
+  "width": 240,
+  "height": 94.4,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/f/f8/Biocon_Logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Biocon_Logo.svg"
+ },
+ {
+  "brand": "Sun Pharma",
+  "slug": "sun-pharma",
+  "file": "sun-pharma.svg",
+  "width": 40,
+  "height": 54,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/5/50/Sun_Pharma_logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Sun_Pharma_logo.svg"
+ },
+ {
+  "brand": "Viatris (Mylan)",
+  "slug": "viatris",
+  "file": "viatris.svg",
+  "width": 150,
+  "height": 39.8,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Viatris.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Viatris.svg"
+ },
+ {
+  "brand": "Biological E",
+  "slug": "biological-e",
+  "file": "biological-e.png",
+  "width": 1475,
+  "height": 710,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Biological_E_logo.jpg",
+  "license": "Public domain",
+  "notes": "JPG converted to PNG, whitespace trimmed; file page: https://commons.wikimedia.org/wiki/File:Biological_E_logo.jpg"
+ },
+ {
+  "brand": "Fresenius Kabi",
+  "slug": "fresenius-kabi",
+  "file": "fresenius-kabi.svg",
+  "width": 400,
+  "height": 120,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Fresenius_Kabi_Logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Fresenius_Kabi_Logo.svg"
+ },
+ {
+  "brand": "Shilpa Medicare",
+  "slug": "shilpa-medicare",
+  "file": "shilpa-medicare.png",
+  "width": 286,
+  "height": 90,
+  "source_url": "https://www.vbshilpa.com/images/vb-shilpa.png",
+  "license": "trademark — official website",
+  "notes": "Site now branded 'VB Shilpa'; this is the Shilpa header logo"
+ },
+ {
+  "brand": "Micro Labs",
+  "slug": "micro-labs",
+  "file": "micro-labs.png",
+  "width": 2305,
+  "height": 2850,
+  "source_url": "https://www.microlabsltd.com/assets/custom/new_logo.jpg",
+  "license": "trademark — official website",
+  "notes": "JPG converted to PNG, whitespace trimmed"
+ },
+ {
+  "brand": "Aurobindo Pharma",
+  "slug": "aurobindo-pharma",
+  "file": "aurobindo-pharma.svg",
+  "width": 43,
+  "height": 19,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/d/dd/Aurobindo_Pharma_logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "AuroNext is an Aurobindo unit; file page: https://en.wikipedia.org/wiki/File:Aurobindo_Pharma_logo.svg"
+ },
+ {
+  "brand": "IFFCO",
+  "slug": "iffco",
+  "file": "iffco.svg",
+  "width": 99,
+  "height": 60,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/0/05/Indian_Farmers_Fertiliser_Cooperative_Logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Indian_Farmers_Fertiliser_Cooperative_Logo.svg"
+ },
+ {
+  "brand": "FACT",
+  "slug": "fact",
+  "file": "fact.png",
+  "width": 206,
+  "height": 83,
+  "source_url": "https://fact.co.in/images/logo.png",
+  "license": "trademark — official website",
+  "notes": ""
+ },
+ {
+  "brand": "Chambal Fertilisers",
+  "slug": "chambal-fertilisers",
+  "file": "chambal-fertilisers.svg",
+  "width": 219,
+  "height": 250,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/8/8d/Chambal_Fertilisers_logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Chambal_Fertilisers_logo.svg"
+ },
+ {
+  "brand": "Coromandel International (Godavari Fertilisers)",
+  "slug": "coromandel",
+  "file": "coromandel.svg",
+  "width": 604,
+  "height": 155,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/3/32/Coromandel_Logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Coromandel_Logo.svg"
+ },
+ {
+  "brand": "UPL",
+  "slug": "upl",
+  "file": "upl.svg",
+  "width": 705,
+  "height": 462,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/b/b9/UPL_official_logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:UPL_official_logo.svg"
+ },
+ {
+  "brand": "Raymond",
+  "slug": "raymond",
+  "file": "raymond.svg",
+  "width": 450,
+  "height": 151,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Raymond_logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Raymond_logo.svg"
+ },
+ {
+  "brand": "Alok Industries",
+  "slug": "alok-industries",
+  "file": "alok-industries.svg",
+  "width": 1650.89,
+  "height": 294.57,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Alok_Industries_ltd.svg",
+  "license": "CC BY-SA 4.0",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Alok_Industries_ltd.svg"
+ },
+ {
+  "brand": "Indorama",
+  "slug": "indorama",
+  "file": "indorama.svg",
+  "width": 61.95,
+  "height": 15.81,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/f/f0/Indorama_Ventures_logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "DOUBTFUL: this is Indorama Ventures (Thailand); confirm the client did not mean Indorama Corporation / Indorama Synthetics; file page: https://en.wikipedia.org/wiki/File:Indorama_Ventures_logo.svg"
+ },
+ {
+  "brand": "Grasim / Birla Cellulose",
+  "slug": "grasim",
+  "file": "grasim.svg",
+  "width": 3360,
+  "height": 3282.88,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/8/8d/Aditya_Birla_Grasim_Logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "Aditya Birla Grasim mark; file page: https://en.wikipedia.org/wiki/File:Aditya_Birla_Grasim_Logo.svg"
+ },
+ {
+  "brand": "MRF",
+  "slug": "mrf",
+  "file": "mrf.svg",
+  "width": 353.62,
+  "height": 71.81,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Madras_Rubber_Factory_Logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Madras_Rubber_Factory_Logo.svg"
+ },
+ {
+  "brand": "Birla Tyres",
+  "slug": "birla-tyres",
+  "file": "birla-tyres.png",
+  "width": 452,
+  "height": 208,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/9/95/Birla_Tyres_logo.png",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Birla_Tyres_logo.png"
+ },
+ {
+  "brand": "Aban Offshore",
+  "slug": "aban-offshore",
+  "file": "aban-offshore.svg",
+  "width": 399.81,
+  "height": 222.73,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Aban_Logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Aban_Logo.svg"
+ },
+ {
+  "brand": "Transocean",
+  "slug": "transocean",
+  "file": "transocean.svg",
+  "width": 136.76,
+  "height": 31.17,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Transocean_logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Transocean_logo.svg"
+ },
+ {
+  "brand": "APM Terminals Pipavav (Gujarat Pipavav Port)",
+  "slug": "apm-terminals-pipavav",
+  "file": "apm-terminals-pipavav.svg",
+  "width": 58.87,
+  "height": 4.58,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/e/ee/APM_Terminals_logo.svg",
+  "license": "PD (en.wikipedia non-free file)",
+  "notes": "APM Terminals parent wordmark; file page: https://en.wikipedia.org/wiki/File:APM_Terminals_logo.svg"
+ },
+ {
+  "brand": "ABB",
+  "slug": "abb",
+  "file": "abb.svg",
+  "width": 88.2,
+  "height": 35,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/ABB_logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:ABB_logo.svg"
+ },
+ {
+  "brand": "Siemens",
+  "slug": "siemens",
+  "file": "siemens.svg",
+  "width": 1000,
+  "height": 159,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Siemens_AG_logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Siemens_AG_logo.svg"
+ },
+ {
+  "brand": "thyssenkrupp",
+  "slug": "thyssenkrupp",
+  "file": "thyssenkrupp.svg",
+  "width": 110,
+  "height": 85,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Thyssenkrupp_AG_Logo_2015.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Thyssenkrupp_AG_Logo_2015.svg"
+ },
+ {
+  "brand": "Schneider Electric",
+  "slug": "schneider-electric",
+  "file": "schneider-electric.svg",
+  "width": 188.74,
+  "height": 57,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Schneider_Electric_2007.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Schneider_Electric_2007.svg"
+ },
+ {
+  "brand": "FLSmidth",
+  "slug": "flsmidth",
+  "file": "flsmidth.svg",
+  "width": 770.84,
+  "height": 210.64,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/FlSmidth_Logo.svg",
+  "license": "Public domain",
+  "notes": "Matches current en.wikipedia infobox logo; file page: https://commons.wikimedia.org/wiki/File:FlSmidth_Logo.svg"
+ },
+ {
+  "brand": "Larsen & Toubro",
+  "slug": "larsen-toubro",
+  "file": "larsen-toubro.svg",
+  "width": 50.25,
+  "height": 50.25,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/a/a1/Larsen%26Toubro_logo.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Larsen%26Toubro_logo.svg"
+ },
+ {
+  "brand": "BEUMER Group",
+  "slug": "beumer-group",
+  "file": "beumer-group.svg",
+  "width": 343.27,
+  "height": 85.93,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Beumer_Group_Logo.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Beumer_Group_Logo.svg"
+ },
+ {
+  "brand": "HD Hyundai Heavy Industries",
+  "slug": "hd-hyundai-heavy-industries",
+  "file": "hd-hyundai-heavy-industries.svg",
+  "width": 147.3,
+  "height": 23.9,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Hyundai_Heavy_Industries_logo_%28english%29.svg",
+  "license": "Public domain",
+  "notes": "file page: https://commons.wikimedia.org/wiki/File:Hyundai_Heavy_Industries_logo_(english).svg"
+ },
+ {
+  "brand": "Qantas",
+  "slug": "qantas",
+  "file": "qantas.svg",
+  "width": 125.27,
+  "height": 25.54,
+  "source_url": "https://upload.wikimedia.org/wikipedia/en/0/02/Qantas_Airways_logo_2016.svg",
+  "license": "Fair use (en.wikipedia non-free file)",
+  "notes": "file page: https://en.wikipedia.org/wiki/File:Qantas_Airways_logo_2016.svg"
+ },
+ {
+  "brand": "Lafarge (Holcim)",
+  "slug": "holcim",
+  "file": "holcim.svg",
+  "width": 284,
+  "height": 67,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/LogoHolcim2021.svg",
+  "license": "Public domain",
+  "notes": "Current Holcim logo (Lafarge India is now part of Nuvoco); file page: https://commons.wikimedia.org/wiki/File:LogoHolcim2021.svg"
+ },
+ {
+  "brand": "Arabio",
+  "slug": "arabio",
+  "file": "arabio.png",
+  "width": 1232,
+  "height": 463,
+  "source_url": "https://arabio.com/wp-content/uploads/2023/05/Arabio-Logo-Saudia-Arabia.png",
+  "license": "trademark — official website",
+  "notes": ""
+ },
+ {
+  "brand": "Asia Pacific Fibers",
+  "slug": "asia-pacific-fibers",
+  "file": "asia-pacific-fibers.png",
+  "width": 300,
+  "height": 156,
+  "source_url": "https://www.asiapacificfibers.com/wp-content/uploads/2022/06/APF-Logo-Long-300x156.png",
+  "license": "trademark — official website",
+  "notes": ""
+ }
+]

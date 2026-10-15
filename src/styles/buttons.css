@@ -12,9 +12,11 @@
 /* 2. press: quick squash */
 .btn:active{transform:scale(.965)}
 /* 3. arrow relay: arrow leaves right, re-enters from left */
-.btn .arr{display:inline-block;overflow:hidden;width:1.05em;height:1em;position:relative}
-.btn .arr i{position:absolute;inset:0;font-style:normal;line-height:1;transition:transform var(--dur-ui) var(--ease-out)}
-.btn .arr i+ i{transform:translateX(-120%)}
+.arr{display:inline-block;overflow:hidden;width:1.05em;height:1em;position:relative;vertical-align:-.12em}
+.arr i{position:absolute;inset:0;font-style:normal;line-height:1;transition:transform var(--dur-ui) var(--ease-out)}
+.arr i+ i{transform:translateX(-120%)}
+a:hover .arr i:first-child,a:focus-visible .arr i:first-child{transform:translateX(120%)}
+a:hover .arr i+ i,a:focus-visible .arr i+ i{transform:translateX(0)}
 .btn:hover .arr i:first-child,.btn:focus-visible .arr i:first-child{transform:translateX(120%)}
 .btn:hover .arr i+ i,.btn:focus-visible .arr i+ i{transform:translateX(0)}
 .btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
@@ -56,7 +58,7 @@
 .chip:active{transform:scale(.94)}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--yellow)}
 @media (prefers-reduced-motion:reduce){
-  .btn::before{transition:none}.btn:active{transform:none}.btn .arr i{transition:none}
+  .btn::before{transition:none}.btn:active{transform:none}.arr i{transition:none}
   .btn--hazard:hover::after{animation:none}.btn--quote .ripple{display:none}.badge.bump{animation:none}
   .lift,.lift img{transition:none}.lift:hover{transform:none}.lift:hover img{transform:none}
 }

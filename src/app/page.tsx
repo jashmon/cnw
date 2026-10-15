@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Arrow, SmartMark } from "@/components/Brand";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import { IndustryPanel } from "@/components/IndustryPanel";
-import { Ticker } from "@/motion/Ticker";
+import { ClientWall } from "@/components/ClientWall";
 import { ProductCard } from "@/components/ProductCard";
 import { SystemDiagram } from "@/components/SystemDiagram";
 import { stats } from "@/content/clients";
@@ -34,7 +34,6 @@ export default function Home() {
   const all = getProducts();
   const hero = getProduct("wmhs-iii");
   const heroImg = hero?.images.find((i) => i.source === "render") ?? { src: "/media/hero/wmhs-iii-render.png", w: 1161, h: 1499, alt: "SMART WMHS-III industrial telephone, 3D render", source: "render" as const, placeholder: true };
-  const codes = [...new Set(all.map((p) => p.model).filter(Boolean))];
   const industries = getIndustries().map((i) => ({ slug: i.slug, name: i.name, intro: clean(i.intro), models: i.recommendedProducts.slice(0, 5).map((sl) => getProduct(sl)).filter((p): p is NonNullable<typeof p> => !!p).map((p) => ({ model: p.model, href: productHref(p) })) }));
   const featured = FEATURED.map((sl) => getProduct(sl)).filter((p): p is NonNullable<typeof p> => !!p);
   const systems = getSystems();
@@ -60,7 +59,6 @@ export default function Home() {
           </div>
         </div>
         <div className="hazard" aria-hidden="true" />
-        <Ticker codes={codes} className={s.ticker} trackClass={s.track} />
       </section>
 
       {/* home.families: HERO-02 category tiles (Viking, Joiwo) */}
@@ -105,12 +103,10 @@ export default function Home() {
           <div>
             <p className="label">Installed at</p>
             <h2 className="h-xl" style={{ marginTop: 6 }}>On the plant floor, not just the brochure.</h2>
-            <p className="lede" style={{ marginTop: 16 }}>Cement, steel, power, fertiliser and port clients across India, and export sites in {stats.countries} countries ({stats.asOf}).</p>
+            <p className="lede" style={{ marginTop: 16 }}>Cement, steel, power, pharma, fertiliser and shipping clients across India, and {stats.intl} international projects in {stats.countries} countries.</p>
             <dl className={s.nums}>
               <div><dt className="label">Products</dt><dd>{all.length}</dd></div>
-              <div><dt className="label">Categories</dt><dd>17</dd></div>
-              <div><dt className="label">Indian client groups</dt><dd>{stats.groups}+</dd></div>
-              <div><dt className="label">Export countries</dt><dd>{stats.countries}</dd></div>
+              <div><dt className="label">Countries</dt><dd>{stats.countries}</dd></div>
             </dl>
             <Link className="btn" href="/installed-at" style={{ marginTop: 28 }}>See where SMART is installed <Arrow /></Link>
           </div>
@@ -120,6 +116,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* home.clients: full 2025 user list with logos (client request 2026-10-15) */}
+      <ClientWall />
 
       {/* home.system: PDP-06 at homepage scale (Shure "How it connects") */}
       <section className="wrap section">

@@ -2,7 +2,7 @@
  {
   "slug": "cement",
   "name": "Cement",
-  "intro": "Cement is the largest group on the SMART client list: more than 20 Indian cement groups and plants in Egypt and Bangladesh (2014 list) [[NEEDS CLIENT: updated count]]. SMART phones, PA systems and bag counters work on loading lines and plant floors where dust and noise defeat ordinary equipment.",
+  "intro": "Cement is the largest group on the SMART client list: more than 30 Indian cement groups, from UltraTech and Ambuja to Shree and Dalmia, plus plants in Egypt (2025 user list). SMART phones, PA systems and bag counters work on loading lines and plant floors where dust and noise defeat ordinary equipment.",
   "problems": [
    "Dust and plant noise drown out an ordinary phone bell. WMHS-III and WMHS-IIIWP cancel background noise at the mouthpiece, and TR-III and FL-III make incoming calls heard and seen.",
    "A team spread over a large plant needs paging, not just a call. MCS-II (loops up to 2000 m) and MCS-III give individual, zone and all-call paging.",
@@ -216,7 +216,7 @@
  {
   "slug": "steel-metals",
   "name": "Steel & Metals",
-  "intro": "Steel is one of the three core industries SMART has served, alongside cement and power. Our 2014 list includes SAIL, Tata Steel, Jindal Stainless and copper and aluminium producers [[NEEDS CLIENT: updated count]].",
+  "intro": "Steel is one of the three core industries SMART has served, alongside cement and power. The 2025 user list includes SAIL, Tata Steel, JSW Steel, Jindal Stainless, Hindalco and Vedanta.",
   "problems": [
    "Shop floors so loud that a normal ring is never heard. WMHS-IIILH adds a 40 W loud ringer and a xenon flasher, and TR-III and FL-III fit any SMART phone.",
    "Crane operators cut off by height and moving structures. CAS-HF announces over a walkie-talkie link, and CCS-HF links the cabin to up to 5 points on the crane.",

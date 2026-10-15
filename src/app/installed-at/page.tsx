@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Arrow } from "@/components/Brand";
-import { CLIENT_NAMES_CONSENT, SECTORS, domestic, international, stats } from "@/content/clients";
+import { CLIENT_NAMES_CONSENT, SECTORS, domestic, international, sitesOf, stats } from "@/content/clients";
 import s from "./installed.module.css";
 
 export const metadata: Metadata = { title: "Installed at: SMART in Indian cement, steel and power plants | Cables & Wireless Co.", description: `SMART industrial communication equipment is installed across ${stats.groups}+ Indian industrial groups and in ${stats.countries} countries abroad, led by cement and steel plants.` };
@@ -17,11 +17,11 @@ export default function InstalledAt() {
           <p className="label">Installed at</p>
           <h1 className="h-xl" style={{ marginTop: 8, maxWidth: "18ch" }}>In the control rooms of India&apos;s cement belt.</h1>
           <dl className={s.stats}>
-            <div><dt className="label">Indian client groups</dt><dd>{stats.groups}+</dd></div>
+            <div><dt className="label">Client groups</dt><dd>{stats.groups}+</dd></div>
             <div><dt className="label">Plants and units</dt><dd>{stats.plants}+</dd></div>
-            <div><dt className="label">Countries abroad</dt><dd>{stats.countries}</dd></div>
+            <div><dt className="label">Countries</dt><dd>{stats.countries}</dd></div>
           </dl>
-          <p className="mono" style={{ fontSize: ".8125rem", marginTop: 18 }}>From the company&apos;s {stats.asOf}. An updated list is on its way.</p>
+          <p className="mono" style={{ fontSize: ".8125rem", marginTop: 18 }}>From the company&apos;s {stats.asOf}.</p>
         </div>
       </section>
       <div className="hazard" aria-hidden="true" />
@@ -33,9 +33,9 @@ export default function InstalledAt() {
             if (!list.length) return null;
             return (
               <div key={sec} className={`${s.sector} reveal`}>
-                <div className={s.sh}><h3 className="h-3">{sec}</h3><span className="mono">{list.reduce((a, c) => a + c.sites, 0)} plants · {list.length} groups</span></div>
-                {CLIENT_NAMES_CONSENT ? <ul className={s.names}>{list.map((c) => <li key={c.name}>{c.name}{c.sites > 1 && <span className="mono muted"> ×{c.sites}</span>}</li>)}</ul>
-                  : <div className={s.bar} aria-hidden="true"><span style={{ width: `${Math.min(100, (list.reduce((a, c) => a + c.sites, 0) / 75) * 100)}%` }} /></div>}
+                <div className={s.sh}><h3 className="h-3">{sec}</h3><span className="mono">{list.reduce((a, c) => a + sitesOf(c), 0)} plants · {list.length} groups</span></div>
+                {CLIENT_NAMES_CONSENT ? <ul className={s.names}>{list.map((c) => <li key={c.name}><b>{c.name}</b>{c.units && <span className="muted" style={{ display: "block", fontSize: ".875rem" }}>{c.units.join(" · ")}</span>}</li>)}</ul>
+                  : <div className={s.bar} aria-hidden="true"><span style={{ width: `${Math.min(100, (list.reduce((a, c) => a + sitesOf(c), 0) / 75) * 100)}%` }} /></div>}
               </div>
             );
           })}
@@ -44,8 +44,9 @@ export default function InstalledAt() {
       </section>
       <section className="band-dark section">
         <div className={`wrap ${s.intl}`}>
-          <div><p className="label">Abroad</p><h2 className="h-1" style={{ color: "var(--yellow)", marginTop: 6 }}>Exported to {stats.countries} countries</h2></div>
+          <div><p className="label">Abroad</p><h2 className="h-1" style={{ color: "var(--yellow)", marginTop: 6 }}>{stats.intl} projects in {stats.countries} countries</h2></div>
           <ul className={s.countries}>{countries.map((c) => <li key={c}>{c}</li>)}</ul>
+          <ul className={s.intlList}>{international.map((c) => <li key={c.name}><b>{c.name}</b><span>{c.country} · {c.product}</span></li>)}</ul>
         </div>
       </section>
       <section className="wrap section">

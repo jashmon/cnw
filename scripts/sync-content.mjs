@@ -20,6 +20,16 @@ log("manifest.json", copy(path.join(proj, "07-imagery/manifest.json"), path.join
 const src = path.join(proj, "07-imagery/processed");
 if (fs.existsSync(src)) { fs.cpSync(src, path.join(site, "public/media"), { recursive: true }); console.log("ok   media"); }
 
+// client logos (07-imagery/client-logos) → public/clients + data/client-logos.json
+const logos = path.join(proj, "07-imagery/client-logos");
+if (fs.existsSync(path.join(logos, "logos.json"))) {
+  const out = path.join(site, "public/clients"); fs.mkdirSync(out, { recursive: true });
+  const list = JSON.parse(fs.readFileSync(path.join(logos, "logos.json"), "utf8"));
+  for (const l of list) if (l.file) copy(path.join(logos, path.basename(l.file)), path.join(out, path.basename(l.file)));
+  fs.writeFileSync(path.join(data, "client-logos.json"), JSON.stringify(list, null, 1));
+  console.log(`ok   ${list.length} client logos`);
+} else console.log("miss client logos");
+
 // datasheets: catalogue `pdf` (relative to 00-intake) → public/files/datasheets/<slug>.pdf
 const cat = JSON.parse(fs.readFileSync(path.join(data, "catalogue.json"), "utf8"));
 const out = path.join(site, "public/files/datasheets"); fs.mkdirSync(out, { recursive: true });
