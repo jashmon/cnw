@@ -1,7 +1,7 @@
 /* SMART button + micro-interaction system. Requires tokens.css. Reduced motion: transforms/sweeps disabled, colour changes kept. */
 .btn{--btn-bg:var(--ink);--btn-fg:var(--yellow);--btn-sweep:var(--yellow);--btn-sweep-fg:var(--ink);
-  position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;gap:.6em;
-  padding:.95em 1.35em;border:2px solid var(--btn-bg);border-radius:var(--radius-sm);
+  position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:.6em;
+  min-height:48px;padding:.6em 1.35em;line-height:1.15;border:2px solid var(--btn-bg);border-radius:var(--radius-sm);
   background:var(--btn-bg);color:var(--btn-fg);font:inherit;font-family:var(--font-display);font-weight:700;letter-spacing:.02em;
   text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;
   transition:color var(--dur-ui) var(--ease-out),transform var(--dur-micro) var(--ease-out),box-shadow var(--dur-ui) var(--ease-out)}
@@ -62,3 +62,5 @@ a:hover .arr i+ i,a:focus-visible .arr i+ i{transform:translateX(0)}
   .btn--hazard:hover::after{animation:none}.btn--quote .ripple{display:none}.badge.bump{animation:none}
   .lift,.lift img{transition:none}.lift:hover{transform:none}.lift:hover img{transform:none}
 }
+
+.btn--sm{min-height:40px;padding:.45em 1em;font-size:.9375rem}

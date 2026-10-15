@@ -11,7 +11,7 @@ export function SpecTables({ groups, model, name }: { groups: SpecGroups; model:
     <div>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "end", gap: 16, flexWrap: "wrap", marginBottom: 18 }}>
         <h2 className="h-1">Specifications</h2>
-        <button type="button" className="btn btn--ghost" style={{ padding: ".6em 1em", fontSize: ".9375rem" }}
+        <button type="button" className="btn btn--ghost btn--sm"
           onClick={async () => { try { await navigator.clipboard.writeText(asText()); setCopied(true); setTimeout(() => setCopied(false), 2200); } catch {} }}>
           {copied ? "✓ Copied" : "Copy spec text for tender"}
         </button>

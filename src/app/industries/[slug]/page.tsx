@@ -42,7 +42,7 @@ export default async function IndustryPage({ params }: PageProps<"/industries/[s
           <h1 className="h-xl" style={{ color: "var(--yellow)", marginTop: 10 }}>{ind.name}</h1>
           <p className="lede" style={{ marginTop: 14, maxWidth: "70ch" }}>{clean(ind.intro)}</p>
           <ol style={{ listStyle: "none", padding: 0, marginTop: 36, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: 12 }}>
-            {ind.problems.map((pr, i) => <li key={i} className="reveal" style={{ "--d": `${i * 80}ms`, borderTop: "2px solid var(--yellow)", paddingTop: 14 } as React.CSSProperties}><span className="mono" style={{ color: "var(--yellow)" }}>{String(i + 1).padStart(2, "0")}</span><p style={{ marginTop: 6 }}>{pr}</p></li>)}
+            {ind.problems.map((pr, i) => <li key={i} style={{ borderTop: "2px solid var(--yellow)", paddingTop: 14 } as React.CSSProperties}><span className="mono" style={{ color: "var(--yellow)" }}>{String(i + 1).padStart(2, "0")}</span><p style={{ marginTop: 6 }}>{pr}</p></li>)}
           </ol>
         </div>
       </section>

@@ -17,7 +17,7 @@ export default function VendorKit() {
         <div>
           <h2 className="h-2" style={{ marginBottom: 16 }}>What&apos;s in the kit</h2>
           <ul style={{ listStyle: "none", padding: 0, borderTop: "2px solid var(--ink)" }}>
-            {DOCS.map((d, i) => <li key={d} className="reveal" style={{ "--d": `${i * 40}ms`, display: "flex", justifyContent: "space-between", gap: 12, padding: "14px 0", borderBottom: "1px solid var(--line)" } as React.CSSProperties}><span>{d}</span><span className="mono muted" style={{ fontSize: ".8125rem", whiteSpace: "nowrap" }}>On request</span></li>)}
+            {DOCS.map((d) => <li key={d} style={{ display: "flex", justifyContent: "space-between", gap: 12, padding: "14px 0", borderBottom: "1px solid var(--line)" } as React.CSSProperties}><span>{d}</span><span className="mono muted" style={{ fontSize: ".8125rem", whiteSpace: "nowrap" }}>On request</span></li>)}
           </ul>
         </div>
         <div><h2 className="h-2" style={{ marginBottom: 16 }}>Request the kit</h2><EnquiryForm kind="vendor-kit" submitLabel="Request vendor kit" /></div>

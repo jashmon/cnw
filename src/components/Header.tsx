@@ -34,7 +34,7 @@ export function useSearch(index: SearchItem[], q: string) {
   }, [index, q]);
 }
 
-function Search({ index, onGo }: { index: SearchItem[]; onGo?: () => void }) {
+export function Search({ index, onGo, large = false, placeholder = "Search models, e.g. WMHS-III" }: { index: SearchItem[]; onGo?: () => void; large?: boolean; placeholder?: string }) {
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
   const [sel, setSel] = useState(0);
@@ -43,10 +43,10 @@ function Search({ index, onGo }: { index: SearchItem[]; onGo?: () => void }) {
   const res = useSearch(index, q);
   const go = (href: string) => { setOpen(false); setQ(""); onGo?.(); router.push(href); };
   return (
-    <div className={s.search}>
+    <div className={`${s.search} ${large ? s.searchLg : ""}`}>
       <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="2" /><path d="M11 11l4 4" stroke="currentColor" strokeWidth="2" /></svg>
       <label htmlFor={`${id}-i`} className="sr-only">Search models</label>
-      <input id={`${id}-i`} value={q} placeholder="Search models, e.g. WMHS-III" autoComplete="off" role="combobox" aria-expanded={open && q.trim().length > 1} aria-autocomplete="list" aria-controls={`${id}-r`} aria-activedescendant={open && res[sel] ? `${id}-o${sel}` : undefined}
+      <input id={`${id}-i`} value={q} placeholder={placeholder} autoComplete="off" role="combobox" aria-expanded={open && q.trim().length > 1} aria-autocomplete="list" aria-controls={`${id}-r`} aria-activedescendant={open && res[sel] ? `${id}-o${sel}` : undefined}
         onChange={(e) => { setQ(e.target.value); setOpen(true); setSel(0); }} onFocus={() => setOpen(true)} onBlur={() => setTimeout(() => setOpen(false), 150)}
         onKeyDown={(e) => {
           if (e.key === "ArrowDown") { e.preventDefault(); setSel((v) => Math.min(v + 1, res.length - 1)); }

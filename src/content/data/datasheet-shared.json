@@ -1,0 +1,20 @@
+{
+ "mcs-ip": [
+  "wmhs-ip-pa-telephone"
+ ],
+ "wmhs-ip-pa-telephone": [
+  "mcs-ip"
+ ],
+ "isas": [
+  "exa-pa-250"
+ ],
+ "exa-pa-250": [
+  "isas"
+ ],
+ "nsdu-44l": [
+  "nsdu-83l"
+ ],
+ "nsdu-83l": [
+  "nsdu-44l"
+ ]
+}

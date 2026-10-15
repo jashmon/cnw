@@ -31,7 +31,7 @@ export default async function SystemPage({ params }: PageProps<"/systems/[slug]"
         <h2 className="h-1" style={{ marginBottom: 20 }}>How it works</h2>
         <ol style={{ listStyle: "none", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: 12 }}>
           {sy.howItWorks.map((st, i) => (
-            <li key={i} className="reveal" style={{ "--d": `${i * 70}ms`, background: "var(--surface-2)", boxShadow: "var(--shadow-inset-line)", borderRadius: "var(--radius-md)", padding: 20, borderTop: "4px solid var(--yellow)" } as React.CSSProperties}>
+            <li key={i} style={{ background: "var(--surface-2)", boxShadow: "var(--shadow-inset-line)", borderRadius: "var(--radius-md)", padding: 20, borderTop: "4px solid var(--yellow)" } as React.CSSProperties}>
               <span className="mono muted">{String(i + 1).padStart(2, "0")}</span><p style={{ marginTop: 8 }}>{st}</p>
             </li>
           ))}

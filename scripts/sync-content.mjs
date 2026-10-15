@@ -40,6 +40,14 @@ for (const p of cat) {
   if (copy(from, path.join(out, `${p.slug}.pdf`))) { sizes[p.slug] = fs.statSync(from).size; n++; }
 }
 fs.writeFileSync(path.join(data, "datasheets.json"), JSON.stringify(sizes, null, 1));
+// datasheets shared by several models (same file) → "Shared with …" note on the product page
+import("node:crypto").then(({ createHash }) => {
+  const by = {};
+  for (const slug of Object.keys(sizes)) { const h = createHash("md5").update(fs.readFileSync(path.join(out, `${slug}.pdf`))).digest("hex"); (by[h] ??= []).push(slug); }
+  const shared = {};
+  for (const g of Object.values(by)) if (g.length > 1) for (const s of g) shared[s] = g.filter((x) => x !== s);
+  fs.writeFileSync(path.join(data, "datasheet-shared.json"), JSON.stringify(shared, null, 1));
+});
 console.log(`ok   ${n} datasheets`);
 
 // demo audio

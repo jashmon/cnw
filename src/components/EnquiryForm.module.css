@@ -8,3 +8,12 @@
 @keyframes tick{0%{transform:scale(.4);opacity:0}60%{transform:scale(1.12)}100%{transform:none}}
 @media (max-width:640px){.row{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.done,.tick{animation:none}}
+.notice{background:var(--yellow-tint);border-left:4px solid var(--ink);padding:12px 14px;font-size:.9375rem;line-height:1.5;border-radius:var(--radius-sm)}
+.req{font-size:.875rem;color:var(--muted)}
+.req span{color:var(--error);font-weight:700}
+.summary{border:2px solid var(--error);border-radius:var(--radius-sm);padding:12px 14px;background:color-mix(in srgb,var(--error) 6%,var(--surface-2))}
+.summary b{color:var(--error)}
+.summary ul{margin:6px 0 0;padding-left:18px}
+.summary a{color:var(--ink)}
+.linkBtn{border:0;background:none;padding:0;font:inherit;color:inherit;text-decoration:underline;text-decoration-color:var(--yellow-deep);text-decoration-thickness:2px;text-underline-offset:3px;cursor:pointer}
+.done:focus{outline:none}

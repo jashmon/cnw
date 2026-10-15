@@ -82,7 +82,9 @@ export default async function ProductPage({ params }: PageProps<"/products/[cate
           {p.keySpecs.length > 0 && <div className="chips" style={{ marginTop: 18 }}>{p.keySpecs.map((k) => <span key={k} className="spec-chip">{k}</span>)}</div>}
           <div className={s.actions}>
             <AddToQuote item={item} />
-            {p.datasheet && <a className="btn btn--ghost" href={p.datasheet.href} download={`SMART-${p.model || p.slug}-datasheet.pdf`}>Datasheet · PDF {kb(p.datasheet.bytes)} <span className="arr" aria-hidden="true"><i>↓</i><i>↓</i></span></a>}
+            {p.datasheet
+              ? <a className="btn btn--ghost" href={p.datasheet.href} download={`SMART-${p.model || p.slug}-datasheet.pdf`}>Datasheet · PDF {kb(p.datasheet.bytes)} <span className="arr" aria-hidden="true"><i>↓</i><i>↓</i></span></a>
+              : <a className="btn btn--ghost" href={waLink(`Hello, please send the datasheet for SMART ${code}.`)} target="_blank" rel="noopener">Datasheet on request</a>}
           </div>
           <p className={s.ask}><a className="link" href={waLink(`Hello, I have a question about SMART ${code}.`)} target="_blank" rel="noopener">Ask an engineer about {p.model || "this"} on WhatsApp →</a></p>
           <dl className={s.facts}>
@@ -97,19 +99,19 @@ export default async function ProductPage({ params }: PageProps<"/products/[cate
         <section className={s.ideal}>
           <div className="wrap">
             <h2 className="label" style={{ color: "var(--ink)" }}>Ideal for</h2>
-            <ul className={s.pills}>{p.idealFor.map((x, n) => <li key={x} className="reveal" style={{ "--d": `${n * 50}ms` } as React.CSSProperties}><span aria-hidden="true">✓</span>{x}</li>)}</ul>
+            <ul className={s.pills}>{p.idealFor.map((x) => <li key={x}><span aria-hidden="true">✓</span>{x}</li>)}</ul>
           </div>
         </section>
       )}
 
       <section className={`wrap section ${s.two}`}>
-        <div className="reveal">
+        <div>
           <h2 className="h-1" style={{ marginBottom: 16 }}>What it does</h2>
           <p className="lede measure" style={{ maxWidth: "60ch" }}>{p.intro}</p>
         </div>
         {p.highlights.length > 0 && (
           <ol className={s.hl}>
-            {p.highlights.map((h, n) => <li key={h} className="reveal" style={{ "--d": `${n * 60}ms` } as React.CSSProperties}><span className="mono">{String(n + 1).padStart(2, "0")}</span><p>{h}</p></li>)}
+            {p.highlights.map((h, n) => <li key={h}><span className="mono">{String(n + 1).padStart(2, "0")}</span><p>{h}</p></li>)}
           </ol>
         )}
       </section>
@@ -147,7 +149,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[cate
             <div>
               <h2 className="h-2" style={{ marginBottom: 14 }}>Downloads</h2>
               <a className={s.file} href={p.datasheet.href} download={`SMART-${p.model || p.slug}-datasheet.pdf`}>
-                <span className={s.ext}>PDF</span><span><b>SMART {code} datasheet</b><small className="mono">{kb(p.datasheet.bytes)} · original client datasheet</small></span><span aria-hidden="true">↓</span>
+                <span className={s.ext}>PDF</span><span><b>SMART {code} datasheet</b><small className="mono">{kb(p.datasheet.bytes)}{p.datasheet.sharedWith.length > 0 ? ` · shared with ${p.datasheet.sharedWith.map((x) => all.find((a) => a.slug === x)?.model ?? x).join(", ")}` : ""}</small></span><span aria-hidden="true">↓</span>
               </a>
             </div>
           )}

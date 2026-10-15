@@ -11,19 +11,35 @@ import s from "./QuoteDrawer.module.css";
 export function QuoteDrawer() {
   const q = useQuote();
   const panel = useRef<HTMLDivElement>(null);
+  const layer = useRef<HTMLDivElement>(null);
+  // Modal dialog: focus moves in, Tab/Shift+Tab are contained, the page behind is inert, Escape closes, focus returns.
   useEffect(() => {
     if (!q.open) return;
     const prev = document.activeElement as HTMLElement | null;
-    panel.current?.querySelector<HTMLElement>("button, a")?.focus();
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") q.setOpen(false); };
+    const focusables = () => [...(panel.current?.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])') ?? [])].filter((el) => el.offsetParent !== null);
+    focusables()[0]?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { q.setOpen(false); return; }
+      if (e.key !== "Tab") return;
+      const f = focusables(); if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && (document.activeElement === first || !panel.current?.contains(document.activeElement))) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && (document.activeElement === last || !panel.current?.contains(document.activeElement))) { e.preventDefault(); first.focus(); }
+    };
+    const behind = [...document.body.children].filter((el) => el !== layer.current && !el.contains(layer.current) && el.tagName !== "SCRIPT" && !el.matches('[role="status"]')) as HTMLElement[];
+    behind.forEach((el) => el.setAttribute("inert", ""));
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
-    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = ""; prev?.focus?.(); };
+    return () => {
+      document.removeEventListener("keydown", onKey); document.body.style.overflow = "";
+      behind.forEach((el) => el.removeAttribute("inert"));
+      prev?.focus?.();
+    };
   }, [q.open]); // eslint-disable-line react-hooks/exhaustive-deps
   const wa = waLink(`Hello Cables & Wireless Co., please quote for:\n${q.lines.map((l) => `• ${l.model} ${l.name} × ${l.qty}`).join("\n")}`);
   return (
     <>
-      <div className={s.layer}>
+      <div className={s.layer} ref={layer}>
       <div className={`${s.scrim} ${q.open ? s.open : ""}`} onClick={() => q.setOpen(false)} aria-hidden="true" />
       <div ref={panel} className={`${s.panel} ${q.open ? s.open : ""}`} role="dialog" aria-modal="true" aria-label="Quote list" aria-hidden={!q.open} inert={!q.open}>
         <div className={s.head}>

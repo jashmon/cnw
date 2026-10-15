@@ -4,12 +4,13 @@ import Link from "next/link";
 import { Arrow, SmartMark } from "@/components/Brand";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import { IndustryPanel } from "@/components/IndustryPanel";
-import { ClientWall } from "@/components/ClientWall";
+import { LogoWall } from "@/components/ClientWall";
+import { Search } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
 import { SystemDiagram } from "@/components/SystemDiagram";
 import { stats } from "@/content/clients";
 import { company, waLink } from "@/content/company";
-import { getFamilies, getIndustries, getProduct, getProducts, getSystems, productHref } from "@/lib/catalogue";
+import { getFamilies, getIndustries, getProduct, getProducts, getSystems, productHref, searchIndex } from "@/lib/catalogue";
 import { clean } from "@/lib/text";
 import s from "./home.module.css";
 
@@ -40,31 +41,37 @@ export default function Home() {
 
   return (
     <>
-      {/* home.hero: HERO-01 + HERO-03 (Talkaphone single product, DEWALT yellow) + MOTION-02 signal rings */}
+      {/* home.hero: HERO-01 + HERO-03 (Talkaphone single product, DEWALT yellow). Catalogue access in the first view (search + families). */}
       <section className={`band-yellow ${s.hero}`}>
         <div className={`wrap ${s.heroIn}`}>
           <div className={s.heroText}>
-            <div className={s.eyebrow}><SmartMark height={40} /><span className="label">Industrial communication · Nagpur</span></div>
+            <div className={s.eyebrow}><SmartMark height={34} /><span className="label">Industrial communication · Nagpur</span></div>
             <h1 className={s.h1}>Built for where water, dust and weather wreak havoc.</h1>
-            <p className={s.sub}>SMART industrial telephones, plant PA systems, emergency call boxes and bag counters, designed and manufactured by Cables &amp; Wireless Co. Working in cement, steel and power plants across India and at export sites in {stats.countries} countries.</p>
-            <div className={s.ctas}>
-              <Link className="btn" href="/products">Browse {all.length} products <Arrow /></Link>
-              <Link className="btn btn--ghost" href="/quote">Request a quote</Link>
+            <p className={s.sub}>SMART industrial telephones, PA systems, call boxes and bag counters, designed and built in Nagpur. {all.length} models, most with a datasheet to download.</p>
+            <div className={s.find}>
+              <Search index={searchIndex()} large placeholder={`Search ${all.length} models, e.g. WMHS-III or hooter`} />
+              <nav aria-label="Product families" className={s.famLinks}>
+                {fams.map((f) => <Link key={f.slug} href={`/products#${f.slug}`}>{f.name}</Link>)}
+              </nav>
             </div>
-            <p className={s.call}>Call <a href={`tel:${company.phones[0].tel}`}>{company.phones[0].display}</a> · <a href={waLink("Hello Cables & Wireless Co.")} target="_blank" rel="noopener">WhatsApp</a> · {company.hours}</p>
+            <div className={s.ctas}>
+              <Link className="btn" href="/quote">Request a quote <Arrow /></Link>
+              <Link className="btn btn--ghost" href="/products">All products</Link>
+              <span className={s.call}><a href={`tel:${company.phones[0].tel}`}>{company.phones[0].display}</a> · <a href={waLink("Hello Cables & Wireless Co.")} target="_blank" rel="noopener">WhatsApp</a></span>
+            </div>
           </div>
           <div className={s.media}>
             <svg className={s.rings} viewBox="0 0 100 100" aria-hidden="true">{[14, 24, 34, 44].map((r) => <circle key={r} cx="50" cy="50" r={r} />)}</svg>
-            <Image className={s.render} src={heroImg.src} alt={heroImg.alt} width={heroImg.w} height={heroImg.h} priority sizes="(max-width:1023px) 78vw, 40vw" quality={85} />
+            <Image className={s.render} src={heroImg.src} alt={heroImg.alt} width={heroImg.w} height={heroImg.h} priority sizes="(max-width:1023px) 60vw, 32vw" quality={75} />
           </div>
         </div>
         <div className="hazard" aria-hidden="true" />
       </section>
 
-      {/* home.families: HERO-02 category tiles (Viking, Joiwo) */}
+      {/* home.families: HERO-02 category tiles (Viking, Joiwo). Text and image in separate areas. */}
       <section className="wrap section">
         <div className={s.secHead}>
-          <div><p className="label">Products</p><h2 className="h-xl" style={{ marginTop: 6 }}>Five families. {all.length} models.</h2><p className="muted" style={{ marginTop: 10 }}>Start with the job. Every model has its datasheet one click away.</p></div>
+          <div><p className="label">Products</p><h2 className="h-xl" style={{ marginTop: 6 }}>Five families. {all.length} models.</h2></div>
           <Link className="link" href="/products" style={{ fontWeight: 600 }}>All {all.length} products →</Link>
         </div>
         <div className={s.fams}>
@@ -73,10 +80,9 @@ export default function Home() {
             const img = p?.images[0];
             const n = f.categories.reduce((a, c) => a + c.products.length, 0);
             return (
-              <Link key={f.slug} href={`/products#${f.slug}`} className={`${s.fam} ${i === 0 ? s.big : ""} reveal`} style={{ "--d": `${i * 70}ms` } as React.CSSProperties}>
-                <div><h3>{f.name}</h3><p style={{ marginTop: 8 }}>{f.cardLine}</p></div>
-                <span className={s.count}>{n} models →</span>
-                {img && <Image className={s.famImg} src={img.src} alt="" width={img.w} height={img.h} sizes="(max-width:600px) 46vw, 22vw" />}
+              <Link key={f.slug} href={`/products#${f.slug}`} className={`${s.fam} ${i === 0 ? s.big : ""}`}>
+                <div className={s.famText}><h3>{f.name}</h3><p>{f.cardLine}</p><span className={s.count}>{n} models →</span></div>
+                <div className={s.famMedia}>{img && <Image className={s.famImg} src={img.src} alt="" width={img.w} height={img.h} sizes="(max-width:600px) 60vw, 20vw" />}</div>
               </Link>
             );
           })}
@@ -97,28 +103,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* home.installed: TRUST-02 + TRUST-05 (names withheld until consent) */}
+      {/* home.clients: concise credibility (TRUST-02/04); the full sector directory lives on /installed-at */}
       <section className="band-yellow section">
-        <div className={`wrap ${s.inst}`}>
-          <div>
-            <p className="label">Installed at</p>
-            <h2 className="h-xl" style={{ marginTop: 6 }}>On the plant floor, not just the brochure.</h2>
-            <p className="lede" style={{ marginTop: 16 }}>Cement, steel, power, pharma, fertiliser and shipping clients across India, and {stats.intl} international projects in {stats.countries} countries.</p>
+        <div className="wrap">
+          <div className={s.secHead}>
+            <div><p className="label">Clients · {stats.asOf}</p><h2 className="h-xl" style={{ marginTop: 6, maxWidth: "20ch" }}>In {stats.plants}+ plants across India and {stats.countries} countries.</h2></div>
             <dl className={s.nums}>
-              <div><dt className="label">Products</dt><dd>{all.length}</dd></div>
+              <div><dt className="label">Client groups</dt><dd>{stats.groups}+</dd></div>
+              <div><dt className="label">Plants &amp; units</dt><dd>{stats.plants}+</dd></div>
               <div><dt className="label">Countries</dt><dd>{stats.countries}</dd></div>
             </dl>
-            <Link className="btn" href="/installed-at" style={{ marginTop: 28 }}>See where SMART is installed <Arrow /></Link>
           </div>
-          <div className={s.photos}>
-            <figure className={s.ph1}><Image src="/media/site/site-emergency-call-box.jpg" alt="SMART emergency call box mounted on a wall" fill sizes="(max-width:1023px) 70vw, 34vw" style={{ objectFit: "cover" }} /></figure>
-            <figure className={s.ph2}><Image src="/media/site/site-stairway.jpg" alt="Yellow SMART telephone on a cement plant stairway" fill sizes="(max-width:1023px) 50vw, 22vw" style={{ objectFit: "cover" }} /></figure>
+          <LogoWall limit={24} />
+          <div style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+            <Link className="btn" href="/installed-at">All {stats.groups} client groups by sector <Arrow /></Link>
+            <span className="mono" style={{ fontSize: ".8125rem" }}>Logos are trademarks of their owners.</span>
           </div>
         </div>
       </section>
-
-      {/* home.clients: full 2025 user list with logos (client request 2026-10-15) */}
-      <ClientWall />
 
       {/* home.system: PDP-06 at homepage scale (Shure "How it connects") */}
       <section className="wrap section">

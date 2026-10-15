@@ -4,7 +4,7 @@
 .media{display:block;background:color-mix(in srgb,var(--surface) 55%,var(--surface-2));aspect-ratio:1/1;padding:8%;overflow:hidden}
 .well{width:100%;height:100%}
 .body{padding:16px 18px 18px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;flex:1}
-.name{font-size:1.375rem;font-weight:800;line-height:1.08}
+.name{font-size:1.1875rem;font-weight:700;line-height:1.15}
 .title{text-decoration:none}
 .title::after{content:"";position:absolute;inset:0;z-index:1}
 .line{color:var(--muted);font-size:.9688rem;line-height:1.45}

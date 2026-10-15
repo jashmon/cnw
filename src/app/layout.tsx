@@ -12,7 +12,7 @@ import "./globals.css";
 // Fonts chosen at checkpoint 1: Barlow Condensed (display) + Barlow (text) + IBM Plex Mono (model codes). All OFL, self-hosted by next/font.
 const display = Barlow_Condensed({ subsets: ["latin"], weight: ["700", "800", "900"], variable: "--ff-display", display: "swap" });
 const text = Barlow({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--ff-text", display: "swap" });
-const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--ff-mono", display: "swap" });
+const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["500", "600"], variable: "--ff-mono", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   metadataBase: new URL(company.url),

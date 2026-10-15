@@ -17,16 +17,19 @@ const VIDEOS = [
 // PDP-05 ungated downloads (E2S, Viking, Matrix). Grouped by family → category.
 export default function Downloads() {
   const fams = getFamilies();
-  const total = fams.flatMap((f) => f.categories.flatMap((c) => c.products)).map((sl) => getProduct(sl)!).filter((p) => p.datasheet).length;
+  const allP = fams.flatMap((f) => f.categories.flatMap((c) => c.products)).map((sl) => getProduct(sl)!);
+  const total = allP.filter((p) => p.datasheet).length;
+  const missing = allP.filter((p) => !p.datasheet);
   return (
     <>
       <section className="band-yellow" style={{ paddingBlock: "var(--space-8) var(--space-7)" }}>
-        <div className="wrap"><p className="label">Downloads</p><h1 className="h-xl" style={{ marginTop: 8 }}>Datasheets, demos, software.</h1><p className="lede" style={{ marginTop: 14 }}>{total} product datasheets as PDFs. No form, no sign-up.</p>
+        <div className="wrap"><p className="label">Downloads</p><h1 className="h-xl" style={{ marginTop: 8 }}>Datasheets, demos, software.</h1><p className="lede" style={{ marginTop: 14 }}>Datasheets for {total} of {allP.length} models as PDFs. No form, no sign-up.</p>
           <nav className={s.jump} aria-label="Jump to"><a href="#datasheets">Datasheets</a><a href="#audio">Voice alarm demos</a><a href="#videos">Videos</a><a href="#software">Software</a></nav></div>
       </section>
       <div className="hazard" aria-hidden="true" />
       <section id="datasheets" className="wrap section">
         <h2 className="h-1" style={{ marginBottom: 8 }}>Datasheets</h2>
+        <p className="muted" style={{ marginBottom: 8 }}>On request ({missing.length}): {missing.map((p) => p.model || p.name).join(", ")}. A few models share one document.</p>
         <p className="muted" style={{ marginBottom: 28 }}>These are the original datasheets. Some still show older contact details. For current details, see <Link className="inline" href="/contact">Contact</Link>.</p>
         {fams.map((f) => (
           <div key={f.slug} className={s.fam}>

@@ -18,7 +18,7 @@ export type Product = {
   cardLine: string; intro: string; idealFor: string[]; highlights: string[]; keySpecs: string[]; specGroups: SpecGroups;
   environment: string[]; interface: string; variants: string[]; related: string[]; faq: { q: string; a: string }[];
   seoTitle: string; metaDescription: string; needsClient: string[]; legacyNames: string[];
-  images: Img[]; datasheet: { href: string; bytes: number } | null; applications: string[];
+  images: Img[]; datasheet: { href: string; bytes: number; sharedWith: string[] } | null; applications: string[];
 };
 export type CardProduct = Pick<Product, "slug" | "model" | "name" | "category" | "categorySlug" | "cardLine" | "keySpecs" | "environment" | "interface" | "legacyNames"> & { images: Img[] };
 export const toCard = (p: Product): CardProduct => ({ slug: p.slug, model: p.model, name: p.name, category: p.category, categorySlug: p.categorySlug, cardLine: p.cardLine, keySpecs: p.keySpecs, environment: p.environment, interface: p.interface, legacyNames: p.legacyNames, images: p.images.slice(0, 1) });
@@ -59,6 +59,7 @@ function build() {
   const voice = new Map(read<VoiceRaw[]>("products.json", []).map((v) => [v.slug, v]));
   const man = new Map(read<ManRaw[]>("manifest.json", []).map((m) => [m.slug, m]));
   const sheets = read<Record<string, number>>("datasheets.json", {});
+  const shared = read<Record<string, string[]>>("datasheet-shared.json", {});
   const catRaw = read<Category[] | { families: { slug: string; cardLine?: string; categories: Category[] }[] }>("categories.json", []);
   const catVoice: Category[] = Array.isArray(catRaw) ? catRaw : catRaw.families.flatMap((f) => f.categories);
   const famVoice = Array.isArray(catRaw) ? [] : catRaw.families;
@@ -99,7 +100,7 @@ function build() {
       legacyNames: v.legacyNames ?? [],
       applications: c.applications ?? [],
       images,
-      datasheet: sheets[c.slug] && !WITHHOLD_DATASHEET.has(c.slug) ? { href: `/files/datasheets/${c.slug}.pdf`, bytes: sheets[c.slug] } : null,
+      datasheet: sheets[c.slug] && !WITHHOLD_DATASHEET.has(c.slug) ? { href: `/files/datasheets/${c.slug}.pdf`, bytes: sheets[c.slug], sharedWith: shared[c.slug] ?? [] } : null,
     };
   });
   const slugs = new Set(products.map((p) => p.slug));

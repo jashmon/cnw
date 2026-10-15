@@ -37,42 +37,49 @@ const dialogVisible = await p.locator('[role="dialog"][aria-label="Quote list"]'
 check("drawer opens", dialogVisible);
 const focusedInDrawer = await p.evaluate(() => !!document.activeElement?.closest('[role="dialog"]'));
 check("focus moves into the drawer", focusedInDrawer);
+let escaped = 0;
+for (let i = 0; i < 25; i++) { await p.keyboard.press(i % 2 ? "Tab" : "Shift+Tab"); if (!(await p.evaluate(() => !!document.activeElement?.closest('[role="dialog"]')))) escaped++; }
+check("Tab / Shift+Tab stay inside the drawer (25 presses)", escaped === 0, `${escaped} escapes`);
+check("page behind the drawer is inert", await p.evaluate(() => document.querySelector("main")?.hasAttribute("inert") === true));
 await p.click('button[aria-label="Increase"]');
 const qty = await p.inputValue('input[aria-label="Quantity"]');
 check("quantity stepper works", qty === "2", qty);
 await p.keyboard.press("Escape");
 await p.waitForTimeout(350);
 check("Escape closes the drawer", !(await p.locator('[role="dialog"][aria-label="Quote list"]').isVisible()));
+check("focus returns to the quote button", await p.evaluate(() => document.activeElement?.hasAttribute("data-quote-badge") === true));
 
 // persistence
 await p.reload({ waitUntil: "networkidle" });
 const badge2 = await p.locator('button[data-quote-badge] .badge').textContent();
 check("quote list persists across reload", badge2?.trim() === "1", badge2);
 
-// quote page: validation then submit
+// quote page: requirements, validation (summary + focus), then WhatsApp handoff with models + quantities
 await p.goto(base + "/quote", { waitUntil: "networkidle" });
 check("quote page lists the model", (await p.locator("text=WMHS-III").count()) > 0);
-await p.getByRole("button", { name: /Send quote request/ }).click();
-await p.waitForTimeout(400);
-const nameErr = await p.locator("#e-name").textContent().catch(() => "");
-check("validation error shown for empty name", /name/i.test(nameErr || ""), nameErr);
+check("delivery notice shown before the form", (await p.locator("text=How this form sends").count()) > 0);
+check("required fields are stated", (await p.locator("#req-note").count()) > 0);
+await p.getByRole("button", { name: /Send quote request on WhatsApp/ }).click();
+await p.waitForTimeout(300);
+check("error summary announced (role=alert)", (await p.locator('[role="alert"]').count()) > 0);
+check("focus moves to the first invalid field", await p.evaluate(() => document.activeElement?.id === "f-name"));
+check("error linked to its field", await p.evaluate(() => document.getElementById("f-name")?.getAttribute("aria-describedby") === "e-name"));
 await p.fill("#f-name", "QA Test Engineer");
 await p.fill("#f-phone", "+91 90000 00000");
-await p.getByRole("button", { name: /Send quote request/ }).click();
-await p.waitForSelector("text=Enquiry received.", { timeout: 6000 }).catch(() => {});
-const ref = await p.locator("b.mono").first().textContent().catch(() => "");
-check("submission returns a reference", /^CW-\d{6}-[A-Z0-9]{4}$/.test(ref || ""), ref);
-const badge3 = await p.locator('button[data-quote-badge] .badge').textContent();
-check("quote list clears after sending", badge3?.trim() === "0", badge3);
+await ctx.route(/wa\.me/, (r) => r.fulfill({ status: 200, body: "ok" }));
+const [popup] = await Promise.all([ctx.waitForEvent("page"), p.getByRole("button", { name: /Send quote request on WhatsApp/ }).click()]);
+const waText = decodeURIComponent(new URL(popup.url()).searchParams.get("text") || "");
+check("WhatsApp handoff carries model + quantity", /WMHS-III .* × 2/.test(waText), waText.split("\n").find((l) => l.includes("WMHS")) || waText.slice(0, 60));
+check("handoff carries contact details", /QA Test Engineer/.test(waText) && /90000/.test(waText));
+await popup.close();
+check("confirmation explains the next step", (await p.locator("text=Press").count()) > 0);
 
-// network failure path
+// contact form: email handoff
 await p.goto(base + "/contact", { waitUntil: "networkidle" });
-await p.route("**/api/enquiry", (r) => r.abort());
-await p.fill("#f-name", "QA"); await p.fill("#f-email", "qa@example.com"); await p.fill("#f-msg", "Network failure test");
-await p.getByRole("button", { name: /Send enquiry/ }).click();
-await p.waitForTimeout(500);
-check("network failure shows a recoverable error", (await p.locator('[role="alert"]').count()) > 0);
-await p.unroute("**/api/enquiry");
+await p.fill("#f-name", "QA"); await p.fill("#f-email", "qa@example.com"); await p.fill("#f-message", "Email handoff test");
+await p.getByRole("button", { name: "Send by email" }).click().catch(() => {});
+await p.waitForTimeout(400);
+check("email handoff shows confirmation", (await p.locator("text=Your email app is open").count()) > 0);
 
 // legacy redirect + datasheet
 const r1 = await p.request.get(base + "/cnwcom-Smart_industialL%20TELEPHONE%20WITH%20HANDSET-MODEL-WMHS-III.php", { maxRedirects: 0 });

@@ -19,7 +19,7 @@
 .nav a:hover::after,.nav button:hover::after,.nav [aria-expanded="true"]::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
 .chev{transition:transform var(--dur-ui) var(--ease-out);font-size:.7em}
 [aria-expanded="true"] .chev{transform:rotate(180deg)}
-.right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.right{margin-left:auto;display:flex;align-items:center;justify-content:flex-end;gap:10px;flex:1 1 auto;min-width:0}
 .badgeBtn{position:relative;display:inline-flex;align-items:center;gap:8px;border:2px solid var(--ink);background:transparent;border-radius:var(--radius-sm);height:44px;padding:0 12px;cursor:pointer;font-family:var(--font-display);font-weight:700;
   transition:background var(--dur-micro),color var(--dur-micro),transform var(--dur-micro) var(--ease-out)}
 .badgeBtn:hover{background:var(--ink);color:var(--yellow)}
@@ -38,7 +38,7 @@
 .feat:hover img{transform:translateY(-6px) rotate(-2deg)}
 .feat strong{font-family:var(--font-display);font-weight:800;font-size:1.375rem;line-height:1.05;max-width:60%}
 /* search */
-.search{position:relative;width:min(300px,24vw)}
+.search{position:relative;flex:0 1 280px;min-width:150px}
 .search input{width:100%;height:44px;border:2px solid var(--ink);border-radius:var(--radius-sm);background:var(--surface-2);padding:0 12px 0 36px;font-family:var(--font-mono);font-size:.875rem}
 .search input:focus-visible{outline:none;box-shadow:0 0 0 3px var(--ink)}
 .search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:16px;height:16px}
@@ -69,9 +69,13 @@
 .sheet .sub a{text-decoration:none;padding:6px 0;font-size:1.0625rem}
 .sheet .acts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
 .sheet .acts a{justify-content:center}
-@media (max-width:1360px){.search{width:190px}.nav a,.nav button{padding:10px 8px;font-size:1rem}}
-@media (max-width:1240px){.search{display:none}}
-@media (max-width:1023px){.nav,.search,.right .cta{display:none}.burger{display:block}.util{display:none}}
+@media (max-width:1440px){.nav a,.nav button{padding:10px 8px;font-size:1rem}}
+@media (max-width:1280px){.nav,.right .search,.right .cta{display:none}.burger{display:block}}
+@media (max-width:1280px){.util{display:none}}
 @media (max-width:767px){.inner{height:60px}.badgeBtn .txt{display:none}}
 .cta{white-space:nowrap}
-@media (max-width:1023px){.mega{display:none}}
+@media (max-width:1280px){.mega{display:none}}
+.searchLg{flex:none;width:100%;max-width:560px;min-width:0}
+.searchLg input{height:56px;font-size:1rem;padding-left:46px;border-width:2px;background:var(--surface-2)}
+.searchLg svg{left:16px;width:20px;height:20px}
+.searchLg .results{width:100%}
