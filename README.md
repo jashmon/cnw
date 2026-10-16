@@ -54,3 +54,12 @@ node qa/a11y.mjs http://localhost:3200 ../11-qa/urls.txt
 node qa/flows.mjs http://localhost:3200
 node qa/links.mjs http://localhost:3200
 ```
+
+## Access lock (deployed site)
+
+On Vercel, `src/proxy.ts` serves a WIP page with a password field for every request. The right password sets a signed HttpOnly cookie that lasts 30 days.
+
+- **Password and signing secret:** the Vercel env vars `SITE_PASSWORD` and `SITE_SECRET` (Production and Preview). They are never committed. Changing either one logs everyone out.
+- **Images:** they are served unoptimised while locked, because the optimiser's internal fetches carry no cookie.
+- **Unlock:** set `SITE_LOCKED=0` in Vercel and redeploy.
+- **Test the lock locally:** run `SITE_LOCKED=1 SITE_PASSWORD=… SITE_SECRET=… npm run build && npm run start`.
