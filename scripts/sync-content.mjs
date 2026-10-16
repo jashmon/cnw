@@ -18,7 +18,8 @@ log("manifest.json", copy(path.join(proj, "07-imagery/manifest.json"), path.join
 
 // processed product + site images → public/media
 const src = path.join(proj, "07-imagery/processed");
-if (fs.existsSync(src)) { fs.cpSync(src, path.join(site, "public/media"), { recursive: true }); console.log("ok   media"); }
+// products/ is fully generated, so clear it first: renamed files (e.g. primary.png → primary.webp) must not linger
+if (fs.existsSync(src)) { fs.rmSync(path.join(site, "public/media/products"), { recursive: true, force: true }); fs.cpSync(src, path.join(site, "public/media"), { recursive: true }); console.log("ok   media"); }
 
 // client logos (07-imagery/client-logos) → public/clients + data/client-logos.json
 const logos = path.join(proj, "07-imagery/client-logos");
