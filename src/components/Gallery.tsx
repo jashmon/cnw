@@ -1,16 +1,24 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Img } from "@/lib/catalogue";
 import s from "./Gallery.module.css";
 
 // PDP-01 gallery: large well, thumbnails, lightbox on click. Placeholder renders are flagged.
+// The lightbox is a native modal <dialog> (showModal): it sits in the browser's top layer, above the sticky header and
+// any stacking context on the page, and the page behind it is inert with focus kept inside.
 export function Gallery({ images, model }: { images: Img[]; model: string }) {
   const [i, setI] = useState(0);
   const [zoom, setZoom] = useState(false);
+  const dlg = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    const d = dlg.current; if (!d) return;
+    if (zoom && !d.open) d.showModal();
+    if (!zoom && d.open) d.close();
+  }, [zoom]);
   useEffect(() => {
     if (!zoom) return;
-    const k = (e: KeyboardEvent) => { if (e.key === "Escape") setZoom(false); if (e.key === "ArrowRight") setI((v) => (v + 1) % images.length); if (e.key === "ArrowLeft") setI((v) => (v - 1 + images.length) % images.length); };
+    const k = (e: KeyboardEvent) => { if (e.key === "ArrowRight") setI((v) => (v + 1) % images.length); if (e.key === "ArrowLeft") setI((v) => (v - 1 + images.length) % images.length); };
     addEventListener("keydown", k); return () => removeEventListener("keydown", k);
   }, [zoom, images.length]);
   if (!images.length) return <div className={s.main}><span className="label">Image coming</span></div>;
@@ -32,12 +40,10 @@ export function Gallery({ images, model }: { images: Img[]; model: string }) {
           ))}
         </ul>
       )}
-      {zoom && (
-        <div className={s.lb} role="dialog" aria-modal="true" aria-label={img.alt} onClick={() => setZoom(false)}>
-          <Image src={img.src} alt={img.alt} width={img.w} height={img.h} sizes="100vw" quality={85} className={s.lbimg} />
-          <button className={s.lbclose} aria-label="Close" autoFocus>×</button>
-        </div>
-      )}
+      <dialog ref={dlg} className={s.lb} aria-label={img.alt} onClose={() => setZoom(false)} onClick={() => setZoom(false)}>
+        {zoom && <Image src={img.src} alt={img.alt} width={img.w} height={img.h} sizes="100vw" quality={85} className={s.lbimg} />}
+        <button className={s.lbclose} aria-label="Close" autoFocus>×</button>
+      </dialog>
     </div>
   );
 }

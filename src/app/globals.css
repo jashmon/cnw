@@ -129,3 +129,6 @@ p { text-wrap: pretty; }
 .label, .mono { font-weight: 500; }
 /* the "mono" role (model codes, specs, labels) is now the same grotesk: tabular figures keep numbers aligned */
 .label, .mono, .code, .spec-chip, .table, .field label, .field input, .field select { font-variant-numeric: tabular-nums; }
+
+/* modal dialogs (gallery lightbox): the page behind does not scroll */
+html:has(dialog[open]) { overflow: hidden; }
