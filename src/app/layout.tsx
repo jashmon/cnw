@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Barlow, Barlow_Condensed, IBM_Plex_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { QuoteDrawer } from "@/components/QuoteDrawer";
@@ -9,10 +9,9 @@ import { getFamilies, getIndustries, getProduct, productHref, searchIndex } from
 import { QuoteProvider } from "@/lib/quote";
 import "./globals.css";
 
-// Fonts chosen at checkpoint 1: Barlow Condensed (display) + Barlow (text) + IBM Plex Mono (model codes). All OFL, self-hosted by next/font.
-const display = Barlow_Condensed({ subsets: ["latin"], weight: ["700", "800", "900"], variable: "--ff-display", display: "swap" });
-const text = Barlow({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--ff-text", display: "swap" });
-const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["500", "600"], variable: "--ff-mono", display: "swap", preload: false });
+// Overused Grotesk (RandomMaerks, OFL; variable 300–900) for every role: display, text and model codes (2026-10-17, user).
+// The SMART wordmark and the company logo are outlined SVGs and keep their own lettering.
+const og = localFont({ src: "../fonts/OverusedGrotesk-VF.woff2", weight: "300 900", style: "normal", variable: "--ff-og", display: "swap", fallback: ["Arial", "Helvetica", "sans-serif"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(company.url),
@@ -37,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     email: company.emails[0],
   };
   return (
-    <html lang="en-IN" className={`${display.variable} ${text.variable} ${mono.variable}`}>
+    <html lang="en-IN" className={og.variable}>
       <body>
         <a href="#main" className="skip">Skip to content</a>
         <QuoteProvider>

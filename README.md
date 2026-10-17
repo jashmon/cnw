@@ -27,7 +27,8 @@ node scripts/build-redirects.mjs  # 301 map from the old cnwcom.in / voizlink.in
 - **Legal copy:** `src/content/legal/*.md`, copied from `06-voice/copy`. "To confirm" highlights show the gaps.
 - **Brand:** `public/brand/`.
   - The SMART wordmark is the exact Lithograph outline from the client's datasheets. It is never typeset.
-  - The company logo is Concept C, Signal Block, in Barlow Condensed.
+  - The company logo is Concept C, Signal Block, in Barlow Condensed (outlined SVG, so it keeps that lettering).
+  - Every other piece of text uses Overused Grotesk (OFL, variable 300–900): `src/fonts/`, loaded with `next/font/local`. The WIP lock page loads the copy in `public/fonts/`, the only path open while the site is locked.
 - **Tokens:** `src/styles/tokens.css`, generated from `04-tokens/tokens.json`.
 - **Motion:** `src/styles/buttons.css` and `src/motion/`, as specified in `09-motion/motion.md`.
 

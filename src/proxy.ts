@@ -9,6 +9,8 @@ import { NextResponse, type NextRequest } from "next/server";
 const LOCKED = process.env.SITE_LOCKED ? process.env.SITE_LOCKED !== "0" : process.env.VERCEL === "1";
 const COOKIE = "cw_access";
 const UNLOCK_PATH = "/__unlock";
+// the WIP page's own font: an OFL font file, safe to serve while locked
+const OPEN_PATHS = new Set(["/fonts/OverusedGrotesk-VF.woff2"]);
 const MAX_AGE = 60 * 60 * 24 * 30;
 
 const enc = new TextEncoder();
@@ -31,18 +33,19 @@ function wip(next: string, error = false, status = 503) {
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><title>WIP</title>
 <style>
+@font-face{font-family:"Overused Grotesk";src:url(/fonts/OverusedGrotesk-VF.woff2) format("woff2");font-weight:300 900;font-display:swap}
 *{box-sizing:border-box;margin:0}
 html,body{height:100%}
-body{background:#FFC20A;color:#111110;font-family:"Arial Narrow",Arial,Helvetica,sans-serif;display:grid;place-items:center;text-align:center;padding:24px 24px 48px}
+body{background:#FFC20A;color:#111110;font-family:"Overused Grotesk",Arial,Helvetica,sans-serif;display:grid;place-items:center;text-align:center;padding:24px 24px 48px}
 h1{font-size:clamp(5rem,22vw,16rem);font-weight:900;letter-spacing:-.04em;line-height:.85}
-p{margin-top:18px;font-family:ui-monospace,Menlo,monospace;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+p{margin-top:18px;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
 form{margin:36px auto 0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;max-width:420px}
 label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-input{flex:1 1 220px;height:48px;padding:0 14px;border:2px solid #111110;border-radius:2px;background:#fff;font:16px ui-monospace,Menlo,monospace;color:#111110}
+input{flex:1 1 220px;height:48px;padding:0 14px;border:2px solid #111110;border-radius:2px;background:#fff;font:16px "Overused Grotesk",Arial,sans-serif;color:#111110}
 input:focus-visible,button:focus-visible{outline:3px solid #0A58CA;outline-offset:2px}
-button{height:48px;padding:0 22px;border:2px solid #111110;border-radius:2px;background:#111110;color:#FFC20A;font:700 16px Arial,sans-serif;cursor:pointer}
+button{height:48px;padding:0 22px;border:2px solid #111110;border-radius:2px;background:#111110;color:#FFC20A;font:700 16px "Overused Grotesk",Arial,sans-serif;cursor:pointer}
 button:hover{background:#000}
-.err{margin-top:14px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#7a0d0d}
+.err{margin-top:14px;font-size:13px;color:#7a0d0d}
 body::after{content:"";position:fixed;left:0;right:0;bottom:0;height:14px;background:repeating-linear-gradient(-45deg,#111110 0 14px,#FFC20A 14px 28px)}
 </style></head><body><main><h1>WIP</h1><p>Work in progress</p>
 <form method="post" action="${UNLOCK_PATH}">
@@ -60,6 +63,7 @@ body::after{content:"";position:fixed;left:0;right:0;bottom:0;height:14px;backgr
 export async function proxy(req: NextRequest) {
   if (!LOCKED) return;
   const { pathname, search } = req.nextUrl;
+  if (OPEN_PATHS.has(pathname)) return;
   const configured = !!process.env.SITE_PASSWORD && !!process.env.SITE_SECRET;
 
   if (pathname === UNLOCK_PATH && req.method === "POST") {

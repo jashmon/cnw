@@ -62,8 +62,8 @@
   --dur-hero: 900ms;
   --max: 1440px;
   --measure: 68ch;
-  --font-display: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
-  --font-text: 'Barlow', Arial, sans-serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  --font-display: 'Overused Grotesk', Arial, sans-serif;
+  --font-text: 'Overused Grotesk', Arial, sans-serif;
+  --font-mono: 'Overused Grotesk', Arial, sans-serif;
 }
 @media (prefers-reduced-motion: reduce) { :root { --dur-micro: 0ms; --dur-ui: 0ms; --dur-reveal: 0ms; --dur-hero: 0ms; } }

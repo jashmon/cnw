@@ -1,11 +1,11 @@
 @import "../styles/tokens.css";
 @import "../styles/buttons.css";
 
-/* next/font exposes --ff-* variables; map them onto the token font roles */
+/* next/font exposes --ff-og; one family (Overused Grotesk) fills all three token font roles */
 :root {
-  --font-display: var(--ff-display), "Arial Narrow", Arial, sans-serif;
-  --font-text: var(--ff-text), Arial, sans-serif;
-  --font-mono: var(--ff-mono), ui-monospace, Menlo, monospace;
+  --font-display: var(--ff-og), Arial, sans-serif;
+  --font-text: var(--ff-og), Arial, sans-serif;
+  --font-mono: var(--ff-og), Arial, sans-serif;
   --header-h: 72px;
   --util-h: 36px;
 }
@@ -127,3 +127,5 @@ p { text-wrap: pretty; }
 @keyframes route-in { from { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .route-fade { animation: none; } }
 .label, .mono { font-weight: 500; }
+/* the "mono" role (model codes, specs, labels) is now the same grotesk: tabular figures keep numbers aligned */
+.label, .mono, .code, .spec-chip, .table, .field label, .field input, .field select { font-variant-numeric: tabular-nums; }
