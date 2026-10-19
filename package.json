@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "qa:flows": "node qa/flows.mjs ${QA_BASE:-http://localhost:3200}",
+    "qa:links": "node qa/links.mjs ${QA_BASE:-http://localhost:3200}",
+    "qa:widths": "node qa/widths.mjs ${QA_BASE:-http://localhost:3200}",
+    "qa:a11y": "node qa/a11y.mjs ${QA_BASE:-http://localhost:3200}",
+    "qa": "npm run lint && npm run typecheck && npm run qa:flows && npm run qa:links && npm run qa:widths && npm run qa:a11y"
   },
   "dependencies": {
     "motion": "^14.2.0",

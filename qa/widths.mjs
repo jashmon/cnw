@@ -19,3 +19,4 @@ for (const w of widths) {
   await ctx.close();
 }
 await b.close(); console.log(bad ? `${bad} problems` : "no overflow at any width");
+process.exitCode = bad ? 1 : 0;

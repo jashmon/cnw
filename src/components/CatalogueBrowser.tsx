@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useMemo, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import type { CardProduct as Product } from "@/lib/catalogue";
 import { useSearch } from "./Header";
 import { ProductCard } from "./ProductCard";
@@ -16,7 +16,9 @@ function Inner({ families }: { families: Fam[] }) {
   const [env, setEnv] = useState<string | null>(null);
   const all = useMemo(() => families.flatMap((f) => f.categories.flatMap((c) => c.products)), [families]);
   const index = useMemo(() => all.map((p) => ({ slug: p.slug, model: p.model, name: p.name, category: p.category, href: "", img: null, aliases: p.legacyNames })), [all]);
-  const hits = useSearch(index, q);
+  const hits = useSearch(index, q, Infinity);
+  // header search icon links to /products#cat-q: land with the cursor in the field
+  useEffect(() => { if (location.hash === "#cat-q") document.getElementById("cat-q")?.focus(); }, []);
   const envs = useMemo(() => [...new Set(all.flatMap((p) => p.environment))].sort(), [all]);
   const searching = q.trim().length > 1;
   const visible = (p: Product) => (!env || p.environment.includes(env)) && (!searching || hits.some((h) => h.slug === p.slug));

@@ -23,7 +23,7 @@ a:hover .arr i+ i,a:focus-visible .arr i+ i{transform:translateX(0)}
 /* variants */
 .btn--yellow{--btn-bg:var(--yellow);--btn-fg:var(--ink);--btn-sweep:var(--ink);--btn-sweep-fg:var(--yellow)}
 .btn--ghost{--btn-bg:transparent;--btn-fg:var(--ink);--btn-sweep:var(--ink);--btn-sweep-fg:var(--yellow);border-color:var(--ink)}
-.on-dark .btn--ghost{--btn-fg:var(--on-charcoal);--btn-sweep:var(--yellow);--btn-sweep-fg:var(--ink);border-color:var(--on-charcoal)}
+.on-dark .btn--ghost,.band-dark .btn--ghost{--btn-fg:var(--on-charcoal);--btn-sweep:var(--yellow);--btn-sweep-fg:var(--ink);border-color:var(--on-charcoal)}
 /* hazard variant: animated stripe underline on hover (for the main RFQ CTA) */
 .btn--hazard{--btn-bg:var(--yellow);--btn-fg:var(--ink);--btn-sweep:var(--yellow);--btn-sweep-fg:var(--ink);padding-bottom:1.25em}
 .btn--hazard::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;

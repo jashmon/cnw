@@ -70,11 +70,15 @@
 .sheet .acts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
 .sheet .acts a{justify-content:center}
 @media (max-width:1440px){.nav a,.nav button{padding:10px 8px;font-size:1rem}}
-@media (max-width:1366px){.nav,.right .search,.right .cta{display:none}.burger{display:block}}
-@media (max-width:1366px){.util{display:none}}
+/* 1251–1366px: full nav stays; the search box collapses to an icon linking to the catalogue search */
+.searchIcon{display:none;place-items:center;width:44px;height:44px;border:2px solid var(--ink);border-radius:var(--radius-sm);color:var(--ink);flex-shrink:0}
+.searchIcon:hover{background:var(--ink);color:var(--yellow)}
+@media (max-width:1366px){.right .search{display:none}.searchIcon{display:grid}}
+@media (max-width:1250px){.nav,.right .cta,.searchIcon{display:none}.burger{display:block}}
+@media (max-width:1250px){.util{display:none}}
 @media (max-width:767px){.inner{height:60px}.badgeBtn .txt{display:none}}
 .cta{white-space:nowrap;flex-shrink:0}
-@media (max-width:1366px){.mega{display:none}}
+@media (max-width:1250px){.mega{display:none}}
 .searchLg{flex:none;width:100%;max-width:560px;min-width:0}
 .searchLg input{height:56px;font-size:1rem;padding-left:46px;border-width:2px;background:var(--surface-2)}
 .searchLg svg{left:16px;width:20px;height:20px}

@@ -55,6 +55,11 @@ const badge2 = await p.locator('button[data-quote-badge] .badge').textContent();
 check("quote list persists across reload", badge2?.trim() === "1", badge2);
 
 // quote page: requirements, validation (summary + focus), then WhatsApp handoff with models + quantities
+// catalogue search must not inherit the header autocomplete's 8-result cap
+await p.goto(base + "/products", { waitUntil: "networkidle" });
+await p.fill("#cat-q", "telephone"); await p.waitForTimeout(400);
+const shown = await p.evaluate(() => (document.body.innerText.match(/(\d+) of (\d+)/) || [])[1]);
+check("catalogue search 'telephone' shows more than 8 models", Number(shown) > 8, `${shown} shown`);
 await p.goto(base + "/quote", { waitUntil: "networkidle" });
 check("quote page lists the model", (await p.locator("text=WMHS-III").count()) > 0);
 check("delivery notice shown before the form", (await p.locator("text=How this form sends").count()) > 0);
@@ -116,3 +121,4 @@ check("no uncaught page errors", errs.length === 0, errs.slice(0, 2).join(" | ")
 await b.close();
 for (const r of results) console.log(r.join("  "));
 console.log(`\n${results.filter((r) => r[0] === "PASS").length}/${results.length} passed`);
+process.exitCode = results.every((r) => r[0] === "PASS") ? 0 : 1;

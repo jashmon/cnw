@@ -13,3 +13,4 @@ for (const [u, from] of seen) {
   if (res.status >= 400) bad.push(`${res.status} ${u}  (from ${from})`);
 }
 console.log(`${seen.size} unique internal URLs checked; ${bad.length} broken`); bad.slice(0, 20).forEach((b) => console.log(b));
+process.exitCode = bad.length ? 1 : 0;

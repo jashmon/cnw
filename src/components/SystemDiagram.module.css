@@ -11,3 +11,10 @@
 .dash{stroke-dasharray:.012 .012}
 :global(.js) :global(.reveal) .line{stroke-dashoffset:1;transition:stroke-dashoffset 1.4s var(--ease-out) .2s}
 :global(.js) :global(.reveal.in) .line{stroke-dashoffset:0}
+
+/* small screens: the 720px diagram scrolls sideways; say so under it */
+.wrapper{position:relative;min-width:0}
+.hint{display:none;margin-top:8px;font-family:var(--font-mono);font-size:.8125rem;color:var(--muted)}
+@media (max-width:800px){
+  .hint{display:block}
+}

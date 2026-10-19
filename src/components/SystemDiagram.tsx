@@ -154,5 +154,10 @@ const MAP: Record<string, () => React.ReactElement> = { "plant-pa-system": Plant
 export function SystemDiagram({ slug }: { slug: string }) {
   const D = MAP[slug];
   if (!D) return null;
-  return <figure className={`${s.fig} reveal`} tabIndex={0} role="region" aria-label="System diagram (scrolls sideways on small screens)"><D /></figure>;
+  return (
+    <div className={s.wrapper}>
+      <figure className={`${s.fig} reveal`} tabIndex={0} role="region" aria-label="System diagram (scrolls sideways on small screens)"><D /></figure>
+      <p className={s.hint} aria-hidden="true">Swipe sideways to see the whole system →</p>
+    </div>
+  );
 }

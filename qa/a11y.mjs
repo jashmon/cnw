@@ -1,17 +1,19 @@
 // Accessibility scan + console errors per route.
-// Usage (from the site folder): node qa/a11y.mjs http://localhost:3100 ../11-qa/urls.txt
+// Usage (from the site folder): node qa/a11y.mjs http://localhost:3200 [urls.txt]   (no list: every route in /sitemap.xml)
 // Requires: npm i -D playwright @axe-core/playwright
 import { chromium } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 import { readFileSync } from "node:fs";
 
 const [base, listFile] = process.argv.slice(2);
-if (!base || !listFile) {
-  console.error("usage: node qa/a11y.mjs <base-url> <urls.txt>");
+if (!base) {
+  console.error("usage: node qa/a11y.mjs <base-url> [urls.txt]");
   process.exit(2);
 }
-const routes = readFileSync(listFile, "utf8")
-  .split("\n").map((l) => l.trim()).filter((l) => l && !l.startsWith("#"))
+const lines = listFile
+  ? readFileSync(listFile, "utf8").split("\n")
+  : [...(await (await fetch(base + "/sitemap.xml")).text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+const routes = lines.map((l) => l.trim()).filter((l) => l && !l.startsWith("#"))
   .map((u) => (u.startsWith("http") ? new URL(u).pathname : u));
 
 const browser = await chromium.launch();

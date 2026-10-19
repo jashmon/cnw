@@ -15,7 +15,8 @@ type Props = { families: NavFamily[]; industries: { slug: string; name: string }
 
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "").replace(/iii/g, "3").replace(/ii/g, "2").replace(/iv/g, "4").replace(/(?<![a-z])i(?![a-z])/g, "1");
 
-export function useSearch(index: SearchItem[], q: string) {
+// limit: the header autocomplete shows the top 8; the catalogue filter passes Infinity so no match is hidden
+export function useSearch(index: SearchItem[], q: string, limit = 8) {
   return useMemo(() => {
     const n = norm(q);
     if (n.length < 2) return [];
@@ -30,8 +31,8 @@ export function useSearch(index: SearchItem[], q: string) {
       }
       return { it, sc };
     }).filter((x) => x.sc > 0).sort((a, b) => b.sc - a.sc || a.it.model.localeCompare(b.it.model));
-    return scored.slice(0, 8).map((x) => x.it);
-  }, [index, q]);
+    return scored.slice(0, limit).map((x) => x.it);
+  }, [index, q, limit]);
 }
 
 export function Search({ index, onGo, large = false, placeholder = "Search models, e.g. WMHS-III" }: { index: SearchItem[]; onGo?: () => void; large?: boolean; placeholder?: string }) {
@@ -118,6 +119,9 @@ export function Header({ families, industries, index, featured }: Props) {
           </nav>
           <div className={s.right}>
             <Search index={index} />
+            <Link href="/products#cat-q" className={s.searchIcon} aria-label="Search models">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" strokeWidth="2.4" /><path d="M15.5 15.5 21 21" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" /></svg>
+            </Link>
             <button className={s.badgeBtn} onClick={() => q.setOpen(true)} data-quote-badge>
               <span className="txt">Quote</span><span key={q.bump} className={`badge ${q.bump ? "bump" : ""}`}>{q.count}</span><span className="sr-only"> items in quote list</span>
             </button>
