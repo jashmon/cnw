@@ -16,7 +16,7 @@ export default function InstalledAt() {
   const countries = [...new Set(international.map((c) => c.country))];
   return (
     <>
-      <section className="band-yellow" style={{ paddingBlock: "var(--space-8) var(--space-7)" }}>
+      <section className="page-head">
         <div className="wrap">
           <p className="label">Installed at</p>
           <h1 className="h-xl" style={{ marginTop: 8, maxWidth: "20ch" }}>In the control rooms of India&apos;s cement belt, and beyond.</h1>
@@ -28,7 +28,6 @@ export default function InstalledAt() {
           <p className="mono" style={{ fontSize: ".8125rem", marginTop: 18 }}>Source: the company&apos;s {stats.asOf}. Abroad: {countries.join(", ")}.</p>
         </div>
       </section>
-      <div className="hazard" aria-hidden="true" />
       <ClientWall />
       <section className="band-surface section">
         <div className="wrap">

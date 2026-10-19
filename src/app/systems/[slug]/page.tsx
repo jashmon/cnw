@@ -22,10 +22,9 @@ export default async function SystemPage({ params }: PageProps<"/systems/[slug]"
   const comps = sy.components.map((c) => getProduct(c)).filter((p): p is NonNullable<typeof p> => !!p);
   return (
     <>
-      <section className="band-yellow" style={{ paddingBlock: "var(--space-8) var(--space-7)" }}>
+      <section className="page-head">
         <div className="wrap"><nav aria-label="Breadcrumb" className="mono" style={{ fontSize: ".8125rem" }}><Link href="/systems">Systems</Link></nav><h1 className="h-xl" style={{ marginTop: 10 }}>{sy.name}</h1><p className="lede" style={{ marginTop: 14, maxWidth: "70ch" }}>{sy.intro}</p></div>
       </section>
-      <div className="hazard" aria-hidden="true" />
       <section className="wrap section" style={{ paddingBottom: "var(--space-7)" }}><SystemDiagram slug={sy.slug} /></section>
       <section className="wrap" style={{ paddingBottom: "var(--space-section)" }}>
         <h2 className="h-1" style={{ marginBottom: 20 }}>How it works</h2>

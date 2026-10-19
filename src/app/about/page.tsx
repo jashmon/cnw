@@ -24,14 +24,13 @@ const BUILD = ["Encapsulated circuit boards that resist water and condensation",
 export default function About() {
   return (
     <>
-      <section className="band-yellow" style={{ paddingBlock: "var(--space-8)" }}>
+      <section className="page-head">
         <div className="wrap">
           <p className="label">About Cables &amp; Wireless Co.</p>
           <h1 className="h-xl" style={{ marginTop: 10, maxWidth: "20ch" }}>We design, make and commission SMART industrial communication equipment.</h1>
           <p className="lede" style={{ marginTop: 18 }}>Wired and wireless PA systems, telephones and alarms for severe climates, harsh operating conditions and life-safety-critical jobs. From Nagpur, India.</p>
         </div>
       </section>
-      <div className="hazard" aria-hidden="true" />
 
       <section className={`wrap section ${s.story}`}>
         <h2 className="h-1">What we do</h2>

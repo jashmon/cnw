@@ -11,7 +11,7 @@ export default function ProductsIndex() {
   const all = getProducts();
   return (
     <>
-      <section className="band-yellow" style={{ paddingBlock: "var(--space-8) var(--space-7)" }}>
+      <section className="page-head">
         <div className="wrap">
           <p className="label">Products</p>
           <h1 className="h-xl" style={{ marginTop: 8 }}>{all.length} models. One maker.</h1>
@@ -20,7 +20,6 @@ export default function ProductsIndex() {
           </nav>
         </div>
       </section>
-      <div className="hazard" aria-hidden="true" />
       <CatalogueBrowser families={fams.map((f) => ({ slug: f.slug, name: f.name, categories: f.categories.map((c) => ({ slug: c.slug, name: c.name, intro: c.intro, products: c.products.map((sl) => toCard(getProduct(sl)!)) })) }))} />
       <section className="wrap" style={{ paddingBottom: "var(--space-section)" }}>
         <p className="muted">Can&apos;t find a model from an old purchase order? <Link className="inline" href="/cross-reference">Send us the code</Link> and we&apos;ll match it.</p>

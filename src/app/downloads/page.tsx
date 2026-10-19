@@ -22,11 +22,10 @@ export default function Downloads() {
   const missing = allP.filter((p) => !p.datasheet);
   return (
     <>
-      <section className="band-yellow" style={{ paddingBlock: "var(--space-8) var(--space-7)" }}>
+      <section className="page-head">
         <div className="wrap"><p className="label">Downloads</p><h1 className="h-xl" style={{ marginTop: 8 }}>Datasheets, demos, software.</h1><p className="lede" style={{ marginTop: 14 }}>Datasheets for {total} of {allP.length} models as PDFs. No form, no sign-up.</p>
           <nav className={s.jump} aria-label="Jump to"><a href="#datasheets">Datasheets</a><a href="#audio">Voice alarm demos</a><a href="#videos">Videos</a><a href="#software">Software</a></nav></div>
       </section>
-      <div className="hazard" aria-hidden="true" />
       <section id="datasheets" className="wrap section">
         <h2 className="h-1" style={{ marginBottom: 8 }}>Datasheets</h2>
         <p className="muted" style={{ marginBottom: 8 }}>On request ({missing.length}): {missing.map((p) => p.model || p.name).join(", ")}. A few models share one document.</p>

@@ -51,11 +51,11 @@ export default async function IndustryPage({ params }: PageProps<"/industries/[s
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 14 }}>{prods.map((p) => <ProductCard key={p.slug} p={p} />)}</div>
       </section>
       {sectorClients.length > 0 && (
-        <section className="band-yellow section"><div className="wrap" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
+        <section className="section" style={{ paddingTop: 0 }}><div className="wrap"><div className="panel-accent" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
           <div><p className="label">Installed in this sector</p><p className="h-1" style={{ marginTop: 6 }}>{sectorClients.length} client group{sectorClients.length > 1 ? "s" : ""}</p>
             {CLIENT_NAMES_CONSENT && <p style={{ marginTop: 10, maxWidth: "80ch" }}>{sectorClients.map((c) => c.name).join(" · ")}</p>}</div>
           <Link className="btn" href="/installed-at">Where SMART is installed <Arrow /></Link>
-        </div></section>
+        </div></div></section>
       )}
       {sys && (
         <section className="wrap section"><div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 20, flexWrap: "wrap", border: "2px solid var(--ink)", borderRadius: "var(--radius-md)", padding: 28, background: "var(--surface-2)" }}>

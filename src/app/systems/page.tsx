@@ -9,10 +9,9 @@ export default function Systems() {
   const systems = getSystems();
   return (
     <>
-      <section className="band-yellow" style={{ paddingBlock: "var(--space-8) var(--space-7)" }}>
+      <section className="page-head">
         <div className="wrap"><p className="label">Systems</p><h1 className="h-xl" style={{ marginTop: 8, maxWidth: "16ch" }}>How the pieces connect.</h1></div>
       </section>
-      <div className="hazard" aria-hidden="true" />
       <section className="wrap section" style={{ display: "grid", gap: 14 }}>
         {systems.map((sy, i) => (
           <Link key={sy.slug} href={`/systems/${sy.slug}`} className="lift reveal" style={{ "--d": `${i * 60}ms`, display: "grid", gridTemplateColumns: "60px 1fr auto", gap: 20, alignItems: "center", padding: "26px 24px", border: "2px solid var(--ink)", borderRadius: "var(--radius-md)", background: "var(--surface-2)", textDecoration: "none" } as React.CSSProperties}>

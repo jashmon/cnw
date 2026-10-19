@@ -9,10 +9,9 @@ const DOCS = ["GST registration certificate", "Udyam / MSME certificate", "PAN",
 export default function VendorKit() {
   return (
     <>
-      <section className="band-yellow" style={{ paddingBlock: "var(--space-8) var(--space-7)" }}>
+      <section className="page-head">
         <div className="wrap"><p className="label">Vendor kit</p><h1 className="h-xl" style={{ marginTop: 8 }}>Everything purchase needs to register us.</h1><p className="lede" style={{ marginTop: 14 }}>One request, one reply with the full set of documents for vendor registration, tenders and GeM.</p></div>
       </section>
-      <div className="hazard" aria-hidden="true" />
       <section className="wrap section" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 380px), 1fr))", gap: "clamp(28px,5vw,80px)", alignItems: "start" }}>
         <div>
           <h2 className="h-2" style={{ marginBottom: 16 }}>What&apos;s in the kit</h2>
