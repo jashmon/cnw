@@ -9,8 +9,9 @@
 .tile:hover{background:#fff}
 .tile:hover .logo{filter:none;opacity:1;transform:scale(1.06)}
 .dir{margin-top:40px;border:2px solid var(--ink);border-radius:var(--radius-md);background:var(--surface-2);overflow:hidden}
-.tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-bottom:2px solid var(--ink);background:var(--yellow);scrollbar-width:thin}
-.tab{flex:1 1 auto;justify-content:center;border-bottom:1px solid rgba(17,17,16,.2);display:inline-flex;align-items:center;gap:8px;padding:14px 18px;border:0;border-right:1px solid rgba(17,17,16,.2);background:transparent;cursor:pointer;
+/* tabs size to their labels and wrap into full-width rows, so long sector names never overlap */
+.tabs{display:flex;flex-wrap:wrap;border-bottom:2px solid var(--ink);background:var(--yellow);scrollbar-width:thin}
+.tab{flex:1 1 auto;justify-content:center;display:inline-flex;align-items:center;gap:8px;padding:14px 18px;border:0;border-right:1px solid rgba(17,17,16,.2);box-shadow:inset 0 -1px 0 rgba(17,17,16,.2);background:transparent;cursor:pointer;
   font-family:var(--font-display);font-weight:700;font-size:1.0625rem;white-space:nowrap;transition:background var(--dur-micro),color var(--dur-micro)}
 .tab:hover{background:var(--yellow-deep)}
 .tab[aria-selected="true"]{background:var(--ink);color:var(--yellow)}
@@ -26,5 +27,5 @@
 .foot{margin-top:18px;color:var(--muted);font-size:.875rem;display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;align-items:center}
 @media (max-width:600px){.wall{grid-template-columns:repeat(3,1fr)}.box{inset:22% 12%}.stats{width:100%;justify-content:space-between}}
 @media (prefers-reduced-motion:reduce){.panel{animation:none}.logo{transition:none}.tile:hover .logo{transform:none}}
-@media (max-width:767px){.tabs{display:flex;overflow-x:auto}.tab{flex:none}}
+@media (max-width:767px){.tabs{flex-wrap:nowrap;overflow-x:auto}.tab{flex:none}}
 .more{margin-top:20px;font-size:.9375rem;padding:.75em 1.1em}
