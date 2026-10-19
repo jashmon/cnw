@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 // Brand marks. The SMART wordmark is the exact Lithograph outline from the client's datasheets: never typeset it.
 export function Logo({ variant = "yellow", className, height = 44 }: { variant?: "light" | "yellow" | "dark"; className?: string; height?: number }) {
-  return <img src={`/brand/cw-logo-${variant}.svg`} alt="Cables & Wireless Co." height={height} width={Math.round(height * 3.55)} className={className} style={{ height, width: "auto" }} />;
+  return <img src={`/brand/cw-logo-${variant}.svg`} alt="Cables & Wireless Co." height={height} width={Math.round(height * 4.67)} className={className} style={{ height, width: "auto" }} />;
 }
 export function Tile({ variant = "yellow", size = 40 }: { variant?: "light" | "yellow" | "dark"; size?: number }) {
   return <img src={`/brand/cw-tile-${variant}.svg`} alt="Cables & Wireless Co." width={size} height={size} />;

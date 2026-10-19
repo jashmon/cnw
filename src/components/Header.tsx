@@ -103,7 +103,7 @@ export function Header({ families, industries, index, featured }: Props) {
       <header className={`${s.bar} ${scrolled ? s.scrolled : ""}`} onMouseLeave={() => hover(null)}>
         <div className={`wrap ${s.inner}`}>
           <Link href="/" className={s.logo} aria-label="Cables & Wireless Co. home">
-            <span className="hide-sm"><Logo variant="yellow" height={scrolled ? 38 : 46} /></span>
+            <span className="hide-sm"><Logo variant="yellow" height={scrolled ? 38 : 42} /></span>
             <span className="show-sm"><Tile variant="yellow" size={40} /></span>
           </Link>
           <nav aria-label="Main">
