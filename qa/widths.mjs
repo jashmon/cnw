@@ -1,8 +1,8 @@
 // Horizontal overflow + clipped controls across widths. Usage: node qa/widths.mjs http://localhost:3000 [routes...]
 import { chromium } from "playwright";
 const base = process.argv[2] || "http://localhost:3000";
-const routes = process.argv.slice(3).length ? process.argv.slice(3) : ["/", "/products", "/products/industrial-telephones", "/products/industrial-telephones/wmhs-iii", "/systems/plant-pa-system", "/installed-at", "/quote", "/contact", "/downloads"];
-const widths = [360, 390, 600, 768, 900, 1024, 1180, 1280, 1363, 1440, 1920];
+const routes = process.argv.slice(3).length ? process.argv.slice(3) : ["/", "/products", "/systems", "/products/industrial-telephones", "/products/industrial-telephones/wmhs-iii", "/systems/plant-pa-system", "/installed-at", "/quote", "/contact", "/downloads"];
+const widths = [320, 360, 390, 600, 768, 900, 1024, 1180, 1251, 1280, 1363, 1440, 1920];
 const b = await chromium.launch(); let bad = 0;
 for (const w of widths) {
   const ctx = await b.newContext({ viewport: { width: w, height: 900 }, isMobile: w < 768, hasTouch: w < 768, reducedMotion: "reduce" });

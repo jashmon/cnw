@@ -152,3 +152,7 @@ html:has(dialog[open]) { overflow: hidden; }
 .spec-group[open] .spec-sign::before { content: "−"; }
 /* focus ring stays visible on charcoal bands */
 .band-dark :focus-visible { outline-color: var(--yellow); }
+
+/* systems index rows: number · text · button; on narrow phones the whole row is the link, so the button goes */
+.sys-row { grid-template-columns: 60px 1fr auto; }
+@media (max-width: 480px) { .sys-row { grid-template-columns: 36px 1fr; gap: 12px !important; } .sys-go { display: none; } }

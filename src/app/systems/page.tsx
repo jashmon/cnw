@@ -14,10 +14,10 @@ export default function Systems() {
       </section>
       <section className="wrap section" style={{ display: "grid", gap: 14 }}>
         {systems.map((sy, i) => (
-          <Link key={sy.slug} href={`/systems/${sy.slug}`} className="lift reveal" style={{ "--d": `${i * 60}ms`, display: "grid", gridTemplateColumns: "60px 1fr auto", gap: 20, alignItems: "center", padding: "26px 24px", border: "2px solid var(--ink)", borderRadius: "var(--radius-md)", background: "var(--surface-2)", textDecoration: "none" } as React.CSSProperties}>
+          <Link key={sy.slug} href={`/systems/${sy.slug}`} className="lift reveal sys-row" style={{ "--d": `${i * 60}ms`, display: "grid", gap: 20, alignItems: "center", padding: "26px 24px", border: "2px solid var(--ink)", borderRadius: "var(--radius-md)", background: "var(--surface-2)", textDecoration: "none" } as React.CSSProperties}>
             <span className="mono" style={{ fontSize: "1.25rem" }}>{String(i + 1).padStart(2, "0")}</span>
             <span><span className="h-2" style={{ display: "block" }}>{sy.name}</span><span className="muted" style={{ display: "block", marginTop: 6, maxWidth: "80ch" }}>{sy.intro}</span></span>
-            <span className="btn btn--ghost" aria-hidden="true">See it <Arrow /></span>
+            <span className="btn btn--ghost sys-go" aria-hidden="true">See it <Arrow /></span>
           </Link>
         ))}
       </section>
