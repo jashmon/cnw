@@ -75,6 +75,28 @@ check("comparison table marks differing rows first", await p.evaluate(() => { co
 // mega-menu featured card says where it goes; the catalogue has its own link
 await p.goto(base + "/", { waitUntil: "networkidle" });
 check("mega menu has a real link to all models", await p.evaluate(() => { const a = [...document.querySelectorAll("#mega-products a")].find((x) => /All \d+ models/.test(x.textContent || "")); return a?.getAttribute("href") === "/products"; }));
+// category page: select-and-compare (2–4 models, differences first)
+await p.goto(base + "/products/industrial-telephones#compare", { waitUntil: "networkidle" });
+const cols = () => p.locator("#compare thead th").count();
+const c0 = await cols();
+const boxes = p.locator("#compare input[type=checkbox]");
+const unchecked = p.locator("#compare input[type=checkbox]:not(:checked)");
+await unchecked.first().check(); await p.waitForTimeout(80);
+const c1 = await cols();
+const fifthDisabled = (await boxes.count()) > 4 ? await unchecked.first().isDisabled() : true;
+check("category compare: picking models changes the table, max 4", c1 === c0 + 1 && c1 - 1 === 4 && fifthDisabled, `${c0 - 1} → ${c1 - 1} models`);
+check("category compare leads with differing rows", await p.locator("#compare tbody tr").first().locator("[class*=tag]").count() === 1);
+// catalogue search writes ?q= back to the URL; a new ?q= updates the field
+await p.goto(base + "/products", { waitUntil: "networkidle" });
+await p.fill("#cat-q", "hooter"); await p.waitForTimeout(700);
+check("catalogue search updates the URL", new URL(p.url()).searchParams.get("q") === "hooter", p.url());
+await p.goto(base + "/products?q=clean", { waitUntil: "networkidle" });
+check("?q= in the URL fills the catalogue search", (await p.inputValue("#cat-q")) === "clean");
+// header autocomplete: clicking an option (standard click) navigates
+await p.goto(base + "/about", { waitUntil: "networkidle" });
+await p.fill('header input[placeholder^="Search models"]', "bc-l02"); await p.waitForTimeout(150);
+await p.locator('header [role="option"]').first().click(); await p.waitForURL("**/bc-l02", { timeout: 5000 }).catch(() => {});
+check("clicking an autocomplete option opens the model", p.url().endsWith("/bc-l02"), p.url());
 // catalogue search must not inherit the header autocomplete's 8-result cap
 await p.goto(base + "/products", { waitUntil: "networkidle" });
 await p.fill("#cat-q", "telephone"); await p.waitForTimeout(400);
@@ -146,6 +168,25 @@ const revealHidden = await m.evaluate(() => document.documentElement.classList.c
 check("reduced motion skips reveal hiding", !revealHidden);
 await m.context().close();
 
+// quote list with long names at 320px: drawer and /quote stay within the screen
+{
+  const n = await (await b.newContext({ viewport: { width: 320, height: 720 }, isMobile: true, hasTouch: true })).newPage();
+  await n.goto(base + "/", { waitUntil: "networkidle" });
+  await n.evaluate(() => localStorage.setItem("cw-quote-v1", JSON.stringify([
+    { slug: "gsm-ecb-server-rack", model: "GSM-ECB SERVER RACK", name: "Emergency Call Box Central Server Rack with Message, Voice and Call Loggers", href: "/products/emergency-call-boxes/gsm-ecb-server-rack", img: null, qty: 12, note: "" },
+    { slug: "oc-dths-iii", model: "OC-DTHS-III", name: "Operator Console with Desk-Top Handset and Gooseneck Microphone", href: "/products/operator-consoles-amplifiers-loudspeakers/oc-dths-iii", img: null, qty: 2, note: "" },
+    { slug: "wmhs-iiiwp-voip", model: "WMHS-IIIWP-VOIP", name: "Weatherproof VoIP Telephone", href: "/products/weatherproof-flameproof-telephones/wmhs-iiiwp-voip", img: null, qty: 1, note: "" },
+  ])));
+  await n.goto(base + "/quote", { waitUntil: "networkidle" });
+  const pageOver = await n.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  await n.click("button[data-quote-badge]"); await n.waitForTimeout(300);
+  const drawerOver = await n.evaluate(() => { const d = document.querySelector("[role=dialog][aria-modal=true]:not(#m-sheet)") || document.querySelector("[class*=drawer]"); return d ? d.scrollWidth - d.clientWidth : -1; });
+  check("long quote list fits at 320px (page and drawer)", pageOver <= 0 && drawerOver === 0, `page +${pageOver}, drawer +${drawerOver}`);
+  await n.keyboard.press("Escape"); await n.waitForTimeout(200);
+  const hdr = await n.evaluate(() => { const bt = document.querySelector('button[aria-label="Menu"]').getBoundingClientRect(); const logo = [...document.querySelectorAll("header img")].find((i) => i.getBoundingClientRect().width > 0).getBoundingClientRect(); return { burger: Math.round(bt.width), right: Math.round(bt.right), logoW: Math.round(logo.width) }; });
+  check("320px header: full logo, 44px menu button, nothing squeezed", hdr.burger >= 44 && hdr.right <= 320 && hdr.logoW > 100, JSON.stringify(hdr));
+  await n.context().close();
+}
 check("no uncaught page errors", errs.length === 0, errs.slice(0, 2).join(" | "));
 await b.close();
 for (const r of results) console.log(r.join("  "));

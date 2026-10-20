@@ -1,0 +1,11 @@
+.line{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.thumb{width:72px;height:72px;background:var(--surface);border-radius:var(--radius-sm);display:grid;place-items:center}
+.info{display:grid;gap:6px;min-width:0}
+.info :global(.code){white-space:normal}
+.qty{display:grid;gap:6px;justify-items:end}
+/* narrow phones: smaller thumbnail; quantity and remove sit under the details in one row */
+@media (max-width:480px){
+  .line{grid-template-columns:52px minmax(0,1fr)}
+  .thumb{width:52px;height:52px}
+  .qty{grid-column:2;grid-template-columns:auto auto 1fr;align-items:center;justify-items:start;gap:10px}
+}

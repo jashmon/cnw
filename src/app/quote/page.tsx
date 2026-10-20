@@ -14,7 +14,7 @@ export default function QuotePage() {
       <div className="hazard" aria-hidden="true" />
       <section className="wrap section" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 420px), 1fr))", gap: "clamp(28px,5vw,72px)", alignItems: "start" }}>
         <div><h2 className="h-2" style={{ marginBottom: 16 }}>Models</h2><QuoteList /></div>
-        <div style={{ position: "sticky", top: "calc(var(--header-h) + 20px)" }}><h2 className="h-2" style={{ marginBottom: 16 }}>About the project</h2><EnquiryForm kind="quote" withList submitLabel="Send quote request" /></div>
+        <div className="quote-form"><h2 className="h-2" style={{ marginBottom: 16 }}>About the project</h2><EnquiryForm kind="quote" withList submitLabel="Send quote request" /></div>
       </section>
     </>
   );

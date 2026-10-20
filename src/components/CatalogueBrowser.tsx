@@ -9,8 +9,24 @@ import s from "./CatalogueBrowser.module.css";
 
 type Fam = { slug: string; name: string; categories: { slug: string; name: string; intro: string; products: Product[] }[] };
 
-function Inner({ families, urlQ }: { families: Fam[]; urlQ: string }) {
+function Inner({ families, urlQ, syncUrl = false }: { families: Fam[]; urlQ: string; syncUrl?: boolean }) {
   const [q, setQ] = useState(urlQ);
+  // a new ?q= from outside (header search, back/forward) replaces the field; our own URL writes match q, so they don't.
+  // Adjusting state when a prop changes, per react.dev/learn/you-might-not-need-an-effect
+  const [seenUrlQ, setSeenUrlQ] = useState(urlQ);
+  if (urlQ !== seenUrlQ) { setSeenUrlQ(urlQ); if (urlQ !== q.trim()) setQ(urlQ); }
+  // typing writes ?q= back to the address bar (debounced, other params kept) so searches can be shared and bookmarked
+  useEffect(() => {
+    if (!syncUrl) return;
+    const t = setTimeout(() => {
+      const u = new URL(location.href);
+      const v = q.trim();
+      if ((u.searchParams.get("q") ?? "") === v) return;
+      if (v) u.searchParams.set("q", v); else u.searchParams.delete("q");
+      history.replaceState(history.state, "", u.pathname + u.search + u.hash);
+    }, 350);
+    return () => clearTimeout(t);
+  }, [q, syncUrl]);
   const [env, setEnv] = useState<string | null>(null);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const all = useMemo(() => families.flatMap((f) => f.categories.flatMap((c) => c.products)), [families]);
@@ -47,7 +63,7 @@ function Inner({ families, urlQ }: { families: Fam[]; urlQ: string }) {
               <div key={c.slug} style={{ marginTop: 28 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12, flexWrap: "wrap", marginBottom: 14 }}>
                   <h3 className="h-3"><Link href={`/products/${c.slug}`} style={{ textDecoration: "none" }}>{c.name}</Link></h3>
-                  <Link className="link" href={`/products/${c.slug}`} style={{ fontWeight: 600, fontSize: ".9375rem" }}>Category page · compare {c.products.length} →</Link>
+                  <Link className="link" href={c.products.length > 1 ? `/products/${c.slug}#compare` : `/products/${c.slug}`} style={{ fontWeight: 600, fontSize: ".9375rem" }}>{c.products.length > 1 ? `Compare ${c.products.length} models →` : "View category →"}</Link>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 14 }}>{c.list.map((p) => <ProductCard key={p.slug} p={p} />)}</div>
               </div>
@@ -67,11 +83,11 @@ function Inner({ families, urlQ }: { families: Fam[]; urlQ: string }) {
   );
 }
 
-// ?q= (from the header search) is read with useSearchParams; key={q} resets the field when a new search arrives.
+// ?q= is read with useSearchParams and kept in sync both ways (see Inner).
 // The Suspense fallback renders the full, unfiltered catalogue, so the page stays static and indexable.
 function WithParams({ families }: { families: Fam[] }) {
   const q = useSearchParams().get("q") ?? "";
-  return <Inner key={q} families={families} urlQ={q} />;
+  return <Inner families={families} urlQ={q} syncUrl />;
 }
 export function CatalogueBrowser({ families }: { families: Fam[] }) {
   return <Suspense fallback={<Inner families={families} urlQ="" />}><WithParams families={families} /></Suspense>;

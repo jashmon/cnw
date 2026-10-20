@@ -27,3 +27,11 @@
   transition:transform var(--dur-ui) var(--ease-out),opacity var(--dur-ui);pointer-events:none;box-shadow:var(--shadow-float)}
 .toast.show{transform:translate(-50%,0);opacity:1}
 @media (max-width:767px){.toast{bottom:84px}}
+/* narrow phones: thumbnail shrinks and the quantity stepper moves under the product details */
+@media (max-width:420px){
+  .line{grid-template-columns:48px minmax(0,1fr);align-items:start}
+  .thumb{width:48px;height:48px}
+  .qty{grid-column:2;justify-self:start}
+}
+.line > div{min-width:0}
+@media (pointer:coarse){.qty button{width:44px;height:44px}.qty input{height:44px}}

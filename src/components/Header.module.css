@@ -49,7 +49,7 @@
 .results .opt[aria-selected="true"]{background:var(--yellow-tint)}
 .none{padding:12px;font-size:.9375rem}
 /* mobile */
-.burger{display:none;width:44px;height:44px;border:2px solid var(--ink);background:transparent;border-radius:var(--radius-sm);cursor:pointer;position:relative}
+.burger{display:none;flex-shrink:0;width:44px;height:44px;border:2px solid var(--ink);background:transparent;border-radius:var(--radius-sm);cursor:pointer;position:relative}
 .burger i{position:absolute;left:10px;right:10px;height:2px;background:var(--ink);transition:transform var(--dur-ui) var(--ease-out),opacity var(--dur-micro)}
 .burger i:nth-child(1){top:13px}.burger i:nth-child(2){top:20px}.burger i:nth-child(3){top:27px}
 .burger[aria-expanded="true"] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -76,7 +76,9 @@
 @media (max-width:1366px){.right .search{display:none}.searchIcon{display:grid}}
 @media (max-width:1250px){.nav,.right .cta,.searchIcon{display:none}.burger{display:block}}
 @media (max-width:1250px){.util{display:none}}
-@media (max-width:767px){.inner{height:60px}.badgeBtn .txt{display:none}}
+@media (max-width:767px){.inner{height:60px}}
+/* very narrow phones: logo + quote badge + menu need the room, so the "Quote" word goes (badge stays) */
+@media (max-width:374px){.badgeBtn :global(.txt){display:none}}
 .cta{white-space:nowrap;flex-shrink:0}
 @media (max-width:1250px){.mega{display:none}}
 .searchLg{flex:none;width:100%;max-width:560px;min-width:0}

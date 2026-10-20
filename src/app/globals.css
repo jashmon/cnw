@@ -156,3 +156,6 @@ html:has(dialog[open]) { overflow: hidden; }
 /* systems index rows: number · text · button; on narrow phones the whole row is the link, so the button goes */
 .sys-row { grid-template-columns: 60px 1fr auto; }
 @media (max-width: 480px) { .sys-row { grid-template-columns: 36px 1fr; gap: 12px !important; } .sys-go { display: none; } }
+
+/* quote page form: sticky beside the list only in the two-column layout; normal flow on phones and tablets */
+@media (min-width: 960px) { .quote-form { position: sticky; top: calc(var(--sticky-top) + 20px); } }

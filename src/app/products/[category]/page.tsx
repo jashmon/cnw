@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Arrow } from "@/components/Brand";
 import { ScrollActive } from "@/components/ScrollActive";
+import { productHref } from "@/lib/href";
+import { CategoryCompare } from "@/components/CategoryCompare";
 import { CategoryGrid } from "@/components/CategoryGrid";
 import { waLink } from "@/content/company";
 import { getCategories, getCategory, getFamilies, getProduct, toCard } from "@/lib/catalogue";
@@ -21,7 +23,8 @@ export default async function CategoryPage({ params }: PageProps<"/products/[cat
   const c = getCategory((await params).category);
   if (!c) notFound();
   const fam = getFamilies().find((f) => f.slug === c.familySlug)!;
-  const products = c.products.map((sl) => toCard(getProduct(sl)!));
+  const full = c.products.map((sl) => getProduct(sl)!);
+  const products = full.map(toCard);
   return (
     <>
       <section className={`band-surface ${s.head}`}>
@@ -29,7 +32,7 @@ export default async function CategoryPage({ params }: PageProps<"/products/[cat
           <nav aria-label="Breadcrumb" className={s.crumbs}><Link href="/products">Products</Link> / <Link href={`/products#${fam.slug}`}>{fam.name}</Link></nav>
           <div className={s.title}>
             <h1 className="h-xl">{c.name}</h1>
-            <p className="mono">{products.length} model{products.length > 1 ? "s" : ""}</p>
+            <p className="mono">{products.length} model{products.length > 1 ? "s" : ""}{products.length > 1 && <> · <a href="#compare" className="inline">compare</a></>}</p>
           </div>
           {c.intro && <p className="lede" style={{ marginTop: 14 }}>{c.intro}</p>}
           <ul className={s.switch} id="cat-switch" aria-label={`Other ${fam.name.toLowerCase()} categories`}>
@@ -42,6 +45,15 @@ export default async function CategoryPage({ params }: PageProps<"/products/[cat
         <h2 className="sr-only">{c.name} models</h2>
         <CategoryGrid products={products} />
       </section>
+      {full.length > 1 && (
+        <section id="compare" className="band-surface section" style={{ scrollMarginTop: "calc(var(--sticky-top) + 12px)" }}>
+          <div className="wrap">
+            <h2 className="h-1">Compare {c.name.toLowerCase()}</h2>
+            <p className="muted" style={{ margin: "8px 0 20px", maxWidth: "70ch" }}>Differences first: interface, power, protection and output, then installation. Each model page has the full specification table.</p>
+            <CategoryCompare category={c.name} models={full.map((m) => ({ slug: m.slug, model: m.model, name: m.name, href: productHref(m), categorySlug: m.categorySlug, interface: m.interface, environment: m.environment, specGroups: m.specGroups, variants: m.variants }))} />
+          </div>
+        </section>
+      )}
       <section className="wrap" style={{ paddingBottom: "var(--space-section)" }}>
         <div className={s.tiles}>
           <Link href="/quote" className={`${s.tile} ${s.y}`}><span className="label" style={{ color: "var(--ink)" }}>01</span><b>Get a quote</b><span>Add models to your list and send one enquiry. <Arrow /></span></Link>

@@ -59,7 +59,7 @@ export function Search({ index, onGo, large = false, placeholder = "Search model
         <ul className={s.results} id={`${id}-r`} role="listbox" aria-label="Matching models">
           {res.map((r, i) => (
             <li key={r.slug} id={`${id}-o${i}`} role="option" aria-selected={i === sel} className={s.opt}
-              onMouseDown={(e) => { e.preventDefault(); go(r.href); }} onMouseEnter={() => setSel(i)}>
+              onMouseDown={(e) => e.preventDefault() /* keep focus in the input */} onClick={() => go(r.href)} onMouseEnter={() => setSel(i)}>
               <span className="code">{r.model}</span><b>{r.name}</b><small>{r.category}</small>
             </li>
           ))}
