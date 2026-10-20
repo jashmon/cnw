@@ -1,7 +1,11 @@
-// Internal link check: fetch every route in urls.txt, collect internal hrefs/srcs, verify each returns < 400.
+// Internal link check: fetch every route (sitemap, or a urls.txt passed as argv[3]), collect internal hrefs/srcs, verify each returns < 400.
 import fs from "node:fs";
 const base = process.argv[2] || "http://localhost:3200";
-const routes = fs.readFileSync("../11-qa/urls.txt", "utf8").split("\n").filter((l) => l && !l.includes("nope"));
+// routes: a list file if given (argv[3]), otherwise every route in the site's own sitemap
+const routes = (process.argv[3] && fs.existsSync(process.argv[3])
+  ? fs.readFileSync(process.argv[3], "utf8").split("\n")
+  : [...(await (await fetch(base + "/sitemap.xml")).text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname)
+).filter((l) => l && !l.includes("nope"));
 const seen = new Map(); const bad = [];
 for (const r of routes) {
   const html = await (await fetch(base + r)).text();
