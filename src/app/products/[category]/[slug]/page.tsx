@@ -10,7 +10,7 @@ import { SpecTables } from "@/components/SpecTables";
 import { company, waLink } from "@/content/company";
 import { comparableTo, compareRows } from "@/lib/compare";
 import { CompareTable } from "@/components/CompareTable";
-import { getCategory, getProduct, getProducts, getSystems, productHref } from "@/lib/catalogue";
+import { fileCode, getCategory, getProduct, getProducts, getSystems, productHref } from "@/lib/catalogue";
 import s from "./pdp.module.css";
 
 export const dynamicParams = false;
@@ -85,7 +85,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[cate
           <div className={s.actions}>
             <AddToQuote item={item} />
             {p.datasheet
-              ? <a className="btn btn--ghost" href={p.datasheet.href} download={`SMART-${p.model || p.slug}-datasheet.pdf`}>Datasheet · PDF {kb(p.datasheet.bytes)} <span className="arr" aria-hidden="true"><i>↓</i><i>↓</i></span></a>
+              ? <a className="btn btn--ghost" href={p.datasheet.href} download={`SMART-${fileCode(p.model || p.slug)}-datasheet.pdf`}>Datasheet · PDF {kb(p.datasheet.bytes)} <span className="arr" aria-hidden="true"><i>↓</i><i>↓</i></span></a>
               : <a className="btn btn--ghost" href={waLink(`Hello, please send the datasheet for SMART ${code}.`)} target="_blank" rel="noopener">Datasheet on request</a>}
           </div>
           <p className={s.ask}><a className="link" href={waLink(`Hello, I have a question about SMART ${code}.`)} target="_blank" rel="noopener">Ask an engineer about {p.model || "this"} on WhatsApp →</a></p>

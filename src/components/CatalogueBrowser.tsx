@@ -54,6 +54,11 @@ function Inner({ families, urlQ, syncUrl = false }: { families: Fam[]; urlQ: str
           {envs.map((e) => <button key={e} type="button" className="chip" aria-pressed={env === e} onClick={() => setEnv(env === e ? null : e)} style={{ textTransform: "capitalize" }}>{e}</button>)}
         </div>
         <span className={`mono muted ${s.count}`} aria-live="polite">{count} of {all.length}</span>
+        <label htmlFor="cat-fam" className="sr-only">Jump to a family</label>
+        <select id="cat-fam" className={s.fam} data-open={filtersOpen} value="" onChange={(e) => { const v = e.target.value; if (v) document.getElementById(v)?.scrollIntoView({ block: "start" }); }}>
+          <option value="">Jump to family…</option>
+          {families.filter((f) => f.categories.some((c) => c.products.some(visible))).map((f) => <option key={f.slug} value={f.slug}>{f.name}</option>)}
+        </select>
       </div>
       {families.map((f) => {
         const cats = f.categories.map((c) => ({ ...c, list: c.products.filter(visible) })).filter((c) => c.list.length);

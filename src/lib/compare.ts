@@ -2,7 +2,7 @@ import type { Product } from "./catalogue";
 
 // Model comparison: which models to compare, and which rows to show.
 
-type Comparable = Pick<Product, "slug" | "categorySlug" | "interface" | "environment" | "specGroups" | "variants">;
+type Comparable = Pick<Product, "slug" | "categorySlug" | "interface" | "environment" | "specGroups" | "variants"> & { capabilities?: Record<string, string> };
 
 // Buyer-decision order: interface and line, power, protection, environment, output, installation, features.
 const PRIORITY = [
@@ -13,15 +13,18 @@ const PRIORITY = [
   /mounting|connection|cabl|connector|ports/i, /dimensions|weight|housing/i,
   /keypad|handset|count input|working mode|output contact|reset|flasher/i,
 ];
-const rank = (k: string) => { const i = PRIORITY.findIndex((r) => r.test(k)); return i < 0 ? PRIORITY.length : i; };
+const rank = (k: string, caps?: Set<string>) => { if (caps?.has(k)) return -1; const i = PRIORITY.findIndex((r) => r.test(k)); return i < 0 ? PRIORITY.length : i; };
+// source-provenance notes that may be dropped when comparing values; engineering qualifiers such as (RMS) or (peak) stay
+const PROVENANCE = /^(?:[\w .&'’-]*?(?:pdf|web|printed|catalogue|catalog|datasheet|manual|spec(?:ification)?s?(?: table)?|features|page|site|version|standard|deck|brochure|per web|as printed)[\w .&'’/,-]*)$/i;
 
 export const NOT_SPECIFIED = "Not specified";
 
-const keysOf = (c: Comparable) => new Set(Object.values(c.specGroups).flatMap((g) => Object.keys(g)));
+const keysOf = (c: Comparable) => new Set([...Object.keys(c.capabilities ?? {}), ...Object.values(c.specGroups).flatMap((g) => Object.keys(g))]);
 
 export function specValue(c: Comparable, k: string): string {
   if (k === "Interface") return c.interface || NOT_SPECIFIED;
   if (k === "Environment") return c.environment.length ? c.environment.join(", ") : NOT_SPECIFIED;
+  if (c.capabilities && k in c.capabilities && c.capabilities[k].trim()) return c.capabilities[k];
   for (const g of Object.values(c.specGroups)) if (k in g && String(g[k]).trim()) return g[k];
   return NOT_SPECIFIED;
 }
@@ -33,7 +36,9 @@ export function normalizeSpec(v: string): string {
   return v
     .normalize("NFKC")
     .toLowerCase()
-    .replace(/\([^)]*\)/g, " ")          // source notes: (cnwcom PDF), (as printed), (web page)…
+    .replace(/\(([^)]*)\)/g, (m, inner: string) => (PROVENANCE.test(inner.trim()) ? " " : m))  // drop only source notes
+    .replace(/(\d)\s*(?:to|upto|up to)\s*(?=[+-]?\d)/g, "$1-")       // "40 to 100 V" = "40–100 V"
+    .replace(/(\d)\s*\/\s*(?=\d)/g, "$1/")
     .replace(/['"‘’“”]/g, "")
     .replace(/[×✕]/g, "x")
     .replace(/[–—−]/g, "-")
@@ -52,6 +57,7 @@ export type Row = { key: string; state: RowState; values: string[] };
 // Order: differs, same, partial; each block in buyer-decision priority.
 export function compareRows(models: Comparable[], limit = 12): Row[] {
   const keys = [...new Set(["Interface", "Environment", ...models.flatMap((c) => [...keysOf(c)])])];
+  const caps = new Set(models.flatMap((c) => Object.keys(c.capabilities ?? {})));
   const order: Record<RowState, number> = { differs: 0, same: 1, partial: 2 };
   return keys
     .map((key) => {
@@ -62,7 +68,7 @@ export function compareRows(models: Comparable[], limit = 12): Row[] {
       return { key, state, values, given: given.length };
     })
     .filter((r) => r.given >= 2)
-    .sort((a, b) => order[a.state] - order[b.state] || rank(a.key) - rank(b.key))
+    .sort((a, b) => order[a.state] - order[b.state] || rank(a.key, caps) - rank(b.key, caps))
     .slice(0, limit)
     .map(({ key, state, values }) => ({ key, state, values }));
 }

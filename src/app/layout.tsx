@@ -15,6 +15,7 @@ const og = localFont({ src: "../fonts/OverusedGrotesk-VF.woff2", weight: "300 90
 
 export const metadata: Metadata = {
   metadataBase: new URL(company.url),
+  alternates: { canonical: "./" }, // self-canonical on every route; product and category pages set their own
   title: { default: "SMART industrial telephones & plant PA systems | Cables & Wireless Co.", template: "%s" },
   description: "SMART industrial telephones, plant PA systems, emergency call boxes, hooters, voice alarms and bag counters. Designed and built in Nagpur by Cables & Wireless Co.",
   openGraph: { type: "website", siteName: "Cables & Wireless Co.", locale: "en_IN", images: [{ url: "/media/og.jpg", width: 1200, height: 630, alt: "SMART industrial telephone by Cables & Wireless Co." }] },

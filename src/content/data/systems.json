@@ -1,104 +1,172 @@
 [
- {
-  "slug": "plant-pa-system",
-  "name": "Plant PA system",
-  "intro": "Paging and private talk across a whole plant, in two architectures. MCS-II puts a 30 W amplifier in every PA telephone and needs no amplifier rack; MCS-III keeps line-powered phones in the field and drives 100 V loudspeaker lines from central 250 W amplifiers.",
-  "howItWorks": [
-   "Field phones go where people work: WMHS-II or WMHF-II PA telephones on an MCS-II, or WMHS-IIIPT line-powered phones on an MCS-III.",
-   "Each phone runs back to the master control station on ordinary telephone cable: 0.5 mm 2-core twisted pair, with loops up to 2000 m on the MCS-II.",
-   "Dial a phone to page at that location, press a zone code or zone key to page one of up to 12 zones, or use all-call to reach every zone.",
-   "Lift the handset (MCS-II) or press TALKBACK (MCS-III) and the conversation goes private on its own channel.",
-   "The operator console in the control room pages, dials and monitors; up to 4 consoles per system.",
-   "Up to 4 trunk lines from the plant EPABX patch in, so office phones can reach the field."
-  ],
-  "components": [
-   "mcs-ii",
-   "wmhs-ii",
-   "wmhf-ii",
-   "wmhs-ii-id",
-   "oc-dths-ii",
-   "exa-i",
-   "mcs-iii",
-   "wmhs-iiipt",
-   "oc-dths-iii",
-   "exa-pa-250",
-   "lsod",
-   "lsin"
-  ],
-  "diagramNotes": "Two side-by-side line diagrams, same visual language. LEFT \"MCS-II, distributed amplifier\": MCS-II cabinet (wall) in the centre; 0.5 mm 2-core lines out to 6 WMHS-II phones, each with its own LSOD horn on a short 0.75 mm 2-core lead and a \"30 W\" tag at the phone; one OC-DTHS-II console in a control-room box; EPABX box linked by \"up to 4 trunk lines\"; label \"loops up to 2000 m\"; group phones into two dashed zone outlines \"Zone 1 … Zone 12\". RIGHT \"MCS-III, central amplifier\": MCS-III + EXA PA 250 modules + PCU in one 19 in rack; 1-pair lines to WMHS-IIIPT phones (no horns at the phones, tag \"line powered\"); separate 100 V loudspeaker lines from the rack to groups of LSOD-XT horns, labelled \"up to 12 loudspeaker lines\"; OC-DTHS-III console on 2-pair cable. Source: MCS-II and MCS-III connection decks (SYSTEM BLOCK DIAGRAM, CABLING DETAILS slides); redraw, do not copy.",
-  "seoTitle": "Plant PA System: MCS-II vs MCS-III | SMART",
-  "metaDescription": "How a SMART plant PA system connects: field PA phones, master control station, zones, all-call, operator consoles and EPABX trunks. MCS-II and MCS-III."
- },
- {
-  "slug": "hotline-network",
-  "name": "Hotline network",
-  "intro": "Direct lines with no dialling, from control rooms to the posts that need an answer now. Three SMART hotlines cover one pair of copper, PA paging on pick-up, and single-mode fibre between sites.",
-  "howItWorks": [
-   "Pick the link: HT-I for up to 4 desktop phones on one pair, HT-A when the far end should page over a loudspeaker, HT-IP when the sites are linked by fibre.",
-   "Phones connect to a SMART controller on a single pair of non-critical telephone cable; HT-A supports loops up to 1 km.",
-   "Lift a handset: HT-I and HT-IP ring the other end until it is answered; HT-A puts the other unit straight into paging on its loudspeaker.",
-   "The answering handset makes the call private and full duplex.",
-   "Replace the handsets and the line resets. HT-I and HT-A controllers carry built-in battery backup for power failures."
-  ],
-  "components": [
-   "ht-i",
-   "ht-a",
-   "ht-ip"
-  ],
-  "diagramNotes": "Three horizontal strips, one per model. HT-I: one controller box (with battery icon) on a single pair, 4 desktop phones tapped along it, note \"controller anywhere on the line\". HT-A: controller with two desktop hotline PA phones, each with a small loudspeaker; arrow \"lift → other end pages\"; label \"up to 1 km, 2-core 0.5 sq mm\". HT-IP: phone — pair — SMART IP controller — single-mode fibre (draw long, label \"up to 10 km\") — SMART IP controller — pair — phone. Keep wavelengths off the diagram.",
-  "seoTitle": "Hotline Networks over Copper or Fibre | SMART",
-  "metaDescription": "How SMART hotlines connect: lift a handset and the other end rings or pages. Up to 4 phones on one pair, PA hotlines, or two sites on fibre up to 10 km."
- },
- {
-  "slug": "highway-emergency-call-box-network",
-  "name": "Highway emergency call box network",
-  "intro": "SOS points along highways, rail lines and ports, with a control room that knows who is calling and whether every box works. SMART call boxes run on GSM or VoIP, with solar options, and report to a central rack and HTMS software.",
-  "howItWorks": [
-   "Install call boxes along the route: GSM-ECB BOX or ECB-GSM-CB on any GSM SIM network, or VOIP-ECB where Ethernet is available.",
-   "Power GSM boxes from 12 V DC with an optional 12 V / 30 W solar panel and 12 V / 7 Ah battery.",
-   "A caller presses the single illuminated button and talks hands-free once the operator answers.",
-   "The 19 in server rack in the control room takes up to 4 calls at once and records each with time stamp and ECB ID.",
-   "HTMS software pops up the caller ID with the box location, shows live box status and builds call reports.",
-   "Boxes send self-check and door-open SMS, and the rack checks connectivity with every box automatically."
-  ],
-  "components": [
-   "gsm-ecb-box",
-   "ecb-gsm-cb",
-   "voip-ecb",
-   "gsm-ecb-server-rack",
-   "htms",
-   "wmhf-iiigsm"
-  ],
-  "diagramNotes": "A road drawn as a long horizontal band with 4 call boxes along it, each with a small solar panel and antenna; dotted radio lines from the boxes to a GSM mast icon, then to a control-room building. Inside the building: the 19 in rack (call logger, voice logger, message logger, FCT) and a PC screen showing HTMS with a map pin labelled \"ECB-07, caller ID\". One box drawn as VOIP-ECB with a cable to the building instead of radio. Callouts: \"one button, hands-free\", \"self-check SMS\", \"up to 4 calls at once\".",
-  "seoTitle": "Highway Emergency Call Box Network | SMART",
-  "metaDescription": "How a SMART emergency call box network works: solar GSM or VoIP boxes, a control-room server rack and HTMS software with caller ID, location and recording."
- },
- {
-  "slug": "bag-counting-dispatch-line",
-  "name": "Bag-counting & dispatch line",
-  "intro": "Bags counted at the loading point, with the count shown where the loading crew can see it. SMART bag counters sit on the chute, conveyor or loader and can stop the line at the set count.",
-  "howItWorks": [
-   "Fit the sensor at the spiral chute, conveyor, packer idler or loader: sensing head, non-contact (BC-L03), diffused optic (BC-DO) or dual optic (BC-0).",
-   "Set the batch count for the truck or wagon on the keypad; models such as BC-L-03 and BC-DO also take the truck or wagon number.",
-   "The counter shows the running count in 3.5 or 4 in digits, plus totaliser and set count on the larger models.",
-   "At the last 10 bags a pre-alarm sounds; at the set count a relay contact can stop the conveyor or loader.",
-   "Counts are kept through power cuts. Network models send counts by Ethernet or wireless to Windows software, with long-loop repeater stations for a remote PC."
-  ],
-  "components": [
-   "bc-l01",
-   "bc-l02",
-   "bc-l03",
-   "bc-l-03",
-   "bc-l03-m",
-   "bc-l-ss",
-   "bc-l-nw-6",
-   "bc-l-nw",
-   "bc-do",
-   "bc-do-nw",
-   "bc-0"
-  ],
-  "diagramNotes": "Side view of a loading line: packer → conveyor → truck loader → truck (and a wagon variant as an inset). Sensor head drawn on the loader with a dashed beam; cable to a wall-mounted counter showing \"COUNT 0485 / SET 0600 / TRUCK MH40AB1234\" (sample values, mark as illustrative). Relay line from the counter back to the conveyor motor labelled \"stop at set count\", a small horn labelled \"pre-alarm: last 10\". Ethernet line from the counter to a dispatch-office PC. Keep sensor types as a small legend: sensing head, non-contact, diffused optic, dual optic.",
-  "seoTitle": "Bag-Counting & Dispatch Line | SMART",
-  "metaDescription": "How a SMART bag-counting line works: sensor at the chute or loader, batch count per truck or wagon, pre-alarm, conveyor stop and Ethernet link to dispatch."
- }
+  {
+    "slug": "plant-pa-system",
+    "name": "Plant PA system",
+    "intro": "Paging and private talk across a whole plant, in two architectures. MCS-II puts a 30 W amplifier in every PA telephone and needs no amplifier rack; MCS-III keeps line-powered phones in the field and drives 100 V loudspeaker lines from central 250 W amplifiers.",
+    "howItWorks": [
+      "Field phones go where people work: WMHS-II or WMHF-II PA telephones on an MCS-II, or WMHS-IIIPT line-powered phones on an MCS-III.",
+      "Each phone runs back to the master control station on ordinary telephone cable: 0.5 mm 2-core twisted pair, with loops up to 2000 m on the MCS-II.",
+      "Dial a phone to page at that location, press a zone code or zone key to page one of up to 12 zones, or use all-call to reach every zone.",
+      "Lift the handset (MCS-II) or press TALKBACK (MCS-III) and the conversation goes private on its own channel.",
+      "The operator console in the control room pages, dials and monitors; up to 4 consoles per system.",
+      "Up to 4 trunk lines from the plant EPABX patch in, so office phones can reach the field."
+    ],
+    "components": [
+      "mcs-ii",
+      "wmhs-ii",
+      "wmhf-ii",
+      "wmhs-ii-id",
+      "oc-dths-ii",
+      "exa-i",
+      "mcs-iii",
+      "wmhs-iiipt",
+      "oc-dths-iii",
+      "exa-pa-250",
+      "lsod",
+      "lsin"
+    ],
+    "diagramNotes": "Two side-by-side line diagrams, same visual language. LEFT \"MCS-II, distributed amplifier\": MCS-II cabinet (wall) in the centre; 0.5 mm 2-core lines out to 6 WMHS-II phones, each with its own LSOD horn on a short 0.75 mm 2-core lead and a \"30 W\" tag at the phone; one OC-DTHS-II console in a control-room box; EPABX box linked by \"up to 4 trunk lines\"; label \"loops up to 2000 m\"; group phones into two dashed zone outlines \"Zone 1 … Zone 12\". RIGHT \"MCS-III, central amplifier\": MCS-III + EXA PA 250 modules + PCU in one 19 in rack; 1-pair lines to WMHS-IIIPT phones (no horns at the phones, tag \"line powered\"); separate 100 V loudspeaker lines from the rack to groups of LSOD-XT horns, labelled \"up to 12 loudspeaker lines\"; OC-DTHS-III console on 2-pair cable. Source: MCS-II and MCS-III connection decks (SYSTEM BLOCK DIAGRAM, CABLING DETAILS slides); redraw, do not copy.",
+    "seoTitle": "Plant PA System: MCS-II vs MCS-III | SMART",
+    "metaDescription": "How a SMART plant PA system connects: field PA phones, master control station, zones, all-call, operator consoles and EPABX trunks. MCS-II and MCS-III.",
+    "componentGroups": [
+      {
+        "title": "MCS-II · amplifier in every phone",
+        "note": "Each field telephone has its own 30 W amplifier and horn; the master station switches calls and zones.",
+        "items": [
+          {
+            "slug": "mcs-ii",
+            "role": "Master control station"
+          },
+          {
+            "slug": "wmhs-ii",
+            "role": "Field PA telephone, handset"
+          },
+          {
+            "slug": "wmhf-ii",
+            "role": "Field PA telephone, hands-free and vandal-resistant"
+          },
+          {
+            "slug": "wmhs-ii-id",
+            "role": "Indoor / desktop PA telephone"
+          },
+          {
+            "slug": "oc-dths-ii",
+            "role": "Operator console"
+          }
+        ]
+      },
+      {
+        "title": "MCS-III · central amplifiers",
+        "note": "Line-powered field telephones; 250 W amplifier modules in the 19 in rack drive 100 V loudspeaker lines.",
+        "items": [
+          {
+            "slug": "mcs-iii",
+            "role": "Master control station, 19 in rack"
+          },
+          {
+            "slug": "exa-pa-250",
+            "role": "250 W paging amplifier module"
+          },
+          {
+            "slug": "wmhs-iiipt",
+            "role": "Field telephone with PAGE and TALKBACK"
+          },
+          {
+            "slug": "oc-dths-iii",
+            "role": "Operator console"
+          }
+        ]
+      },
+      {
+        "title": "Shared and optional",
+        "note": "Loudspeakers for either architecture, and the external amplifier that lets an MCS-II phone drive more horns.",
+        "items": [
+          {
+            "slug": "lsod",
+            "role": "Outdoor loudspeaker horn"
+          },
+          {
+            "slug": "lsin",
+            "role": "Indoor box speaker"
+          },
+          {
+            "slug": "exa-i",
+            "role": "External amplifier for extra horns (MCS-II phones)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hotline-network",
+    "name": "Hotline network",
+    "intro": "Direct lines with no dialling, from control rooms to the posts that need an answer now. Three SMART hotlines cover one pair of copper, PA paging on pick-up, and single-mode fibre between sites.",
+    "howItWorks": [
+      "Pick the link: HT-I for up to 4 desktop phones on one pair, HT-A when the far end should page over a loudspeaker, HT-IP when the sites are linked by fibre.",
+      "Phones connect to a SMART controller on a single pair of non-critical telephone cable; HT-A supports loops up to 1 km.",
+      "Lift a handset: HT-I and HT-IP ring the other end until it is answered; HT-A puts the other unit straight into paging on its loudspeaker.",
+      "The answering handset makes the call private and full duplex.",
+      "Replace the handsets and the line resets. HT-I and HT-A controllers carry built-in battery backup for power failures."
+    ],
+    "components": [
+      "ht-i",
+      "ht-a",
+      "ht-ip"
+    ],
+    "diagramNotes": "Three horizontal strips, one per model. HT-I: one controller box (with battery icon) on a single pair, 4 desktop phones tapped along it, note \"controller anywhere on the line\". HT-A: controller with two desktop hotline PA phones, each with a small loudspeaker; arrow \"lift → other end pages\"; label \"up to 1 km, 2-core 0.5 sq mm\". HT-IP: phone — pair — SMART IP controller — single-mode fibre (draw long, label \"up to 10 km\") — SMART IP controller — pair — phone. Keep wavelengths off the diagram.",
+    "seoTitle": "Hotline Networks over Copper or Fibre | SMART",
+    "metaDescription": "How SMART hotlines connect: lift a handset and the other end rings or pages. Up to 4 phones on one pair, PA hotlines, or two sites on fibre up to 10 km."
+  },
+  {
+    "slug": "highway-emergency-call-box-network",
+    "name": "Highway emergency call box network",
+    "intro": "SOS points along highways, rail lines and ports, with a control room that knows who is calling and whether every box works. SMART call boxes run on GSM or VoIP, with solar options, and report to a central rack and HTMS software.",
+    "howItWorks": [
+      "Install call boxes along the route: GSM-ECB BOX or ECB-GSM-CB on any GSM SIM network, or VOIP-ECB where Ethernet is available.",
+      "Power GSM boxes from 12 V DC with an optional 12 V / 30 W solar panel and 12 V / 7 Ah battery.",
+      "A caller presses the single illuminated button and talks hands-free once the operator answers.",
+      "The 19 in server rack in the control room takes up to 4 calls at once and records each with time stamp and ECB ID.",
+      "HTMS software pops up the caller ID with the box location, shows live box status and builds call reports.",
+      "Boxes send self-check and door-open SMS, and the rack checks connectivity with every box automatically."
+    ],
+    "components": [
+      "gsm-ecb-box",
+      "ecb-gsm-cb",
+      "voip-ecb",
+      "gsm-ecb-server-rack",
+      "htms",
+      "wmhf-iiigsm"
+    ],
+    "diagramNotes": "A road drawn as a long horizontal band with 4 call boxes along it, each with a small solar panel and antenna; dotted radio lines from the boxes to a GSM mast icon, then to a control-room building. Inside the building: the 19 in rack (call logger, voice logger, message logger, FCT) and a PC screen showing HTMS with a map pin labelled \"ECB-07, caller ID\". One box drawn as VOIP-ECB with a cable to the building instead of radio. Callouts: \"one button, hands-free\", \"self-check SMS\", \"up to 4 calls at once\".",
+    "seoTitle": "Highway Emergency Call Box Network | SMART",
+    "metaDescription": "How a SMART emergency call box network works: solar GSM or VoIP boxes, a control-room server rack and HTMS software with caller ID, location and recording."
+  },
+  {
+    "slug": "bag-counting-dispatch-line",
+    "name": "Bag-counting & dispatch line",
+    "intro": "Bags counted at the loading point, with the count shown where the loading crew can see it. SMART bag counters sit on the chute, conveyor or loader and can stop the line at the set count.",
+    "howItWorks": [
+      "Fit the sensor at the spiral chute, conveyor, packer idler or loader: sensing head, non-contact (BC-L03), diffused optic (BC-DO) or dual optic (BC-0).",
+      "Set the batch count for the truck or wagon on the keypad; models such as BC-L-03 and BC-DO also take the truck or wagon number.",
+      "The counter shows the running count in 3.5 or 4 in digits, plus totaliser and set count on the larger models.",
+      "At the last 10 bags a pre-alarm sounds; at the set count a relay contact can stop the conveyor or loader.",
+      "Counts are kept through power cuts. Network models send counts by Ethernet or wireless to Windows software, with long-loop repeater stations for a remote PC."
+    ],
+    "components": [
+      "bc-l01",
+      "bc-l02",
+      "bc-l03",
+      "bc-l-03",
+      "bc-l03-m",
+      "bc-l-ss",
+      "bc-l-nw-6",
+      "bc-l-nw",
+      "bc-do",
+      "bc-do-nw",
+      "bc-0"
+    ],
+    "diagramNotes": "Side view of a loading line: packer → conveyor → truck loader → truck (and a wagon variant as an inset). Sensor head drawn on the loader with a dashed beam; cable to a wall-mounted counter showing \"COUNT 0485 / SET 0600 / TRUCK MH40AB1234\" (sample values, mark as illustrative). Relay line from the counter back to the conveyor motor labelled \"stop at set count\", a small horn labelled \"pre-alarm: last 10\". Ethernet line from the counter to a dispatch-office PC. Keep sensor types as a small legend: sensing head, non-contact, diffused optic, dual optic.",
+    "seoTitle": "Bag-Counting & Dispatch Line | SMART",
+    "metaDescription": "How a SMART bag-counting line works: sensor at the chute or loader, batch count per truck or wagon, pre-alarm, conveyor stop and Ethernet link to dispatch."
+  }
 ]

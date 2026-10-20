@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "Cables & Wireless Co. designs, makes and commissions SMART industrial telephones, PA systems and alarms in Nagpur, with in-house R&D and PCB design.",
 };
 
-// Copy: 06-voice/copy/about.md (CEO note edited lightly from Sanjay Gandhi's own text; edit log in the deck).
+// Copy: 06-voice/copy/about.md (CEO note edited from the founder's own text; shortened 2026-10-20 so the pull quote is not
+// repeated and the culture passages are one paragraph. Pending the client's approval: see CLIENT-TODO.)
 const CAPS = [
   ["In-house R&D", "Products designed by our own engineers."],
   ["PCB design and development", "Our own circuit boards. Field units use a single plug-and-play PCB for quick troubleshooting."],
@@ -49,10 +50,8 @@ export default function About() {
             <p className="label">A note from our founder</p>
             <blockquote className={s.quote}>
               <p className={s.pull}>“SMART industrial communication products that are attractive in looks, easy to install, locate, use and maintain, and difficult to damage.”</p>
-              <p>I am {company.ceo}, Founder &amp; CEO of Cables &amp; Wireless Co. The vision behind our business is to build SMART industrial communication products that are attractive in looks (a new concept in industry), easy to install, locate, use and maintain, and difficult to damage. Our products share one goal: to give you the tools to take full advantage of a simplified industrial communication platform.</p>
-              <p>Our products help people and plants communicate better and work more efficiently. From a basic single-location telephone to systems tailored for specific industries, we have the mix of products to enable, enhance and simplify your communication.</p>
-              <p>We have a great team turning out some of the coolest products in industrial communication, here at Cables &amp; Wireless Co. Our people are passionate about their daily work, because they can see that their contribution makes a difference.</p>
-              <p>As we have grown in clients, people and revenue, our work culture has let us keep the advantages of a small company. Decisions are taken quickly. We are nimble and responsive to change.</p>
+              <p>I am {company.ceo}, Founder &amp; CEO of Cables &amp; Wireless Co. Our products share one goal: to give you the tools to take full advantage of simplified industrial communication.</p>
+              <p>From a basic single-location telephone to systems tailored for specific industries, we have the mix of products to enable, enhance and simplify your communication. We design and build them here in Nagpur with a team that is passionate about the work, and we have kept the advantages of a small company as we have grown: decisions are taken quickly, and we are nimble and responsive to change.</p>
               <p>I welcome you to explore our products. If you are seriously considering industrial communication products, you should be seriously considering SMART.</p>
             </blockquote>
             <figcaption className={s.sig}><b>{company.ceo}</b><span className="label">Founder &amp; CEO, Cables &amp; Wireless Co.</span></figcaption>

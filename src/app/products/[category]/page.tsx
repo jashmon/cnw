@@ -50,7 +50,7 @@ export default async function CategoryPage({ params }: PageProps<"/products/[cat
           <div className="wrap">
             <h2 className="h-1">Compare {c.name.toLowerCase()}</h2>
             <p className="muted" style={{ margin: "8px 0 20px", maxWidth: "70ch" }}>Differences first: interface, power, protection and output, then installation. Each model page has the full specification table.</p>
-            <CategoryCompare category={c.name} models={full.map((m) => ({ slug: m.slug, model: m.model, name: m.name, href: productHref(m), categorySlug: m.categorySlug, interface: m.interface, environment: m.environment, specGroups: m.specGroups, variants: m.variants }))} />
+            <CategoryCompare category={c.name} models={full.map((m) => ({ slug: m.slug, model: m.model, name: m.name, href: productHref(m), categorySlug: m.categorySlug, interface: m.interface, environment: m.environment, specGroups: m.specGroups, variants: m.variants, capabilities: m.capabilities }))} />
           </div>
         </section>
       )}

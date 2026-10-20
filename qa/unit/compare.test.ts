@@ -56,3 +56,24 @@ test("comparable models: variants and same category first; other categories excl
   // c: same category + interface + shared decision spec (6.25) · v: declared variant (6) · d: same category (4) · x: excluded
   assert.deepEqual(comparableTo(p, pool).map((x) => x.slug), ["c", "v", "d"]);
 });
+
+test("R01: engineering qualifiers in brackets stay significant; provenance notes do not", () => {
+  assert.notEqual(normalizeSpec("30 W (RMS)"), normalizeSpec("30 W (peak)"));
+  assert.equal(normalizeSpec("0.6 kg (as printed)"), normalizeSpec("0.6 kg"));
+  assert.equal(normalizeSpec("IP 65 (cnwcom PDF)"), normalizeSpec("IP65"));
+  assert.equal(normalizeSpec("2 kg (web page)"), normalizeSpec("2 kg (datasheet)"));
+});
+
+test("F08: equivalent range notation compares equal", () => {
+  assert.equal(normalizeSpec("40–100 V AC @ 16–25 Hz"), normalizeSpec("40 to 100 V AC @ 16–25 Hz"));
+  assert.equal(normalizeSpec("110 – 220 V AC"), normalizeSpec("110-220 V AC"));
+  assert.notEqual(normalizeSpec("40–100 V AC"), normalizeSpec("40–110 V AC"));
+});
+
+test("F08: capability fields are rows and rank before specs", () => {
+  const a = { ...m("a", { Weight: "5 kg" }), capabilities: { "Paging / talkback": "PAGE and TALKBACK buttons" } };
+  const b = { ...m("b", { Weight: "5 kg" }), capabilities: { "Paging / talkback": "No (telephone only)" } };
+  const r = compareRows([a, b]);
+  assert.equal(r[0].key, "Paging / talkback"); assert.equal(r[0].state, "differs");
+  assert.equal(row(r, "Weight")?.state, "same");
+});

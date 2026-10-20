@@ -153,7 +153,14 @@ html:has(dialog[open]) { overflow: hidden; }
 .spec-sign::before { content: "+"; font-size: 1.125rem; line-height: 1; }
 .spec-group[open] .spec-sign::before { content: "−"; }
 /* focus ring stays visible on charcoal bands */
-.band-dark :focus-visible { outline-color: var(--yellow); }
+/* focus ring colour follows the surface (WCAG 1.4.11, 3:1 against the adjacent colour): blue on light and yellow
+   surfaces; SMART yellow on charcoal and ink, including ink-filled buttons, the utility bar, dark bands, the footer */
+.band-dark :focus-visible, footer :focus-visible, .skip:focus-visible,
+.btn:not(.btn--ghost):not(.btn--yellow):not(.btn--hazard):focus-visible, .btn[style*="--btn-bg:var(--ink)"]:focus-visible, .btn[style*="--btn-bg: var(--ink)"]:focus-visible,
+[aria-pressed="true"]:focus-visible, [role="tab"][aria-selected="true"]:focus-visible, a.chip[aria-current="page"]:focus-visible { outline-color: var(--yellow); }
+/* yellow-filled controls: ink ring; on charcoal an ink inner ring plus a yellow outer ring, so both edges contrast */
+.btn--yellow:focus-visible, .btn--hazard:focus-visible, .code:focus-visible { outline-color: var(--ink); }
+.band-dark .btn--yellow:focus-visible, .band-dark .btn--hazard:focus-visible, .band-dark .code:focus-visible, footer .code:focus-visible { outline-color: var(--yellow); box-shadow: 0 0 0 3px var(--ink); }
 
 /* systems index rows: number · text · button; on narrow phones the whole row is the link, so the button goes */
 .sys-row { grid-template-columns: 60px 1fr auto; }

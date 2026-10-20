@@ -42,6 +42,8 @@ export function Search({ index, onGo, large = false, placeholder = "Search model
   const router = useRouter();
   const id = useId();
   const res = useSearch(index, q);
+  // F02: an arrow-selected option below the list's visible area is scrolled into view (short viewports)
+  useEffect(() => { if (open) document.getElementById(`${id}-o${sel}`)?.scrollIntoView({ block: "nearest" }); }, [sel, open, id]);
   const go = (href: string) => { setOpen(false); setQ(""); onGo?.(); router.push(href); };
   return (
     <div className={`${s.search} ${large ? s.searchLg : ""}`}>
@@ -195,6 +197,7 @@ export function Header({ families, industries, index, featured }: Props) {
         <details>
           <summary>Products <span>+</span></summary>
           <div className={s.sub}>
+            <Link href="/products" style={{ fontWeight: 700 }}>All {index.length} models →</Link>
             {families.map((f) => (<div key={f.slug} style={{ display: "contents" }}><b>{f.name}</b>{f.categories.map((c) => <Link key={c.slug} href={`/products/${c.slug}`}>{c.name}</Link>)}</div>))}
           </div>
         </details>

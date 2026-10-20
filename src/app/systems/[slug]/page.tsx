@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Arrow } from "@/components/Brand";
 import { ProductCard } from "@/components/ProductCard";
 import { SystemDiagram } from "@/components/SystemDiagram";
-import { getProduct, getSystems } from "@/lib/catalogue";
+import { getProduct, getSystems, slugify } from "@/lib/catalogue";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return getSystems().map((s) => ({ slug: s.slug })); }
@@ -39,8 +39,27 @@ export default async function SystemPage({ params }: PageProps<"/systems/[slug]"
       {comps.length > 0 && (
         <section className="band-surface section">
           <div className="wrap">
-            <h2 className="h-1" style={{ marginBottom: 20 }}>Components</h2>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 14 }}>{comps.map((p) => <ProductCard key={p.slug} p={p} />)}</div>
+            <h2 className="h-1" style={{ marginBottom: sy.componentGroups ? 8 : 20 }}>Components</h2>
+            {sy.componentGroups ? (
+              <>
+                <p className="muted" style={{ marginBottom: 24, maxWidth: "70ch" }}>Grouped by architecture, as in the diagram above. Each card names the part&apos;s role in the system.</p>
+                {sy.componentGroups.map((g) => {
+                  const items = g.items.map((it) => ({ ...it, p: comps.find((c) => c.slug === it.slug) })).filter((it): it is typeof it & { p: NonNullable<typeof it.p> } => !!it.p);
+                  if (!items.length) return null;
+                  return (
+                    <section key={g.title} aria-labelledby={`cg-${slugify(g.title)}`} style={{ marginTop: 28 }}>
+                      <h3 id={`cg-${slugify(g.title)}`} className="h-3" style={{ borderBottom: "2px solid var(--ink)", paddingBottom: 8 }}>{g.title}</h3>
+                      {g.note && <p className="muted" style={{ margin: "8px 0 16px", maxWidth: "70ch" }}>{g.note}</p>}
+                      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 14 }}>
+                        {items.map((it) => <div key={it.slug} style={{ display: "grid", gap: 8 }}><p className="label" style={{ color: "var(--ink)" }}>{it.role}</p><ProductCard p={it.p} /></div>)}
+                      </div>
+                    </section>
+                  );
+                })}
+              </>
+            ) : (
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 14 }}>{comps.map((p) => <ProductCard key={p.slug} p={p} />)}</div>
+            )}
           </div>
         </section>
       )}

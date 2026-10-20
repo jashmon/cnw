@@ -195,6 +195,64 @@ await m.context().close();
   check("a second tab picks up the change", (await t2.locator("button[data-quote-badge] .badge").textContent())?.trim() === "2");
   await ctx2.close();
 }
+// F01: hand-off keeps the draft: alternate channel resends it, Edit restores the values
+{
+  const f = await (await b.newContext({ viewport: { width: 1280, height: 900 } })).newPage(); f.on("pageerror", (e) => errs.push(String(e)));
+  await f.goto(base + "/contact", { waitUntil: "load" });
+  await f.fill("#f-name", "Test Buyer"); await f.fill("#f-company", "Acme Cement"); await f.fill("#f-email", "buyer@example.com"); await f.fill("#f-message", "Need three phones for the kiln floor.");
+  await f.getByRole("button", { name: /on WhatsApp/ }).click(); await f.waitForTimeout(300);
+  check("hand-off shows the confirmation", await f.getByText("WhatsApp is open with your enquiry.").isVisible());
+  const popup = f.waitForEvent("popup", { timeout: 3000 }).catch(() => null);
+  await f.getByRole("button", { name: "send by email instead" }).click(); await f.waitForTimeout(300);
+  const nav = f.url();
+  check("alternate channel works from the confirmation (no null-form crash)", await f.getByText(/email app is open|WhatsApp is open/).isVisible() && errs.length === 0, nav);
+  await popup;
+  await f.getByRole("button", { name: "Edit enquiry" }).click(); await f.waitForTimeout(200);
+  check("Edit enquiry restores the typed values", (await f.inputValue("#f-name")) === "Test Buyer" && (await f.inputValue("#f-company")) === "Acme Cement" && (await f.inputValue("#f-message")).startsWith("Need three"));
+  await f.context().close();
+}
+// F07: a custom comparison survives visiting a model and coming Back
+const ctx3 = await b.newContext({ viewport: { width: 1280, height: 900 } });
+{
+  const p = await ctx3.newPage(); p.on("pageerror", (e) => errs.push(String(e)));
+  await p.goto(base + "/products/industrial-telephones#compare", { waitUntil: "load" }); await p.waitForTimeout(200);
+  await p.locator('#compare button[aria-label^="Remove"]').first().click(); await p.waitForTimeout(100);
+  const v = await p.locator("#cmp-add option:not([value=''])").first().getAttribute("value"); await p.selectOption("#cmp-add", v); await p.waitForTimeout(200);
+  const before = await p.evaluate(() => [...document.querySelectorAll("#compare thead th .code")].map((e) => e.textContent.trim()));
+  const url = p.url();
+  await p.locator("#compare thead th a").first().click(); await p.waitForURL(/\/products\/[^/]+\/[^/?#]+$/, { timeout: 8000 }); await p.waitForTimeout(200);
+  await p.goBack();
+  await p.waitForFunction((want) => [...document.querySelectorAll("#compare thead th .code")].map((e) => e.textContent.trim()).join() === want, before.join(), { timeout: 8000 }).catch(() => {});
+  const after = await p.evaluate(() => [...document.querySelectorAll("#compare thead th .code")].map((e) => e.textContent.trim()));
+  check("custom comparison is kept across detail and Back (?cmp= in URL)", url.includes("cmp=") && before.join() === after.join(), `${before.join("|")} → ${after.join("|")}`);
+}
+// F11: downloads filter
+{
+const p = await ctx3.newPage();
+await p.goto(base + "/downloads", { waitUntil: "load" });
+const totalDs = await p.locator("a[download]").count();
+await p.fill('input[placeholder^="Filter by model"]', "cr-iii"); await p.waitForTimeout(150);
+const someDs = await p.locator("a[download]").count();
+check("downloads filter narrows the datasheet list", someDs > 0 && someDs < totalDs, `${totalDs} → ${someDs}`);
+// F12: family switch in the catalogue bar
+await p.goto(base + "/products", { waitUntil: "load" });
+await p.selectOption("#cat-fam", "lighting"); await p.waitForTimeout(300);
+check("catalogue family switch scrolls to the family", await p.evaluate(() => { const r = document.getElementById("lighting")?.getBoundingClientRect(); return !!r && r.top >= 0 && r.top < 260; }));
+check("mobile menu lists All models", (await p.locator('#m-sheet a[href="/products"]').count()) > 0);
+}
+await ctx3.close();
+// F05/F06: compare columns at 390px; product identity before the gallery at 768px
+{
+  const n = await (await b.newContext({ viewport: { width: 390, height: 844 }, isMobile: true })).newPage();
+  await n.goto(base + "/products/industrial-telephones#compare", { waitUntil: "load" }); await n.waitForTimeout(200);
+  const w = await n.evaluate(() => { const th = document.querySelector("#compare tbody th"); const td = document.querySelector("#compare tbody td"); return [Math.round(th.getBoundingClientRect().width), Math.round(td.getBoundingClientRect().width)]; });
+  check("390px comparison: label column ≤ 130px, product column ≥ 150px", w[0] <= 130 && w[1] >= 150, w.join(" / "));
+  await n.setViewportSize({ width: 768, height: 900 });
+  await n.goto(base + "/products/industrial-telephones/wmhs-iii", { waitUntil: "load" });
+  const order = await n.evaluate(() => { const h1 = document.querySelector("main h1").getBoundingClientRect(); const img = document.querySelector("main img").getBoundingClientRect(); const ds = [...document.querySelectorAll("main a[download]")][0].getBoundingClientRect(); return { h1: Math.round(h1.top), ds: Math.round(ds.top), img: Math.round(img.top), vh: innerHeight }; });
+  check("768px product page: title and datasheet above the gallery, in the first screen", order.h1 < order.img && order.ds < order.img && order.ds < order.vh, JSON.stringify(order));
+  await n.context().close();
+}
 // quote list with long names at 320px: drawer and /quote stay within the screen
 {
   const n = await (await b.newContext({ viewport: { width: 320, height: 720 }, isMobile: true, hasTouch: true })).newPage();

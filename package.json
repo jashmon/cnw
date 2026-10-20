@@ -12,10 +12,12 @@
     "qa:links": "node qa/links.mjs ${QA_BASE:-http://localhost:3200}",
     "qa:widths": "node qa/widths.mjs ${QA_BASE:-http://localhost:3200}",
     "qa:a11y": "node qa/a11y.mjs ${QA_BASE:-http://localhost:3200}",
-    "qa": "npm run lint && npm run typecheck && npm run test:unit && npm run qa:flows && npm run qa:links && npm run qa:widths && npm run qa:overlap && npm run qa:keyboard && npm run qa:a11y",
+    "qa": "npm run lint && npm run typecheck && npm run validate && npm run test:unit && npm run qa:flows && npm run qa:links && npm run qa:widths && npm run qa:overlap && npm run qa:keyboard && npm run qa:a11y",
     "test:unit": "node --test qa/unit/*.test.ts",
     "qa:overlap": "node qa/overlap.mjs ${QA_BASE:-http://localhost:3200}",
-    "qa:keyboard": "node qa/keyboard.mjs ${QA_BASE:-http://localhost:3200}"
+    "qa:keyboard": "node qa/keyboard.mjs ${QA_BASE:-http://localhost:3200}",
+    "validate": "node scripts/validate-content.mjs",
+    "prebuild": "node scripts/validate-content.mjs"
   },
   "dependencies": {
     "motion": "^14.2.0",

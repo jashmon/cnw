@@ -45,6 +45,13 @@ export function Gallery({ images, model }: { images: Img[]; model: string }) {
       <dialog ref={dlg} className={s.lb} aria-label={img.alt} onClose={() => setZoom(false)} onClick={() => setZoom(false)}>
         {zoom && <Image src={img.src} alt={img.alt} width={img.w} height={img.h} sizes="100vw" quality={85} className={s.lbimg} />}
         <button className={s.lbclose} aria-label="Close" autoFocus>×</button>
+        {images.length > 1 && (
+          <>
+            <button type="button" className={`${s.lbnav} ${s.prev}`} aria-label="Previous image" onClick={(e) => { e.stopPropagation(); setI((v) => (v - 1 + images.length) % images.length); }}>‹</button>
+            <button type="button" className={`${s.lbnav} ${s.next}`} aria-label="Next image" onClick={(e) => { e.stopPropagation(); setI((v) => (v + 1) % images.length); }}>›</button>
+            <p className={s.lbcount} aria-live="polite">{i + 1} / {images.length}</p>
+          </>
+        )}
       </dialog>
     </div>
   );

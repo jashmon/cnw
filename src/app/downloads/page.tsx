@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LiteVideo } from "@/components/LiteVideo";
-import { getFamilies, getProduct, productHref } from "@/lib/catalogue";
+import { DatasheetList } from "@/components/DatasheetList";
+import { TRANSCRIPTS } from "@/content/transcripts";
+import { fileCode, getFamilies, getProduct, productHref } from "@/lib/catalogue";
 import s from "./downloads.module.css";
 
 export const metadata: Metadata = { title: "Downloads: SMART datasheets, software and demos | Cables & Wireless Co.", description: "Download SMART product datasheets (PDF), listen to voice-alarm demo recordings and watch bag counter and clean-room phone videos. No sign-up needed." };
@@ -30,38 +32,33 @@ export default function Downloads() {
         <h2 className="h-1" style={{ marginBottom: 8 }}>Datasheets</h2>
         <p className="muted" style={{ marginBottom: 8 }}>On request ({missing.length}): {missing.map((p) => p.model || p.name).join(", ")}. A few models share one document.</p>
         <p className="muted" style={{ marginBottom: 28 }}>These are the original datasheets. Some still show older contact details. For current details, see <Link className="inline" href="/contact">Contact</Link>.</p>
-        {fams.map((f) => (
-          <div key={f.slug} className={s.fam}>
-            <h3 className="h-3">{f.name}</h3>
-            {f.categories.map((c) => {
-              const items = c.products.map((sl) => getProduct(sl)!).filter((p) => p.datasheet);
-              if (!items.length) return null;
-              return (
-                <div key={c.slug} className={s.cat}>
-                  <p className="label">{c.name}</p>
-                  <ul className={s.list}>
-                    {items.map((p) => (
-                      <li key={p.slug}>
-                        <a className={s.file} href={p.datasheet!.href} download={`SMART-${p.model}-datasheet.pdf`}>
-                          <span className="code">{p.model}</span><span className={s.n}>{p.name}</span><span className="mono muted">PDF · {kb(p.datasheet!.bytes)}</span><span aria-hidden="true" className={s.dl}>↓</span>
-                        </a>
-                        <Link href={productHref(p)} className={s.view}>View product</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-        ))}
+        <DatasheetList
+          families={fams.map((f) => ({ slug: f.slug, name: f.name }))}
+          rows={fams.flatMap((f) => f.categories.flatMap((c) => c.products.map((sl) => getProduct(sl)!).filter((p) => p.datasheet).map((p) => ({
+            slug: p.slug, model: p.model, name: p.name, href: p.datasheet!.href, size: kb(p.datasheet!.bytes), filename: `SMART-${fileCode(p.model)}-datasheet.pdf`,
+            productHref: productHref(p), family: f.name, familySlug: f.slug, category: c.name, catSlug: c.slug,
+          }))))} />
       </section>
       <section id="audio" className="band-surface section">
         <div className="wrap">
           <h2 className="h-1">Voice alarm demo recordings</h2>
           <p className="muted measure" style={{ margin: "8px 0 24px" }}>Sample induction and safety announcements of the kind a SMART voice alarm plays in a plant.</p>
           <div className={s.audio}>
-            <figure><figcaption className="label" style={{ color: "var(--ink)" }}>English · 3:08</figcaption><audio controls preload="none" src="/files/audio/voice-alarm-demo-english.mp3" /></figure>
-            <figure><figcaption className="label" style={{ color: "var(--ink)" }}>Hindi · 2:49</figcaption><audio controls preload="none" src="/files/audio/voice-alarm-demo-hindi.mp3" /></figure>
+            {(["english", "hindi"] as const).map((k) => {
+              const t = TRANSCRIPTS[k];
+              return (
+                <figure key={k}>
+                  <figcaption className="label" style={{ color: "var(--ink)" }}>{t.label} · {t.duration}</figcaption>
+                  <audio controls preload="none" src={`/files/audio/voice-alarm-demo-${k}.mp3`} aria-describedby={`tr-${k}`} />
+                  <details id={`tr-${k}`} className={s.transcript}>
+                    <summary>Transcript</summary>
+                    {t.text.length ? t.text.map((line, i) => <p key={i}>{line}</p>) : (
+                      <p className="muted">The written transcript of this recording is being prepared. If you need it now, <Link className="inline" href="/contact">ask us</Link> and we will send the announcement script.</p>
+                    )}
+                  </details>
+                </figure>
+              );
+            })}
           </div>
         </div>
       </section>

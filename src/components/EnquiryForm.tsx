@@ -48,12 +48,15 @@ export function EnquiryForm({ kind = "contact", withList = false, submitLabel = 
   const [state, setState] = useState<"idle" | "sending" | "done" | "handed" | "fail">("idle");
   const [via, setVia] = useState<"whatsapp" | "email">("whatsapp");
   const [ref, setRef] = useState("");
+  // the last validated draft: the hand-off branch unmounts the form, so re-sending on another channel and
+  // "Edit enquiry" (which restores these values as defaults) work from this, not from the DOM
+  const [draft, setDraft] = useState<Fields>({});
   const lines = withList ? q.lines : [];
 
   function check(): Fields | null {
     const f = Object.fromEntries(new FormData(form.current!).entries()) as Fields;
     const e = validate(f, kind, lines);
-    setErrors(e);
+    setErrors(e); setDraft(f);
     if (Object.keys(e).length) {
       requestAnimationFrame(() => form.current?.querySelector<HTMLElement>(`[name="${Object.keys(e)[0]}"]`)?.focus());
       return null;
@@ -61,13 +64,14 @@ export function EnquiryForm({ kind = "contact", withList = false, submitLabel = 
     return f;
   }
 
-  function handoff(channel: "whatsapp" | "email") {
-    const f = check(); if (!f) return;
+  function send(channel: "whatsapp" | "email", f: Fields) {
     const text = compose(f, kind, buyer, lines);
     if (channel === "whatsapp") window.open(waLink(text), "_blank", "noopener");
     else window.location.href = `mailto:${company.emails[0]}?subject=${encodeURIComponent(`${KIND_LABEL[kind]} from the website`)}&body=${encodeURIComponent(text)}`;
     setVia(channel); setState("handed");
   }
+  // from the form: validate (and save the draft) first. From the confirmation: resend the saved draft.
+  function handoff(channel: "whatsapp" | "email") { const f = form.current ? check() : draft; if (f) send(channel, f); }
 
   async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -115,7 +119,7 @@ export function EnquiryForm({ kind = "contact", withList = false, submitLabel = 
           <b>How this form sends:</b> it opens WhatsApp or your email app with your details{withList ? " and model list" : ""} filled in, ready to send to us. Prefer to talk? Call <a className="inline" href={`tel:${company.phones[0].tel}`}>{company.phones[0].display}</a>.
         </p>
       )}
-      <p className={s.req} id="req-note"><span aria-hidden="true">*</span> Required: your name, and a phone number <i>or</i> an email.</p>
+      <p className={s.req} id="req-note"><span aria-hidden="true">*</span> Required: your name, and <b>one</b> way to reach you (phone or email).</p>
       {errorList.length > 0 && (
         <div className={s.summary} role="alert">
           <b>Please fix {errorList.length === 1 ? "this" : `these ${errorList.length}`} before sending:</b>
@@ -127,27 +131,27 @@ export function EnquiryForm({ kind = "contact", withList = false, submitLabel = 
         <div className="chips">{BUYERS.map(([v, l]) => <button key={v} type="button" className="chip" aria-pressed={buyer === v} onClick={() => setBuyer(v)}>{l}</button>)}</div>
       </fieldset>
       <div className={s.row}>
-        <div className="field"><label htmlFor="f-name">Name <span aria-hidden="true">*</span></label><input id="f-name" name="name" autoComplete="name" required aria-invalid={!!errors.name} aria-describedby={errIds("name")} />{errors.name && <span className="err" id="e-name">{errors.name}</span>}</div>
-        <div className="field"><label htmlFor="f-company">Company / plant</label><input id="f-company" name="company" autoComplete="organization" placeholder="e.g. cement plant, Chandrapur" /></div>
+        <div className="field"><label htmlFor="f-name">Name <span aria-hidden="true">*</span></label><input id="f-name" name="name" defaultValue={draft.name} autoComplete="name" required aria-invalid={!!errors.name} aria-describedby={errIds("name")} />{errors.name && <span className="err" id="e-name">{errors.name}</span>}</div>
+        <div className="field"><label htmlFor="f-company">Company / plant</label><input id="f-company" name="company" defaultValue={draft.company} autoComplete="organization" placeholder="e.g. cement plant, Chandrapur" /></div>
       </div>
       <div className={s.row}>
-        <div className="field"><label htmlFor="f-phone">Phone / WhatsApp <span aria-hidden="true">*</span></label><input id="f-phone" name="phone" type="tel" autoComplete="tel" inputMode="tel" aria-invalid={!!errors.phone} aria-describedby={[errIds("phone"), "req-note"].filter(Boolean).join(" ")} />{errors.phone && <span className="err" id="e-phone">{errors.phone}</span>}</div>
-        <div className="field"><label htmlFor="f-email">Email <span aria-hidden="true">*</span></label><input id="f-email" name="email" type="email" autoComplete="email" aria-invalid={!!errors.email} aria-describedby={[errIds("email"), "req-note"].filter(Boolean).join(" ")} />{errors.email && <span className="err" id="e-email">{errors.email}</span>}</div>
+        <div className="field"><label htmlFor="f-phone">Phone / WhatsApp <span className={s.either}>phone or email</span></label><input id="f-phone" name="phone" defaultValue={draft.phone} type="tel" autoComplete="tel" inputMode="tel" aria-invalid={!!errors.phone} aria-describedby={[errIds("phone"), "req-note"].filter(Boolean).join(" ")} />{errors.phone && <span className="err" id="e-phone">{errors.phone}</span>}</div>
+        <div className="field"><label htmlFor="f-email">Email <span className={s.either}>phone or email</span></label><input id="f-email" name="email" defaultValue={draft.email} type="email" autoComplete="email" aria-invalid={!!errors.email} aria-describedby={[errIds("email"), "req-note"].filter(Boolean).join(" ")} />{errors.email && <span className="err" id="e-email">{errors.email}</span>}</div>
       </div>
       {extra === "cross-reference" && (
         <div className={s.row}>
-          <div className="field"><label htmlFor="f-brand">Current brand</label><input id="f-brand" name="brand" /></div>
-          <div className="field"><label htmlFor="f-old">Model you are replacing</label><input id="f-old" name="oldModel" /></div>
+          <div className="field"><label htmlFor="f-brand">Current brand</label><input id="f-brand" name="brand" defaultValue={draft.brand} /></div>
+          <div className="field"><label htmlFor="f-old">Model you are replacing</label><input id="f-old" name="oldModel" defaultValue={draft.oldModel} /></div>
         </div>
       )}
       {kind === "quote" && (
         <div className={s.row}>
-          <div className="field"><label htmlFor="f-city">Site location</label><input id="f-city" name="city" placeholder="City / state / country" /></div>
+          <div className="field"><label htmlFor="f-city">Site location</label><input id="f-city" name="city" defaultValue={draft.city} placeholder="City / state / country" /></div>
           <div className="field"><label htmlFor="f-time">Needed by</label>
-            <select id="f-time" name="timeline" defaultValue=""><option value="">Not decided</option><option>Within 2 weeks</option><option>Within a month</option><option>1–3 months</option><option>Tender / budgeting</option></select></div>
+            <select id="f-time" name="timeline" defaultValue={draft.timeline ?? ""}><option value="">Not decided</option><option>Within 2 weeks</option><option>Within a month</option><option>1–3 months</option><option>Tender / budgeting</option></select></div>
         </div>
       )}
-      <div className="field"><label htmlFor="f-message">{kind === "quote" ? "Notes" : "Message"}{kind !== "quote" && <span aria-hidden="true"> *</span>}</label><textarea id="f-message" name="message" aria-invalid={!!errors.message} aria-describedby={errIds("message")} placeholder={kind === "quote" ? "Cable lengths, number of zones, power supply, anything we should know" : "What do you need, and where will it be installed?"} />{errors.message && <span className="err" id="e-message">{errors.message}</span>}</div>
+      <div className="field"><label htmlFor="f-message">{kind === "quote" ? "Notes" : "Message"}{kind !== "quote" && <span aria-hidden="true"> *</span>}</label><textarea id="f-message" name="message" defaultValue={draft.message} aria-invalid={!!errors.message} aria-describedby={errIds("message")} placeholder={kind === "quote" ? "Cable lengths, number of zones, power supply, anything we should know" : "What do you need, and where will it be installed?"} />{errors.message && <span className="err" id="e-message">{errors.message}</span>}</div>
       <input type="text" name="website" tabIndex={-1} autoComplete="off" className="sr-only" aria-hidden="true" />
       <div className={s.submit}>
         {API ? (

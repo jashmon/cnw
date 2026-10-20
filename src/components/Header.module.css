@@ -1,6 +1,7 @@
 .util{background:var(--charcoal);color:var(--on-charcoal);font-family:var(--font-mono);font-size:.8125rem;height:var(--util-h)}
 .util :global(.wrap){display:flex;justify-content:space-between;align-items:center;height:100%;gap:16px}
 .util a{text-decoration:none;color:inherit}
+.util :focus-visible{outline-color:var(--yellow)}
 .util a:hover{color:var(--yellow)}
 .util .l,.util .r{display:flex;gap:18px;align-items:center}
 .util .dot{width:7px;height:7px;border-radius:50%;background:#3ddc84;display:inline-block;margin-right:6px;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:pulse 2.4s 4}

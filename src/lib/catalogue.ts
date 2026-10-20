@@ -1,4 +1,5 @@
 import "server-only";
+import { CAPABILITIES } from "@/content/compare-fields";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -19,13 +20,22 @@ export type Product = {
   environment: string[]; interface: string; variants: string[]; related: string[]; faq: { q: string; a: string }[];
   seoTitle: string; metaDescription: string; needsClient: string[]; legacyNames: string[];
   images: Img[]; datasheet: { href: string; bytes: number; sharedWith: string[] } | null; applications: string[];
+  /** The manufacturer's model code as printed. `model` adds a qualifier when two products share one code (F09). */
+  modelCode: string;
+  capabilities: Record<string, string>;
 };
 export type CardProduct = Pick<Product, "slug" | "model" | "name" | "category" | "categorySlug" | "cardLine" | "keySpecs" | "environment" | "interface" | "legacyNames"> & { images: Img[] };
 export const toCard = (p: Product): CardProduct => ({ slug: p.slug, model: p.model, name: p.name, category: p.category, categorySlug: p.categorySlug, cardLine: p.cardLine, keySpecs: p.keySpecs, environment: p.environment, interface: p.interface, legacyNames: p.legacyNames, images: p.images.slice(0, 1) });
 export type Category = { slug: string; name: string; family: string; familySlug: string; intro: string; cardLine: string; seoTitle: string; metaDescription: string; products: string[] };
 export type Family = { slug: string; name: string; cardLine: string; categories: Category[] };
 export type Industry = { slug: string; name: string; intro: string; problems: string[]; recommendedProducts: string[]; clientsInSector: { name: string; sites?: string; country?: string }[]; seoTitle: string; metaDescription: string };
-export type System = { slug: string; name: string; intro: string; howItWorks: string[]; components: string[]; diagramNotes?: string; seoTitle?: string; metaDescription?: string };
+export type ComponentGroup = { title: string; note?: string; items: { slug: string; role: string }[] };
+export type System = { slug: string; name: string; intro: string; howItWorks: string[]; components: string[]; componentGroups?: ComponentGroup[]; diagramNotes?: string; seoTitle?: string; metaDescription?: string };
+// Two products carry the same printed model code (WMHS-IP). Their display code gets a short qualifier everywhere
+// (search, cards, chips, quote lines, filenames) so a purchase order is unambiguous. To confirm with the business.
+const CODE_QUALIFIER: Record<string, string> = { "wmhs-ip-pa-telephone": "PA", "wmhs-ip-sip-phone": "SIP" };
+/** Safe for a download filename: letters, digits, dots and dashes. */
+export const fileCode = (s: string) => s.replace(/[^A-Za-z0-9.-]+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
 
 // Family/category structure approved at checkpoint 1 (05-architecture).
 export const FAMILY_ORDER: { slug: string; name: string; categories: string[] }[] = [
@@ -99,10 +109,19 @@ function build() {
       needsClient: v.needsClient ?? [],
       legacyNames: v.legacyNames ?? [],
       applications: c.applications ?? [],
+      modelCode: v.model ?? c.model ?? "",
+      capabilities: CAPABILITIES[c.slug] ?? {},
       images,
       datasheet: sheets[c.slug] && !WITHHOLD_DATASHEET.has(c.slug) ? { href: `/files/datasheets/${c.slug}.pdf`, bytes: sheets[c.slug], sharedWith: shared[c.slug] ?? [] } : null,
     };
   });
+  // F09: qualify display codes that two products share
+  const codeCount = new Map<string, number>();
+  for (const p of products) if (p.model) codeCount.set(p.model, (codeCount.get(p.model) ?? 0) + 1);
+  for (const p of products) if (p.model && (codeCount.get(p.model) ?? 0) > 1) {
+    const q = CODE_QUALIFIER[p.slug];
+    if (q) { if (!p.legacyNames.includes(p.model)) p.legacyNames = [...p.legacyNames, p.model]; p.model = `${p.model} · ${q}`; }
+  }
   const slugs = new Set(products.map((p) => p.slug));
   for (const p of products) { p.variants = p.variants.filter((s) => slugs.has(s)); p.related = p.related.filter((s) => slugs.has(s)); }
 

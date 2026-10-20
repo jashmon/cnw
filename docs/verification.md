@@ -5,12 +5,13 @@
 | Check | Script | What it proves |
 |---|---|---|
 | Lint, types | `npm run lint`, `npm run typecheck` | Code health |
-| Unit tests (15) | `qa/unit/*.test.ts` | Comparison logic: units, missing values and real differences. Quote storage: wrong shapes, clamping, merging |
-| User flows (56) | `qa/flows.mjs` | Search, autocomplete (keyboard and click), quote basket (including corrupted storage, partial quantities, two tabs), drawer focus, mobile menu as a modal, filters and empty states, category compare (add, cap, remove, reset), URL search sync, gallery dialog, forms, redirects, 404 |
+| Content contract | `scripts/validate-content.mjs` (prebuild) | Unique slugs, required fields, spec value types, variant/related/system references, image files synced, shared model codes qualified, compare-field slugs valid |
+| Unit tests (18) | `qa/unit/*.test.ts` | Comparison logic: units, range notation, bracketed qualifiers vs provenance notes, missing values, capability rows. Quote storage: wrong shapes, clamping, merging |
+| User flows (65) | `qa/flows.mjs` | Search, autocomplete (keyboard and click), quote basket (including corrupted storage, partial quantities, two tabs), drawer focus, mobile menu as a modal, filters and empty states, category compare (add, cap, remove, reset), URL search sync, gallery dialog, forms, redirects, 404 |
 | Links | `qa/links.mjs` | Every internal link from every sitemap route returns < 400 |
 | Widths | `qa/widths.mjs` | No horizontal overflow or clipped controls at 320–1920px (13 widths) |
 | Collisions | `qa/overlap.mjs` | No overlapping text or controls on 7 key pages (quote list populated) at 320, 390, 768, 1024, 1280 and 1440px. Self-test: `QA_INJECT_CSS='main h1{margin-bottom:-60px}'` makes it fail |
-| Keyboard and zoom | `qa/keyboard.mjs` | Every Tab stop on 8 key pages at desktop and phone width: visible focus, not hidden by sticky bars, named, visible label included in the name (WCAG 2.4.7, 2.4.11, 2.5.3). Reflow at 200% and 400% zoom (1.4.10) |
+| Keyboard and zoom | `qa/keyboard.mjs` | Every Tab stop on 8 key pages at desktop and phone width: visible focus with ≥ 3:1 ring contrast against its surface (1.4.11), not hidden by sticky bars, named, visible label included in the name (2.4.7, 2.4.11, 2.5.3). Arrow-selected search results stay visible. Reflow at 200% and 400% zoom (1.4.10) |
 | axe (WCAG 2.1 AA rules) | `qa/a11y.mjs` | Every sitemap route at 390 and 1440px: 0 serious or critical issues |
 
 Lab performance on a production build (Lighthouse mobile, warm image cache), 2026-10-20:
@@ -29,6 +30,10 @@ Lab performance on a production build (Lighthouse mobile, warm image cache), 202
 - Accessibility, best practices and SEO score 100 (/quote's SEO score is 66 because it is noindex by design).
 
 ## Manual: needs people or devices CI does not have
+
+### 0. Open item: voice-alarm transcripts (WCAG 1.2.1)
+
+The two demo recordings on /downloads have a Transcript control, but the text is empty until the client sends the announcement scripts or approves a transcription (CLIENT-TODO §7). Until then this is an unresolved Level A item.
 
 ### 1. Screen readers (about 2 hours)
 
