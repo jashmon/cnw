@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useState } from "react";
 import type { CardProduct as Product } from "@/lib/catalogue";
 import { useSearch } from "./Header";
+import { environmentLabel } from "@/lib/labels";
 import { ProductCard } from "./ProductCard";
 import s from "./CatalogueBrowser.module.css";
 
@@ -48,10 +49,10 @@ function Inner({ families, urlQ, syncUrl = false }: { families: Fam[]; urlQ: str
         <label htmlFor="cat-q" className="sr-only">Search models</label>
         <input id="cat-q" type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Model code or name, e.g. CR-IIIPE, hooter" className={s.input} />
         <button type="button" className={s.toggle} aria-expanded={filtersOpen} aria-controls="cat-filters" onClick={() => setFiltersOpen((v) => !v)}>
-          Filters{env ? " · 1" : ""}
+          Browse &amp; filter{env ? " · 1" : ""}
         </button>
         <div id="cat-filters" role="group" aria-label="Environment" className={`chips ${s.chips}`} data-open={filtersOpen}>
-          {envs.map((e) => <button key={e} type="button" className="chip" aria-pressed={env === e} onClick={() => setEnv(env === e ? null : e)} style={{ textTransform: "capitalize" }}>{e}</button>)}
+          {envs.map((e) => <button key={e} type="button" className="chip" aria-pressed={env === e} onClick={() => setEnv(env === e ? null : e)}>{environmentLabel(e)}</button>)}
         </div>
         <span className={`mono muted ${s.count}`} aria-live="polite">{count} of {all.length}</span>
         <label htmlFor="cat-fam" className="sr-only">Jump to a family</label>
@@ -80,7 +81,7 @@ function Inner({ families, urlQ, syncUrl = false }: { families: Fam[]; urlQ: str
       })}
       {count === 0 && (
         <div className="wrap section" role="status">
-          <p className="h-3">{searching ? <>No model matches “{q}”{env ? <> in {env}</> : null}.</> : <>No models match these filters.</>}</p>
+          <p className="h-3">{searching ? <>No model matches “{q}”{env ? <> in {environmentLabel(env)}</> : null}.</> : <>No models match these filters.</>}</p>
           <p className="muted" style={{ marginTop: 6 }}>Try fewer letters, or <Link className="inline" href="/cross-reference">send us the code</Link>.</p>
           <button type="button" className="btn btn--ghost btn--sm" style={{ marginTop: 16 }} onClick={reset}>Reset search and filters</button>
         </div>

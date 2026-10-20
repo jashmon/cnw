@@ -15,7 +15,7 @@ export async function POST(req: Request) {
   if (name.length < 2) errors.name = "Please tell us your name.";
   if (!phone && !email) errors.contact = "Add a phone number or an email so we can reply.";
   if (email && !/^\S+@\S+\.\S+$/.test(email)) errors.email = "That email address doesn't look complete.";
-  if (phone && !/^[+()\d\s-]{7,}$/.test(phone)) errors.phone = "Use digits, spaces, + or -.";
+  if (phone && (!/^[+()\d\s.-]+$/.test(phone) || phone.replace(/\D/g, "").length < 7)) errors.phone = "Enter a phone number with at least 7 digits.";
   const kind = KIND.includes(d.kind) ? d.kind : "contact";
   const lines = Array.isArray(d.lines) ? d.lines.slice(0, 60).map((l: Record<string, unknown>) => ({ model: clip(l.model, 40), qty: Math.max(1, Math.min(9999, Number(l.qty) || 1)), note: clip(l.note, 300) })) : [];
   if (kind === "quote" && !lines.length && message.length < 5) errors.message = "Add models to the list or describe what you need.";

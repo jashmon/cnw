@@ -168,3 +168,9 @@ html:has(dialog[open]) { overflow: hidden; }
 
 /* quote page form: sticky beside the list only in the two-column layout; normal flow on phones and tablets */
 @media (min-width: 960px) { .quote-form { position: sticky; top: calc(var(--sticky-top) + 20px); } }
+
+/* system components (A06): each group fills one row where it fits; role labels share a row track (subgrid), so a
+   two-line role never pushes its card below its neighbours */
+.comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 216px), 1fr)); column-gap: 14px; row-gap: 22px; }
+.comp-item { display: grid; grid-row: span 2; grid-template-rows: subgrid; row-gap: 8px; align-content: start; }
+.comp-item > .label { align-self: end; }

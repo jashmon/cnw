@@ -1,5 +1,5 @@
 import "server-only";
-import { CAPABILITIES } from "@/content/compare-fields";
+import { CAPABILITIES, type Capabilities } from "@/content/compare-fields";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -22,7 +22,7 @@ export type Product = {
   images: Img[]; datasheet: { href: string; bytes: number; sharedWith: string[] } | null; applications: string[];
   /** The manufacturer's model code as printed. `model` adds a qualifier when two products share one code (F09). */
   modelCode: string;
-  capabilities: Record<string, string>;
+  capabilities: Capabilities;
 };
 export type CardProduct = Pick<Product, "slug" | "model" | "name" | "category" | "categorySlug" | "cardLine" | "keySpecs" | "environment" | "interface" | "legacyNames"> & { images: Img[] };
 export const toCard = (p: Product): CardProduct => ({ slug: p.slug, model: p.model, name: p.name, category: p.category, categorySlug: p.categorySlug, cardLine: p.cardLine, keySpecs: p.keySpecs, environment: p.environment, interface: p.interface, legacyNames: p.legacyNames, images: p.images.slice(0, 1) });

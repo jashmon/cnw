@@ -32,6 +32,7 @@ export function CompareTable({ cols, rows, current, label }: { cols: Col[]; rows
                 {r.values.map((v, i) => (
                   <td key={cols[i].slug} className={cols[i].slug === current ? s.me : ""}>
                     {v === NOT_SPECIFIED ? <span className={s.ns}>Not specified</span> : v}
+                    {r.notes[i] && <span className={s.note}>{r.notes[i]}</span>}
                   </td>
                 ))}
               </tr>

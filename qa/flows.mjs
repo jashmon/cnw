@@ -249,8 +249,48 @@ await ctx3.close();
   check("390px comparison: label column ≤ 130px, product column ≥ 150px", w[0] <= 130 && w[1] >= 150, w.join(" / "));
   await n.setViewportSize({ width: 768, height: 900 });
   await n.goto(base + "/products/industrial-telephones/wmhs-iii", { waitUntil: "load" });
-  const order = await n.evaluate(() => { const h1 = document.querySelector("main h1").getBoundingClientRect(); const img = document.querySelector("main img").getBoundingClientRect(); const ds = [...document.querySelectorAll("main a[download]")][0].getBoundingClientRect(); return { h1: Math.round(h1.top), ds: Math.round(ds.top), img: Math.round(img.top), vh: innerHeight }; });
+  const order = await n.evaluate(() => { const h1 = document.querySelector("main h1").getBoundingClientRect(); const img = document.querySelector("main [class*=gal] img").getBoundingClientRect(); const ds = [...document.querySelectorAll("main a[download]")][0].getBoundingClientRect(); return { h1: Math.round(h1.top), ds: Math.round(ds.top), img: Math.round(img.top), vh: innerHeight }; });
   check("768px product page: title and datasheet above the gallery, in the first screen", order.h1 < order.img && order.ds < order.img && order.ds < order.vh, JSON.stringify(order));
+  await n.context().close();
+}
+// audit 2: A02 capability semantics, A03 focus order, A04 aliases, A06 alignment, A07 mpn, A08 phone, labels, compare edges
+{
+  const ctx4 = await b.newContext({ viewport: { width: 1440, height: 900 } });
+  const p = await ctx4.newPage(); p.on("pageerror", (e) => errs.push(String(e)));
+  await p.goto(base + "/products/clean-room-phones#compare", { waitUntil: "load" }); await p.waitForTimeout(200);
+  const hf = await p.evaluate(() => { const tr = [...document.querySelectorAll("#compare tbody tr")].find((r) => r.querySelector("th")?.textContent?.startsWith("Hands-free")); return tr ? !!tr.querySelector("[class*=tag]") : null; });
+  check("A02: 'Yes' vs 'Yes, true hands-free' is not tagged as a difference", hf === false, String(hf));
+  await p.goto(base + "/products/clean-room-phones/cr-ip", { waitUntil: "load" });
+  check("interface label reads 'IP', not 'Ip'", await p.evaluate(() => [...document.querySelectorAll("main dt")].find((d) => d.textContent === "Interface")?.nextElementSibling?.textContent === "IP"));
+  await p.goto(base + "/downloads", { waitUntil: "load" });
+  await p.fill('input[placeholder^="Filter by model"]', "wmhs3"); await p.waitForTimeout(150);
+  const tr = await p.evaluate(() => [...document.querySelectorAll("#audio details")].map((d) => ({ lang: d.querySelector("[lang]")?.getAttribute("lang"), words: (d.querySelector("[lang]")?.textContent || "").trim().split(/\s+/).length })));
+  check("A01: both audio demos have a transcript in their language", tr.length === 2 && tr.every((x) => x.lang && x.words > 150), JSON.stringify(tr));
+  check("A04: downloads filter accepts the 'wmhs3' alias", await p.locator('a[download][href$="/wmhs-iii.pdf"]').count() === 1);
+  await p.goto(base + "/systems/plant-pa-system", { waitUntil: "load" }); await p.evaluate(() => document.querySelectorAll(".reveal").forEach((e) => e.classList.add("in")));
+  const tops = await p.evaluate(() => [...document.querySelector(".comp-grid").querySelectorAll(".comp-item > article")].map((a) => Math.round(a.getBoundingClientRect().top)));
+  check("A06: PA component cards in a group share one top line", tops.length >= 4 && new Set(tops).size === 1, tops.join(","));
+  await p.goto(base + "/products/ip-voip-telephones-systems/wmhs-ip-pa-telephone", { waitUntil: "load" });
+  const mpn = await p.evaluate(() => [...document.querySelectorAll('script[type="application/ld+json"]')].map((x) => JSON.parse(x.textContent)).flat().find((o) => o["@type"] === "Product")?.mpn);
+  check("A07: JSON-LD mpn is the printed code, without the display qualifier", mpn === "WMHS-IP", mpn);
+  await p.goto(base + "/contact", { waitUntil: "load" });
+  await p.fill("#f-name", "Test Buyer"); await p.fill("#f-phone", "-------"); await p.fill("#f-message", "Need three phones.");
+  await p.getByRole("button", { name: /on WhatsApp/ }).click(); await p.waitForTimeout(200);
+  check("A08: punctuation-only phone is rejected", await p.locator("#e-phone").isVisible());
+  await p.goto(base + "/products/industrial-telephones?cmp=#compare", { waitUntil: "load" }); await p.waitForTimeout(300);
+  check("compare: an empty ?cmp= reloads as an empty selection", (await p.locator('#compare button[aria-label^="Remove"]').count()) === 0);
+  await p.goto(base + "/products/industrial-telephones?cmp=wmhs-iiilh,wmhf-iii#compare", { waitUntil: "load" }); await p.waitForTimeout(300);
+  await p.evaluate(() => { history.pushState(null, "", "/products/industrial-telephones?cmp=wmhs-iii,wmhs-iiipt#compare"); });
+  await p.goBack(); await p.waitForTimeout(400);
+  check("compare: a ?cmp= link selects exactly those models", (await p.locator("#compare thead th .code").allTextContents()).join() === "WMHS-IIILH,WMHF-III");
+  await ctx4.close();
+  // A03: at phone width, focus goes breadcrumb → quote → datasheet → gallery (no jump back up)
+  const n = await (await b.newContext({ viewport: { width: 390, height: 844 }, isMobile: true })).newPage();
+  await n.goto(base + "/products/clean-room-phones/cr-ip", { waitUntil: "load" });
+  await n.focus('nav[aria-label="Breadcrumb"] a:last-of-type');
+  const seq = [];
+  for (let i = 0; i < 4; i++) { await n.keyboard.press("Tab"); seq.push(await n.evaluate(() => { const e = document.activeElement; return { t: (e.getAttribute("aria-label") || e.textContent || "").trim().slice(0, 18), y: Math.round(e.getBoundingClientRect().top + scrollY) }; })); }
+  check("A03: phone focus order follows the visual order (actions before gallery, always downward)", /Add to quote/.test(seq[0].t) && seq.every((x, i) => i === 0 || x.y >= seq[i - 1].y - 2), seq.map((x) => `${x.t}@${x.y}`).join(" → "));
   await n.context().close();
 }
 // quote list with long names at 320px: drawer and /quote stay within the screen

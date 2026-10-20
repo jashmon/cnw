@@ -50,8 +50,8 @@ export default async function SystemPage({ params }: PageProps<"/systems/[slug]"
                     <section key={g.title} aria-labelledby={`cg-${slugify(g.title)}`} style={{ marginTop: 28 }}>
                       <h3 id={`cg-${slugify(g.title)}`} className="h-3" style={{ borderBottom: "2px solid var(--ink)", paddingBottom: 8 }}>{g.title}</h3>
                       {g.note && <p className="muted" style={{ margin: "8px 0 16px", maxWidth: "70ch" }}>{g.note}</p>}
-                      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 14 }}>
-                        {items.map((it) => <div key={it.slug} style={{ display: "grid", gap: 8 }}><p className="label" style={{ color: "var(--ink)" }}>{it.role}</p><ProductCard p={it.p} /></div>)}
+                      <div className="comp-grid">
+                        {items.map((it) => <div key={it.slug} className="comp-item"><p className="label" style={{ color: "var(--ink)" }}>{it.role}</p><ProductCard p={it.p} /></div>)}
                       </div>
                     </section>
                   );

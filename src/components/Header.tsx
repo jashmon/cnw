@@ -7,13 +7,14 @@ import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useQuote } from "@/lib/quote";
 import { company, waLink } from "@/content/company";
 import { Arrow, Logo } from "./Brand";
+import { normModel } from "@/lib/model-search";
 import s from "./Header.module.css";
 
 export type NavFamily = { slug: string; name: string; categories: { slug: string; name: string; count: number }[] };
 export type SearchItem = { slug: string; model: string; name: string; category: string; href: string; img: string | null; aliases: string[] };
 type Props = { families: NavFamily[]; industries: { slug: string; name: string }[]; index: SearchItem[]; featured: SearchItem | null };
 
-const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "").replace(/iii/g, "3").replace(/ii/g, "2").replace(/iv/g, "4").replace(/(?<![a-z])i(?![a-z])/g, "1");
+const norm = normModel;
 
 // limit: the header autocomplete shows the top 8; the catalogue filter passes Infinity so no match is hidden
 export function useSearch(index: SearchItem[], q: string, limit = 8) {

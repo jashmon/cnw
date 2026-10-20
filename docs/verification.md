@@ -31,9 +31,9 @@ Lab performance on a production build (Lighthouse mobile, warm image cache), 202
 
 ## Manual: needs people or devices CI does not have
 
-### 0. Open item: voice-alarm transcripts (WCAG 1.2.1)
+### 0. Voice-alarm transcripts (WCAG 1.2.1)
 
-The two demo recordings on /downloads have a Transcript control, but the text is empty until the client sends the announcement scripts or approves a transcription (CLIENT-TODO §7). Until then this is an unresolved Level A item.
+Both demo recordings on /downloads have a full transcript under a Transcript control (`src/content/transcripts.ts`, marked with `lang`). They were made with local speech-to-text and checked line by line. The recordings are speech only, with no tones. The client is asked to confirm the wording (CLIENT-TODO §7).
 
 ### 1. Screen readers (about 2 hours)
 

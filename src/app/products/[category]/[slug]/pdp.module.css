@@ -1,15 +1,18 @@
 .crumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:18px 0;font-size:.875rem;color:var(--muted)}
 .crumbs a{text-decoration:none}.crumbs a:hover{text-decoration:underline;color:var(--ink)}
-.top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,64px);align-items:start;padding-bottom:var(--space-8)}
-.gal{position:sticky;top:calc(var(--sticky-top) + 16px)}
-.info{padding-top:8px}
-.brandRow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:18px}
-.h1{font-size:clamp(2.1rem,1.5rem + 2.2vw,3.25rem);font-weight:800;line-height:1;margin-bottom:12px}
+.top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"gal intro" "gal details";grid-template-rows:auto 1fr;column-gap:clamp(24px,4vw,64px);row-gap:16px;align-items:start;padding-bottom:var(--space-8)}
+.intro{grid-area:intro;padding-top:8px}
+.details{grid-area:details}
+.gal{grid-area:gal;position:sticky;top:calc(var(--sticky-top) + 16px)}
+.brandRow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:14px}
+.h1{font-size:clamp(2.1rem,1.5rem + 2.2vw,3.25rem);font-weight:800;line-height:1;margin-bottom:10px}
+.lede{margin:0}
+.chips{margin-top:16px}
 .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.ask{margin-top:16px;font-weight:500}
-.facts{display:grid;gap:12px;margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+.ask{margin:0;font-weight:500}
+.facts{display:grid;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
 .facts div{display:grid;grid-template-columns:130px 1fr;gap:12px;align-items:baseline}
-.facts dd{margin:0;text-transform:capitalize}
+.facts dd{margin:0}
 .ideal{background:var(--yellow-tint);border-block:2px solid var(--ink);padding-block:28px}
 .pills{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
 .pills li{display:inline-flex;gap:8px;align-items:center;background:var(--surface-2);border:1.5px solid var(--ink);border-radius:var(--radius-pill);padding:8px 14px;font-weight:500}
@@ -36,7 +39,7 @@
 .rel{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .cta{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end}
 .ctaR{display:grid;gap:18px}
-/* tablets and phones: product identity first. .info dissolves into the grid (display:contents) so its children can
-   be ordered around the gallery: brand+code, title, line, chips, actions · gallery · ask, facts */
-@media (max-width:1023px){.top,.two,.cta{grid-template-columns:1fr}.gal{position:static;order:0}.info{display:contents}.brandRow,.h1{order:-5}.info > :global(.lede){order:-4}.info > :global(.chips){order:-3}.actions{order:-2;margin-top:4px}.ask{order:1;margin-top:0}.facts{order:2;margin-top:8px}.rel{grid-template-columns:repeat(2,1fr)}}
+/* tablets and phones: one column in source order. A05: the intro is one group (12–16px inside), with a
+   deliberate 24–32px step to the actions and the gallery */
+@media (max-width:1023px){.top{grid-template-columns:1fr;grid-template-areas:"intro" "gal" "details";grid-template-rows:auto;row-gap:28px}.two,.cta{grid-template-columns:1fr}.gal{position:static}.intro{padding-top:0}.brandRow{margin-bottom:12px}.h1{margin-bottom:8px}.chips{margin-top:14px}.actions{margin-top:24px}.facts{margin-top:16px}.rel{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:767px){.rel{grid-template-columns:1fr}.facts div{grid-template-columns:1fr}}

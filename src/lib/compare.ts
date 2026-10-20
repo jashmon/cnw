@@ -1,8 +1,9 @@
 import type { Product } from "./catalogue";
+import { environmentLabel, interfaceLabel } from "./labels.ts";
 
 // Model comparison: which models to compare, and which rows to show.
 
-type Comparable = Pick<Product, "slug" | "categorySlug" | "interface" | "environment" | "specGroups" | "variants"> & { capabilities?: Record<string, string> };
+type Comparable = Pick<Product, "slug" | "categorySlug" | "interface" | "environment" | "specGroups" | "variants"> & { capabilities?: Record<string, { value: string; detail?: string }> };
 
 // Buyer-decision order: interface and line, power, protection, environment, output, installation, features.
 const PRIORITY = [
@@ -22,9 +23,9 @@ export const NOT_SPECIFIED = "Not specified";
 const keysOf = (c: Comparable) => new Set([...Object.keys(c.capabilities ?? {}), ...Object.values(c.specGroups).flatMap((g) => Object.keys(g))]);
 
 export function specValue(c: Comparable, k: string): string {
-  if (k === "Interface") return c.interface || NOT_SPECIFIED;
-  if (k === "Environment") return c.environment.length ? c.environment.join(", ") : NOT_SPECIFIED;
-  if (c.capabilities && k in c.capabilities && c.capabilities[k].trim()) return c.capabilities[k];
+  if (k === "Interface") return c.interface ? interfaceLabel(c.interface) : NOT_SPECIFIED;
+  if (k === "Environment") return c.environment.length ? c.environment.map(environmentLabel).join(", ") : NOT_SPECIFIED;
+  if (c.capabilities?.[k]?.value.trim()) return c.capabilities[k].value;
   for (const g of Object.values(c.specGroups)) if (k in g && String(g[k]).trim()) return g[k];
   return NOT_SPECIFIED;
 }
@@ -48,7 +49,8 @@ export function normalizeSpec(v: string): string {
 }
 
 export type RowState = "differs" | "same" | "partial";
-export type Row = { key: string; state: RowState; values: string[] };
+/** values: what is compared; notes: explanatory detail under a capability value (never compared) */
+export type Row = { key: string; state: RowState; values: string[]; notes: (string | undefined)[] };
 
 // Rows present on at least two models. States:
 //   differs  two or more different specified values
@@ -65,12 +67,12 @@ export function compareRows(models: Comparable[], limit = 12): Row[] {
       const given = values.filter((v) => v !== NOT_SPECIFIED);
       const distinct = new Set(given.map(normalizeSpec)).size;
       const state: RowState = distinct > 1 ? "differs" : given.length === values.length ? "same" : "partial";
-      return { key, state, values, given: given.length };
+      return { key, state, values, notes: models.map((c) => c.capabilities?.[key]?.detail), given: given.length };
     })
     .filter((r) => r.given >= 2)
     .sort((a, b) => order[a.state] - order[b.state] || rank(a.key, caps) - rank(b.key, caps))
     .slice(0, limit)
-    .map(({ key, state, values }) => ({ key, state, values }));
+    .map(({ key, state, values, notes }) => ({ key, state, values, notes }));
 }
 
 // The most useful alternatives to compare against: explicit variants, then the same category, the same interface,

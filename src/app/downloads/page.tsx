@@ -35,7 +35,7 @@ export default function Downloads() {
         <DatasheetList
           families={fams.map((f) => ({ slug: f.slug, name: f.name }))}
           rows={fams.flatMap((f) => f.categories.flatMap((c) => c.products.map((sl) => getProduct(sl)!).filter((p) => p.datasheet).map((p) => ({
-            slug: p.slug, model: p.model, name: p.name, href: p.datasheet!.href, size: kb(p.datasheet!.bytes), filename: `SMART-${fileCode(p.model)}-datasheet.pdf`,
+            slug: p.slug, model: p.model, aliases: [p.modelCode, ...p.legacyNames], name: p.name, href: p.datasheet!.href, size: kb(p.datasheet!.bytes), filename: `SMART-${fileCode(p.model)}-datasheet.pdf`,
             productHref: productHref(p), family: f.name, familySlug: f.slug, category: c.name, catSlug: c.slug,
           }))))} />
       </section>
@@ -52,7 +52,7 @@ export default function Downloads() {
                   <audio controls preload="none" src={`/files/audio/voice-alarm-demo-${k}.mp3`} aria-describedby={`tr-${k}`} />
                   <details id={`tr-${k}`} className={s.transcript}>
                     <summary>Transcript</summary>
-                    {t.text.length ? t.text.map((line, i) => <p key={i}>{line}</p>) : (
+                    {t.text.length ? <div lang={t.lang}>{t.text.map((line, i) => <p key={i}>{line}</p>)}</div> : (
                       <p className="muted">The written transcript of this recording is being prepared. If you need it now, <Link className="inline" href="/contact">ask us</Link> and we will send the announcement script.</p>
                     )}
                   </details>

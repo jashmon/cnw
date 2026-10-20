@@ -71,9 +71,30 @@ test("F08: equivalent range notation compares equal", () => {
 });
 
 test("F08: capability fields are rows and rank before specs", () => {
-  const a = { ...m("a", { Weight: "5 kg" }), capabilities: { "Paging / talkback": "PAGE and TALKBACK buttons" } };
-  const b = { ...m("b", { Weight: "5 kg" }), capabilities: { "Paging / talkback": "No (telephone only)" } };
+  const a = { ...m("a", { Weight: "5 kg" }), capabilities: { "Paging / talkback": { value: "PAGE and TALKBACK buttons" } } };
+  const b = { ...m("b", { Weight: "5 kg" }), capabilities: { "Paging / talkback": { value: "No", detail: "telephone only" } } };
   const r = compareRows([a, b]);
   assert.equal(r[0].key, "Paging / talkback"); assert.equal(r[0].state, "differs");
   assert.equal(row(r, "Weight")?.state, "same");
+});
+
+test("A02: same capability value with different explanatory detail is 'same', and the details are kept", () => {
+  const a = { ...m("a", {}), capabilities: { "Hands-free": { value: "Yes" }, "Vandal-resistant": { value: "No", detail: "handset model" } } };
+  const b = { ...m("b", {}), capabilities: { "Hands-free": { value: "Yes", detail: "true hands-free" }, "Vandal-resistant": { value: "No", detail: "desktop, ABS" } } };
+  const r = compareRows([a, b]);
+  assert.equal(row(r, "Hands-free")?.state, "same");
+  assert.equal(row(r, "Vandal-resistant")?.state, "same");
+  assert.deepEqual(row(r, "Vandal-resistant")?.notes, ["handset model", "desktop, ABS"]);
+});
+
+test("A02: the real catalogue never tags equal capability values as differing", async () => {
+  const { default: cf } = await import("../../src/content/compare-fields.json", { with: { type: "json" } });
+  const products = cf.products as Record<string, Record<string, string[]>>;
+  const asModel = (slug: string) => ({ ...m(slug, {}), capabilities: Object.fromEntries(Object.entries(products[slug]).map(([k, [value, detail]]) => [k, { value, detail }])) });
+  const slugs = Object.keys(products);
+  for (const a of slugs) for (const b of slugs) {
+    if (a >= b) continue;
+    for (const r of compareRows([asModel(a), asModel(b)], 99))
+      if (r.key in products[a] && r.key in products[b] && products[a][r.key][0] === products[b][r.key][0]) assert.notEqual(r.state, "differs", `${a} vs ${b}: ${r.key}`);
+  }
 });

@@ -6,7 +6,7 @@ import type { SpecGroups } from "@/lib/catalogue";
 import { CompareTable } from "./CompareTable";
 import s from "./CategoryCompare.module.css";
 
-type M = { slug: string; model: string; name: string; href: string; categorySlug: string; interface: string; environment: string[]; specGroups: SpecGroups; variants: string[]; capabilities?: Record<string, string> };
+type M = { slug: string; model: string; name: string; href: string; categorySlug: string; interface: string; environment: string[]; specGroups: SpecGroups; variants: string[]; capabilities?: Record<string, { value: string; detail?: string }> };
 const PARAM = "cmp";
 const MAX = 4;
 
@@ -16,10 +16,14 @@ function Inner({ models, category, fromUrl }: { models: M[]; category: string; f
   const initial = useMemo(() => models.slice(0, Math.min(3, models.length)).map((m) => m.slug), [models]);
   // F07: the selection starts from ?cmp= (valid slugs of this category only) and every change is mirrored back
   // into the URL with replaceState, so Back restores a custom shortlist and the link can be shared
-  const [picked, setPicked] = useState<string[]>(() => {
-    const valid = (fromUrl ?? "").split(",").filter((sl, i, a) => sl && models.some((m) => m.slug === sl) && a.indexOf(sl) === i).slice(0, MAX);
-    return valid.length ? valid : initial;
-  });
+  // absent → default three; "" → deliberately empty; otherwise the valid slugs of this category, in order, max 4
+  const parse = (v: string | null | undefined) => (v == null ? initial : v.split(",").filter((sl, i, a) => sl && models.some((m) => m.slug === sl) && a.indexOf(sl) === i).slice(0, MAX));
+  const [picked, setPicked] = useState<string[]>(() => parse(fromUrl));
+  // a ?cmp= change while mounted (Back/Forward within the page, a pasted link) updates the selection; our own
+  // replaceState writes produce the value we already hold, so they change nothing.
+  // Adjusting state when a prop changes, per react.dev/learn/you-might-not-need-an-effect
+  const [seenUrl, setSeenUrl] = useState(fromUrl);
+  if (fromUrl !== seenUrl) { setSeenUrl(fromUrl); const next = parse(fromUrl); if (next.join() !== picked.join()) setPicked(next); }
   useEffect(() => {
     if (fromUrl === undefined) return; // server fallback render: no URL to write
     const u = new URL(location.href);

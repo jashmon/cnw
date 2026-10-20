@@ -9,6 +9,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { SpecTables } from "@/components/SpecTables";
 import { company, waLink } from "@/content/company";
 import { comparableTo, compareRows } from "@/lib/compare";
+import { environmentLabel, interfaceLabel } from "@/lib/labels";
 import { CompareTable } from "@/components/CompareTable";
 import { fileCode, getCategory, getProduct, getProducts, getSystems, productHref } from "@/lib/catalogue";
 import s from "./pdp.module.css";
@@ -51,7 +52,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[cate
 
   const jsonld = [
     {
-      "@context": "https://schema.org", "@type": "Product", name: `SMART ${p.model} ${p.name}`.replace("  ", " "), ...(p.model ? { sku: p.model, mpn: p.model } : {}), description: p.intro,
+      "@context": "https://schema.org", "@type": "Product", name: `SMART ${p.model} ${p.name}`.replace("  ", " "), ...(p.modelCode ? { mpn: p.modelCode } : {}), ...(p.model ? { sku: p.slug } : {}), description: p.intro,
       brand: { "@type": "Brand", name: "SMART" }, manufacturer: { "@type": "Organization", name: company.name },
       image: p.images.map((i) => `${company.url}${i.src}`), category: p.category, url: `${company.url}${href}`,
     },
@@ -75,24 +76,28 @@ export default async function ProductPage({ params }: PageProps<"/products/[cate
         </nav>
       </div>
 
+      {/* A03: source order = reading and focus order on every width: identity and actions, gallery, details.
+          Desktop puts the gallery in the left column with grid areas; nothing is re-ordered visually. */}
       <section className={`wrap ${s.top}`}>
-        <div className={s.gal}><Gallery images={p.images} model={code} /></div>
-        <div className={s.info}>
+        <div className={s.intro}>
           <div className={s.brandRow}><SmartMark height={26} />{p.model && <span className="code code--lg">{p.model}</span>}</div>
           <h1 className={`h-1 ${s.h1}`}>{p.name}</h1>
-          <p className="lede">{p.cardLine}</p>
-          {p.keySpecs.length > 0 && <div className="chips" style={{ marginTop: 18 }}>{p.keySpecs.map((k) => <span key={k} className="spec-chip">{k}</span>)}</div>}
+          <p className={`lede ${s.lede}`}>{p.cardLine}</p>
+          {p.keySpecs.length > 0 && <div className={`chips ${s.chips}`}>{p.keySpecs.map((k) => <span key={k} className="spec-chip">{k}</span>)}</div>}
           <div className={s.actions}>
             <AddToQuote item={item} />
             {p.datasheet
               ? <a className="btn btn--ghost" href={p.datasheet.href} download={`SMART-${fileCode(p.model || p.slug)}-datasheet.pdf`}>Datasheet · PDF {kb(p.datasheet.bytes)} <span className="arr" aria-hidden="true"><i>↓</i><i>↓</i></span></a>
               : <a className="btn btn--ghost" href={waLink(`Hello, please send the datasheet for SMART ${code}.`)} target="_blank" rel="noopener">Datasheet on request</a>}
           </div>
+        </div>
+        <div className={s.gal}><Gallery images={p.images} model={code} /></div>
+        <div className={s.details}>
           <p className={s.ask}><a className="link" href={waLink(`Hello, I have a question about SMART ${code}.`)} target="_blank" rel="noopener">Ask an engineer about {p.model || "this"} on WhatsApp →</a></p>
           <dl className={s.facts}>
             <div><dt className="label">Category</dt><dd><Link className="link" href={`/products/${cat.slug}`}>{cat.name}</Link></dd></div>
-            {p.environment.length > 0 && <div><dt className="label">Environment</dt><dd>{p.environment.join(" · ")}</dd></div>}
-            {p.interface && <div><dt className="label">Interface</dt><dd>{p.interface}</dd></div>}
+            {p.environment.length > 0 && <div><dt className="label">Environment</dt><dd>{p.environment.map(environmentLabel).join(" · ")}</dd></div>}
+            {p.interface && <div><dt className="label">Interface</dt><dd>{interfaceLabel(p.interface)}</dd></div>}
           </dl>
         </div>
       </section>

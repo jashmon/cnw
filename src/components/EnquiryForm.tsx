@@ -20,7 +20,8 @@ function validate(f: Fields, kind: Kind, lines: QuoteLine[]) {
   if ((f.name ?? "").trim().length < 2) e.name = "Enter your name.";
   const phone = (f.phone ?? "").trim(), email = (f.email ?? "").trim();
   if (!phone && !email) { e.phone = "Enter a phone number or an email address."; }
-  if (phone && !/^[+()\d\s-]{7,}$/.test(phone)) e.phone = "Use digits, spaces, + or - (at least 7).";
+  // A08: formatting (+, spaces, dashes, dots, brackets) is fine, but there must be at least 7 actual digits
+  if (phone && (!/^[+()\d\s.-]+$/.test(phone) || phone.replace(/\D/g, "").length < 7)) e.phone = "Enter a phone number with at least 7 digits. Spaces, +, - and brackets are fine.";
   if (email && !/^\S+@\S+\.\S+$/.test(email)) e.email = "That email address looks incomplete.";
   const msg = (f.message ?? "").trim();
   if (kind === "quote" && !lines.length && msg.length < 5) e.message = "Add models to the quote list, or describe what you need.";

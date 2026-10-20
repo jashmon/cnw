@@ -1,0 +1,547 @@
+{
+ "_comment": "Comparison decision fields (audit F08/A02). Each value is [canonical, detail?]: rows compare on the canonical value only, from a fixed list per field; the detail is shown underneath and never counts as a difference. Filled from datasheets and catalogue copy only; omit a field rather than guess. Checked by scripts/validate-content.mjs.",
+ "fieldSets": {
+  "telephone": {
+   "Paging / talkback": [
+    "No",
+    "Page phone (built-in amplifier)",
+    "PAGE and TALKBACK buttons"
+   ],
+   "Handset": [
+    "Yes",
+    "No"
+   ],
+   "Hands-free": [
+    "No",
+    "Speakerphone",
+    "Press-to-talk"
+   ],
+   "Powering": [
+    "Line powered",
+    "Mains AC",
+    "Mains AC or PoE",
+    "Solar and battery"
+   ],
+   "Vandal-resistant": [
+    "Yes",
+    "No"
+   ],
+   "External ringer / flasher": [
+    "Output contact",
+    "Built in"
+   ]
+  },
+  "clean-room": {
+   "Network": [
+    "Analogue (EPABX extension)",
+    "SIP / VoIP"
+   ],
+   "Hands-free": [
+    "Yes"
+   ],
+   "Activation": [
+    "Manual",
+    "Automatic",
+    "Automatic or manual"
+   ],
+   "Front dial": [
+    "Polyester",
+    "Stainless steel"
+   ],
+   "Housing": [
+    "Powder-coated steel",
+    "Stainless steel"
+   ],
+   "PoE": [
+    "Yes",
+    "No"
+   ]
+  }
+ },
+ "categories": {
+  "industrial-telephones": "telephone",
+  "pa-telephones": "telephone",
+  "weatherproof-flameproof-telephones": "telephone",
+  "ip-voip-telephones-systems": "telephone",
+  "rail-metro-telephones": "telephone",
+  "clean-room-phones": "clean-room"
+ },
+ "products": {
+  "wmhs-iii": {
+   "Paging / talkback": [
+    "No",
+    "telephone only"
+   ],
+   "Handset": [
+    "Yes",
+    "noise-cancelling"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Powering": [
+    "Line powered"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "handset model"
+   ],
+   "External ringer / flasher": [
+    "Output contact",
+    "for a SMART loud ringer or flasher"
+   ]
+  },
+  "wmhs-iiipt": {
+   "Paging / talkback": [
+    "PAGE and TALKBACK buttons",
+    "MCS-III field station"
+   ],
+   "Handset": [
+    "Yes",
+    "noise-cancelling"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Powering": [
+    "Line powered"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "handset model"
+   ],
+   "External ringer / flasher": [
+    "Output contact",
+    "for a SMART loud ringer or flasher"
+   ]
+  },
+  "wmhs-iii-id": {
+   "Paging / talkback": [
+    "PAGE and TALKBACK buttons",
+    "direct buttons"
+   ],
+   "Handset": [
+    "Yes",
+    "heavy-duty ABS"
+   ],
+   "Hands-free": [
+    "Speakerphone"
+   ],
+   "Powering": [
+    "Line powered"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "desktop, ABS"
+   ]
+  },
+  "wmhs-iiiep": {
+   "Paging / talkback": [
+    "No",
+    "emergency telephone"
+   ],
+   "Handset": [
+    "Yes",
+    "noise-cancelling"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Powering": [
+    "Line powered"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "desktop"
+   ]
+  },
+  "wmhs-iiilh": {
+   "Paging / talkback": [
+    "No"
+   ],
+   "Handset": [
+    "Yes",
+    "hearing-aid compatible, volume control"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "handset model"
+   ],
+   "External ringer / flasher": [
+    "Built in",
+    "40 W loud ringer and xenon flasher"
+   ]
+  },
+  "wmhf-iii": {
+   "Paging / talkback": [
+    "No"
+   ],
+   "Handset": [
+    "No"
+   ],
+   "Hands-free": [
+    "Press-to-talk",
+    "CONNECT / RELEASE / PTT"
+   ],
+   "Powering": [
+    "Mains AC",
+    "220/110 V AC"
+   ],
+   "Vandal-resistant": [
+    "Yes"
+   ],
+   "External ringer / flasher": [
+    "Output contact",
+    "for a SMART external loud ringer"
+   ]
+  },
+  "wmhf-iiigsm": {
+   "Paging / talkback": [
+    "No"
+   ],
+   "Handset": [
+    "No"
+   ],
+   "Hands-free": [
+    "Press-to-talk",
+    "CONNECT / RELEASE / PTT"
+   ],
+   "Powering": [
+    "Solar and battery",
+    "optional 220 V AC pack"
+   ],
+   "Vandal-resistant": [
+    "Yes"
+   ]
+  },
+  "wmhs-ii": {
+   "Paging / talkback": [
+    "Page phone (built-in amplifier)",
+    "30 W; private mode on handset lift"
+   ],
+   "Handset": [
+    "Yes"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Powering": [
+    "Mains AC",
+    "220/110 V AC"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "handset model"
+   ]
+  },
+  "wmhf-ii": {
+   "Paging / talkback": [
+    "Page phone (built-in amplifier)",
+    "horn and internal speaker"
+   ],
+   "Handset": [
+    "No"
+   ],
+   "Hands-free": [
+    "Press-to-talk",
+    "CONNECT / PTT / RELEASE"
+   ],
+   "Vandal-resistant": [
+    "Yes"
+   ]
+  },
+  "wmhs-ii-id": {
+   "Paging / talkback": [
+    "Page phone (built-in amplifier)",
+    "30 W; private mode"
+   ],
+   "Handset": [
+    "Yes"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Powering": [
+    "Mains AC",
+    "220/110 V AC"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "desktop"
+   ]
+  },
+  "wmhs-iiwp": {
+   "Paging / talkback": [
+    "Page phone (built-in amplifier)",
+    "30 W; private mode"
+   ],
+   "Handset": [
+    "Yes",
+    "noise-cancelling"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Powering": [
+    "Mains AC",
+    "220/110 V AC"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "handset model"
+   ]
+  },
+  "wmhs-iiwp-m": {
+   "Paging / talkback": [
+    "Page phone (built-in amplifier)",
+    "30 W; private mode"
+   ],
+   "Handset": [
+    "Yes",
+    "noise-cancelling"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Powering": [
+    "Mains AC",
+    "220/110 V AC"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "handset model"
+   ]
+  },
+  "wmhs-iiiwp": {
+   "Paging / talkback": [
+    "No",
+    "telephone only"
+   ],
+   "Handset": [
+    "Yes",
+    "noise-cancelling"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Powering": [
+    "Line powered"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "handset model"
+   ]
+  },
+  "wmhs-iiiwp-voip": {
+   "Paging / talkback": [
+    "No",
+    "telephone only"
+   ],
+   "Handset": [
+    "Yes",
+    "noise-cancelling"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Powering": [
+    "Mains AC",
+    "110/220 V AC"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "handset model"
+   ]
+  },
+  "flp": {
+   "Paging / talkback": [
+    "Page phone (built-in amplifier)",
+    "30 W"
+   ],
+   "Powering": [
+    "Mains AC",
+    "220/110 V AC"
+   ]
+  },
+  "wmhs-ip-pa-telephone": {
+   "Paging / talkback": [
+    "Page phone (built-in amplifier)",
+    "30 W; private mode"
+   ],
+   "Handset": [
+    "Yes"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "handset model"
+   ]
+  },
+  "wmhs-ii-ip": {
+   "Paging / talkback": [
+    "Page phone (built-in amplifier)",
+    "30 W; private mode"
+   ],
+   "Handset": [
+    "Yes"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Powering": [
+    "Mains AC or PoE",
+    "PoE option or 220/110 V AC"
+   ],
+   "Vandal-resistant": [
+    "No",
+    "handset model"
+   ]
+  },
+  "wmhs-ip-sip-phone": {
+   "Paging / talkback": [
+    "No",
+    "SIP telephone"
+   ],
+   "Handset": [
+    "Yes"
+   ],
+   "Hands-free": [
+    "No"
+   ],
+   "Powering": [
+    "Mains AC or PoE",
+    "100–220 V AC; PoE on WMHS-IP-POE"
+   ],
+   "Vandal-resistant": [
+    "Yes"
+   ],
+   "External ringer / flasher": [
+    "Output contact",
+    "relay for an external ringer or flasher"
+   ]
+  },
+  "cr-iiipe": {
+   "Network": [
+    "Analogue (EPABX extension)"
+   ],
+   "Hands-free": [
+    "Yes"
+   ],
+   "Activation": [
+    "Manual",
+    "AUTO DIAL button and keypad"
+   ],
+   "Front dial": [
+    "Polyester",
+    "F150, IPA washable"
+   ],
+   "Housing": [
+    "Powder-coated steel",
+    "18-gauge"
+   ],
+   "PoE": [
+    "No"
+   ]
+  },
+  "cr-iiiad": {
+   "Network": [
+    "Analogue (EPABX extension)"
+   ],
+   "Hands-free": [
+    "Yes",
+    "true hands-free"
+   ],
+   "Activation": [
+    "Automatic",
+    "resets on busy tone"
+   ],
+   "Front dial": [
+    "Polyester",
+    "F150, IPA washable"
+   ],
+   "Housing": [
+    "Powder-coated steel",
+    "18-gauge"
+   ],
+   "PoE": [
+    "No"
+   ]
+  },
+  "cr-iii-ss": {
+   "Network": [
+    "Analogue (EPABX extension)"
+   ],
+   "Hands-free": [
+    "Yes",
+    "true hands-free"
+   ],
+   "Activation": [
+    "Automatic or manual",
+    "programmable"
+   ],
+   "Front dial": [
+    "Stainless steel",
+    "SS 304, solvent-resistant overlay"
+   ],
+   "Housing": [
+    "Stainless steel",
+    "full SS"
+   ],
+   "PoE": [
+    "No"
+   ]
+  },
+  "cr-iii-ip": {
+   "Network": [
+    "SIP / VoIP",
+    "RJ-45 10/100"
+   ],
+   "Hands-free": [
+    "Yes"
+   ],
+   "Activation": [
+    "Manual",
+    "AUTO DIAL button and keypad"
+   ],
+   "Front dial": [
+    "Polyester",
+    "solvent resistant"
+   ],
+   "Housing": [
+    "Powder-coated steel",
+    "18-gauge"
+   ],
+   "PoE": [
+    "No",
+    "220/110 V AC"
+   ]
+  },
+  "cr-ip": {
+   "Network": [
+    "SIP / VoIP",
+    "RJ-45 CAT-6 or Wi-Fi"
+   ],
+   "Hands-free": [
+    "Yes",
+    "full duplex"
+   ],
+   "Front dial": [
+    "Polyester",
+    "F150, IPA washable"
+   ],
+   "Housing": [
+    "Stainless steel",
+    "full SS"
+   ],
+   "PoE": [
+    "Yes",
+    "IEEE 802.3af"
+   ]
+  }
+ }
+}

@@ -1,19 +1,20 @@
 "use client";
 import Link from "next/link";
 import { useId, useMemo, useState } from "react";
+import { modelMatches, normModel } from "@/lib/model-search";
 import s from "@/app/downloads/downloads.module.css";
 
 // F11: the datasheet index with a local model/name filter and family anchors, so a buyer who starts at
 // Downloads types a code and reaches the PDF without scanning 70+ rows. All rows are server-rendered first.
-export type SheetRow = { slug: string; model: string; name: string; href: string; size: string; filename: string; productHref: string; family: string; familySlug: string; category: string; catSlug: string };
+export type SheetRow = { slug: string; model: string; aliases: string[]; name: string; href: string; size: string; filename: string; productHref: string; family: string; familySlug: string; category: string; catSlug: string };
 
-const norm = (v: string) => v.toLowerCase().replace(/[^a-z0-9]+/g, "");
 
 export function DatasheetList({ rows, families }: { rows: SheetRow[]; families: { slug: string; name: string }[] }) {
   const [q, setQ] = useState("");
   const id = useId();
-  const n = norm(q);
-  const shown = useMemo(() => (n.length < 2 ? rows : rows.filter((r) => norm(r.model).includes(n) || norm(r.name).includes(n) || norm(r.category).includes(n))), [rows, n]);
+  // A04: same normaliser and aliases as the header search ("wmhs3" finds WMHS-III here too)
+  const n = normModel(q);
+  const shown = useMemo(() => (n.length < 2 ? rows : rows.filter((r) => modelMatches(q, r))), [rows, n, q]);
   const fams = families.filter((f) => shown.some((r) => r.familySlug === f.slug));
   return (
     <div>

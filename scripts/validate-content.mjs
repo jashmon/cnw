@@ -60,9 +60,21 @@ for (const m of manifest) {
   }
 }
 
-// compare-fields: every slug exists, every key belongs to the category's field list
-const cf = fs.readFileSync(path.join(process.cwd(), "src/content/compare-fields.ts"), "utf8");
-for (const m of cf.matchAll(/^\s+"([a-z0-9-]+)":\s*\{/gm)) if (!slugs.has(m[1])) err(`compare-fields: unknown product ${m[1]}`);
+// compare-fields: every product exists, belongs to a category with a field set, and uses only that set's fields
+// and allowed canonical values (so "Yes" vs "Yes, true hands-free" cannot become a false difference)
+const cf = JSON.parse(fs.readFileSync(path.join(process.cwd(), "src/content/compare-fields.json"), "utf8"));
+const catOf = Object.fromEntries(voiceList.map((v) => [v.slug, v.categorySlug]));
+for (const [slug, fields] of Object.entries(cf.products)) {
+  if (!slugs.has(slug)) { err(`compare-fields: unknown product ${slug}`); continue; }
+  const setName = cf.categories[catOf[slug] ?? ""];
+  const set = setName && cf.fieldSets[setName];
+  if (!set) { err(`compare-fields ${slug}: category ${catOf[slug]} has no field set`); continue; }
+  for (const [k, v] of Object.entries(fields)) {
+    if (!(k in set)) err(`compare-fields ${slug}: field "${k}" is not in the ${setName} set`);
+    else if (!Array.isArray(v) || !set[k].includes(v[0])) err(`compare-fields ${slug}: "${k}" = ${JSON.stringify(v?.[0])} is not one of ${set[k].join(" / ")}`);
+    if (Array.isArray(v) && v.length > 2) err(`compare-fields ${slug}: "${k}" has more than [value, detail]`);
+  }
+}
 
 if (errors.length) { console.error(`content validation: ${errors.length} problem${errors.length > 1 ? "s" : ""}`); errors.slice(0, 400).forEach((e) => console.error("  " + e)); process.exit(1); }
 if (warnings.length) console.log(`content validation: ${warnings.length} note${warnings.length > 1 ? "s" : ""} (variant codes without a product page)`);

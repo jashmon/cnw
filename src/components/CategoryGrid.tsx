@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
 import type { CardProduct as Product } from "@/lib/catalogue";
+import { environmentLabel, interfaceLabel } from "@/lib/labels";
 import { ProductCard } from "./ProductCard";
 
 // Filter chips (environment / interface) + grid. Filtering is client-side; all cards are server-rendered first.
@@ -16,8 +17,8 @@ export function CategoryGrid({ products }: { products: Product[] }) {
       {showFilters && (
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center", marginBottom: 24 }} role="group" aria-label="Filter models">
           <span className="label" style={{ marginRight: 6 }}>Filter</span>
-          {envs.length > 1 && envs.map((e) => <button key={e} type="button" className="chip" aria-pressed={env === e} onClick={() => setEnv(env === e ? null : e)} style={{ textTransform: "capitalize" }}>{e}</button>)}
-          {ifs.length > 1 && ifs.map((e) => <button key={e} type="button" className="chip" aria-pressed={itf === e} onClick={() => setItf(itf === e ? null : e)}>{e}</button>)}
+          {envs.length > 1 && envs.map((e) => <button key={e} type="button" className="chip" aria-pressed={env === e} onClick={() => setEnv(env === e ? null : e)} >{environmentLabel(e)}</button>)}
+          {ifs.length > 1 && ifs.map((e) => <button key={e} type="button" className="chip" aria-pressed={itf === e} onClick={() => setItf(itf === e ? null : e)}>{interfaceLabel(e)}</button>)}
           {(env || itf) && <button type="button" className="link" style={{ border: 0, background: "none", cursor: "pointer", marginLeft: 6 }} onClick={() => { setEnv(null); setItf(null); }}>Clear</button>}
           <span className="mono muted" aria-live="polite" style={{ marginLeft: "auto", fontSize: ".875rem" }}>{list.length} shown</span>
         </div>
@@ -29,7 +30,7 @@ export function CategoryGrid({ products }: { products: Product[] }) {
       ) : (
         <div role="status" style={{ border: "2px dashed var(--line)", borderRadius: "var(--radius-md)", padding: "clamp(24px,4vw,48px)", textAlign: "center" }}>
           <p className="h-3">No models match these filters.</p>
-          <p className="muted" style={{ marginTop: 6 }}>{[env, itf].filter(Boolean).join(" + ")} has no model in this category.</p>
+          <p className="muted" style={{ marginTop: 6 }}>{[env && environmentLabel(env), itf && interfaceLabel(itf)].filter(Boolean).join(" + ")} has no model in this category.</p>
           <button type="button" className="btn btn--ghost btn--sm" style={{ marginTop: 16 }} onClick={() => { setEnv(null); setItf(null); }}>Reset filters</button>
         </div>
       )}

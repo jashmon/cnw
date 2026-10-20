@@ -12,7 +12,7 @@
 .n{font-weight:500}
 .view{font-size:.875rem;color:var(--muted)}
 .audio{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.audio figure{display:grid;gap:10px;background:var(--surface-2);padding:18px;border-radius:var(--radius-md);box-shadow:var(--shadow-inset-line)}
+.audio figure{display:grid;gap:10px;align-content:start;background:var(--surface-2);padding:18px;border-radius:var(--radius-md);box-shadow:var(--shadow-inset-line)}
 .audio audio{width:100%}
 .videos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 /* phones: code · name · ↓ on one row, file size under the name (global .mono needs :global in a module) */
