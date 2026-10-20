@@ -1,6 +1,7 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { QtyInput } from "./QtyInput";
 import { useEffect, useRef } from "react";
 import { useQuote } from "@/lib/quote";
 import { waLink } from "@/content/company";
@@ -60,12 +61,12 @@ export function QuoteDrawer() {
                 <div>
                   <span className="code">{l.model}</span>
                   <Link href={l.href} className={s.name} onClick={() => q.setOpen(false)}>{l.name}</Link>
-                  <button className={s.rm} onClick={() => q.remove(l.slug)}>Remove</button>
+                  <button type="button" className={s.rm} onClick={() => q.remove(l.slug)} aria-label={`Remove ${l.model} from the quote list`}>Remove</button>
                 </div>
                 <div className={s.qty} role="group" aria-label={`Quantity for ${l.model}`}>
-                  <button onClick={() => q.setQty(l.slug, l.qty - 1)} aria-label="Decrease">−</button>
-                  <input inputMode="numeric" value={l.qty} onChange={(e) => q.setQty(l.slug, parseInt(e.target.value, 10))} aria-label="Quantity" />
-                  <button onClick={() => q.setQty(l.slug, l.qty + 1)} aria-label="Increase">+</button>
+                  <button type="button" onClick={() => q.setQty(l.slug, l.qty - 1)} aria-label={`Decrease quantity of ${l.model}`} disabled={l.qty <= 1}>−</button>
+                  <QtyInput value={l.qty} onCommit={(n) => q.setQty(l.slug, n)} label={`Quantity of ${l.model}`} />
+                  <button type="button" onClick={() => q.setQty(l.slug, l.qty + 1)} aria-label={`Increase quantity of ${l.model}`}>+</button>
                 </div>
               </li>
             ))}

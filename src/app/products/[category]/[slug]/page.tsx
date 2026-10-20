@@ -9,6 +9,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { SpecTables } from "@/components/SpecTables";
 import { company, waLink } from "@/content/company";
 import { comparableTo, compareRows } from "@/lib/compare";
+import { CompareTable } from "@/components/CompareTable";
 import { getCategory, getProduct, getProducts, getSystems, productHref } from "@/lib/catalogue";
 import s from "./pdp.module.css";
 
@@ -126,12 +127,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[cate
           <div className="wrap">
             <h2 className="h-1">Compare with similar models</h2>
             <p className="muted" style={{ margin: "8px 0 20px", maxWidth: "70ch" }}>Differences first: interface, power, protection and output, then installation. Full specifications are in each model&apos;s table.</p>
-            <div className={s.cmpWrap}>
-              <table className={`table ${s.cmp}`}>
-                <thead><tr><th scope="col" className="sr-only">Spec</th>{compare.map((c) => <th key={c.slug} scope="col" className={c.slug === p.slug ? s.me : ""}>{c.slug === p.slug ? <span className="code">{c.model || "This system"}</span> : <Link href={productHref(c)} className="code" style={{ background: "transparent", border: "1.5px solid var(--ink)" }}>{c.model || "Multi-channel"}</Link>}<div className={s.cname}>{c.name}</div></th>)}</tr></thead>
-                <tbody>{rows.map((r) => <tr key={r.key} className={r.differs ? s.diff : s.same}><th scope="row">{r.key}{r.differs && <span className={s.diffTag}>differs</span>}</th>{compare.map((c, i) => <td key={c.slug} className={c.slug === p.slug ? s.me : ""}>{r.values[i]}</td>)}</tr>)}</tbody>
-              </table>
-            </div>
+            <CompareTable cols={compare.map((c) => ({ slug: c.slug, model: c.model, name: c.name, href: productHref(c) }))} rows={rows} current={p.slug} label={`Comparison of ${code} with similar models`} />
           </div>
         </section>
       )}

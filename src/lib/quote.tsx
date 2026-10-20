@@ -1,17 +1,18 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { clampQty, sanitize, type QuoteLine } from "./quote-data";
+export { MAX_QTY, clampQty, type QuoteLine } from "./quote-data";
 
 // CONV-01 quote list (E2S quote basket / Viking pick list). Client-side store persisted to localStorage,
 // read through useSyncExternalStore so server HTML (empty list) and hydration stay consistent.
-export type QuoteLine = { slug: string; model: string; name: string; href: string; img: string | null; qty: number; note?: string };
 const KEY = "cw-quote-v1";
 const EMPTY: QuoteLine[] = [];
 let lines: QuoteLine[] | null = null;
 const listeners = new Set<() => void>();
 function load(): QuoteLine[] {
   if (lines) return lines;
-  try { lines = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch { lines = []; }
+  try { lines = sanitize(JSON.parse(localStorage.getItem(KEY) || "[]")); } catch { lines = []; }
   return lines!;
 }
 function set(next: QuoteLine[]) {
@@ -43,11 +44,11 @@ export function QuoteProvider({ children }: { children: React.ReactNode }) {
 
   const add = useCallback((l: Omit<QuoteLine, "qty">, qty = 1) => {
     const prev = load();
-    set(prev.some((p) => p.slug === l.slug) ? prev.map((p) => (p.slug === l.slug ? { ...p, qty: p.qty + qty } : p)) : [...prev, { ...l, qty }]);
+    set(prev.some((p) => p.slug === l.slug) ? prev.map((p) => (p.slug === l.slug ? { ...p, qty: clampQty(p.qty + qty) } : p)) : [...prev, { ...l, qty: clampQty(qty) }]);
     setBump((b) => b + 1); setToast(`${l.model} added to your quote list`);
   }, []);
   const remove = useCallback((slug: string) => { set(load().filter((p) => p.slug !== slug)); setBump((b) => b + 1); }, []);
-  const setQty = useCallback((slug: string, qty: number) => set(load().map((p) => (p.slug === slug ? { ...p, qty: Math.max(1, Math.min(9999, qty || 1)) } : p))), []);
+  const setQty = useCallback((slug: string, qty: number) => set(load().map((p) => (p.slug === slug ? { ...p, qty: clampQty(qty) } : p))), []);
   const setNote = useCallback((slug: string, note: string) => set(load().map((p) => (p.slug === slug ? { ...p, note: note.slice(0, 300) } : p))), []);
   const value = useMemo<Ctx>(() => ({
     lines: current, count: current.length, open, setOpen, add, remove, setQty, setNote,

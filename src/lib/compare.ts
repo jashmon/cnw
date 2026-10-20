@@ -15,24 +15,56 @@ const PRIORITY = [
 ];
 const rank = (k: string) => { const i = PRIORITY.findIndex((r) => r.test(k)); return i < 0 ? PRIORITY.length : i; };
 
-export function specValue(c: Comparable, k: string): string {
-  if (k === "Interface") return c.interface || "—";
-  if (k === "Environment") return c.environment.length ? c.environment.join(", ") : "—";
-  for (const g of Object.values(c.specGroups)) if (k in g) return g[k];
-  return "—";
-}
+export const NOT_SPECIFIED = "Not specified";
 
 const keysOf = (c: Comparable) => new Set(Object.values(c.specGroups).flatMap((g) => Object.keys(g)));
 
-// Rows present on at least two models; differing rows first, each block in priority order.
-export function compareRows(models: Comparable[], limit = 12) {
-  const keys = [...new Set(["Interface", "Environment", ...models.flatMap((c) => [...keysOf(c)])])]
-    .filter((k) => models.filter((c) => specValue(c, k) !== "—").length >= 2);
-  const differs = (k: string) => new Set(models.map((c) => specValue(c, k))).size > 1;
+export function specValue(c: Comparable, k: string): string {
+  if (k === "Interface") return c.interface || NOT_SPECIFIED;
+  if (k === "Environment") return c.environment.length ? c.environment.join(", ") : NOT_SPECIFIED;
+  for (const g of Object.values(c.specGroups)) if (k in g && String(g[k]).trim()) return g[k];
+  return NOT_SPECIFIED;
+}
+
+// Comparison key for a value: equal engineering values compare equal even when written differently
+// ("30 W" / "30W", "IP-65" / "IP 65", "0.6 kg (as printed)" / "0.6 kg", "140 x 120" / "140 × 120").
+// Only used to decide same/different; the table always shows the original text.
+export function normalizeSpec(v: string): string {
+  return v
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, " ")          // source notes: (cnwcom PDF), (as printed), (web page)…
+    .replace(/['"‘’“”]/g, "")
+    .replace(/[×✕]/g, "x")
+    .replace(/[–—−]/g, "-")
+    .replace(/\bip\s*-?\s*(\d)/g, "ip$1")  // IP 65, IP-65 → ip65
+    .replace(/\s+/g, "")
+    .replace(/[.,;:]+$/, "");
+}
+
+export type RowState = "differs" | "same" | "partial";
+export type Row = { key: string; state: RowState; values: string[] };
+
+// Rows present on at least two models. States:
+//   differs  two or more different specified values
+//   same     every model specifies it, all equal
+//   partial  equal wherever specified, but some models don't specify it (never reported as a difference)
+// Order: differs, same, partial; each block in buyer-decision priority.
+export function compareRows(models: Comparable[], limit = 12): Row[] {
+  const keys = [...new Set(["Interface", "Environment", ...models.flatMap((c) => [...keysOf(c)])])];
+  const order: Record<RowState, number> = { differs: 0, same: 1, partial: 2 };
   return keys
-    .map((k) => ({ key: k, differs: differs(k), values: models.map((c) => specValue(c, k)) }))
-    .sort((a, b) => Number(b.differs) - Number(a.differs) || rank(a.key) - rank(b.key))
-    .slice(0, limit);
+    .map((key) => {
+      const values = models.map((c) => specValue(c, key));
+      const given = values.filter((v) => v !== NOT_SPECIFIED);
+      const distinct = new Set(given.map(normalizeSpec)).size;
+      const state: RowState = distinct > 1 ? "differs" : given.length === values.length ? "same" : "partial";
+      return { key, state, values, given: given.length };
+    })
+    .filter((r) => r.given >= 2)
+    .sort((a, b) => order[a.state] - order[b.state] || rank(a.key) - rank(b.key))
+    .slice(0, limit)
+    .map(({ key, state, values }) => ({ key, state, values }));
 }
 
 // The most useful alternatives to compare against: explicit variants, then the same category, the same interface,

@@ -41,8 +41,8 @@ let escaped = 0;
 for (let i = 0; i < 25; i++) { await p.keyboard.press(i % 2 ? "Tab" : "Shift+Tab"); if (!(await p.evaluate(() => !!document.activeElement?.closest('[role="dialog"]')))) escaped++; }
 check("Tab / Shift+Tab stay inside the drawer (25 presses)", escaped === 0, `${escaped} escapes`);
 check("page behind the drawer is inert", await p.evaluate(() => document.querySelector("main")?.hasAttribute("inert") === true));
-await p.click('button[aria-label="Increase"]');
-const qty = await p.inputValue('input[aria-label="Quantity"]');
+await p.click('button[aria-label^="Increase"]');
+const qty = await p.inputValue('input[aria-label^="Quantity"]');
 check("quantity stepper works", qty === "2", qty);
 await p.keyboard.press("Escape");
 await p.waitForTimeout(350);
@@ -71,7 +71,7 @@ for (let i = 0, n = await chips.count(); i < n && emptyShown === null; i++) for 
 check("empty filter result shows a reset that restores models", emptyShown !== false, emptyShown === null ? "no empty combination in this category" : "");
 // product comparison leads with differences
 await p.goto(base + "/products/industrial-telephones/wmhs-iii", { waitUntil: "networkidle" });
-check("comparison table marks differing rows first", await p.evaluate(() => { const rows = [...document.querySelectorAll("table tbody tr")].filter((r) => r.closest("[class*=cmpWrap]")); const first = rows.findIndex((r) => !r.querySelector("[class*=diffTag]")); return rows.length > 0 && !!rows[0].querySelector("[class*=diffTag]") && (first < 0 || rows.slice(first).every((r) => !r.querySelector("[class*=diffTag]"))); }));
+check("comparison table marks differing rows first", await p.evaluate(() => { const t = [...document.querySelectorAll("table")].find((x) => x.caption?.textContent?.startsWith("Comparison of")); const rows = t ? [...t.querySelectorAll("tbody tr")] : []; const tagged = (r) => !!r.querySelector("[class*=tag]"); const first = rows.findIndex((r) => !tagged(r)); return rows.length > 0 && tagged(rows[0]) && (first < 0 || rows.slice(first).every((r) => !tagged(r))); }));
 // mega-menu featured card says where it goes; the catalogue has its own link
 await p.goto(base + "/", { waitUntil: "networkidle" });
 check("mega menu has a real link to all models", await p.evaluate(() => { const a = [...document.querySelectorAll("#mega-products a")].find((x) => /All \d+ models/.test(x.textContent || "")); return a?.getAttribute("href") === "/products"; }));
@@ -79,12 +79,15 @@ check("mega menu has a real link to all models", await p.evaluate(() => { const 
 await p.goto(base + "/products/industrial-telephones#compare", { waitUntil: "networkidle" });
 const cols = () => p.locator("#compare thead th").count();
 const c0 = await cols();
-const boxes = p.locator("#compare input[type=checkbox]");
-const unchecked = p.locator("#compare input[type=checkbox]:not(:checked)");
-await unchecked.first().check(); await p.waitForTimeout(80);
+const addOne = async () => { const v = await p.locator("#cmp-add option:not([value=''])").first().getAttribute("value"); await p.selectOption("#cmp-add", v); await p.waitForTimeout(80); };
+await addOne();
 const c1 = await cols();
-const fifthDisabled = (await boxes.count()) > 4 ? await unchecked.first().isDisabled() : true;
-check("category compare: picking models changes the table, max 4", c1 === c0 + 1 && c1 - 1 === 4 && fifthDisabled, `${c0 - 1} → ${c1 - 1} models`);
+const capped = await p.locator("#cmp-add").isDisabled();
+check("category compare: add a model, capped at 4", c1 === c0 + 1 && c1 - 1 === 4 && capped, `${c0 - 1} → ${c1 - 1} models, add disabled: ${capped}`);
+await p.locator('#compare button[aria-label^="Remove"]').first().click(); await p.waitForTimeout(80);
+const c2 = await cols();
+await p.getByRole("button", { name: "Reset" }).click(); await p.waitForTimeout(80);
+check("category compare: remove (×) and reset", c2 === c1 - 1 && (await cols()) === c0, `${c1 - 1} → ${c2 - 1} → ${(await cols()) - 1}`);
 check("category compare leads with differing rows", await p.locator("#compare tbody tr").first().locator("[class*=tag]").count() === 1);
 // catalogue search writes ?q= back to the URL; a new ?q= updates the field
 await p.goto(base + "/products", { waitUntil: "networkidle" });
@@ -168,6 +171,30 @@ const revealHidden = await m.evaluate(() => document.documentElement.classList.c
 check("reduced motion skips reveal hiding", !revealHidden);
 await m.context().close();
 
+// quote basket hardening: wrong-shape storage, partial quantity edits, two tabs in sync
+{
+  const ctx2 = await b.newContext({ viewport: { width: 1280, height: 900 } });
+  const t1 = await ctx2.newPage(); t1.on("pageerror", (e) => errs.push(String(e)));
+  await t1.goto(base + "/", { waitUntil: "load" });
+  await t1.evaluate(() => localStorage.setItem("cw-quote-v1", JSON.stringify({ lines: [1, 2] })));
+  await t1.reload({ waitUntil: "load" });
+  check("valid JSON of the wrong shape restores as an empty list", (await t1.locator("button[data-quote-badge] .badge").textContent())?.trim() === "0");
+  await t1.evaluate(() => localStorage.setItem("cw-quote-v1", JSON.stringify([{ slug: "wmhs-iii", model: "WMHS-III", name: "Industrial Telephone", href: "/products/industrial-telephones/wmhs-iii", img: null, qty: "3" }, { slug: 9 }, { slug: "x", href: "https://evil.example" }])));
+  await t1.goto(base + "/quote", { waitUntil: "load" }); await t1.waitForTimeout(300);
+  check("mixed storage keeps only the valid line", (await t1.locator("button[data-quote-badge] .badge").textContent())?.trim() === "1" && (await t1.inputValue("#q-wmhs-iii")) === "3");
+  const qty = t1.locator("#q-wmhs-iii");
+  await qty.click(); await qty.press("Backspace"); await t1.waitForTimeout(100);
+  const midEdit = await qty.inputValue();
+  await qty.blur(); await t1.waitForTimeout(100);
+  check("clearing a quantity mid-edit is allowed, and blur restores it", midEdit === "" && (await qty.inputValue()) === "3", `${JSON.stringify(midEdit)} → ${await qty.inputValue()}`);
+  await qty.click(); await qty.fill("12"); await qty.press("Enter"); await t1.waitForTimeout(100);
+  check("typed quantity is saved", await t1.evaluate(() => JSON.parse(localStorage.getItem("cw-quote-v1"))[0].qty) === 12);
+  const t2 = await ctx2.newPage(); await t2.goto(base + "/quote", { waitUntil: "load" }); await t2.waitForTimeout(300);
+  await t1.goto(base + "/products/bag-counters/bc-l02", { waitUntil: "load" });
+  await t1.getByRole("button", { name: /Add to quote\s*: BC-L02$/ }).first().click(); await t2.waitForTimeout(400);
+  check("a second tab picks up the change", (await t2.locator("button[data-quote-badge] .badge").textContent())?.trim() === "2");
+  await ctx2.close();
+}
 // quote list with long names at 320px: drawer and /quote stay within the screen
 {
   const n = await (await b.newContext({ viewport: { width: 320, height: 720 }, isMobile: true, hasTouch: true })).newPage();

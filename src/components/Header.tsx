@@ -87,6 +87,9 @@ export function Header({ families, industries, index, featured }: Props) {
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
   useEffect(() => { const f = () => { const y = scrollY > 80; setScrolled(y); document.documentElement.toggleAttribute("data-scrolled", y); }; f(); addEventListener("scroll", f, { passive: true }); return () => removeEventListener("scroll", f); }, []);
   useEffect(() => { const k = (e: KeyboardEvent) => e.key === "Escape" && setMega(null); addEventListener("keydown", k); return () => removeEventListener("keydown", k); }, []);
+  // mark in-site navigations so the route crossfade runs only after the first page (see globals.css)
+  const firstPath = useRef(path);
+  useEffect(() => { if (path !== firstPath.current) document.documentElement.setAttribute("data-navigated", ""); }, [path]);
   useEffect(() => { const pop = () => { setMega(null); setSheet(false); }; addEventListener("popstate", pop); return () => removeEventListener("popstate", pop); }, []);
   // mobile sheet behaves as a modal: page behind is inert, focus moves in, Tab stays within burger + sheet,
   // Escape closes, and focus returns to the burger

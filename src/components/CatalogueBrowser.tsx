@@ -38,6 +38,8 @@ function Inner({ families, urlQ, syncUrl = false }: { families: Fam[]; urlQ: str
   const searching = q.trim().length > 1;
   const visible = (p: Product) => (!env || p.environment.includes(env)) && (!searching || hits.some((h) => h.slug === p.slug));
   const count = all.filter(visible).length;
+  // the first visible card is above the fold (and usually the Largest Contentful Paint): load it eagerly
+  const firstSlug = all.find(visible)?.slug;
   const reset = () => { setQ(""); setEnv(null); document.getElementById("cat-q")?.focus(); };
   return (
     <>
@@ -65,7 +67,7 @@ function Inner({ families, urlQ, syncUrl = false }: { families: Fam[]; urlQ: str
                   <h3 className="h-3"><Link href={`/products/${c.slug}`} style={{ textDecoration: "none" }}>{c.name}</Link></h3>
                   <Link className="link" href={c.products.length > 1 ? `/products/${c.slug}#compare` : `/products/${c.slug}`} style={{ fontWeight: 600, fontSize: ".9375rem" }}>{c.products.length > 1 ? `Compare ${c.products.length} models →` : "View category →"}</Link>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 14 }}>{c.list.map((p) => <ProductCard key={p.slug} p={p} />)}</div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 14 }}>{c.list.map((p) => <ProductCard key={p.slug} p={p} priority={p.slug === firstSlug} />)}</div>
               </div>
             ))}
           </section>

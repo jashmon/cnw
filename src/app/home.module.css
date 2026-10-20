@@ -13,7 +13,8 @@
 .call a{text-decoration:none;border-bottom:1.5px solid}
 .media{position:relative;align-self:end;display:flex;align-items:flex-end;justify-content:center}
 .render{position:relative;z-index:2;width:min(100%,400px);height:auto;margin-bottom:-2%;filter:drop-shadow(0 40px 50px rgba(17,17,16,.22));animation:rise var(--dur-hero) var(--ease-out) both .1s}
-@keyframes rise{from{opacity:0;transform:translateY(40px)}}
+/* motion without starting invisible: the hero render is the Largest Contentful Paint */
+@keyframes rise{from{transform:translateY(40px)}}
 .rings{position:absolute;left:50%;top:44%;width:150%;aspect-ratio:1;transform:translate(-50%,-50%);z-index:1;pointer-events:none}
 .rings circle{fill:none;stroke:var(--ink);stroke-width:1.5;opacity:.12;transform-origin:center;transform-box:fill-box}
 .rings circle:nth-child(1){animation:ring 1.6s var(--ease-out) both .2s}

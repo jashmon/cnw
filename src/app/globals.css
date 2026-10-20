@@ -128,7 +128,9 @@ p { text-wrap: pretty; }
 @media (prefers-reduced-motion: reduce) { .ind-panel { animation: none; } }
 
 /* route crossfade (template.tsx) */
-.route-fade { animation: route-in var(--dur-ui) var(--ease-in-out) both; }
+/* only after an in-site navigation (html[data-navigated], set by Header): on first load the content must paint at
+   once, or the opacity-0 start delays Largest Contentful Paint */
+html[data-navigated] .route-fade { animation: route-in var(--dur-ui) var(--ease-in-out) both; }
 @keyframes route-in { from { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .route-fade { animation: none; } }
 .label, .mono { font-weight: 500; }

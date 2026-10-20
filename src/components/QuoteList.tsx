@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { useQuote } from "@/lib/quote";
+import { QtyInput } from "./QtyInput";
 import s from "./QuoteList.module.css";
 
 // Editable quote list on /quote (qty + per-line note).
@@ -25,9 +26,9 @@ export function QuoteList() {
             <input id={`n-${l.slug}`} value={l.note ?? ""} onChange={(e) => q.setNote(l.slug, e.target.value)} placeholder="Note (variant, colour, cable length…)" style={{ border: "1px solid var(--line)", borderRadius: "var(--radius-sm)", padding: "8px 10px", background: "var(--surface-2)", fontSize: ".9375rem" }} />
           </div>
           <div className={s.qty}>
-            <label className="label" htmlFor={`q-${l.slug}`}>Qty</label>
-            <input id={`q-${l.slug}`} type="number" min={1} max={9999} value={l.qty} onChange={(e) => q.setQty(l.slug, parseInt(e.target.value, 10))} style={{ width: 84, padding: "8px 10px", border: "1.5px solid var(--ink)", borderRadius: "var(--radius-sm)", fontFamily: "var(--font-mono)" }} />
-            <button type="button" onClick={() => q.remove(l.slug)} style={{ border: 0, background: "none", textDecoration: "underline", color: "var(--muted)", cursor: "pointer", fontSize: ".8125rem" }}>Remove</button>
+            <label className="label" htmlFor={`q-${l.slug}`}>Qty<span className="sr-only"> of {l.model}</span></label>
+            <QtyInput id={`q-${l.slug}`} value={l.qty} onCommit={(n) => q.setQty(l.slug, n)} style={{ width: 84, minHeight: 44, padding: "8px 10px", border: "1.5px solid var(--ink)", borderRadius: "var(--radius-sm)", fontFamily: "var(--font-mono)", background: "var(--surface-2)" }} />
+            <button type="button" onClick={() => q.remove(l.slug)} aria-label={`Remove ${l.model} from the quote list`} style={{ minHeight: 44, minWidth: 44, padding: "0 8px", border: 0, background: "none", textDecoration: "underline", color: "var(--muted)", cursor: "pointer", fontSize: ".875rem" }}>Remove</button>
           </div>
         </li>
       ))}

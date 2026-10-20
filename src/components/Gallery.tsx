@@ -10,6 +10,8 @@ import s from "./Gallery.module.css";
 export function Gallery({ images, model }: { images: Img[]; model: string }) {
   const [i, setI] = useState(0);
   const [zoom, setZoom] = useState(false);
+  const [switched, setSwitched] = useState(false);
+  const show = (n: number) => { setI(n); setSwitched(true); };
   const dlg = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     const d = dlg.current; if (!d) return;
@@ -24,8 +26,8 @@ export function Gallery({ images, model }: { images: Img[]; model: string }) {
   if (!images.length) return <div className={s.main}><span className="label">Image coming</span></div>;
   const img = images[i];
   return (
-    <div className={s.g}>
-      <button className={s.main} onClick={() => setZoom(true)} aria-label={`Enlarge image: ${img.alt}`}>
+    <div className={`${s.g} ${switched ? s.switched : ""}`}>
+      <button className={s.main} onClick={() => setZoom(true)} aria-label={`Enlarge image${img.placeholder ? " (3D render · placeholder)" : ""}: ${img.alt}`}>
         <Image key={img.src} src={img.src} alt={img.alt} width={img.w} height={img.h} sizes="(max-width: 1023px) 92vw, 56vw" priority quality={75} className={s.img} />
         {img.placeholder && <span className="flag">3D render · placeholder</span>}
         <span className={s.zoomHint} aria-hidden="true">⤢</span>
@@ -33,7 +35,7 @@ export function Gallery({ images, model }: { images: Img[]; model: string }) {
       {images.length > 1 && (
         <ul className={s.thumbs} aria-label={`${model} images`}>
           {images.map((t, n) => (
-            <li key={t.src}><button className={s.thumb} aria-current={n === i} onClick={() => setI(n)} aria-label={`Show image ${n + 1}: ${t.alt}`}>
+            <li key={t.src}><button className={s.thumb} aria-current={n === i} onClick={() => show(n)} aria-label={`${t.source === "photo" ? "Photo" : "Render"} ${n + 1}: ${t.alt}`}>
               <Image src={t.src} alt="" width={t.w} height={t.h} sizes="96px" className={s.timg} />
               <span className={s.tlabel}>{t.source === "photo" ? "Photo" : "Render"}</span>
             </button></li>
