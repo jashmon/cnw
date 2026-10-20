@@ -46,7 +46,10 @@
   --space-7: 48px;
   --space-8: 64px;
   --space-9: 96px;
-  --space-section: clamp(64px, 9vw, 144px);
+  /* section rhythm in three tiers: editorial (home statements), functional (default: catalogue, specs, forms), compact */
+  --space-editorial: clamp(64px, 9vw, 144px);
+  --space-section: clamp(48px, 6vw, 96px);
+  --space-compact: clamp(32px, 4vw, 56px);
   --space-gutter: clamp(16px, 4vw, 48px);
   --radius-none: 0;
   --radius-sm: 2px;

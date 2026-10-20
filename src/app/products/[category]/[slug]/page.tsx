@@ -30,6 +30,14 @@ export async function generateMetadata({ params }: PageProps<"/products/[categor
 const kb = (b: number) => (b > 1e6 ? `${(b / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(b / 1e3))} KB`);
 
 // PDP spine (E2S + Talkaphone + Viking + Matrix): PDP-01 gallery · PDP-02 title/chips · PDP-08 actions · PDP-01 ideal-for ·
+const CMP_PRIORITY = [
+  /^interface$/i, /protocol|phone line|line voltage|loop current|dialling|gsm/i,
+  /power supply|power consumption|standby|rated power|ups/i,
+  /ip rating|protection|enclosure|dust|moisture|insulation/i, /^environment$/i, /temperature|humidity/i,
+  /amplifier|speaker|sound output|horn|ringer output|led count|beam|display|message length/i,
+  /mounting|connection|cabl|connector|ports/i, /dimensions|weight|housing/i,
+  /keypad|handset|count input|working mode|output contact|reset|flasher/i,
+];
 // intro + highlights · PDP-07 specs · PDP-03 compare · PDP-06 system · PDP-05 downloads · FAQ · PDP-09 related · CTA band.
 export default async function ProductPage({ params }: PageProps<"/products/[category]/[slug]">) {
   const { slug } = await params;
@@ -42,8 +50,18 @@ export default async function ProductPage({ params }: PageProps<"/products/[cate
   const item = { slug: p.slug, model: code, name: p.name, href, img: p.images[0]?.src ?? null };
   const siblings = [...new Set([...p.variants, ...cat.products])].filter((x) => x !== p.slug).map((x) => all.find((a) => a.slug === x)!).filter(Boolean);
   const compare = [p, ...siblings].slice(0, 4);
-  const compareKeys = [...new Set(compare.flatMap((c) => Object.values(c.specGroups).flatMap((g) => Object.keys(g))))].filter((k) => compare.filter((c) => Object.values(c.specGroups).some((g) => k in g)).length >= 2).slice(0, 10);
-  const specOf = (c: typeof p, k: string) => { for (const g of Object.values(c.specGroups)) if (k in g) return g[k]; return "—"; };
+  // comparison rows: decision-relevant attributes first (interface, power, protection, environment, output,
+  // installation, features), rows where the models differ ahead of identical ones; capped at 12. Full specs stay above.
+  const specOf = (c: typeof p, k: string): string => {
+    if (k === "Interface") return c.interface || "—";
+    if (k === "Environment") return c.environment.length ? c.environment.join(", ") : "—";
+    for (const g of Object.values(c.specGroups)) if (k in g) return g[k]; return "—";
+  };
+  const shared = [...new Set(["Interface", "Environment", ...compare.flatMap((c) => Object.values(c.specGroups).flatMap((g) => Object.keys(g)))])]
+    .filter((k) => compare.filter((c) => specOf(c, k) !== "—").length >= 2);
+  const rank = (k: string) => { const i = CMP_PRIORITY.findIndex((r) => r.test(k)); return i < 0 ? CMP_PRIORITY.length : i; };
+  const differs = (k: string) => new Set(compare.map((c) => specOf(c, k))).size > 1;
+  const compareKeys = shared.sort((a, b) => Number(differs(b)) - Number(differs(a)) || rank(a) - rank(b)).slice(0, 12);
   const related = (p.related.length ? p.related : siblings.map((x) => x.slug)).map((x) => all.find((a) => a.slug === x)!).filter(Boolean).slice(0, 4);
   const system = getSystems().find((sy) => sy.components?.includes(p.slug));
 
@@ -123,11 +141,12 @@ export default async function ProductPage({ params }: PageProps<"/products/[cate
       {compare.length > 1 && compareKeys.length > 0 && (
         <section className="band-surface section">
           <div className="wrap">
-            <h2 className="h-1" style={{ marginBottom: 20 }}>Compare with similar models</h2>
+            <h2 className="h-1">Compare with similar models</h2>
+            <p className="muted" style={{ margin: "8px 0 20px", maxWidth: "70ch" }}>Differences first: interface, power, protection and output, then installation. Full specifications are in each model&apos;s table.</p>
             <div className={s.cmpWrap}>
               <table className={`table ${s.cmp}`}>
                 <thead><tr><th scope="col" className="sr-only">Spec</th>{compare.map((c) => <th key={c.slug} scope="col" className={c.slug === p.slug ? s.me : ""}>{c.slug === p.slug ? <span className="code">{c.model || "This system"}</span> : <Link href={productHref(c)} className="code" style={{ background: "transparent", border: "1.5px solid var(--ink)" }}>{c.model || "Multi-channel"}</Link>}<div className={s.cname}>{c.name}</div></th>)}</tr></thead>
-                <tbody>{compareKeys.map((k) => <tr key={k}><th scope="row">{k}</th>{compare.map((c) => <td key={c.slug} className={c.slug === p.slug ? s.me : ""}>{specOf(c, k)}</td>)}</tr>)}</tbody>
+                <tbody>{compareKeys.map((k) => { const d = differs(k); return <tr key={k} className={d ? s.diff : s.same}><th scope="row">{k}{d && <span className={s.diffTag}>differs</span>}</th>{compare.map((c) => <td key={c.slug} className={c.slug === p.slug ? s.me : ""}>{specOf(c, k)}</td>)}</tr>; })}</tbody>
               </table>
             </div>
           </div>

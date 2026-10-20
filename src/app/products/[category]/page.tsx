@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Arrow } from "@/components/Brand";
+import { ScrollActive } from "@/components/ScrollActive";
 import { CategoryGrid } from "@/components/CategoryGrid";
 import { waLink } from "@/content/company";
 import { getCategories, getCategory, getFamilies, getProduct, toCard } from "@/lib/catalogue";
@@ -31,9 +32,10 @@ export default async function CategoryPage({ params }: PageProps<"/products/[cat
             <p className="mono">{products.length} model{products.length > 1 ? "s" : ""}</p>
           </div>
           {c.intro && <p className="lede" style={{ marginTop: 14 }}>{c.intro}</p>}
-          <ul className={s.switch} aria-label={`Other ${fam.name.toLowerCase()} categories`}>
+          <ul className={s.switch} id="cat-switch" aria-label={`Other ${fam.name.toLowerCase()} categories`}>
             {fam.categories.map((x) => <li key={x.slug}><Link href={`/products/${x.slug}`} className="chip" aria-current={x.slug === c.slug ? "page" : undefined}>{x.name}</Link></li>)}
           </ul>
+          <ScrollActive selector="#cat-switch" />
         </div>
       </section>
       <section className="wrap section" style={{ paddingTop: "var(--space-7)" }}>

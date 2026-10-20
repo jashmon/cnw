@@ -12,3 +12,10 @@
 .y{background:var(--yellow)}.y:hover{background:var(--yellow-deep)}
 .tile:hover :global(.arr) i:first-child{transform:translateX(120%)}.tile:hover :global(.arr) i+i{transform:none}
 @media (max-width:900px){.tiles{grid-template-columns:1fr}}
+/* phones: categories become one swipeable row (active one scrolled into view by ScrollActive) instead of several rows of chips */
+@media (max-width:767px){
+  .switch{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * var(--space-gutter));padding-inline:var(--space-gutter);padding-bottom:4px;scroll-snap-type:x proximity}
+  .switch::-webkit-scrollbar{display:none}
+  .switch li{flex:none;scroll-snap-align:start}
+  .switch a{white-space:nowrap}
+}

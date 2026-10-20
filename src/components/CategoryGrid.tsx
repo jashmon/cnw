@@ -22,9 +22,17 @@ export function CategoryGrid({ products }: { products: Product[] }) {
           <span className="mono muted" aria-live="polite" style={{ marginLeft: "auto", fontSize: ".875rem" }}>{list.length} shown</span>
         </div>
       )}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 280px), 1fr))", gap: 16 }}>
-        {list.map((p, i) => <ProductCard key={p.slug} p={p} priority={i < 3} />)}
-      </div>
+      {list.length ? (
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 280px), 1fr))", gap: 16 }}>
+          {list.map((p, i) => <ProductCard key={p.slug} p={p} priority={i < 3} />)}
+        </div>
+      ) : (
+        <div role="status" style={{ border: "2px dashed var(--line)", borderRadius: "var(--radius-md)", padding: "clamp(24px,4vw,48px)", textAlign: "center" }}>
+          <p className="h-3">No models match these filters.</p>
+          <p className="muted" style={{ marginTop: 6 }}>{[env, itf].filter(Boolean).join(" + ")} has no model in this category.</p>
+          <button type="button" className="btn btn--ghost btn--sm" style={{ marginTop: 16 }} onClick={() => { setEnv(null); setItf(null); }}>Reset filters</button>
+        </div>
+      )}
     </>
   );
 }

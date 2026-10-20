@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useQuote } from "@/lib/quote";
 import { company, waLink } from "@/content/company";
-import { Arrow, Logo, Tile } from "./Brand";
+import { Arrow, Logo } from "./Brand";
 import s from "./Header.module.css";
 
 export type NavFamily = { slug: string; name: string; categories: { slug: string; name: string; count: number }[] };
@@ -47,7 +47,7 @@ export function Search({ index, onGo, large = false, placeholder = "Search model
     <div className={`${s.search} ${large ? s.searchLg : ""}`}>
       <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="2" /><path d="M11 11l4 4" stroke="currentColor" strokeWidth="2" /></svg>
       <label htmlFor={`${id}-i`} className="sr-only">Search models</label>
-      <input id={`${id}-i`} value={q} placeholder={placeholder} autoComplete="off" role="combobox" aria-expanded={open && q.trim().length > 1} aria-autocomplete="list" aria-controls={`${id}-r`} aria-activedescendant={open && res[sel] ? `${id}-o${sel}` : undefined}
+      <input id={`${id}-i`} value={q} placeholder={placeholder} autoComplete="off" role="combobox" aria-expanded={open && q.trim().length > 1 && res.length > 0} aria-autocomplete="list" aria-controls={`${id}-r`} aria-activedescendant={open && res[sel] ? `${id}-o${sel}` : undefined}
         onChange={(e) => { setQ(e.target.value); setOpen(true); setSel(0); }} onFocus={() => setOpen(true)} onBlur={() => setTimeout(() => setOpen(false), 150)}
         onKeyDown={(e) => {
           if (e.key === "ArrowDown") { e.preventDefault(); setSel((v) => Math.min(v + 1, res.length - 1)); }
@@ -55,15 +55,19 @@ export function Search({ index, onGo, large = false, placeholder = "Search model
           else if (e.key === "Enter") { e.preventDefault(); if (res[sel]) go(res[sel].href); else if (q) go(`/products?q=${encodeURIComponent(q)}`); }
           else if (e.key === "Escape") setOpen(false);
         }} />
-      {open && q.trim().length > 1 && (
-        <ul className={s.results} id={`${id}-r`} role="listbox">
-          {res.length ? res.map((r, i) => (
-            <li key={r.slug} id={`${id}-o${i}`} role="option" aria-selected={i === sel}>
-              <a href={r.href} onMouseDown={(e) => { e.preventDefault(); go(r.href); }}><span className="code">{r.model}</span><b>{r.name}</b><small>{r.category}</small></a>
+      {open && q.trim().length > 1 && (res.length ? (
+        <ul className={s.results} id={`${id}-r`} role="listbox" aria-label="Matching models">
+          {res.map((r, i) => (
+            <li key={r.slug} id={`${id}-o${i}`} role="option" aria-selected={i === sel} className={s.opt}
+              onMouseDown={(e) => { e.preventDefault(); go(r.href); }} onMouseEnter={() => setSel(i)}>
+              <span className="code">{r.model}</span><b>{r.name}</b><small>{r.category}</small>
             </li>
-          )) : <li className={s.none}>No model matches “{q}”. Try the code on your old PO, or <a className="inline" href={waLink(`Looking for: ${q}`)}>ask on WhatsApp</a>.</li>}
+          ))}
         </ul>
-      )}
+      ) : (
+        <div className={`${s.results} ${s.none}`} id={`${id}-r`}>No model matches “{q}”. Try the code on your old PO, or <a className="inline" href={waLink(`Looking for: ${q}`)}>ask on WhatsApp</a>.</div>
+      ))}
+      <span className="sr-only" aria-live="polite">{open && q.trim().length > 1 ? (res.length ? `${res.length} model${res.length > 1 ? "s" : ""} found, use up and down arrows` : "No matching model") : ""}</span>
     </div>
   );
 }
@@ -75,14 +79,36 @@ export function Header({ families, industries, index, featured }: Props) {
   const [sheet, setSheet] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [megaSeen, setMegaSeen] = useState(false);
-  if (mega === "products" && !megaSeen) setMegaSeen(true);
-  const [lastPath, setLastPath] = useState(path);
-  if (path !== lastPath) { setLastPath(path); setMega(null); setSheet(false); }
+  const openMega = (v: typeof mega) => { setMega(v); if (v === "products") setMegaSeen(true); };
+  const burger = useRef<HTMLButtonElement>(null);
+  const sheetRef = useRef<HTMLDivElement>(null);
+  // any link followed inside the header or the mobile sheet closes the menus (replaces a render-time path check)
+  const closeOnLink = (e: React.MouseEvent) => { if ((e.target as Element).closest("a")) { setMega(null); setSheet(false); } };
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
-  useEffect(() => { const f = () => setScrolled(scrollY > 80); f(); addEventListener("scroll", f, { passive: true }); return () => removeEventListener("scroll", f); }, []);
+  useEffect(() => { const f = () => { const y = scrollY > 80; setScrolled(y); document.documentElement.toggleAttribute("data-scrolled", y); }; f(); addEventListener("scroll", f, { passive: true }); return () => removeEventListener("scroll", f); }, []);
   useEffect(() => { const k = (e: KeyboardEvent) => e.key === "Escape" && setMega(null); addEventListener("keydown", k); return () => removeEventListener("keydown", k); }, []);
-  useEffect(() => { document.body.style.overflow = sheet ? "hidden" : ""; }, [sheet]);
-  const hover = (v: typeof mega) => { clearTimeout(timer.current); timer.current = setTimeout(() => setMega(v), v ? 120 : 180); };
+  useEffect(() => { const pop = () => { setMega(null); setSheet(false); }; addEventListener("popstate", pop); return () => removeEventListener("popstate", pop); }, []);
+  // mobile sheet behaves as a modal: page behind is inert, focus moves in, Tab stays within burger + sheet,
+  // Escape closes, and focus returns to the burger
+  useEffect(() => {
+    document.body.style.overflow = sheet ? "hidden" : "";
+    const behind = [...document.querySelectorAll<HTMLElement>("main, footer, .skip")];
+    behind.forEach((el) => (sheet ? el.setAttribute("inert", "") : el.removeAttribute("inert")));
+    if (!sheet) return;
+    const first = sheetRef.current?.querySelector<HTMLElement>("input, a, summary, button");
+    first?.focus();
+    const key = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { setSheet(false); burger.current?.focus(); return; }
+      if (e.key !== "Tab" || !sheetRef.current) return;
+      const items = [burger.current, ...sheetRef.current.querySelectorAll<HTMLElement>("input, a[href], summary, button")].filter((el): el is HTMLElement => !!el && el.offsetParent !== null);
+      const i = items.indexOf(document.activeElement as HTMLElement);
+      if (e.shiftKey && (i <= 0)) { e.preventDefault(); items[items.length - 1].focus(); }
+      else if (!e.shiftKey && i === items.length - 1) { e.preventDefault(); items[0].focus(); }
+    };
+    addEventListener("keydown", key);
+    return () => { removeEventListener("keydown", key); behind.forEach((el) => el.removeAttribute("inert")); };
+  }, [sheet]);
+  const hover = (v: typeof mega) => { clearTimeout(timer.current); timer.current = setTimeout(() => openMega(v), v ? 120 : 180); };
   const cur = (href: string) => (path === href || path.startsWith(href + "/") ? "page" : undefined);
 
   return (
@@ -101,16 +127,17 @@ export function Header({ families, industries, index, featured }: Props) {
           </div>
         </div>
       </div>
-      <header className={`${s.bar} ${scrolled ? s.scrolled : ""}`} onMouseLeave={() => hover(null)}>
+      <header className={`${s.bar} ${scrolled ? s.scrolled : ""}`} onMouseLeave={() => hover(null)} onClickCapture={closeOnLink}>
         <div className={`wrap ${s.inner}`}>
           <Link href="/" className={s.logo} aria-label="Cables & Wireless Co. home">
             <span className="hide-sm"><Logo variant="yellow" height={scrolled ? 38 : 42} /></span>
-            <span className="show-sm"><Tile variant="yellow" size={40} /></span>
+            {/* phones: the full lockup too (icon + company name), just smaller */}
+            <span className="show-sm"><Logo variant="yellow" height={32} /></span>
           </Link>
           <nav aria-label="Main">
             <ul className={s.nav}>
-              <li><button aria-expanded={mega === "products"} aria-controls="mega-products" onMouseEnter={() => hover("products")} onClick={() => setMega(mega === "products" ? null : "products")}>Products <span className={s.chev}>▼</span></button></li>
-              <li><button aria-expanded={mega === "industries"} aria-controls="mega-industries" onMouseEnter={() => hover("industries")} onClick={() => setMega(mega === "industries" ? null : "industries")}>Industries <span className={s.chev}>▼</span></button></li>
+              <li><button aria-expanded={mega === "products"} aria-controls="mega-products" onMouseEnter={() => hover("products")} onClick={() => openMega(mega === "products" ? null : "products")}>Products <span className={s.chev}>▼</span></button></li>
+              <li><button aria-expanded={mega === "industries"} aria-controls="mega-industries" onMouseEnter={() => hover("industries")} onClick={() => openMega(mega === "industries" ? null : "industries")}>Industries <span className={s.chev}>▼</span></button></li>
               <li onMouseEnter={() => hover(null)}><Link href="/systems" aria-current={cur("/systems")}>Systems</Link></li>
               <li onMouseEnter={() => hover(null)}><Link href="/installed-at" aria-current={cur("/installed-at")}>Installed at</Link></li>
               <li onMouseEnter={() => hover(null)}><Link href="/about" aria-current={cur("/about")}>About</Link></li>
@@ -126,7 +153,7 @@ export function Header({ families, industries, index, featured }: Props) {
               <span className="txt">Quote</span><span key={q.bump} className={`badge ${q.bump ? "bump" : ""}`}>{q.count}</span><span className="sr-only"> items in quote list</span>
             </button>
             <Link href="/quote" className={`btn btn--yellow ${s.cta}`} style={{ "--btn-bg": "var(--ink)", "--btn-fg": "var(--yellow)", "--btn-sweep": "var(--surface-2)", "--btn-sweep-fg": "var(--ink)" } as React.CSSProperties}>Request a quote <Arrow /></Link>
-            <button className={s.burger} aria-expanded={sheet} aria-controls="m-sheet" aria-label="Menu" onClick={() => setSheet(!sheet)}><i /><i /><i /></button>
+            <button ref={burger} className={s.burger} aria-expanded={sheet} aria-controls="m-sheet" aria-label="Menu" onClick={() => setSheet(!sheet)}><i /><i /><i /></button>
           </div>
         </div>
 
@@ -139,12 +166,15 @@ export function Header({ families, industries, index, featured }: Props) {
               </div>
             ))}
             {featured && (
-              <Link href={featured.href} className={s.feat}>
-                <div><span className="code" style={{ background: "var(--ink)", color: "var(--yellow)" }}>{featured.model}</span></div>
-                <strong>{featured.name}</strong>
-                <span className="link" style={{ fontWeight: 600, position: "relative", zIndex: 1 }}>All {index.length} models →</span>
-                {featured.img && megaSeen && <img src={`/_next/image?url=${encodeURIComponent(featured.img)}&w=640&q=75`} alt="" loading="lazy" />}
-              </Link>
+              <div className={s.featCol}>
+                <Link href={featured.href} className={s.feat}>
+                  <div><span className="code" style={{ background: "var(--ink)", color: "var(--yellow)" }}>{featured.model}</span></div>
+                  <strong>{featured.name}</strong>
+                  <span className="link" style={{ fontWeight: 600, position: "relative", zIndex: 1 }}>Explore {featured.model} →</span>
+                  {featured.img && megaSeen && <img src={`/_next/image?url=${encodeURIComponent(featured.img)}&w=640&q=75`} alt="" loading="lazy" />}
+                </Link>
+                <Link href="/products" className={s.allModels}>All {index.length} models →</Link>
+              </div>
             )}
           </div>
         </div>
@@ -157,7 +187,7 @@ export function Header({ families, industries, index, featured }: Props) {
         </div>
       </header>
 
-      <div id="m-sheet" className={`${s.sheet} ${sheet ? s.open : ""}`} inert={!sheet}>
+      <div id="m-sheet" ref={sheetRef} className={`${s.sheet} ${sheet ? s.open : ""}`} inert={!sheet} role="dialog" aria-modal="true" aria-label="Menu" onClickCapture={closeOnLink}>
         <div style={{ margin: "6px 0 12px" }}><Search index={index} onGo={() => setSheet(false)} /></div>
         <details>
           <summary>Products <span>+</span></summary>

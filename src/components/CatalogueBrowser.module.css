@@ -1,0 +1,15 @@
+.bar{position:sticky;top:var(--sticky-top);z-index:5;background:var(--ground);padding-block:14px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px;align-items:center;transition:top var(--dur-ui) var(--ease-out)}
+.input{flex:1 1 260px;height:46px;border:2px solid var(--ink);border-radius:var(--radius-sm);padding:0 14px;font-family:var(--font-mono);background:var(--surface-2);min-width:0}
+.toggle{display:none}
+.count{font-size:.875rem;margin-left:auto}
+
+/* phones: one row (search, Filters, count); chips open in a panel under it */
+@media (max-width:767px){
+  .bar{flex-wrap:wrap;padding-block:10px;gap:8px}
+  .input{flex:1 1 0;height:44px}
+  .toggle{display:inline-flex;align-items:center;height:44px;padding:0 14px;border:2px solid var(--ink);border-radius:var(--radius-sm);background:transparent;font:inherit;font-family:var(--font-display);font-weight:700;cursor:pointer;white-space:nowrap}
+  .toggle[aria-expanded="true"]{background:var(--ink);color:var(--yellow)}
+  .count{order:3;margin-left:0;white-space:nowrap}
+  .bar .chips{order:4;flex-basis:100%;display:none;padding-top:4px}
+  .bar .chips[data-open="true"]{display:flex}
+}

@@ -9,5 +9,7 @@
 .title::after{content:"";position:absolute;inset:0;z-index:1}
 .line{color:var(--muted);font-size:.9688rem;line-height:1.45}
 .act{margin-top:auto;padding-top:8px;position:relative;z-index:3}
-@media (hover:hover){.act{opacity:.0;transform:translateY(6px);transition:opacity var(--dur-ui) var(--ease-out),transform var(--dur-ui) var(--ease-out)}
-  .card:hover .act,.card:focus-within .act{opacity:1;transform:none}}
+/* always visible (procurement catalogue: adding to the quote list must be discoverable); a lighter border
+   at rest, full ink on card hover or focus */
+@media (hover:hover){.act :global(.btn--ghost){border-color:var(--line);transition:border-color var(--dur-ui) var(--ease-out)}
+  .card:hover .act :global(.btn--ghost),.card:focus-within .act :global(.btn--ghost){border-color:var(--ink)}}

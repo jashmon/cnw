@@ -27,7 +27,7 @@ const badge = await p.locator('button[data-quote-badge] .badge').textContent();
 check("badge increments to 1", badge?.trim() === "1", badge);
 const label = await p.getByRole("button", { name: /In quote list\s*: WMHS-III/ }).count();
 check("button flips to 'In quote list'", label > 0);
-const toast = await p.locator('[role="status"]').first().textContent();
+const toast = (await p.locator('[role="status"]').allTextContents()).find((t) => /added to your quote list/.test(t)) ?? "";
 check("toast announces the add", /added to your quote list/.test(toast || ""), toast);
 
 // drawer
@@ -55,6 +55,26 @@ const badge2 = await p.locator('button[data-quote-badge] .badge').textContent();
 check("quote list persists across reload", badge2?.trim() === "1", badge2);
 
 // quote page: requirements, validation (summary + focus), then WhatsApp handoff with models + quantities
+// URL search (?q=) filters the catalogue (read via useSearchParams)
+await p.goto(base + "/products?q=hooter", { waitUntil: "networkidle" });
+const qShown = await p.evaluate(() => (document.body.innerText.match(/(\d+) of (\d+)/) || []).slice(1).map(Number));
+check("/products?q=hooter filters the catalogue", qShown[0] > 0 && qShown[0] < qShown[1], qShown.join(" of "));
+// category filters: an impossible combination shows an empty state with a reset
+await p.goto(base + "/products/industrial-telephones", { waitUntil: "networkidle" });
+const chips = p.locator('[role=group][aria-label="Filter models"] .chip');
+let emptyShown = null;
+for (let i = 0, n = await chips.count(); i < n && emptyShown === null; i++) for (let j = i + 1; j < n && emptyShown === null; j++) {
+  await chips.nth(i).click(); await chips.nth(j).click(); await p.waitForTimeout(80);
+  if (await p.getByText("No models match these filters.").isVisible()) { await p.getByRole("button", { name: "Reset filters" }).click(); emptyShown = await p.locator("main article").count() > 0; }
+  else { if (await chips.nth(i).getAttribute("aria-pressed") === "true") await chips.nth(i).click(); if (await chips.nth(j).getAttribute("aria-pressed") === "true") await chips.nth(j).click(); }
+}
+check("empty filter result shows a reset that restores models", emptyShown !== false, emptyShown === null ? "no empty combination in this category" : "");
+// product comparison leads with differences
+await p.goto(base + "/products/industrial-telephones/wmhs-iii", { waitUntil: "networkidle" });
+check("comparison table marks differing rows first", await p.evaluate(() => { const rows = [...document.querySelectorAll("table tbody tr")].filter((r) => r.closest("[class*=cmpWrap]")); const first = rows.findIndex((r) => !r.querySelector("[class*=diffTag]")); return rows.length > 0 && !!rows[0].querySelector("[class*=diffTag]") && (first < 0 || rows.slice(first).every((r) => !r.querySelector("[class*=diffTag]"))); }));
+// mega-menu featured card says where it goes; the catalogue has its own link
+await p.goto(base + "/", { waitUntil: "networkidle" });
+check("mega menu has a real link to all models", await p.evaluate(() => { const a = [...document.querySelectorAll("#mega-products a")].find((x) => /All \d+ models/.test(x.textContent || "")); return a?.getAttribute("href") === "/products"; }));
 // catalogue search must not inherit the header autocomplete's 8-result cap
 await p.goto(base + "/products", { waitUntil: "networkidle" });
 await p.fill("#cat-q", "telephone"); await p.waitForTimeout(400);
@@ -109,6 +129,15 @@ await m.goto(base + "/", { waitUntil: "networkidle" });
 await m.click('button[aria-label="Menu"]');
 await m.waitForTimeout(300);
 check("mobile menu opens", await m.locator("#m-sheet").isVisible());
+// menu behaves as a modal: focus moves in, Tab stays inside (burger + sheet), page behind inert, Escape returns focus
+const inSheet = () => m.evaluate(() => !!document.activeElement?.closest("#m-sheet") || document.activeElement?.getAttribute("aria-label") === "Menu");
+check("mobile menu takes focus", await inSheet());
+let sheetEscapes = 0; for (let i = 0; i < 40; i++) { await m.keyboard.press("Tab"); if (!(await inSheet())) sheetEscapes++; }
+check("Tab stays inside the mobile menu", sheetEscapes === 0, `${sheetEscapes} escapes in 40 presses`);
+check("page behind the mobile menu is inert", await m.evaluate(() => document.querySelector("main")?.hasAttribute("inert")));
+await m.keyboard.press("Escape"); await m.waitForTimeout(150);
+check("Escape closes the menu and returns focus to the button", await m.evaluate(() => !document.querySelector("#m-sheet")?.matches("[class*=open]") && document.activeElement?.getAttribute("aria-label") === "Menu" && !document.querySelector("main")?.hasAttribute("inert")));
+check("company name shown in the mobile header", await m.evaluate(() => { const i = [...document.querySelectorAll("header img")].find((e) => e.getBoundingClientRect().width > 0); return !!i && i.alt.includes("Cables") && i.getAttribute("src")?.includes("cw-logo") && i.getBoundingClientRect().width > 100; }));
 const small = await m.evaluate(() => [...document.querySelectorAll("header button, header a")].filter((e) => { const r = e.getBoundingClientRect(); return r.width > 0 && (r.height < 40 || r.width < 40); }).map((e) => e.getAttribute("aria-label") || e.textContent?.trim()).slice(0, 5));
 check("header tap targets ≥ 40px", small.length === 0, small.join(", "));
 const anim = await m.evaluate(() => getComputedStyle(document.querySelector("svg[class*=rings] circle")).animationName);

@@ -64,3 +64,5 @@ a:hover .arr i+ i,a:focus-visible .arr i+ i{transform:translateX(0)}
 }
 
 .btn--sm{min-height:40px;padding:.45em 1em;font-size:.9375rem}
+/* touch screens: chips and small buttons meet the 44px target */
+@media (pointer:coarse){.chip,.btn--sm{min-height:44px}}

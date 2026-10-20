@@ -96,7 +96,7 @@ export default function Home() {
       </section>
 
       {/* home.industries: NAV-01 second axis (Talkaphone, Axis) */}
-      <section className="band-dark section">
+      <section className="band-dark section section--editorial">
         <div className="wrap">
           <div className={s.secHead}><div><p className="label">Industries</p><h2 className="h-xl" style={{ color: "var(--yellow)", marginTop: 6 }}>Choose your plant.</h2></div><p className="muted" style={{ maxWidth: "46ch" }}>Each industry page lists the SMART models made for its conditions, and the problems they solve.</p></div>
           <IndustryPanel items={industries} />
@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* home.clients: concise credibility (TRUST-02/04); the full sector directory lives on /installed-at */}
-      <section className="band-yellow section">
+      <section className="band-yellow section section--editorial">
         <div className="wrap">
           <div className={s.secHead}>
             <div><p className="label">Clients · {stats.asOf}</p><h2 className="h-xl" style={{ marginTop: 6, maxWidth: "20ch" }}>In {stats.plants}+ plants across India and {stats.countries} countries.</h2></div>
