@@ -70,4 +70,4 @@ Lab scores are not field data. Once the site is public, read Core Web Vitals at 
 - PageSpeed Insights, which shows CrUX field data once there is enough traffic
 - Vercel Speed Insights, if enabled on the project
 
-The site is password-locked until launch, so no field data exists yet.
+The site is public on cnw-tau.vercel.app (noindex on that preview host), so field data starts once it has real traffic on its final domain.

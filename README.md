@@ -28,7 +28,7 @@ node scripts/build-redirects.mjs  # 301 map from the old cnwcom.in / voizlink.in
 - **Brand:** `public/brand/`.
   - The SMART wordmark is the exact Lithograph outline from the client's datasheets. It is never typeset.
   - The company logo is the client's handset-and-signal icon plus a "CABLES & / WIRELESS CO." wordmark in Overused Grotesk 800. The wordmark is outlined, so it doesn't depend on the web font. Rebuild it with `04-tokens/logo/build_logo.py`.
-  - Every other piece of text uses Overused Grotesk (OFL, variable 300–900): `src/fonts/`, loaded with `next/font/local`. The WIP lock page loads the copy in `public/fonts/`, the only path open while the site is locked.
+  - Every other piece of text uses Overused Grotesk (OFL, variable 300–900): `src/fonts/`, loaded with `next/font/local`.
 - **Tokens:** `src/styles/tokens.css`, generated from `04-tokens/tokens.json`.
 - **Motion:** `src/styles/buttons.css` and `src/motion/`, as specified in `09-motion/motion.md`.
 
@@ -56,11 +56,3 @@ node qa/flows.mjs http://localhost:3200
 node qa/links.mjs http://localhost:3200
 ```
 
-## Access lock (deployed site)
-
-On Vercel, `src/proxy.ts` serves a WIP page with a password field for every request. The right password sets a signed HttpOnly cookie that lasts 30 days.
-
-- **Password and signing secret:** the Vercel env vars `SITE_PASSWORD` and `SITE_SECRET` (Production and Preview). They are never committed. Changing either one logs everyone out.
-- **Images:** they are served unoptimised while locked, because the optimiser's internal fetches carry no cookie.
-- **Unlock:** set `SITE_LOCKED=0` in Vercel and redeploy.
-- **Test the lock locally:** run `SITE_LOCKED=1 SITE_PASSWORD=… SITE_SECRET=… npm run build && npm run start`.
