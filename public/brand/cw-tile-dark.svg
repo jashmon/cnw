@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" role="img" aria-label="Cables &amp; Wireless Co."><title>Cables &amp; Wireless Co.</title><path d="M28 200 L28 178 C28 120 70 128 96 104" stroke="#FFC20A" stroke-width="22"/>
-  <rect x="-11" y="-15" width="22" height="30" rx="2" fill="#FFC20A" transform="translate(101.8 98.6) rotate(-42.7)"/>
-  <rect x="-7" y="-4" width="14" height="8" fill="#FFC20A" transform="translate(115 86.3) rotate(-42.7)"/>
-  <g stroke="#FFC20A" stroke-linecap="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" role="img" aria-label="Cables &amp; Wireless Co."><title>Cables &amp; Wireless Co.</title><path d="M28 200 L28 178 C28 120 70 128 96 104" stroke="#FFCB2E" stroke-width="22"/>
+  <rect x="-11" y="-15" width="22" height="30" rx="2" fill="#FFCB2E" transform="translate(101.8 98.6) rotate(-42.7)"/>
+  <rect x="-7" y="-4" width="14" height="8" fill="#FFCB2E" transform="translate(115 86.3) rotate(-42.7)"/>
+  <g stroke="#FFCB2E" stroke-linecap="round">
     <path d="M121.3 58.2 A26 26 0 0 1 144 82.8" stroke-width="12"/>
     <path d="M123.8 38.4 A46 46 0 0 1 164 81.8" stroke-width="11"/>
     <path d="M126.4 18.5 A66 66 0 0 1 183.9 80.9" stroke-width="10"/>

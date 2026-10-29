@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: { type: "website", siteName: "Cables & Wireless Co.", locale: "en_IN", images: [{ url: "/media/og.jpg", width: 1200, height: 630, alt: "SMART industrial telephone by Cables & Wireless Co." }] },
   twitter: { card: "summary_large_image" },
 };
-export const viewport: Viewport = { themeColor: "#FFC20A" };
+export const viewport: Viewport = { themeColor: "#FFCB2E" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   const families = getFamilies().map((f) => ({ slug: f.slug, name: f.name, categories: f.categories.map((c) => ({ slug: c.slug, name: c.name, count: c.products.length })) }));
