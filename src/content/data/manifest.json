@@ -1672,16 +1672,36 @@
   "slug": "bc-l01",
   "model": "BC-L01",
   "primary": {
-   "file": "processed/products/bc-l01/photo-1-d34befa5.webp",
-   "source": "photo",
+   "file": "processed/products/bc-l01/render-1-8ae027a2.webp",
+   "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 678,
-   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
-   "note": "Representative unit: BCP-03",
-   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   "h": 886,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
+   "note": "3D render \u00b7 representative unit BCP-03",
+   "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l01/render-2-602f7997.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1600,
+    "h": 942,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
+    "note": "3D render \u00b7 representative unit BCP-03",
+    "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
+   },
+   {
+    "file": "processed/products/bc-l01/photo-1-d34befa5.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   },
    {
     "file": "processed/products/bc-l01/photo-2-abf32c9d.webp",
     "source": "photo",
@@ -1729,16 +1749,36 @@
   "slug": "bc-l02",
   "model": "BC-L02",
   "primary": {
-   "file": "processed/products/bc-l02/photo-1-d34befa5.webp",
-   "source": "photo",
+   "file": "processed/products/bc-l02/render-1-8ae027a2.webp",
+   "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 678,
-   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
-   "note": "Representative unit: BCP-03",
-   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   "h": 886,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
+   "note": "3D render \u00b7 representative unit BCP-03",
+   "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l02/render-2-602f7997.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1600,
+    "h": 942,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
+    "note": "3D render \u00b7 representative unit BCP-03",
+    "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
+   },
+   {
+    "file": "processed/products/bc-l02/photo-1-d34befa5.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   },
    {
     "file": "processed/products/bc-l02/photo-2-abf32c9d.webp",
     "source": "photo",
@@ -1792,16 +1832,36 @@
   "slug": "bc-l03",
   "model": "BC-L03",
   "primary": {
-   "file": "processed/products/bc-l03/photo-1-d34befa5.webp",
-   "source": "photo",
+   "file": "processed/products/bc-l03/render-1-8ae027a2.webp",
+   "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 678,
-   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
-   "note": "Representative unit: BCP-03",
-   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   "h": 886,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
+   "note": "3D render \u00b7 representative unit BCP-03",
+   "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l03/render-2-602f7997.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1600,
+    "h": 942,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
+    "note": "3D render \u00b7 representative unit BCP-03",
+    "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
+   },
+   {
+    "file": "processed/products/bc-l03/photo-1-d34befa5.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   },
    {
     "file": "processed/products/bc-l03/photo-2-abf32c9d.webp",
     "source": "photo",
@@ -1851,16 +1911,36 @@
   "slug": "bc-l-03",
   "model": "BC-L-03",
   "primary": {
-   "file": "processed/products/bc-l-03/photo-1-d34befa5.webp",
-   "source": "photo",
+   "file": "processed/products/bc-l-03/render-1-8ae027a2.webp",
+   "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 678,
-   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
-   "note": "Representative unit: BCP-03",
-   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   "h": 886,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
+   "note": "3D render \u00b7 representative unit BCP-03",
+   "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l-03/render-2-602f7997.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1600,
+    "h": 942,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
+    "note": "3D render \u00b7 representative unit BCP-03",
+    "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
+   },
+   {
+    "file": "processed/products/bc-l-03/photo-1-d34befa5.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   },
    {
     "file": "processed/products/bc-l-03/photo-2-abf32c9d.webp",
     "source": "photo",
@@ -1902,16 +1982,36 @@
   "slug": "bc-l03-m",
   "model": "BC-L03-M",
   "primary": {
-   "file": "processed/products/bc-l03-m/photo-1-d34befa5.webp",
-   "source": "photo",
+   "file": "processed/products/bc-l03-m/render-1-8ae027a2.webp",
+   "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 678,
-   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
-   "note": "Representative unit: BCP-03",
-   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   "h": 886,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
+   "note": "3D render \u00b7 representative unit BCP-03",
+   "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l03-m/render-2-602f7997.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1600,
+    "h": 942,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
+    "note": "3D render \u00b7 representative unit BCP-03",
+    "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
+   },
+   {
+    "file": "processed/products/bc-l03-m/photo-1-d34befa5.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   },
    {
     "file": "processed/products/bc-l03-m/photo-2-abf32c9d.webp",
     "source": "photo",
@@ -1961,16 +2061,36 @@
   "slug": "bc-l-ss",
   "model": "BC-L-SS",
   "primary": {
-   "file": "processed/products/bc-l-ss/photo-1-d34befa5.webp",
-   "source": "photo",
+   "file": "processed/products/bc-l-ss/render-1-8ae027a2.webp",
+   "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 678,
-   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
-   "note": "Representative unit: BCP-03",
-   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   "h": 886,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
+   "note": "3D render \u00b7 representative unit BCP-03",
+   "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l-ss/render-2-602f7997.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1600,
+    "h": 942,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
+    "note": "3D render \u00b7 representative unit BCP-03",
+    "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
+   },
+   {
+    "file": "processed/products/bc-l-ss/photo-1-d34befa5.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   },
    {
     "file": "processed/products/bc-l-ss/photo-2-abf32c9d.webp",
     "source": "photo",
@@ -2020,16 +2140,36 @@
   "slug": "bc-l-nw-6",
   "model": "BC-L-NW-6",
   "primary": {
-   "file": "processed/products/bc-l-nw-6/photo-1-d34befa5.webp",
-   "source": "photo",
+   "file": "processed/products/bc-l-nw-6/render-1-8ae027a2.webp",
+   "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 678,
-   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
-   "note": "Representative unit: BCP-03",
-   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   "h": 886,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
+   "note": "3D render \u00b7 representative unit BCP-03",
+   "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l-nw-6/render-2-602f7997.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1600,
+    "h": 942,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
+    "note": "3D render \u00b7 representative unit BCP-03",
+    "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
+   },
+   {
+    "file": "processed/products/bc-l-nw-6/photo-1-d34befa5.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   },
    {
     "file": "processed/products/bc-l-nw-6/photo-2-abf32c9d.webp",
     "source": "photo",
@@ -2079,16 +2219,36 @@
   "slug": "bc-l-nw",
   "model": "BC-L-NW",
   "primary": {
-   "file": "processed/products/bc-l-nw/photo-1-d34befa5.webp",
-   "source": "photo",
+   "file": "processed/products/bc-l-nw/render-1-8ae027a2.webp",
+   "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 678,
-   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
-   "note": "Representative unit: BCP-03",
-   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   "h": 886,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
+   "note": "3D render \u00b7 representative unit BCP-03",
+   "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l-nw/render-2-602f7997.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1600,
+    "h": 942,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
+    "note": "3D render \u00b7 representative unit BCP-03",
+    "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
+   },
+   {
+    "file": "processed/products/bc-l-nw/photo-1-d34befa5.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   },
    {
     "file": "processed/products/bc-l-nw/photo-2-abf32c9d.webp",
     "source": "photo",
@@ -2140,16 +2300,36 @@
   "slug": "bc-do",
   "model": "BC-DO",
   "primary": {
-   "file": "processed/products/bc-do/photo-1-d34befa5.webp",
-   "source": "photo",
+   "file": "processed/products/bc-do/render-1-8ae027a2.webp",
+   "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 678,
-   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
-   "note": "Representative unit: BCP-03",
-   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   "h": 886,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
+   "note": "3D render \u00b7 representative unit BCP-03",
+   "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-do/render-2-602f7997.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1600,
+    "h": 942,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
+    "note": "3D render \u00b7 representative unit BCP-03",
+    "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
+   },
+   {
+    "file": "processed/products/bc-do/photo-1-d34befa5.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   },
    {
     "file": "processed/products/bc-do/photo-2-abf32c9d.webp",
     "source": "photo",
@@ -2191,16 +2371,36 @@
   "slug": "bc-do-nw",
   "model": "BC-DO-NW",
   "primary": {
-   "file": "processed/products/bc-do-nw/photo-1-d34befa5.webp",
-   "source": "photo",
+   "file": "processed/products/bc-do-nw/render-1-8ae027a2.webp",
+   "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 678,
-   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
-   "note": "Representative unit: BCP-03",
-   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   "h": 886,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
+   "note": "3D render \u00b7 representative unit BCP-03",
+   "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-do-nw/render-2-602f7997.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1600,
+    "h": 942,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
+    "note": "3D render \u00b7 representative unit BCP-03",
+    "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
+   },
+   {
+    "file": "processed/products/bc-do-nw/photo-1-d34befa5.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   },
    {
     "file": "processed/products/bc-do-nw/photo-2-abf32c9d.webp",
     "source": "photo",
@@ -2242,16 +2442,36 @@
   "slug": "bc-0",
   "model": "BC-0",
   "primary": {
-   "file": "processed/products/bc-0/photo-1-d34befa5.webp",
-   "source": "photo",
+   "file": "processed/products/bc-0/render-1-8ae027a2.webp",
+   "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 678,
-   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
-   "note": "Representative unit: BCP-03",
-   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   "h": 886,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
+   "note": "3D render \u00b7 representative unit BCP-03",
+   "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-0/render-2-602f7997.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1600,
+    "h": 942,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
+    "note": "3D render \u00b7 representative unit BCP-03",
+    "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
+   },
+   {
+    "file": "processed/products/bc-0/photo-1-d34befa5.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 678,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
+   },
    {
     "file": "processed/products/bc-0/photo-2-abf32c9d.webp",
     "source": "photo",
