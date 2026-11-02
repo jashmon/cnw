@@ -3,14 +3,65 @@
   "slug": "wmhs-iiwp",
   "model": "WMHS-IIWP",
   "primary": {
-   "file": "processed/products/wmhs-iiwp/primary.webp",
+   "file": "processed/products/wmhs-iiwp/render-1-4c8b584d.webp",
    "source": "render",
-   "placeholder": true,
-   "w": 848,
-   "h": 1600,
-   "alt": "SMART Weatherproof PA Telephone (WMHS-IIWP): yellow die-cast weatherproof wall telephone with handset and keypad"
+   "placeholder": false,
+   "w": 806,
+   "h": 1272,
+   "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): front three-quarter 3D render with the handset on its cradle, armoured cord, nameplate, blue keypad, cast SMART lettering and rear mounting rails",
+   "note": "3D render \u00b7 representative weatherproof unit",
+   "original": "07-imagery/render/out-phones-pt/wmhs-wp-1.png"
   },
-  "gallery": [],
+  "gallery": [
+   {
+    "file": "processed/products/wmhs-iiwp/render-2-afb79671.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 706,
+    "h": 1329,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): 3D render of the side with the SMART FIELD STATION print, deep canopy, back box and mounting rails",
+    "note": "3D render \u00b7 representative weatherproof unit",
+    "original": "07-imagery/render/out-phones-pt/wmhs-wp-2.png"
+   },
+   {
+    "file": "processed/products/wmhs-iiwp/photo-1-ae01ff70.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1138,
+    "h": 1390,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): front view with the handset on its cradle, keypad, nameplate and cast SMART lettering",
+    "note": "Representative weatherproof unit",
+    "original": "07-imagery/photos/wmhs-wp-cast/01-front.webp"
+   },
+   {
+    "file": "processed/products/wmhs-iiwp/photo-2-082a9147.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1191,
+    "h": 1600,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): front view with the handset lifted, showing the blue keypad and the hook",
+    "note": "Representative weatherproof unit",
+    "original": "07-imagery/photos/wmhs-wp-cast/02-front-handset-off.webp"
+   },
+   {
+    "file": "processed/products/wmhs-iiwp/photo-3-7356367f.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 1123,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): side and rear with the SMART FIELD STATION print, back box and mounting rails",
+    "note": "Representative weatherproof unit",
+    "original": "07-imagery/photos/wmhs-wp-cast/03-side-field-station.webp"
+   },
+   {
+    "file": "processed/products/wmhs-iiwp/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 848,
+    "h": 1600,
+    "alt": "SMART Weatherproof PA Telephone (WMHS-IIWP): yellow die-cast weatherproof wall telephone with handset and keypad"
+   }
+  ],
   "realPhotos": [
    "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg",
    "00-intake/voizlink/img/products/WMHS-IIWP_150.png"
@@ -19,7 +70,7 @@
    "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg": "thumb 100x218",
    "00-intake/voizlink/img/products/WMHS-IIWP_150.png": "thumb 150x150"
   },
-  "notes": ""
+  "notes": "Main photos: real die-cast weatherproof telephone unit (photo set photos/wmhs-wp-cast)."
  },
  {
   "slug": "wmhs-iiwp-m",
@@ -45,14 +96,65 @@
   "slug": "wmhs-iiiwp",
   "model": "WMHS-IIIWP",
   "primary": {
-   "file": "processed/products/wmhs-iiiwp/primary.webp",
+   "file": "processed/products/wmhs-iiiwp/render-1-4c8b584d.webp",
    "source": "render",
-   "placeholder": true,
-   "w": 859,
-   "h": 1600,
-   "alt": "SMART Industrial Weatherproof Telephone (WMHS-IIIWP): yellow die-cast weatherproof wall telephone with handset and keypad"
+   "placeholder": false,
+   "w": 806,
+   "h": 1272,
+   "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): front three-quarter 3D render with the handset on its cradle, armoured cord, nameplate, blue keypad, cast SMART lettering and rear mounting rails",
+   "note": "3D render \u00b7 representative weatherproof unit",
+   "original": "07-imagery/render/out-phones-pt/wmhs-wp-1.png"
   },
-  "gallery": [],
+  "gallery": [
+   {
+    "file": "processed/products/wmhs-iiiwp/render-2-afb79671.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 706,
+    "h": 1329,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): 3D render of the side with the SMART FIELD STATION print, deep canopy, back box and mounting rails",
+    "note": "3D render \u00b7 representative weatherproof unit",
+    "original": "07-imagery/render/out-phones-pt/wmhs-wp-2.png"
+   },
+   {
+    "file": "processed/products/wmhs-iiiwp/photo-1-ae01ff70.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1138,
+    "h": 1390,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): front view with the handset on its cradle, keypad, nameplate and cast SMART lettering",
+    "note": "Representative weatherproof unit",
+    "original": "07-imagery/photos/wmhs-wp-cast/01-front.webp"
+   },
+   {
+    "file": "processed/products/wmhs-iiiwp/photo-2-082a9147.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1191,
+    "h": 1600,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): front view with the handset lifted, showing the blue keypad and the hook",
+    "note": "Representative weatherproof unit",
+    "original": "07-imagery/photos/wmhs-wp-cast/02-front-handset-off.webp"
+   },
+   {
+    "file": "processed/products/wmhs-iiiwp/photo-3-7356367f.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 1123,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): side and rear with the SMART FIELD STATION print, back box and mounting rails",
+    "note": "Representative weatherproof unit",
+    "original": "07-imagery/photos/wmhs-wp-cast/03-side-field-station.webp"
+   },
+   {
+    "file": "processed/products/wmhs-iiiwp/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 859,
+    "h": 1600,
+    "alt": "SMART Industrial Weatherproof Telephone (WMHS-IIIWP): yellow die-cast weatherproof wall telephone with handset and keypad"
+   }
+  ],
   "realPhotos": [
    "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg",
    "00-intake/voizlink/img/products/WMHS-IIWP_150.png"
@@ -61,27 +163,78 @@
    "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg": "thumb 100x218",
    "00-intake/voizlink/img/products/WMHS-IIWP_150.png": "thumb 150x150"
   },
-  "notes": ""
+  "notes": "Main photos: real die-cast weatherproof telephone unit (photo set photos/wmhs-wp-cast)."
  },
  {
   "slug": "wmhs-iiiwp-voip",
   "model": "WMHS-IIIWP-VOIP",
   "primary": {
-   "file": "processed/products/wmhs-iiiwp-voip/primary.webp",
+   "file": "processed/products/wmhs-iiiwp-voip/render-1-4c8b584d.webp",
    "source": "render",
-   "placeholder": true,
-   "w": 894,
-   "h": 1600,
-   "alt": "SMART Industrial Weatherproof VoIP Telephone (WMHS-IIIWP-VOIP): yellow die-cast weatherproof VoIP wall telephone with handset and keypad"
+   "placeholder": false,
+   "w": 806,
+   "h": 1272,
+   "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): front three-quarter 3D render with the handset on its cradle, armoured cord, nameplate, blue keypad, cast SMART lettering and rear mounting rails",
+   "note": "3D render \u00b7 representative weatherproof unit",
+   "original": "07-imagery/render/out-phones-pt/wmhs-wp-1.png"
   },
-  "gallery": [],
+  "gallery": [
+   {
+    "file": "processed/products/wmhs-iiiwp-voip/render-2-afb79671.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 706,
+    "h": 1329,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): 3D render of the side with the SMART FIELD STATION print, deep canopy, back box and mounting rails",
+    "note": "3D render \u00b7 representative weatherproof unit",
+    "original": "07-imagery/render/out-phones-pt/wmhs-wp-2.png"
+   },
+   {
+    "file": "processed/products/wmhs-iiiwp-voip/photo-1-ae01ff70.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1138,
+    "h": 1390,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): front view with the handset on its cradle, keypad, nameplate and cast SMART lettering",
+    "note": "Representative weatherproof unit",
+    "original": "07-imagery/photos/wmhs-wp-cast/01-front.webp"
+   },
+   {
+    "file": "processed/products/wmhs-iiiwp-voip/photo-2-082a9147.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1191,
+    "h": 1600,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): front view with the handset lifted, showing the blue keypad and the hook",
+    "note": "Representative weatherproof unit",
+    "original": "07-imagery/photos/wmhs-wp-cast/02-front-handset-off.webp"
+   },
+   {
+    "file": "processed/products/wmhs-iiiwp-voip/photo-3-7356367f.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 1123,
+    "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): side and rear with the SMART FIELD STATION print, back box and mounting rails",
+    "note": "Representative weatherproof unit",
+    "original": "07-imagery/photos/wmhs-wp-cast/03-side-field-station.webp"
+   },
+   {
+    "file": "processed/products/wmhs-iiiwp-voip/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 894,
+    "h": 1600,
+    "alt": "SMART Industrial Weatherproof VoIP Telephone (WMHS-IIIWP-VOIP): yellow die-cast weatherproof VoIP wall telephone with handset and keypad"
+   }
+  ],
   "realPhotos": [
    "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg"
   ],
   "realPhotoGrades": {
    "00-intake/voizlink/image/IP_Weather_Proof_WMHS-IIIWP.jpg": "thumb 100x218"
   },
-  "notes": ""
+  "notes": "Main photos: real die-cast weatherproof telephone unit (photo set photos/wmhs-wp-cast)."
  },
  {
   "slug": "flp",
@@ -474,21 +627,64 @@
   "slug": "wmhs-ip-sip-phone",
   "model": "WMHS-IP",
   "primary": {
-   "file": "processed/products/wmhs-ip-sip-phone/primary.webp",
+   "file": "processed/products/wmhs-ip-sip-phone/render-1-6288e92f.webp",
    "source": "render",
-   "placeholder": true,
-   "w": 1145,
-   "h": 1600,
-   "alt": "SMART SIP VoIP Phone (WMHS-IP): yellow hooded SIP telephone with handset, keypad and LCD"
+   "placeholder": false,
+   "w": 843,
+   "h": 1237,
+   "alt": "SMART SIP telephone (model WMHS-IP): front three-quarter 3D render of the yellow steel hood with the handset on hook, LCD, keypad and notched mounting flange",
+   "note": "3D render \u00b7 WMHS-IP",
+   "original": "07-imagery/render/out-phones-pt/wmhs-ip-1.png"
   },
-  "gallery": [],
+  "gallery": [
+   {
+    "file": "processed/products/wmhs-ip-sip-phone/render-2-79597567.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 633,
+    "h": 1399,
+    "alt": "SMART SIP telephone (model WMHS-IP): 3D render with the handset lifted, showing the LCD, black lettered keypad, hook cradle and left flange",
+    "note": "3D render \u00b7 WMHS-IP",
+    "original": "07-imagery/render/out-phones-pt/wmhs-ip-2.png"
+   },
+   {
+    "file": "processed/products/wmhs-ip-sip-phone/photo-1-fe85aa09.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 936,
+    "h": 1600,
+    "alt": "SMART SIP telephone (model WMHS-IP): front view of the yellow steel hood with the handset on hook, LCD and keypad",
+    "note": "",
+    "original": "07-imagery/photos/wmhs-ip/01-front.webp"
+   },
+   {
+    "file": "processed/products/wmhs-ip-sip-phone/photo-2-2974bacf.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 945,
+    "h": 1600,
+    "alt": "SMART SIP telephone (model WMHS-IP): handset lifted, showing the LCD, black keypad and hook",
+    "note": "",
+    "original": "07-imagery/photos/wmhs-ip/02-handset-off.webp"
+   },
+   {
+    "file": "processed/products/wmhs-ip-sip-phone/photo-3-4dcc390a.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1403,
+    "h": 1216,
+    "alt": "SMART SIP telephone (model WMHS-IP): flat rear with the slotted mounting flanges",
+    "note": "",
+    "original": "07-imagery/photos/wmhs-ip/03-rear.webp"
+   }
+  ],
   "realPhotos": [
    "00-intake/voizlink/image/SIP_VOIP_PHONE_WMHS-IP.jpg"
   ],
   "realPhotoGrades": {
    "00-intake/voizlink/image/SIP_VOIP_PHONE_WMHS-IP.jpg": "thumb 200x247"
   },
-  "notes": ""
+  "notes": "Main photos: real WMHS-IP unit (photo set photos/wmhs-ip)."
  },
  {
   "slug": "mcs-ii",
@@ -959,14 +1155,64 @@
   "slug": "lsod",
   "model": "LSOD",
   "primary": {
-   "file": "processed/products/lsod/primary.webp",
+   "file": "processed/products/lsod/render-1-60b72729.webp",
    "source": "render",
-   "placeholder": true,
-   "w": 1600,
-   "h": 1127,
-   "alt": "SMART Industrial Loudspeaker Horn (Outdoor) (LSOD): grey re-entrant horn loudspeaker with mounting bracket"
+   "placeholder": false,
+   "w": 1281,
+   "h": 978,
+   "alt": "SMART industrial horn speaker (model LSOD V2, shown as a representative unit): front three-quarter 3D render of the rounded-rectangle horn mouth, centre badge and U-bracket",
+   "note": "3D render \u00b7 representative unit LSOD V2",
+   "original": "07-imagery/render/out-va-pt/lsod-1.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/lsod/render-2-81caacba.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 1297,
+    "h": 671,
+    "alt": "SMART industrial horn speaker (model LSOD V2, shown as a representative unit): rear three-quarter 3D render of the driver with its LSOD V2 label (8 ohms, 60 watts), cable gland and three-hole bracket",
+    "note": "3D render \u00b7 representative unit LSOD V2",
+    "original": "07-imagery/render/out-va-pt/lsod-2.png"
+   },
+   {
+    "file": "processed/products/lsod/photo-1-208cb47c.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1178,
+    "h": 1327,
+    "alt": "SMART industrial horn speaker (model LSOD V2, shown as a representative unit): horn mouth and mounting bracket from the front",
+    "note": "Representative unit: LSOD V2",
+    "original": "07-imagery/photos/lsod-v2/01-front-mouth.webp"
+   },
+   {
+    "file": "processed/products/lsod/photo-2-1df35459.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 964,
+    "h": 861,
+    "alt": "SMART industrial horn speaker (model LSOD V2, shown as a representative unit): side view of the horn, driver and U-bracket",
+    "note": "Representative unit: LSOD V2",
+    "original": "07-imagery/photos/lsod-v2/02-side.webp"
+   },
+   {
+    "file": "processed/products/lsod/photo-3-09a75b39.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1488,
+    "h": 1421,
+    "alt": "SMART industrial horn speaker (model LSOD V2, shown as a representative unit): rear with the cable gland and the LSOD V2 label (8 ohms, 60 watts)",
+    "note": "Representative unit: LSOD V2",
+    "original": "07-imagery/photos/lsod-v2/03-rear-label.webp"
+   },
+   {
+    "file": "processed/products/lsod/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 1127,
+    "alt": "SMART Industrial Loudspeaker Horn (Outdoor) (LSOD): grey re-entrant horn loudspeaker with mounting bracket"
+   },
    {
     "file": "processed/products/lsod/gallery-1.jpg",
     "source": "photo",
@@ -982,7 +1228,7 @@
   "realPhotoGrades": {
    "00-intake/voizlink/image/crans_comm_mdelccs_hf.png": "card 3352x2064"
   },
-  "notes": "Gallery photo is a crop of the CCS-HF photo showing the labelled LSOD horn. voizlink/image/crans_comm_mdelccs_hf.png 3352x2064: card (soft; shot on cardboard)"
+  "notes": "Main photos: real LSOD V2 unit (photo set photos/lsod-v2). Gallery photo is a crop of the CCS-HF photo showing the labelled LSOD horn. voizlink/image/crans_comm_mdelccs_hf.png 3352x2064: card (soft; shot on cardboard)"
  },
  {
   "slug": "lsin",
@@ -1149,22 +1395,54 @@
   "slug": "cr-iii-ss",
   "model": "CR-III-SS",
   "primary": {
-   "file": "processed/products/cr-iii-ss/primary.jpg",
-   "source": "photo",
+   "file": "processed/products/cr-iii-ss/render-1-ac015db1.webp",
+   "source": "render",
    "placeholder": false,
-   "w": 931,
-   "h": 931,
-   "alt": "SMART Clean Room Phone, Full Stainless Steel (CR-III-SS): stainless steel flush-mount clean room phone with blue keypad",
-   "original": "00-intake/cnwcom/image/criiiss.jpg"
+   "w": 1228,
+   "h": 1600,
+   "alt": "SMART clean room intercom (model CR-III-SS): front three-quarter 3D render with the handset artwork, POWER lamp and blue keypad with AUTO DIAL, ON/OFF and F keys",
+   "note": "3D render \u00b7 CR-III-SS",
+   "original": "07-imagery/render/out-cr-pt/cr-iii-ss-1.png"
   },
   "gallery": [
    {
-    "file": "processed/products/cr-iii-ss/gallery-1.webp",
+    "file": "processed/products/cr-iii-ss/render-2-1818f655.webp",
     "source": "render",
-    "placeholder": true,
-    "w": 1462,
+    "placeholder": false,
+    "w": 985,
     "h": 1600,
-    "alt": "SMART Clean Room Phone, Full Stainless Steel (CR-III-SS): stainless steel flush-mount clean room phone with blue keypad"
+    "alt": "SMART clean room intercom (model CR-III-SS): 3D render from behind showing the back cover with keyhole slots, screws and the coiled cable",
+    "note": "3D render \u00b7 CR-III-SS",
+    "original": "07-imagery/render/out-cr-pt/cr-iii-ss-2.png"
+   },
+   {
+    "file": "processed/products/cr-iii-ss/photo-1-506e6465.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 802,
+    "h": 926,
+    "alt": "SMART clean room intercom (model CR-III-SS): stainless front with the handset artwork, POWER lamp and blue keypad with AUTO DIAL, ON/OFF and F keys",
+    "note": "",
+    "original": "07-imagery/photos/cr-iii-ss/01-front.webp"
+   },
+   {
+    "file": "processed/products/cr-iii-ss/photo-2-681d9304.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1079,
+    "h": 1430,
+    "alt": "SMART clean room intercom (model CR-III-SS): rear plate with the keyhole mounting slots and cable",
+    "note": "",
+    "original": "07-imagery/photos/cr-iii-ss/02-rear.webp"
+   },
+   {
+    "file": "processed/products/cr-iii-ss/primary.jpg",
+    "source": "photo",
+    "placeholder": false,
+    "w": 931,
+    "h": 931,
+    "alt": "SMART Clean Room Phone, Full Stainless Steel (CR-III-SS): stainless steel flush-mount clean room phone with blue keypad",
+    "original": "00-intake/cnwcom/image/criiiss.jpg"
    }
   ],
   "realPhotos": [
@@ -1175,7 +1453,7 @@
    "00-intake/cnwcom/image/criiiss.jpg": "hero 931x931",
    "00-intake/voizlink/image/CR-IIISS.jpg": "thumb 259x250"
   },
-  "notes": ""
+  "notes": "Main photos: real CR-III-SS unit (photo set photos/cr-iii-ss)."
  },
  {
   "slug": "cr-iii-ip",
@@ -1197,14 +1475,56 @@
   "slug": "cr-ip",
   "model": "CR-IP",
   "primary": {
-   "file": "processed/products/cr-ip/primary.webp",
+   "file": "processed/products/cr-ip/render-1-e3daff4f.webp",
    "source": "render",
-   "placeholder": true,
-   "w": 1485,
-   "h": 1600,
-   "alt": "SMART IP Clean Room Phone (PoE, Full SS) (CR-IP): stainless steel flush-mount IP clean room phone with display and keypad"
+   "placeholder": false,
+   "w": 1204,
+   "h": 1462,
+   "alt": "SMART IP clean room intercom (model CR-IP): front three-quarter 3D render of the stainless panel with the LCD, soft keys, navigation ring, keypad, speaker opening and network cable",
+   "note": "3D render \u00b7 CR-IP",
+   "original": "07-imagery/render/out-cr-pt/cr-ip-1.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/cr-ip/render-2-3d71250d.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 921,
+    "h": 1476,
+    "alt": "SMART IP clean room intercom (model CR-IP): 3D render from below and behind showing the stainless back box, cable grommets and RJ45 network cable",
+    "note": "3D render \u00b7 CR-IP",
+    "original": "07-imagery/render/out-cr-pt/cr-ip-2.png"
+   },
+   {
+    "file": "processed/products/cr-ip/photo-1-84a75802.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1225,
+    "h": 1402,
+    "alt": "SMART IP clean room intercom (model CR-IP): stainless front with the LCD, soft keys, navigation ring, keypad and speaker grille (panel marked MODEL - IP CR)",
+    "note": "",
+    "original": "07-imagery/photos/cr-ip/01-front.webp"
+   },
+   {
+    "file": "processed/products/cr-ip/photo-2-70ce0e85.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1221,
+    "h": 1600,
+    "alt": "SMART IP clean room intercom (model CR-IP): rear box with the network cable and RJ45 plug",
+    "note": "",
+    "original": "07-imagery/photos/cr-ip/02-rear-cable.webp"
+   },
+   {
+    "file": "processed/products/cr-ip/photo-3-83b6c2db.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1173,
+    "h": 1175,
+    "alt": "SMART IP clean room intercom (model CR-IP): rear view of the stainless back box and flange",
+    "note": "",
+    "original": "07-imagery/photos/cr-ip/03-rear.webp"
+   },
    {
     "file": "processed/products/cr-ip/gallery-1.jpg",
     "source": "photo",
@@ -1220,7 +1540,7 @@
   "realPhotoGrades": {
    "00-intake/voizlink/image/CRIIIIP.jpg": "card 400x418"
   },
-  "notes": ""
+  "notes": "Main photos: real CR-IP unit (photo set photos/cr-ip)."
  },
  {
   "slug": "gsm-ecb-box",
@@ -1568,14 +1888,56 @@
   "slug": "va-1fl",
   "model": "VA-1FL",
   "primary": {
-   "file": "processed/products/va-1fl/primary.webp",
+   "file": "processed/products/va-1fl/render-1-dd21b432.webp",
    "source": "render",
-   "placeholder": true,
-   "w": 1600,
-   "h": 1259,
-   "alt": "SMART Single Channel Voice Alarm with Flasher (VA-1FL): grey voice alarm box with separate red flasher"
+   "placeholder": false,
+   "w": 958,
+   "h": 1600,
+   "alt": "SMART voice alarm with flasher (model VA-1-FL): front three-quarter 3D render with the red flasher on top, D-handle, QR code sticker and nameplate, and SMART VOICE ALARM on the side",
+   "note": "3D render \u00b7 VA-1-FL",
+   "original": "07-imagery/render/out-va-pt/va-1fl-1.png"
   },
   "gallery": [
+   {
+    "file": "processed/products/va-1fl/render-2-34b991a2.webp",
+    "source": "render",
+    "placeholder": false,
+    "w": 746,
+    "h": 1600,
+    "alt": "SMART voice alarm with flasher (model VA-1-FL): 3D render of the left side with the SMART VA-1-FL print, sloped hood and slotted mounting flange",
+    "note": "3D render \u00b7 VA-1-FL",
+    "original": "07-imagery/render/out-va-pt/va-1fl-2.png"
+   },
+   {
+    "file": "processed/products/va-1fl/photo-1-8498b911.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 741,
+    "h": 1544,
+    "alt": "SMART voice alarm with flasher (model VA-1-FL): front view of the hooded steel enclosure with the red flasher on top, D-handle, QR code and nameplate",
+    "note": "",
+    "original": "07-imagery/photos/va-1fl/01-front.webp"
+   },
+   {
+    "file": "processed/products/va-1fl/photo-2-554f8c05.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 551,
+    "h": 1600,
+    "alt": "SMART voice alarm with flasher (model VA-1-FL): side view with the SMART VA-1-FL print",
+    "note": "",
+    "original": "07-imagery/photos/va-1fl/02-side-model-print.webp"
+   },
+   {
+    "file": "processed/products/va-1fl/photo-3-eb23f1f8.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 575,
+    "h": 1600,
+    "alt": "SMART voice alarm with flasher (model VA-1-FL): other side with the SMART VOICE ALARM print",
+    "note": "",
+    "original": "07-imagery/photos/va-1fl/03-side-voice-alarm.webp"
+   },
    {
     "file": "processed/products/va-1fl/gallery-1.jpg",
     "source": "photo",
@@ -1595,7 +1957,7 @@
    "00-intake/voizlink/image/voice_va_fl.png": "thumb 283x229",
    "00-intake/voizlink/image/voice_allram_vs_fl.png": "thumb 234x183"
   },
-  "notes": "voizlink/image/VOICE ALARM 1 CH WITH FLASHER.jpg 2318x982: card (composite; flasher half is upscaled and blurred)"
+  "notes": "Main photos: real VA-1-FL unit (photo set photos/va-1fl). voizlink/image/VOICE ALARM 1 CH WITH FLASHER.jpg 2318x982: card (composite; flasher half is upscaled and blurred)"
  },
  {
   "slug": "voice-alarm-units",
