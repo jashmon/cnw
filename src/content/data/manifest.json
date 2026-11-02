@@ -1672,22 +1672,22 @@
   "slug": "bc-l01",
   "model": "BC-L01",
   "primary": {
-   "file": "processed/products/bc-l01/render-1-8ae027a2.webp",
+   "file": "processed/products/bc-l01/render-1-9ba803d6.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 886,
+   "h": 885,
    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
    "note": "3D render \u00b7 representative unit BCP-03",
    "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l01/render-2-602f7997.webp",
+    "file": "processed/products/bc-l01/render-2-7ecb3380.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
-    "h": 942,
+    "h": 898,
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
     "note": "3D render \u00b7 representative unit BCP-03",
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
@@ -1749,22 +1749,22 @@
   "slug": "bc-l02",
   "model": "BC-L02",
   "primary": {
-   "file": "processed/products/bc-l02/render-1-8ae027a2.webp",
+   "file": "processed/products/bc-l02/render-1-9ba803d6.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 886,
+   "h": 885,
    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
    "note": "3D render \u00b7 representative unit BCP-03",
    "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l02/render-2-602f7997.webp",
+    "file": "processed/products/bc-l02/render-2-7ecb3380.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
-    "h": 942,
+    "h": 898,
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
     "note": "3D render \u00b7 representative unit BCP-03",
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
@@ -1832,22 +1832,22 @@
   "slug": "bc-l03",
   "model": "BC-L03",
   "primary": {
-   "file": "processed/products/bc-l03/render-1-8ae027a2.webp",
+   "file": "processed/products/bc-l03/render-1-9ba803d6.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 886,
+   "h": 885,
    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
    "note": "3D render \u00b7 representative unit BCP-03",
    "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l03/render-2-602f7997.webp",
+    "file": "processed/products/bc-l03/render-2-7ecb3380.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
-    "h": 942,
+    "h": 898,
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
     "note": "3D render \u00b7 representative unit BCP-03",
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
@@ -1911,22 +1911,22 @@
   "slug": "bc-l-03",
   "model": "BC-L-03",
   "primary": {
-   "file": "processed/products/bc-l-03/render-1-8ae027a2.webp",
+   "file": "processed/products/bc-l-03/render-1-9ba803d6.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 886,
+   "h": 885,
    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
    "note": "3D render \u00b7 representative unit BCP-03",
    "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l-03/render-2-602f7997.webp",
+    "file": "processed/products/bc-l-03/render-2-7ecb3380.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
-    "h": 942,
+    "h": 898,
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
     "note": "3D render \u00b7 representative unit BCP-03",
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
@@ -1982,22 +1982,22 @@
   "slug": "bc-l03-m",
   "model": "BC-L03-M",
   "primary": {
-   "file": "processed/products/bc-l03-m/render-1-8ae027a2.webp",
+   "file": "processed/products/bc-l03-m/render-1-9ba803d6.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 886,
+   "h": 885,
    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
    "note": "3D render \u00b7 representative unit BCP-03",
    "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l03-m/render-2-602f7997.webp",
+    "file": "processed/products/bc-l03-m/render-2-7ecb3380.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
-    "h": 942,
+    "h": 898,
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
     "note": "3D render \u00b7 representative unit BCP-03",
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
@@ -2061,22 +2061,22 @@
   "slug": "bc-l-ss",
   "model": "BC-L-SS",
   "primary": {
-   "file": "processed/products/bc-l-ss/render-1-8ae027a2.webp",
+   "file": "processed/products/bc-l-ss/render-1-9ba803d6.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 886,
+   "h": 885,
    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
    "note": "3D render \u00b7 representative unit BCP-03",
    "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l-ss/render-2-602f7997.webp",
+    "file": "processed/products/bc-l-ss/render-2-7ecb3380.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
-    "h": 942,
+    "h": 898,
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
     "note": "3D render \u00b7 representative unit BCP-03",
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
@@ -2140,22 +2140,22 @@
   "slug": "bc-l-nw-6",
   "model": "BC-L-NW-6",
   "primary": {
-   "file": "processed/products/bc-l-nw-6/render-1-8ae027a2.webp",
+   "file": "processed/products/bc-l-nw-6/render-1-9ba803d6.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 886,
+   "h": 885,
    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
    "note": "3D render \u00b7 representative unit BCP-03",
    "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l-nw-6/render-2-602f7997.webp",
+    "file": "processed/products/bc-l-nw-6/render-2-7ecb3380.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
-    "h": 942,
+    "h": 898,
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
     "note": "3D render \u00b7 representative unit BCP-03",
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
@@ -2219,22 +2219,22 @@
   "slug": "bc-l-nw",
   "model": "BC-L-NW",
   "primary": {
-   "file": "processed/products/bc-l-nw/render-1-8ae027a2.webp",
+   "file": "processed/products/bc-l-nw/render-1-9ba803d6.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 886,
+   "h": 885,
    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
    "note": "3D render \u00b7 representative unit BCP-03",
    "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l-nw/render-2-602f7997.webp",
+    "file": "processed/products/bc-l-nw/render-2-7ecb3380.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
-    "h": 942,
+    "h": 898,
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
     "note": "3D render \u00b7 representative unit BCP-03",
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
@@ -2300,22 +2300,22 @@
   "slug": "bc-do",
   "model": "BC-DO",
   "primary": {
-   "file": "processed/products/bc-do/render-1-8ae027a2.webp",
+   "file": "processed/products/bc-do/render-1-9ba803d6.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 886,
+   "h": 885,
    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
    "note": "3D render \u00b7 representative unit BCP-03",
    "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
    {
-    "file": "processed/products/bc-do/render-2-602f7997.webp",
+    "file": "processed/products/bc-do/render-2-7ecb3380.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
-    "h": 942,
+    "h": 898,
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
     "note": "3D render \u00b7 representative unit BCP-03",
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
@@ -2371,22 +2371,22 @@
   "slug": "bc-do-nw",
   "model": "BC-DO-NW",
   "primary": {
-   "file": "processed/products/bc-do-nw/render-1-8ae027a2.webp",
+   "file": "processed/products/bc-do-nw/render-1-9ba803d6.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 886,
+   "h": 885,
    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
    "note": "3D render \u00b7 representative unit BCP-03",
    "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
    {
-    "file": "processed/products/bc-do-nw/render-2-602f7997.webp",
+    "file": "processed/products/bc-do-nw/render-2-7ecb3380.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
-    "h": 942,
+    "h": 898,
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
     "note": "3D render \u00b7 representative unit BCP-03",
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
@@ -2442,22 +2442,22 @@
   "slug": "bc-0",
   "model": "BC-0",
   "primary": {
-   "file": "processed/products/bc-0/render-1-8ae027a2.webp",
+   "file": "processed/products/bc-0/render-1-9ba803d6.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
-   "h": 886,
+   "h": 885,
    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter 3D render with the LED dot-matrix panel, keypad and right-end model label",
    "note": "3D render \u00b7 representative unit BCP-03",
    "original": "07-imagery/render/out-bcp-pt/bcp-03.png"
   },
   "gallery": [
    {
-    "file": "processed/products/bc-0/render-2-602f7997.webp",
+    "file": "processed/products/bc-0/render-2-7ecb3380.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
-    "h": 942,
+    "h": 898,
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): 3D render from below showing the four cable glands and rear mounting flanges",
     "note": "3D render \u00b7 representative unit BCP-03",
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
