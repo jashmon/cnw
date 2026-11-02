@@ -32,7 +32,7 @@
 .fam h3{font-size:clamp(1.5rem,1.2rem + .9vw,2rem);font-weight:800;line-height:1.05}
 .fam p{color:var(--muted);font-size:.9375rem;line-height:1.45;margin-top:6px;max-width:34ch}
 .count{display:block;font-family:var(--font-mono);font-size:.8125rem;margin-top:12px}
-.famMedia{position:relative;min-height:150px;margin-top:10px;border-top:1px solid var(--line);background:color-mix(in srgb,var(--surface) 45%,var(--surface-2))}
+.famMedia{position:relative;min-height:150px;margin-top:10px;border-top:1px solid var(--line);background:#fff}
 .famImg{position:absolute;inset:14px 16px 0;width:calc(100% - 32px);height:calc(100% - 14px);object-fit:contain;object-position:bottom center;transition:transform var(--dur-reveal) var(--ease-out)}
 .fam:hover .famImg{transform:translateY(-6px)}
 .big{grid-column:span 2;grid-row:span 2;background:var(--yellow);box-shadow:none}

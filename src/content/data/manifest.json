@@ -3,7 +3,7 @@
   "slug": "wmhs-iiwp",
   "model": "WMHS-IIWP",
   "primary": {
-   "file": "processed/products/wmhs-iiwp/render-1-4c8b584d.webp",
+   "file": "processed/products/wmhs-iiwp/render-1-8c48a019.webp",
    "source": "render",
    "placeholder": false,
    "w": 806,
@@ -14,7 +14,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhs-iiwp/render-2-afb79671.webp",
+    "file": "processed/products/wmhs-iiwp/render-2-18233847.webp",
     "source": "render",
     "placeholder": false,
     "w": 706,
@@ -24,7 +24,7 @@
     "original": "07-imagery/render/out-phones-pt/wmhs-wp-2.png"
    },
    {
-    "file": "processed/products/wmhs-iiwp/photo-1-ae01ff70.webp",
+    "file": "processed/products/wmhs-iiwp/photo-1-bed1f2a0.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1138,
@@ -34,7 +34,7 @@
     "original": "07-imagery/photos/wmhs-wp-cast/01-front.webp"
    },
    {
-    "file": "processed/products/wmhs-iiwp/photo-2-082a9147.webp",
+    "file": "processed/products/wmhs-iiwp/photo-2-fdf7a731.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1191,
@@ -44,7 +44,7 @@
     "original": "07-imagery/photos/wmhs-wp-cast/02-front-handset-off.webp"
    },
    {
-    "file": "processed/products/wmhs-iiwp/photo-3-7356367f.webp",
+    "file": "processed/products/wmhs-iiwp/photo-3-86cda5f0.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -52,14 +52,6 @@
     "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): side and rear with the SMART FIELD STATION print, back box and mounting rails",
     "note": "Representative weatherproof unit",
     "original": "07-imagery/photos/wmhs-wp-cast/03-side-field-station.webp"
-   },
-   {
-    "file": "processed/products/wmhs-iiwp/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 848,
-    "h": 1600,
-    "alt": "SMART Weatherproof PA Telephone (WMHS-IIWP): yellow die-cast weatherproof wall telephone with handset and keypad"
    }
   ],
   "realPhotos": [
@@ -76,7 +68,7 @@
   "slug": "wmhs-iiwp-m",
   "model": "WMHS-IIWP M",
   "primary": {
-   "file": "processed/products/wmhs-iiwp-m/primary.webp",
+   "file": "processed/products/wmhs-iiwp-m/primary-cfbf06f4.webp",
    "source": "render",
    "placeholder": true,
    "w": 1122,
@@ -96,7 +88,7 @@
   "slug": "wmhs-iiiwp",
   "model": "WMHS-IIIWP",
   "primary": {
-   "file": "processed/products/wmhs-iiiwp/render-1-4c8b584d.webp",
+   "file": "processed/products/wmhs-iiiwp/render-1-8c48a019.webp",
    "source": "render",
    "placeholder": false,
    "w": 806,
@@ -107,7 +99,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhs-iiiwp/render-2-afb79671.webp",
+    "file": "processed/products/wmhs-iiiwp/render-2-18233847.webp",
     "source": "render",
     "placeholder": false,
     "w": 706,
@@ -117,7 +109,7 @@
     "original": "07-imagery/render/out-phones-pt/wmhs-wp-2.png"
    },
    {
-    "file": "processed/products/wmhs-iiiwp/photo-1-ae01ff70.webp",
+    "file": "processed/products/wmhs-iiiwp/photo-1-bed1f2a0.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1138,
@@ -127,7 +119,7 @@
     "original": "07-imagery/photos/wmhs-wp-cast/01-front.webp"
    },
    {
-    "file": "processed/products/wmhs-iiiwp/photo-2-082a9147.webp",
+    "file": "processed/products/wmhs-iiiwp/photo-2-fdf7a731.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1191,
@@ -137,7 +129,7 @@
     "original": "07-imagery/photos/wmhs-wp-cast/02-front-handset-off.webp"
    },
    {
-    "file": "processed/products/wmhs-iiiwp/photo-3-7356367f.webp",
+    "file": "processed/products/wmhs-iiiwp/photo-3-86cda5f0.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -145,14 +137,6 @@
     "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): side and rear with the SMART FIELD STATION print, back box and mounting rails",
     "note": "Representative weatherproof unit",
     "original": "07-imagery/photos/wmhs-wp-cast/03-side-field-station.webp"
-   },
-   {
-    "file": "processed/products/wmhs-iiiwp/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 859,
-    "h": 1600,
-    "alt": "SMART Industrial Weatherproof Telephone (WMHS-IIIWP): yellow die-cast weatherproof wall telephone with handset and keypad"
    }
   ],
   "realPhotos": [
@@ -169,7 +153,7 @@
   "slug": "wmhs-iiiwp-voip",
   "model": "WMHS-IIIWP-VOIP",
   "primary": {
-   "file": "processed/products/wmhs-iiiwp-voip/render-1-4c8b584d.webp",
+   "file": "processed/products/wmhs-iiiwp-voip/render-1-8c48a019.webp",
    "source": "render",
    "placeholder": false,
    "w": 806,
@@ -180,7 +164,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhs-iiiwp-voip/render-2-afb79671.webp",
+    "file": "processed/products/wmhs-iiiwp-voip/render-2-18233847.webp",
     "source": "render",
     "placeholder": false,
     "w": 706,
@@ -190,7 +174,7 @@
     "original": "07-imagery/render/out-phones-pt/wmhs-wp-2.png"
    },
    {
-    "file": "processed/products/wmhs-iiiwp-voip/photo-1-ae01ff70.webp",
+    "file": "processed/products/wmhs-iiiwp-voip/photo-1-bed1f2a0.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1138,
@@ -200,7 +184,7 @@
     "original": "07-imagery/photos/wmhs-wp-cast/01-front.webp"
    },
    {
-    "file": "processed/products/wmhs-iiiwp-voip/photo-2-082a9147.webp",
+    "file": "processed/products/wmhs-iiiwp-voip/photo-2-fdf7a731.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1191,
@@ -210,7 +194,7 @@
     "original": "07-imagery/photos/wmhs-wp-cast/02-front-handset-off.webp"
    },
    {
-    "file": "processed/products/wmhs-iiiwp-voip/photo-3-7356367f.webp",
+    "file": "processed/products/wmhs-iiiwp-voip/photo-3-86cda5f0.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -218,14 +202,6 @@
     "alt": "SMART die-cast weatherproof telephone (representative weatherproof unit): side and rear with the SMART FIELD STATION print, back box and mounting rails",
     "note": "Representative weatherproof unit",
     "original": "07-imagery/photos/wmhs-wp-cast/03-side-field-station.webp"
-   },
-   {
-    "file": "processed/products/wmhs-iiiwp-voip/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 894,
-    "h": 1600,
-    "alt": "SMART Industrial Weatherproof VoIP Telephone (WMHS-IIIWP-VOIP): yellow die-cast weatherproof VoIP wall telephone with handset and keypad"
    }
   ],
   "realPhotos": [
@@ -240,7 +216,7 @@
   "slug": "flp",
   "model": "FLP",
   "primary": {
-   "file": "processed/products/flp/primary.webp",
+   "file": "processed/products/flp/primary-8f995faa.webp",
    "source": "render",
    "placeholder": true,
    "w": 1485,
@@ -260,7 +236,7 @@
   "slug": "wmhs-iii",
   "model": "WMHS-III",
   "primary": {
-   "file": "processed/products/wmhs-iii/primary.webp",
+   "file": "processed/products/wmhs-iii/primary-d0442560.webp",
    "source": "render",
    "placeholder": true,
    "w": 1143,
@@ -269,7 +245,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhs-iii/gallery-1.jpg",
+    "file": "processed/products/wmhs-iii/gallery-1-2a0d5782.jpg",
     "source": "photo",
     "w": 1067,
     "h": 1600,
@@ -277,7 +253,7 @@
     "original": "00-intake/voizlink/image/WMHS-III.jpg"
    },
    {
-    "file": "processed/products/wmhs-iii/gallery-2.jpg",
+    "file": "processed/products/wmhs-iii/gallery-2-d6eea518.jpg",
     "source": "photo",
     "w": 310,
     "h": 452,
@@ -303,7 +279,7 @@
   "slug": "wmhs-iiipt",
   "model": "WMHS-IIIPT",
   "primary": {
-   "file": "processed/products/wmhs-iiipt/primary.webp",
+   "file": "processed/products/wmhs-iiipt/primary-0a83b40c.webp",
    "source": "render",
    "placeholder": true,
    "w": 1133,
@@ -325,7 +301,7 @@
   "slug": "wmhs-iii-id",
   "model": "WMHS-III-ID",
   "primary": {
-   "file": "processed/products/wmhs-iii-id/primary.jpg",
+   "file": "processed/products/wmhs-iii-id/primary-bf4a103f.jpg",
    "source": "photo",
    "placeholder": false,
    "w": 631,
@@ -335,7 +311,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhs-iii-id/gallery-1.webp",
+    "file": "processed/products/wmhs-iii-id/gallery-1-800a0f6e.webp",
     "source": "render",
     "placeholder": true,
     "w": 1600,
@@ -357,7 +333,7 @@
   "slug": "wmhs-iiiep",
   "model": "WMHS-IIIEP",
   "primary": {
-   "file": "processed/products/wmhs-iiiep/primary.webp",
+   "file": "processed/products/wmhs-iiiep/primary-1cdbccc5.webp",
    "source": "render",
    "placeholder": true,
    "w": 1145,
@@ -373,7 +349,7 @@
   "slug": "wmhs-iiilh",
   "model": "WMHS-IIILH",
   "primary": {
-   "file": "processed/products/wmhs-iiilh/primary.webp",
+   "file": "processed/products/wmhs-iiilh/primary-3d9b8a43.webp",
    "source": "render",
    "placeholder": true,
    "w": 1576,
@@ -395,7 +371,7 @@
   "slug": "wmhf-iii",
   "model": "WMHF-III",
   "primary": {
-   "file": "processed/products/wmhf-iii/primary.webp",
+   "file": "processed/products/wmhf-iii/primary-e18dfe2d.webp",
    "source": "render",
    "placeholder": true,
    "w": 1156,
@@ -419,7 +395,7 @@
   "slug": "wmhf-iiigsm",
   "model": "WMHF-IIIGSM",
   "primary": {
-   "file": "processed/products/wmhf-iiigsm/primary.webp",
+   "file": "processed/products/wmhf-iiigsm/primary-092b17b6.webp",
    "source": "render",
    "placeholder": true,
    "w": 961,
@@ -428,7 +404,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhf-iiigsm/gallery-1.jpg",
+    "file": "processed/products/wmhf-iiigsm/gallery-1-eca16111.jpg",
     "source": "photo",
     "w": 254,
     "h": 516,
@@ -452,7 +428,7 @@
   "slug": "wmhs-ii",
   "model": "WMHS-II",
   "primary": {
-   "file": "processed/products/wmhs-ii/primary.webp",
+   "file": "processed/products/wmhs-ii/primary-7ae99ce2.webp",
    "source": "render",
    "placeholder": true,
    "w": 1145,
@@ -461,7 +437,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhs-ii/gallery-1.jpg",
+    "file": "processed/products/wmhs-ii/gallery-1-399070c3.jpg",
     "source": "photo",
     "w": 367,
     "h": 443,
@@ -481,7 +457,7 @@
   "slug": "wmhf-ii",
   "model": "WMHF-II",
   "primary": {
-   "file": "processed/products/wmhf-ii/primary.webp",
+   "file": "processed/products/wmhf-ii/primary-21d05379.webp",
    "source": "render",
    "placeholder": true,
    "w": 1161,
@@ -490,7 +466,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhf-ii/gallery-1.jpg",
+    "file": "processed/products/wmhf-ii/gallery-1-2a578fda.jpg",
     "source": "photo",
     "w": 360,
     "h": 546,
@@ -510,7 +486,7 @@
   "slug": "wmhs-ii-id",
   "model": "WMHS-II ID",
   "primary": {
-   "file": "processed/products/wmhs-ii-id/primary.webp",
+   "file": "processed/products/wmhs-ii-id/primary-0b614752.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -519,7 +495,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhs-ii-id/gallery-1.jpg",
+    "file": "processed/products/wmhs-ii-id/gallery-1-001c017a.jpg",
     "source": "photo",
     "w": 229,
     "h": 501,
@@ -543,7 +519,7 @@
   "slug": "mcs-ip",
   "model": "MCS-IP",
   "primary": {
-   "file": "processed/products/mcs-ip/primary.jpg",
+   "file": "processed/products/mcs-ip/primary-083d354f.jpg",
    "source": "photo",
    "placeholder": false,
    "w": 1600,
@@ -553,7 +529,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/mcs-ip/gallery-1.webp",
+    "file": "processed/products/mcs-ip/gallery-1-dad71189.webp",
     "source": "render",
     "placeholder": true,
     "w": 1600,
@@ -575,7 +551,7 @@
   "slug": "wmhs-ip-pa-telephone",
   "model": "WMHS-IP",
   "primary": {
-   "file": "processed/products/wmhs-ip-pa-telephone/primary.webp",
+   "file": "processed/products/wmhs-ip-pa-telephone/primary-9a3e4cca.webp",
    "source": "render",
    "placeholder": true,
    "w": 1143,
@@ -595,7 +571,7 @@
   "slug": "mcs-ii-ip",
   "model": "MCS-II-IP",
   "primary": {
-   "file": "processed/products/mcs-ii-ip/primary.webp",
+   "file": "processed/products/mcs-ii-ip/primary-a47722f8.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -611,7 +587,7 @@
   "slug": "wmhs-ii-ip",
   "model": "WMHS-II-IP",
   "primary": {
-   "file": "processed/products/wmhs-ii-ip/primary.webp",
+   "file": "processed/products/wmhs-ii-ip/primary-3b1f3eb5.webp",
    "source": "render",
    "placeholder": true,
    "w": 1038,
@@ -627,7 +603,7 @@
   "slug": "wmhs-ip-sip-phone",
   "model": "WMHS-IP",
   "primary": {
-   "file": "processed/products/wmhs-ip-sip-phone/render-1-6288e92f.webp",
+   "file": "processed/products/wmhs-ip-sip-phone/render-1-00288abf.webp",
    "source": "render",
    "placeholder": false,
    "w": 843,
@@ -638,7 +614,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhs-ip-sip-phone/render-2-79597567.webp",
+    "file": "processed/products/wmhs-ip-sip-phone/render-2-6e757ef9.webp",
     "source": "render",
     "placeholder": false,
     "w": 633,
@@ -648,7 +624,7 @@
     "original": "07-imagery/render/out-phones-pt/wmhs-ip-2.png"
    },
    {
-    "file": "processed/products/wmhs-ip-sip-phone/photo-1-fe85aa09.webp",
+    "file": "processed/products/wmhs-ip-sip-phone/photo-1-1c3c45bc.webp",
     "source": "photo",
     "placeholder": false,
     "w": 936,
@@ -658,7 +634,7 @@
     "original": "07-imagery/photos/wmhs-ip/01-front.webp"
    },
    {
-    "file": "processed/products/wmhs-ip-sip-phone/photo-2-2974bacf.webp",
+    "file": "processed/products/wmhs-ip-sip-phone/photo-2-594e8efd.webp",
     "source": "photo",
     "placeholder": false,
     "w": 945,
@@ -668,7 +644,7 @@
     "original": "07-imagery/photos/wmhs-ip/02-handset-off.webp"
    },
    {
-    "file": "processed/products/wmhs-ip-sip-phone/photo-3-4dcc390a.webp",
+    "file": "processed/products/wmhs-ip-sip-phone/photo-3-b340444b.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1403,
@@ -690,7 +666,7 @@
   "slug": "mcs-ii",
   "model": "MCS-II",
   "primary": {
-   "file": "processed/products/mcs-ii/primary.jpg",
+   "file": "processed/products/mcs-ii/primary-8a427280.jpg",
    "source": "photo",
    "placeholder": false,
    "w": 1600,
@@ -700,7 +676,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/mcs-ii/gallery-1.jpg",
+    "file": "processed/products/mcs-ii/gallery-1-3de375c9.jpg",
     "source": "photo",
     "w": 834,
     "h": 668,
@@ -726,7 +702,7 @@
   "slug": "mini-mcs-ii",
   "model": "MINI MCS-II",
   "primary": {
-   "file": "processed/products/mini-mcs-ii/primary.webp",
+   "file": "processed/products/mini-mcs-ii/primary-efecb37a.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -746,7 +722,7 @@
   "slug": "mcs-iii",
   "model": "MCS-III",
   "primary": {
-   "file": "processed/products/mcs-iii/primary.webp",
+   "file": "processed/products/mcs-iii/primary-96f3f229.webp",
    "source": "render",
    "placeholder": true,
    "w": 1281,
@@ -770,7 +746,7 @@
   "slug": "isas",
   "model": "ISAS",
   "primary": {
-   "file": "processed/products/isas/primary.jpg",
+   "file": "processed/products/isas/primary-2f8e666e.jpg",
    "source": "photo",
    "placeholder": false,
    "w": 1449,
@@ -780,7 +756,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/isas/gallery-1.jpg",
+    "file": "processed/products/isas/gallery-1-1ae68682.jpg",
     "source": "photo",
     "w": 272,
     "h": 459,
@@ -788,7 +764,7 @@
     "original": "00-intake/voizlink/image/model_isas.png"
    },
    {
-    "file": "processed/products/isas/gallery-2.webp",
+    "file": "processed/products/isas/gallery-2-40039b7c.webp",
     "source": "render",
     "placeholder": true,
     "w": 1600,
@@ -812,7 +788,7 @@
   "slug": "wmhs-iiad",
   "model": "WMHS-IIAD",
   "primary": {
-   "file": "processed/products/wmhs-iiad/primary.webp",
+   "file": "processed/products/wmhs-iiad/primary-9a0ca623.webp",
    "source": "render",
    "placeholder": true,
    "w": 1149,
@@ -821,7 +797,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhs-iiad/gallery-1.jpg",
+    "file": "processed/products/wmhs-iiad/gallery-1-f927be45.jpg",
     "source": "photo",
     "w": 367,
     "h": 443,
@@ -841,7 +817,7 @@
   "slug": "wmhs-i",
   "model": "WMHS-I",
   "primary": {
-   "file": "processed/products/wmhs-i/primary.webp",
+   "file": "processed/products/wmhs-i/primary-67b63388.webp",
    "source": "render",
    "placeholder": true,
    "w": 1133,
@@ -850,7 +826,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhs-i/gallery-1.jpg",
+    "file": "processed/products/wmhs-i/gallery-1-58188400.jpg",
     "source": "photo",
     "w": 343,
     "h": 403,
@@ -872,7 +848,7 @@
   "slug": "wmhf-i",
   "model": "WMHF-I",
   "primary": {
-   "file": "processed/products/wmhf-i/primary.webp",
+   "file": "processed/products/wmhf-i/primary-d26c8b66.webp",
    "source": "render",
    "placeholder": true,
    "w": 1160,
@@ -881,7 +857,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhf-i/gallery-1.jpg",
+    "file": "processed/products/wmhf-i/gallery-1-ebf585f6.jpg",
     "source": "photo",
     "w": 343,
     "h": 437,
@@ -903,7 +879,7 @@
   "slug": "wmhf-i-3w",
   "model": "WMHF-I-3W",
   "primary": {
-   "file": "processed/products/wmhf-i-3w/primary.webp",
+   "file": "processed/products/wmhf-i-3w/primary-5a50ff60.webp",
    "source": "render",
    "placeholder": true,
    "w": 1173,
@@ -923,7 +899,7 @@
   "slug": "wmhs-iv",
   "model": "WMHS-IV",
   "primary": {
-   "file": "processed/products/wmhs-iv/primary.webp",
+   "file": "processed/products/wmhs-iv/primary-d878d6db.webp",
    "source": "render",
    "placeholder": true,
    "w": 1143,
@@ -932,7 +908,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhs-iv/gallery-1.jpg",
+    "file": "processed/products/wmhs-iv/gallery-1-543308e9.jpg",
     "source": "photo",
     "w": 363,
     "h": 434,
@@ -952,7 +928,7 @@
   "slug": "wmhf-iv",
   "model": "WMHF-IV",
   "primary": {
-   "file": "processed/products/wmhf-iv/primary.webp",
+   "file": "processed/products/wmhf-iv/primary-f3036e17.webp",
    "source": "render",
    "placeholder": true,
    "w": 1167,
@@ -961,7 +937,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/wmhf-iv/gallery-1.jpg",
+    "file": "processed/products/wmhf-iv/gallery-1-b41100db.jpg",
     "source": "photo",
     "w": 343,
     "h": 402,
@@ -981,7 +957,7 @@
   "slug": "oc-dths-i",
   "model": "OC-DTHS-I",
   "primary": {
-   "file": "processed/products/oc-dths-i/primary.webp",
+   "file": "processed/products/oc-dths-i/primary-7877033f.webp",
    "source": "render",
    "placeholder": true,
    "w": 1483,
@@ -990,7 +966,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/oc-dths-i/gallery-1.jpg",
+    "file": "processed/products/oc-dths-i/gallery-1-25db335f.jpg",
     "source": "photo",
     "w": 285,
     "h": 409,
@@ -1010,7 +986,7 @@
   "slug": "oc-dths-ii",
   "model": "OC-DTHS-II",
   "primary": {
-   "file": "processed/products/oc-dths-ii/primary.webp",
+   "file": "processed/products/oc-dths-ii/primary-b3dad5fa.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1032,7 +1008,7 @@
   "slug": "oc-dths-iii",
   "model": "OC-DTHS-III",
   "primary": {
-   "file": "processed/products/oc-dths-iii/primary.webp",
+   "file": "processed/products/oc-dths-iii/primary-218afd3f.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1054,7 +1030,7 @@
   "slug": "oc-dths-v",
   "model": "OC-DTHS-V",
   "primary": {
-   "file": "processed/products/oc-dths-v/primary.webp",
+   "file": "processed/products/oc-dths-v/primary-e89a61b8.webp",
    "source": "render",
    "placeholder": true,
    "w": 1308,
@@ -1063,7 +1039,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/oc-dths-v/gallery-1.jpg",
+    "file": "processed/products/oc-dths-v/gallery-1-f0b30305.jpg",
     "source": "photo",
     "w": 504,
     "h": 870,
@@ -1085,7 +1061,7 @@
   "slug": "exa-i",
   "model": "EXA-I",
   "primary": {
-   "file": "processed/products/exa-i/primary.webp",
+   "file": "processed/products/exa-i/primary-c66aa29b.webp",
    "source": "render",
    "placeholder": true,
    "w": 1160,
@@ -1105,7 +1081,7 @@
   "slug": "exa-ii",
   "model": "EXA-II",
   "primary": {
-   "file": "processed/products/exa-ii/primary.webp",
+   "file": "processed/products/exa-ii/primary-07029529.webp",
    "source": "render",
    "placeholder": true,
    "w": 1175,
@@ -1125,7 +1101,7 @@
   "slug": "exa-pa-250",
   "model": "EXA PA 250",
   "primary": {
-   "file": "processed/products/exa-pa-250/primary.png",
+   "file": "processed/products/exa-pa-250/primary-42324cc4.jpg",
    "source": "photo",
    "placeholder": false,
    "w": 1600,
@@ -1135,7 +1111,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/exa-pa-250/gallery-1.webp",
+    "file": "processed/products/exa-pa-250/gallery-1-d89ffd70.webp",
     "source": "render",
     "placeholder": true,
     "w": 1600,
@@ -1155,7 +1131,7 @@
   "slug": "lsod",
   "model": "LSOD",
   "primary": {
-   "file": "processed/products/lsod/render-1-60b72729.webp",
+   "file": "processed/products/lsod/render-1-a8fcc60f.webp",
    "source": "render",
    "placeholder": false,
    "w": 1281,
@@ -1166,7 +1142,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/lsod/render-2-81caacba.webp",
+    "file": "processed/products/lsod/render-2-71f58fce.webp",
     "source": "render",
     "placeholder": false,
     "w": 1297,
@@ -1176,7 +1152,7 @@
     "original": "07-imagery/render/out-va-pt/lsod-2.png"
    },
    {
-    "file": "processed/products/lsod/photo-1-208cb47c.webp",
+    "file": "processed/products/lsod/photo-1-bd58a82a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1178,
@@ -1186,7 +1162,7 @@
     "original": "07-imagery/photos/lsod-v2/01-front-mouth.webp"
    },
    {
-    "file": "processed/products/lsod/photo-2-1df35459.webp",
+    "file": "processed/products/lsod/photo-2-fbc0fe61.webp",
     "source": "photo",
     "placeholder": false,
     "w": 964,
@@ -1196,7 +1172,7 @@
     "original": "07-imagery/photos/lsod-v2/02-side.webp"
    },
    {
-    "file": "processed/products/lsod/photo-3-09a75b39.webp",
+    "file": "processed/products/lsod/photo-3-48fe5d24.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1488,
@@ -1206,15 +1182,7 @@
     "original": "07-imagery/photos/lsod-v2/03-rear-label.webp"
    },
    {
-    "file": "processed/products/lsod/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 1127,
-    "alt": "SMART Industrial Loudspeaker Horn (Outdoor) (LSOD): grey re-entrant horn loudspeaker with mounting bracket"
-   },
-   {
-    "file": "processed/products/lsod/gallery-1.jpg",
+    "file": "processed/products/lsod/gallery-1-47b29f7e.jpg",
     "source": "photo",
     "w": 1600,
     "h": 1271,
@@ -1234,7 +1202,7 @@
   "slug": "lsin",
   "model": "LSIN",
   "primary": {
-   "file": "processed/products/lsin/primary.webp",
+   "file": "processed/products/lsin/primary-d444dac2.webp",
    "source": "render",
    "placeholder": true,
    "w": 1091,
@@ -1250,7 +1218,7 @@
   "slug": "ht-i",
   "model": "HT-I",
   "primary": {
-   "file": "processed/products/ht-i/primary.webp",
+   "file": "processed/products/ht-i/primary-568eac64.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1270,7 +1238,7 @@
   "slug": "ht-a",
   "model": "HT-A",
   "primary": {
-   "file": "processed/products/ht-a/primary.webp",
+   "file": "processed/products/ht-a/primary-b2fdc60c.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1292,7 +1260,7 @@
   "slug": "ht-ip",
   "model": "HT-IP",
   "primary": {
-   "file": "processed/products/ht-ip/primary.webp",
+   "file": "processed/products/ht-ip/primary-1c41c53f.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1301,7 +1269,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/ht-ip/gallery-1.jpg",
+    "file": "processed/products/ht-ip/gallery-1-2c0c6f90.jpg",
     "source": "photo",
     "w": 442,
     "h": 224,
@@ -1323,7 +1291,7 @@
   "slug": "cr-iiipe",
   "model": "CR-IIIPE",
   "primary": {
-   "file": "processed/products/cr-iiipe/primary.webp",
+   "file": "processed/products/cr-iiipe/primary-72ca3fc0.webp",
    "source": "render",
    "placeholder": true,
    "w": 1455,
@@ -1332,7 +1300,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/cr-iiipe/gallery-1.jpg",
+    "file": "processed/products/cr-iiipe/gallery-1-1a18653d.jpg",
     "source": "photo",
     "w": 462,
     "h": 442,
@@ -1356,7 +1324,7 @@
   "slug": "cr-iiiad",
   "model": "CR-IIIAD",
   "primary": {
-   "file": "processed/products/cr-iiiad/primary.webp",
+   "file": "processed/products/cr-iiiad/primary-a33ad730.webp",
    "source": "render",
    "placeholder": true,
    "w": 1468,
@@ -1365,7 +1333,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/cr-iiiad/gallery-1.jpg",
+    "file": "processed/products/cr-iiiad/gallery-1-490730d0.jpg",
     "source": "photo",
     "w": 412,
     "h": 336,
@@ -1373,7 +1341,7 @@
     "original": "00-intake/voizlink/image/MODEL-CR-III AD.jpg"
    },
    {
-    "file": "processed/products/cr-iiiad/gallery-2.jpg",
+    "file": "processed/products/cr-iiiad/gallery-2-7a484dc1.jpg",
     "source": "photo",
     "w": 336,
     "h": 433,
@@ -1395,7 +1363,7 @@
   "slug": "cr-iii-ss",
   "model": "CR-III-SS",
   "primary": {
-   "file": "processed/products/cr-iii-ss/render-1-ac015db1.webp",
+   "file": "processed/products/cr-iii-ss/render-1-997180a5.webp",
    "source": "render",
    "placeholder": false,
    "w": 1228,
@@ -1406,7 +1374,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/cr-iii-ss/render-2-1818f655.webp",
+    "file": "processed/products/cr-iii-ss/render-2-6dd59d0a.webp",
     "source": "render",
     "placeholder": false,
     "w": 985,
@@ -1416,7 +1384,7 @@
     "original": "07-imagery/render/out-cr-pt/cr-iii-ss-2.png"
    },
    {
-    "file": "processed/products/cr-iii-ss/photo-1-506e6465.webp",
+    "file": "processed/products/cr-iii-ss/photo-1-762369e8.webp",
     "source": "photo",
     "placeholder": false,
     "w": 802,
@@ -1426,7 +1394,7 @@
     "original": "07-imagery/photos/cr-iii-ss/01-front.webp"
    },
    {
-    "file": "processed/products/cr-iii-ss/photo-2-681d9304.webp",
+    "file": "processed/products/cr-iii-ss/photo-2-dfd0f3af.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1079,
@@ -1436,7 +1404,7 @@
     "original": "07-imagery/photos/cr-iii-ss/02-rear.webp"
    },
    {
-    "file": "processed/products/cr-iii-ss/primary.jpg",
+    "file": "processed/products/cr-iii-ss/primary-a9e2b0b3.jpg",
     "source": "photo",
     "placeholder": false,
     "w": 931,
@@ -1459,7 +1427,7 @@
   "slug": "cr-iii-ip",
   "model": "CR-III-IP",
   "primary": {
-   "file": "processed/products/cr-iii-ip/primary.webp",
+   "file": "processed/products/cr-iii-ip/primary-803d9666.webp",
    "source": "render",
    "placeholder": true,
    "w": 1463,
@@ -1475,7 +1443,7 @@
   "slug": "cr-ip",
   "model": "CR-IP",
   "primary": {
-   "file": "processed/products/cr-ip/render-1-e3daff4f.webp",
+   "file": "processed/products/cr-ip/render-1-66e8d15f.webp",
    "source": "render",
    "placeholder": false,
    "w": 1204,
@@ -1486,7 +1454,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/cr-ip/render-2-3d71250d.webp",
+    "file": "processed/products/cr-ip/render-2-ae962998.webp",
     "source": "render",
     "placeholder": false,
     "w": 921,
@@ -1496,7 +1464,7 @@
     "original": "07-imagery/render/out-cr-pt/cr-ip-2.png"
    },
    {
-    "file": "processed/products/cr-ip/photo-1-84a75802.webp",
+    "file": "processed/products/cr-ip/photo-1-05a3bfd9.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1225,
@@ -1506,7 +1474,7 @@
     "original": "07-imagery/photos/cr-ip/01-front.webp"
    },
    {
-    "file": "processed/products/cr-ip/photo-2-70ce0e85.webp",
+    "file": "processed/products/cr-ip/photo-2-0b431acf.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1221,
@@ -1516,7 +1484,7 @@
     "original": "07-imagery/photos/cr-ip/02-rear-cable.webp"
    },
    {
-    "file": "processed/products/cr-ip/photo-3-83b6c2db.webp",
+    "file": "processed/products/cr-ip/photo-3-a69d4e7f.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1173,
@@ -1526,7 +1494,7 @@
     "original": "07-imagery/photos/cr-ip/03-rear.webp"
    },
    {
-    "file": "processed/products/cr-ip/gallery-1.jpg",
+    "file": "processed/products/cr-ip/gallery-1-b084f8af.jpg",
     "source": "photo",
     "w": 400,
     "h": 418,
@@ -1546,7 +1514,7 @@
   "slug": "gsm-ecb-box",
   "model": "GSM-ECB BOX",
   "primary": {
-   "file": "processed/products/gsm-ecb-box/primary.webp",
+   "file": "processed/products/gsm-ecb-box/primary-2f63ce51.webp",
    "source": "render",
    "placeholder": true,
    "w": 1198,
@@ -1555,7 +1523,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/gsm-ecb-box/gallery-1.jpg",
+    "file": "processed/products/gsm-ecb-box/gallery-1-fd36a340.jpg",
     "source": "photo",
     "w": 336,
     "h": 443,
@@ -1579,7 +1547,7 @@
   "slug": "ecb-gsm-cb",
   "model": "ECB-GSM-CB",
   "primary": {
-   "file": "processed/products/ecb-gsm-cb/primary.webp",
+   "file": "processed/products/ecb-gsm-cb/primary-d0d406f0.webp",
    "source": "render",
    "placeholder": true,
    "w": 1278,
@@ -1588,7 +1556,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/ecb-gsm-cb/gallery-1.jpg",
+    "file": "processed/products/ecb-gsm-cb/gallery-1-00452594.jpg",
     "source": "photo",
     "w": 1600,
     "h": 1163,
@@ -1610,7 +1578,7 @@
   "slug": "voip-ecb",
   "model": "VOIP-ECB",
   "primary": {
-   "file": "processed/products/voip-ecb/primary.webp",
+   "file": "processed/products/voip-ecb/primary-d6e1af69.webp",
    "source": "render",
    "placeholder": true,
    "w": 1159,
@@ -1619,7 +1587,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/voip-ecb/gallery-1.jpg",
+    "file": "processed/products/voip-ecb/gallery-1-2e79fabf.jpg",
     "source": "photo",
     "w": 291,
     "h": 448,
@@ -1641,7 +1609,7 @@
   "slug": "gsm-ecb-server-rack",
   "model": "GSM-ECB SERVER RACK",
   "primary": {
-   "file": "processed/products/gsm-ecb-server-rack/primary.webp",
+   "file": "processed/products/gsm-ecb-server-rack/primary-33b27a83.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1661,7 +1629,7 @@
   "slug": "htms",
   "model": "HTMS",
   "primary": {
-   "file": "processed/products/htms/primary.webp",
+   "file": "processed/products/htms/primary-9bc0277d.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1670,7 +1638,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/htms/gallery-1.jpg",
+    "file": "processed/products/htms/gallery-1-6197307e.jpg",
     "source": "photo",
     "w": 500,
     "h": 269,
@@ -1690,7 +1658,7 @@
   "slug": "cas-hf",
   "model": "CAS-HF",
   "primary": {
-   "file": "processed/products/cas-hf/primary.webp",
+   "file": "processed/products/cas-hf/primary-9d8ed61c.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1712,7 +1680,7 @@
   "slug": "ccs-hf",
   "model": "CCS-HF",
   "primary": {
-   "file": "processed/products/ccs-hf/primary.webp",
+   "file": "processed/products/ccs-hf/primary-d5de1814.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1721,7 +1689,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/ccs-hf/gallery-1.jpg",
+    "file": "processed/products/ccs-hf/gallery-1-139fb1d3.jpg",
     "source": "photo",
     "w": 1600,
     "h": 985,
@@ -1743,7 +1711,7 @@
   "slug": "eh",
   "model": "EH",
   "primary": {
-   "file": "processed/products/eh/primary.webp",
+   "file": "processed/products/eh/primary-4d17a294.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1752,7 +1720,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/eh/gallery-1.jpg",
+    "file": "processed/products/eh/gallery-1-6a314bbb.jpg",
     "source": "photo",
     "w": 805,
     "h": 633,
@@ -1774,7 +1742,7 @@
   "slug": "eh-fl",
   "model": "EH-FL",
   "primary": {
-   "file": "processed/products/eh-fl/primary.webp",
+   "file": "processed/products/eh-fl/primary-2da2400c.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1796,7 +1764,7 @@
   "slug": "tr-iii",
   "model": "TR-III",
   "primary": {
-   "file": "processed/products/tr-iii/primary.webp",
+   "file": "processed/products/tr-iii/primary-ee7211d0.webp",
    "source": "render",
    "placeholder": true,
    "w": 1252,
@@ -1805,7 +1773,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/tr-iii/gallery-1.jpg",
+    "file": "processed/products/tr-iii/gallery-1-e2177af2.jpg",
     "source": "photo",
     "w": 303,
     "h": 410,
@@ -1825,7 +1793,7 @@
   "slug": "fl-iii",
   "model": "FL-III",
   "primary": {
-   "file": "processed/products/fl-iii/primary.webp",
+   "file": "processed/products/fl-iii/primary-2ecc70db.webp",
    "source": "render",
    "placeholder": true,
    "w": 1275,
@@ -1834,7 +1802,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/fl-iii/gallery-1.jpg",
+    "file": "processed/products/fl-iii/gallery-1-40baa38f.jpg",
     "source": "photo",
     "w": 343,
     "h": 423,
@@ -1856,7 +1824,7 @@
   "slug": "va-1",
   "model": "VA-1",
   "primary": {
-   "file": "processed/products/va-1/primary.jpg",
+   "file": "processed/products/va-1/primary-27fd459c.jpg",
    "source": "photo",
    "placeholder": false,
    "w": 1600,
@@ -1866,7 +1834,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/va-1/gallery-1.webp",
+    "file": "processed/products/va-1/gallery-1-50f84fa6.webp",
     "source": "render",
     "placeholder": true,
     "w": 1600,
@@ -1888,7 +1856,7 @@
   "slug": "va-1fl",
   "model": "VA-1FL",
   "primary": {
-   "file": "processed/products/va-1fl/render-1-dd21b432.webp",
+   "file": "processed/products/va-1fl/render-1-c3948a59.webp",
    "source": "render",
    "placeholder": false,
    "w": 958,
@@ -1899,7 +1867,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/va-1fl/render-2-34b991a2.webp",
+    "file": "processed/products/va-1fl/render-2-8a2ae4a9.webp",
     "source": "render",
     "placeholder": false,
     "w": 746,
@@ -1909,7 +1877,7 @@
     "original": "07-imagery/render/out-va-pt/va-1fl-2.png"
    },
    {
-    "file": "processed/products/va-1fl/photo-1-8498b911.webp",
+    "file": "processed/products/va-1fl/photo-1-70e969ab.webp",
     "source": "photo",
     "placeholder": false,
     "w": 741,
@@ -1919,7 +1887,7 @@
     "original": "07-imagery/photos/va-1fl/01-front.webp"
    },
    {
-    "file": "processed/products/va-1fl/photo-2-554f8c05.webp",
+    "file": "processed/products/va-1fl/photo-2-7e80f068.webp",
     "source": "photo",
     "placeholder": false,
     "w": 551,
@@ -1929,7 +1897,7 @@
     "original": "07-imagery/photos/va-1fl/02-side-model-print.webp"
    },
    {
-    "file": "processed/products/va-1fl/photo-3-eb23f1f8.webp",
+    "file": "processed/products/va-1fl/photo-3-ceef7fe1.webp",
     "source": "photo",
     "placeholder": false,
     "w": 575,
@@ -1939,7 +1907,7 @@
     "original": "07-imagery/photos/va-1fl/03-side-voice-alarm.webp"
    },
    {
-    "file": "processed/products/va-1fl/gallery-1.jpg",
+    "file": "processed/products/va-1fl/gallery-1-9714b76f.jpg",
     "source": "photo",
     "w": 1600,
     "h": 678,
@@ -1963,7 +1931,7 @@
   "slug": "voice-alarm-units",
   "model": null,
   "primary": {
-   "file": "processed/products/voice-alarm-units/primary.webp",
+   "file": "processed/products/voice-alarm-units/primary-bffb7d40.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -1972,7 +1940,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/voice-alarm-units/gallery-1.jpg",
+    "file": "processed/products/voice-alarm-units/gallery-1-26745600.jpg",
     "source": "photo",
     "w": 562,
     "h": 237,
@@ -1994,7 +1962,7 @@
   "slug": "vm-1",
   "model": "VM-1",
   "primary": {
-   "file": "processed/products/vm-1/primary.webp",
+   "file": "processed/products/vm-1/primary-acf5c0c2.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -2014,7 +1982,7 @@
   "slug": "la-1",
   "model": "LA-1",
   "primary": {
-   "file": "processed/products/la-1/primary.webp",
+   "file": "processed/products/la-1/primary-17906fb5.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -2034,7 +2002,7 @@
   "slug": "bc-l01",
   "model": "BC-L01",
   "primary": {
-   "file": "processed/products/bc-l01/render-1-9ba803d6.webp",
+   "file": "processed/products/bc-l01/render-1-0861f3ed.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
@@ -2045,7 +2013,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l01/render-2-7ecb3380.webp",
+    "file": "processed/products/bc-l01/render-2-e26901a7.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
@@ -2055,7 +2023,7 @@
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
    },
    {
-    "file": "processed/products/bc-l01/photo-1-d34befa5.webp",
+    "file": "processed/products/bc-l01/photo-1-fbe0b297.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2065,7 +2033,7 @@
     "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
    },
    {
-    "file": "processed/products/bc-l01/photo-2-abf32c9d.webp",
+    "file": "processed/products/bc-l01/photo-2-e267ff4a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2075,7 +2043,7 @@
     "original": "07-imagery/photos/bcp-03/02-front.webp"
    },
    {
-    "file": "processed/products/bc-l01/photo-3-f76e526e.webp",
+    "file": "processed/products/bc-l01/photo-3-28687db2.webp",
     "source": "photo",
     "placeholder": false,
     "w": 794,
@@ -2083,14 +2051,6 @@
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
     "note": "Representative unit: BCP-03",
     "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
-   },
-   {
-    "file": "processed/products/bc-l01/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 1097,
-    "alt": "SMART Weigh Log Bag Counter cum Totalizer (BC-L01): yellow-framed bag counter with count, totaliser and set displays and keypad"
    }
   ],
   "realPhotos": [
@@ -2111,7 +2071,7 @@
   "slug": "bc-l02",
   "model": "BC-L02",
   "primary": {
-   "file": "processed/products/bc-l02/render-1-9ba803d6.webp",
+   "file": "processed/products/bc-l02/render-1-0861f3ed.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
@@ -2122,7 +2082,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l02/render-2-7ecb3380.webp",
+    "file": "processed/products/bc-l02/render-2-e26901a7.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
@@ -2132,7 +2092,7 @@
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
    },
    {
-    "file": "processed/products/bc-l02/photo-1-d34befa5.webp",
+    "file": "processed/products/bc-l02/photo-1-fbe0b297.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2142,7 +2102,7 @@
     "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
    },
    {
-    "file": "processed/products/bc-l02/photo-2-abf32c9d.webp",
+    "file": "processed/products/bc-l02/photo-2-e267ff4a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2152,7 +2112,7 @@
     "original": "07-imagery/photos/bcp-03/02-front.webp"
    },
    {
-    "file": "processed/products/bc-l02/photo-3-f76e526e.webp",
+    "file": "processed/products/bc-l02/photo-3-28687db2.webp",
     "source": "photo",
     "placeholder": false,
     "w": 794,
@@ -2162,15 +2122,7 @@
     "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
    },
    {
-    "file": "processed/products/bc-l02/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 1099,
-    "alt": "SMART Bag Counter cum Totalizer (BC-L02): yellow-framed bag counter with 5-digit count, totaliser display and keypad"
-   },
-   {
-    "file": "processed/products/bc-l02/gallery-1.jpg",
+    "file": "processed/products/bc-l02/gallery-1-b132daa3.jpg",
     "source": "photo",
     "w": 431,
     "h": 210,
@@ -2194,7 +2146,7 @@
   "slug": "bc-l03",
   "model": "BC-L03",
   "primary": {
-   "file": "processed/products/bc-l03/render-1-9ba803d6.webp",
+   "file": "processed/products/bc-l03/render-1-0861f3ed.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
@@ -2205,7 +2157,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l03/render-2-7ecb3380.webp",
+    "file": "processed/products/bc-l03/render-2-e26901a7.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
@@ -2215,7 +2167,7 @@
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
    },
    {
-    "file": "processed/products/bc-l03/photo-1-d34befa5.webp",
+    "file": "processed/products/bc-l03/photo-1-fbe0b297.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2225,7 +2177,7 @@
     "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
    },
    {
-    "file": "processed/products/bc-l03/photo-2-abf32c9d.webp",
+    "file": "processed/products/bc-l03/photo-2-e267ff4a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2235,7 +2187,7 @@
     "original": "07-imagery/photos/bcp-03/02-front.webp"
    },
    {
-    "file": "processed/products/bc-l03/photo-3-f76e526e.webp",
+    "file": "processed/products/bc-l03/photo-3-28687db2.webp",
     "source": "photo",
     "placeholder": false,
     "w": 794,
@@ -2245,15 +2197,7 @@
     "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
    },
    {
-    "file": "processed/products/bc-l03/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 1102,
-    "alt": "SMART Weigh Log Bag Counter cum Totalizer, Ultrasonic Sensor (BC-L03): white-framed bag counter with count, totaliser and set displays and keypad"
-   },
-   {
-    "file": "processed/products/bc-l03/gallery-1.jpg",
+    "file": "processed/products/bc-l03/gallery-1-47aff28b.jpg",
     "source": "photo",
     "w": 434,
     "h": 206,
@@ -2273,7 +2217,7 @@
   "slug": "bc-l-03",
   "model": "BC-L-03",
   "primary": {
-   "file": "processed/products/bc-l-03/render-1-9ba803d6.webp",
+   "file": "processed/products/bc-l-03/render-1-0861f3ed.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
@@ -2284,7 +2228,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l-03/render-2-7ecb3380.webp",
+    "file": "processed/products/bc-l-03/render-2-e26901a7.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
@@ -2294,7 +2238,7 @@
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
    },
    {
-    "file": "processed/products/bc-l-03/photo-1-d34befa5.webp",
+    "file": "processed/products/bc-l-03/photo-1-fbe0b297.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2304,7 +2248,7 @@
     "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
    },
    {
-    "file": "processed/products/bc-l-03/photo-2-abf32c9d.webp",
+    "file": "processed/products/bc-l-03/photo-2-e267ff4a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2314,7 +2258,7 @@
     "original": "07-imagery/photos/bcp-03/02-front.webp"
    },
    {
-    "file": "processed/products/bc-l-03/photo-3-f76e526e.webp",
+    "file": "processed/products/bc-l-03/photo-3-28687db2.webp",
     "source": "photo",
     "placeholder": false,
     "w": 794,
@@ -2322,14 +2266,6 @@
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
     "note": "Representative unit: BCP-03",
     "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
-   },
-   {
-    "file": "processed/products/bc-l-03/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 829,
-    "alt": "SMART Bag Counter with 3-Line LED Display (BC-L-03): white-framed bag counter with three-line LED display"
    }
   ],
   "realPhotos": [
@@ -2344,7 +2280,7 @@
   "slug": "bc-l03-m",
   "model": "BC-L03-M",
   "primary": {
-   "file": "processed/products/bc-l03-m/render-1-9ba803d6.webp",
+   "file": "processed/products/bc-l03-m/render-1-0861f3ed.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
@@ -2355,7 +2291,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l03-m/render-2-7ecb3380.webp",
+    "file": "processed/products/bc-l03-m/render-2-e26901a7.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
@@ -2365,7 +2301,7 @@
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
    },
    {
-    "file": "processed/products/bc-l03-m/photo-1-d34befa5.webp",
+    "file": "processed/products/bc-l03-m/photo-1-fbe0b297.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2375,7 +2311,7 @@
     "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
    },
    {
-    "file": "processed/products/bc-l03-m/photo-2-abf32c9d.webp",
+    "file": "processed/products/bc-l03-m/photo-2-e267ff4a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2385,7 +2321,7 @@
     "original": "07-imagery/photos/bcp-03/02-front.webp"
    },
    {
-    "file": "processed/products/bc-l03-m/photo-3-f76e526e.webp",
+    "file": "processed/products/bc-l03-m/photo-3-28687db2.webp",
     "source": "photo",
     "placeholder": false,
     "w": 794,
@@ -2395,15 +2331,7 @@
     "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
    },
    {
-    "file": "processed/products/bc-l03-m/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 973,
-    "alt": "SMART Bag Counter with 2-Line LED Display & RTC (BC L03-M) (BC-L03-M): yellow-framed bag counter with two-line LED display and keypad"
-   },
-   {
-    "file": "processed/products/bc-l03-m/gallery-1.jpg",
+    "file": "processed/products/bc-l03-m/gallery-1-761fdf23.jpg",
     "source": "photo",
     "w": 420,
     "h": 180,
@@ -2423,7 +2351,7 @@
   "slug": "bc-l-ss",
   "model": "BC-L-SS",
   "primary": {
-   "file": "processed/products/bc-l-ss/render-1-9ba803d6.webp",
+   "file": "processed/products/bc-l-ss/render-1-0861f3ed.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
@@ -2434,7 +2362,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l-ss/render-2-7ecb3380.webp",
+    "file": "processed/products/bc-l-ss/render-2-e26901a7.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
@@ -2444,7 +2372,7 @@
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
    },
    {
-    "file": "processed/products/bc-l-ss/photo-1-d34befa5.webp",
+    "file": "processed/products/bc-l-ss/photo-1-fbe0b297.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2454,7 +2382,7 @@
     "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
    },
    {
-    "file": "processed/products/bc-l-ss/photo-2-abf32c9d.webp",
+    "file": "processed/products/bc-l-ss/photo-2-e267ff4a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2464,7 +2392,7 @@
     "original": "07-imagery/photos/bcp-03/02-front.webp"
    },
    {
-    "file": "processed/products/bc-l-ss/photo-3-f76e526e.webp",
+    "file": "processed/products/bc-l-ss/photo-3-28687db2.webp",
     "source": "photo",
     "placeholder": false,
     "w": 794,
@@ -2474,15 +2402,7 @@
     "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
    },
    {
-    "file": "processed/products/bc-l-ss/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 718,
-    "alt": "SMART Bag Counter, 304 Stainless Steel (BC-L-SS): stainless steel bag counter with 6-digit display"
-   },
-   {
-    "file": "processed/products/bc-l-ss/gallery-1.jpg",
+    "file": "processed/products/bc-l-ss/gallery-1-39052364.jpg",
     "source": "photo",
     "w": 500,
     "h": 177,
@@ -2502,7 +2422,7 @@
   "slug": "bc-l-nw-6",
   "model": "BC-L-NW-6",
   "primary": {
-   "file": "processed/products/bc-l-nw-6/render-1-9ba803d6.webp",
+   "file": "processed/products/bc-l-nw-6/render-1-0861f3ed.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
@@ -2513,7 +2433,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l-nw-6/render-2-7ecb3380.webp",
+    "file": "processed/products/bc-l-nw-6/render-2-e26901a7.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
@@ -2523,7 +2443,7 @@
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
    },
    {
-    "file": "processed/products/bc-l-nw-6/photo-1-d34befa5.webp",
+    "file": "processed/products/bc-l-nw-6/photo-1-fbe0b297.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2533,7 +2453,7 @@
     "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
    },
    {
-    "file": "processed/products/bc-l-nw-6/photo-2-abf32c9d.webp",
+    "file": "processed/products/bc-l-nw-6/photo-2-e267ff4a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2543,7 +2463,7 @@
     "original": "07-imagery/photos/bcp-03/02-front.webp"
    },
    {
-    "file": "processed/products/bc-l-nw-6/photo-3-f76e526e.webp",
+    "file": "processed/products/bc-l-nw-6/photo-3-28687db2.webp",
     "source": "photo",
     "placeholder": false,
     "w": 794,
@@ -2553,15 +2473,7 @@
     "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
    },
    {
-    "file": "processed/products/bc-l-nw-6/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 725,
-    "alt": "SMART Network Bag Counter, 6-Digit Mild Steel (BC-L-NW-6): grey powder-coated network bag counter with 6-digit display"
-   },
-   {
-    "file": "processed/products/bc-l-nw-6/gallery-1.jpg",
+    "file": "processed/products/bc-l-nw-6/gallery-1-b9c79443.jpg",
     "source": "photo",
     "w": 425,
     "h": 150,
@@ -2581,7 +2493,7 @@
   "slug": "bc-l-nw",
   "model": "BC-L-NW",
   "primary": {
-   "file": "processed/products/bc-l-nw/render-1-9ba803d6.webp",
+   "file": "processed/products/bc-l-nw/render-1-0861f3ed.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
@@ -2592,7 +2504,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/bc-l-nw/render-2-7ecb3380.webp",
+    "file": "processed/products/bc-l-nw/render-2-e26901a7.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
@@ -2602,7 +2514,7 @@
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
    },
    {
-    "file": "processed/products/bc-l-nw/photo-1-d34befa5.webp",
+    "file": "processed/products/bc-l-nw/photo-1-fbe0b297.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2612,7 +2524,7 @@
     "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
    },
    {
-    "file": "processed/products/bc-l-nw/photo-2-abf32c9d.webp",
+    "file": "processed/products/bc-l-nw/photo-2-e267ff4a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2622,7 +2534,7 @@
     "original": "07-imagery/photos/bcp-03/02-front.webp"
    },
    {
-    "file": "processed/products/bc-l-nw/photo-3-f76e526e.webp",
+    "file": "processed/products/bc-l-nw/photo-3-28687db2.webp",
     "source": "photo",
     "placeholder": false,
     "w": 794,
@@ -2632,15 +2544,7 @@
     "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
    },
    {
-    "file": "processed/products/bc-l-nw/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 1234,
-    "alt": "SMART Network Bag Counter (BC-L-NW): yellow-framed network bag counter with 4-digit count and set displays"
-   },
-   {
-    "file": "processed/products/bc-l-nw/gallery-1.jpg",
+    "file": "processed/products/bc-l-nw/gallery-1-8c8b634b.jpg",
     "source": "photo",
     "w": 500,
     "h": 232,
@@ -2662,7 +2566,7 @@
   "slug": "bc-do",
   "model": "BC-DO",
   "primary": {
-   "file": "processed/products/bc-do/render-1-9ba803d6.webp",
+   "file": "processed/products/bc-do/render-1-0861f3ed.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
@@ -2673,7 +2577,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/bc-do/render-2-7ecb3380.webp",
+    "file": "processed/products/bc-do/render-2-e26901a7.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
@@ -2683,7 +2587,7 @@
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
    },
    {
-    "file": "processed/products/bc-do/photo-1-d34befa5.webp",
+    "file": "processed/products/bc-do/photo-1-fbe0b297.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2693,7 +2597,7 @@
     "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
    },
    {
-    "file": "processed/products/bc-do/photo-2-abf32c9d.webp",
+    "file": "processed/products/bc-do/photo-2-e267ff4a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2703,7 +2607,7 @@
     "original": "07-imagery/photos/bcp-03/02-front.webp"
    },
    {
-    "file": "processed/products/bc-do/photo-3-f76e526e.webp",
+    "file": "processed/products/bc-do/photo-3-28687db2.webp",
     "source": "photo",
     "placeholder": false,
     "w": 794,
@@ -2711,14 +2615,6 @@
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
     "note": "Representative unit: BCP-03",
     "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
-   },
-   {
-    "file": "processed/products/bc-do/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 957,
-    "alt": "SMART Diffused Optic Sensor Bag Counter cum Totalizer (BC-DO): yellow-framed bag counter with displays, keypad and diffused optic sensor head"
    }
   ],
   "realPhotos": [
@@ -2733,7 +2629,7 @@
   "slug": "bc-do-nw",
   "model": "BC-DO-NW",
   "primary": {
-   "file": "processed/products/bc-do-nw/render-1-9ba803d6.webp",
+   "file": "processed/products/bc-do-nw/render-1-0861f3ed.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
@@ -2744,7 +2640,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/bc-do-nw/render-2-7ecb3380.webp",
+    "file": "processed/products/bc-do-nw/render-2-e26901a7.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
@@ -2754,7 +2650,7 @@
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
    },
    {
-    "file": "processed/products/bc-do-nw/photo-1-d34befa5.webp",
+    "file": "processed/products/bc-do-nw/photo-1-fbe0b297.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2764,7 +2660,7 @@
     "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
    },
    {
-    "file": "processed/products/bc-do-nw/photo-2-abf32c9d.webp",
+    "file": "processed/products/bc-do-nw/photo-2-e267ff4a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2774,7 +2670,7 @@
     "original": "07-imagery/photos/bcp-03/02-front.webp"
    },
    {
-    "file": "processed/products/bc-do-nw/photo-3-f76e526e.webp",
+    "file": "processed/products/bc-do-nw/photo-3-28687db2.webp",
     "source": "photo",
     "placeholder": false,
     "w": 794,
@@ -2782,14 +2678,6 @@
     "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
     "note": "Representative unit: BCP-03",
     "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
-   },
-   {
-    "file": "processed/products/bc-do-nw/primary.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 1033,
-    "alt": "SMART Diffused Optic Sensor Network Bag Counter (BC-DO-NW): yellow-framed network bag counter with diffused optic sensor head"
    }
   ],
   "realPhotos": [
@@ -2804,7 +2692,7 @@
   "slug": "bc-0",
   "model": "BC-0",
   "primary": {
-   "file": "processed/products/bc-0/render-1-9ba803d6.webp",
+   "file": "processed/products/bc-0/render-1-0861f3ed.webp",
    "source": "render",
    "placeholder": false,
    "w": 1600,
@@ -2815,7 +2703,7 @@
   },
   "gallery": [
    {
-    "file": "processed/products/bc-0/render-2-7ecb3380.webp",
+    "file": "processed/products/bc-0/render-2-e26901a7.webp",
     "source": "render",
     "placeholder": false,
     "w": 1600,
@@ -2825,7 +2713,7 @@
     "original": "07-imagery/render/out-bcp-pt/bcp-03-low.png"
    },
    {
-    "file": "processed/products/bc-0/photo-1-d34befa5.webp",
+    "file": "processed/products/bc-0/photo-1-fbe0b297.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2835,7 +2723,7 @@
     "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
    },
    {
-    "file": "processed/products/bc-0/photo-2-abf32c9d.webp",
+    "file": "processed/products/bc-0/photo-2-e267ff4a.webp",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2845,7 +2733,7 @@
     "original": "07-imagery/photos/bcp-03/02-front.webp"
    },
    {
-    "file": "processed/products/bc-0/photo-3-f76e526e.webp",
+    "file": "processed/products/bc-0/photo-3-28687db2.webp",
     "source": "photo",
     "placeholder": false,
     "w": 794,
@@ -2855,7 +2743,7 @@
     "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
    },
    {
-    "file": "processed/products/bc-0/primary.jpg",
+    "file": "processed/products/bc-0/primary-d7282373.jpg",
     "source": "photo",
     "placeholder": false,
     "w": 1600,
@@ -2864,20 +2752,12 @@
     "original": "00-intake/cnwcom/img/BAG COUNTER-DUAL OPTIC.JPG"
    },
    {
-    "file": "processed/products/bc-0/gallery-1.jpg",
+    "file": "processed/products/bc-0/gallery-1-a07c7655.jpg",
     "source": "photo",
     "w": 470,
     "h": 226,
     "alt": "SMART Dual Optic Bag Counter (BC-0): grey bag counter panel with 4-digit display and MENU, UP, DOWN, RESET buttons",
     "original": "00-intake/voizlink/image/bag_counter_BC0.png"
-   },
-   {
-    "file": "processed/products/bc-0/gallery-2.webp",
-    "source": "render",
-    "placeholder": true,
-    "w": 1600,
-    "h": 948,
-    "alt": "SMART Dual Optic Bag Counter (BC-0): grey bag counter panel with 4-digit display and MENU, UP, DOWN, RESET buttons"
    }
   ],
   "realPhotos": [
@@ -2896,7 +2776,7 @@
   "slug": "nsdu-44l",
   "model": "NSDU-44L",
   "primary": {
-   "file": "processed/products/nsdu-44l/primary.webp",
+   "file": "processed/products/nsdu-44l/primary-a997c843.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -2918,7 +2798,7 @@
   "slug": "nsdu-83l",
   "model": "NSDU-83L",
   "primary": {
-   "file": "processed/products/nsdu-83l/primary.webp",
+   "file": "processed/products/nsdu-83l/primary-0a5db4ac.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -2938,7 +2818,7 @@
   "slug": "el-3w",
   "model": "EL-3W",
   "primary": {
-   "file": "processed/products/el-3w/primary.webp",
+   "file": "processed/products/el-3w/primary-d3e5ec91.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -2958,7 +2838,7 @@
   "slug": "fl30",
   "model": "FL30",
   "primary": {
-   "file": "processed/products/fl30/primary.webp",
+   "file": "processed/products/fl30/primary-d3d21aa5.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -2980,7 +2860,7 @@
   "slug": "fl40",
   "model": "FL40",
   "primary": {
-   "file": "processed/products/fl40/primary.webp",
+   "file": "processed/products/fl40/primary-8c77e17b.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -3000,7 +2880,7 @@
   "slug": "fl50",
   "model": "FL50",
   "primary": {
-   "file": "processed/products/fl50/primary.webp",
+   "file": "processed/products/fl50/primary-1f88fa81.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -3026,7 +2906,7 @@
   "slug": "fl100",
   "model": "FL100",
   "primary": {
-   "file": "processed/products/fl100/primary.webp",
+   "file": "processed/products/fl100/primary-711ee4e8.webp",
    "source": "render",
    "placeholder": true,
    "w": 1600,
@@ -3052,7 +2932,7 @@
   "slug": "wmhs-ert-a",
   "model": "WMHS-ERT-A",
   "primary": {
-   "file": "processed/products/wmhs-ert-a/primary.webp",
+   "file": "processed/products/wmhs-ert-a/primary-83f1f846.webp",
    "source": "render",
    "placeholder": true,
    "w": 1266,
@@ -3072,7 +2952,7 @@
   "slug": "wmhs-ert-i",
   "model": "WMHS-ERT-I",
   "primary": {
-   "file": "processed/products/wmhs-ert-i/primary.webp",
+   "file": "processed/products/wmhs-ert-i/primary-1337fb21.webp",
    "source": "render",
    "placeholder": true,
    "w": 1277,

@@ -1,15 +1,18 @@
 .g{display:grid;gap:12px}
-.main{position:relative;display:grid;place-items:center;aspect-ratio:4/5;max-height:78vh;width:100%;background:var(--surface);border:0;border-radius:var(--radius-md);padding:7%;cursor:zoom-in;overflow:hidden}
+.main{position:relative;-webkit-user-select:none;user-select:none;display:block;width:100%;background:#fff;border:0;border-radius:var(--radius-md);box-shadow:var(--shadow-inset-line);padding:0;cursor:zoom-in;overflow:hidden;
+  /* the whole image and the thumbnail row fit the first screen: viewport minus header, breadcrumb, thumbnails and gaps */
+  height:clamp(300px,calc(100svh - var(--header-h) - 210px),820px)}
 /* no fade on the first image (it is the page's Largest Contentful Paint); fade only when switching images */
-.img{width:100%;height:100%;object-fit:contain;transition:transform var(--dur-reveal) var(--ease-out)}
+.img{position:absolute;inset:5%;width:90%;height:90%;object-fit:contain;transition:transform var(--dur-reveal) var(--ease-out)}
+@media (max-width:1023px){.main{height:clamp(260px,min(calc(100vw - 32px),calc(100svh - var(--header-h) - 200px)),640px)}}
 .switched .img{animation:fade var(--dur-ui) var(--ease-out)}
 .main:hover .img{transform:scale(1.03)}
 @keyframes fade{from{opacity:0;transform:scale(.985)}}
 .zoomHint{position:absolute;right:12px;top:12px;width:34px;height:34px;display:grid;place-items:center;background:var(--ground);border-radius:var(--radius-sm);font-size:18px;opacity:0;transition:opacity var(--dur-ui)}
 .main:hover .zoomHint,.main:focus-visible .zoomHint{opacity:1}
 .thumbs{list-style:none;padding:0;display:flex;gap:8px;overflow-x:auto}
-.thumb{position:relative;width:88px;height:88px;border:2px solid transparent;border-radius:var(--radius-sm);background:var(--surface);padding:8px;cursor:pointer;transition:border-color var(--dur-micro),transform var(--dur-micro)}
-.thumb:hover{border-color:var(--line)}
+.thumb{position:relative;flex:none;width:88px;height:88px;border:2px solid var(--line);border-radius:var(--radius-sm);background:#fff;padding:8px;cursor:pointer;transition:border-color var(--dur-micro),transform var(--dur-micro)}
+.thumb:hover{border-color:var(--muted)}
 .thumb[aria-current="true"]{border-color:var(--ink)}
 .thumb:active{transform:scale(.95)}
 .timg{width:100%;height:100%;object-fit:contain}
@@ -22,4 +25,7 @@
 .lbnav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:64px;border:2px solid var(--yellow);background:rgba(17,17,16,.6);color:var(--yellow);font-size:34px;line-height:1;border-radius:var(--radius-sm);cursor:pointer}
 .lbnav:hover{background:var(--yellow);color:var(--ink)}
 .prev{left:12px}.next{right:12px}
+/* touch screens swipe between images; the arrow buttons stay for mouse and keyboard */
+@media (pointer:coarse){.lbnav{display:none}}
+.main,.lb{touch-action:pan-y}
 .lbcount{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);margin:0;font-family:var(--font-mono);font-size:.8125rem;color:var(--yellow)}

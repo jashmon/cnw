@@ -1,5 +1,5 @@
 .line{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
-.thumb{width:72px;height:72px;background:var(--surface);border-radius:var(--radius-sm);display:grid;place-items:center}
+.thumb{width:72px;height:72px;background:#fff;box-shadow:var(--shadow-inset-line);border-radius:var(--radius-sm);display:grid;place-items:center}
 .info{display:grid;gap:6px;min-width:0}
 .info :global(.code){white-space:normal}
 .qty{display:grid;gap:6px;justify-items:end}
