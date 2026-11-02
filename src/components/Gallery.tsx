@@ -27,9 +27,9 @@ export function Gallery({ images, model }: { images: Img[]; model: string }) {
   const img = images[i];
   return (
     <div className={`${s.g} ${switched ? s.switched : ""}`}>
-      <button className={s.main} onClick={() => setZoom(true)} aria-label={`Enlarge image${img.placeholder ? " (3D render · placeholder)" : ""}: ${img.alt}`}>
+      <button className={s.main} onClick={() => setZoom(true)} aria-label={`Enlarge image${img.placeholder ? " (3D render · placeholder)" : img.note ? ` (${img.note})` : ""}: ${img.alt}`}>
         <Image key={img.src} src={img.src} alt={img.alt} width={img.w} height={img.h} sizes="(max-width: 1023px) 92vw, 56vw" priority quality={75} className={s.img} />
-        {img.placeholder && <span className="flag">3D render · placeholder</span>}
+        {img.placeholder ? <span className="flag">3D render · placeholder</span> : img.note ? <span className="flag">{img.note}</span> : null}
         <span className={s.zoomHint} aria-hidden="true">⤢</span>
       </button>
       {images.length > 1 && (

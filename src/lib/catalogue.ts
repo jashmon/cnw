@@ -12,7 +12,8 @@ function read<T>(file: string, fallback: T): T {
   try { return JSON.parse(fs.readFileSync(path.join(DATA, file), "utf8")) as T; } catch { return fallback; }
 }
 
-export type Img = { src: string; w: number; h: number; alt: string; source: "photo" | "render"; placeholder: boolean };
+/** note: visible caption on the image, e.g. "Representative unit: BCP-03" when a shared photo shows another model */
+export type Img = { src: string; w: number; h: number; alt: string; source: "photo" | "render"; placeholder: boolean; note?: string };
 export type SpecGroups = Record<string, Record<string, string>>;
 export type Product = {
   slug: string; model: string; name: string; family: string; familySlug: string; category: string; categorySlug: string;
@@ -50,7 +51,7 @@ export const slugify = (s: string) => s.toLowerCase().replace(/&/g, "and").repla
 
 type CatRaw = { slug: string; model: string; name: string; category: string; summary: string; features?: string[]; specs?: Record<string, unknown>; applications?: string[]; variants?: string[]; pdf?: string; notes?: string };
 type VoiceRaw = Partial<Product> & { slug: string };
-type ManRaw = { slug: string; primary?: { file: string; source: string; placeholder?: boolean; w: number; h: number; alt: string }; gallery?: { file: string; source: string; w: number; h: number; alt: string; placeholder?: boolean }[] };
+type ManRaw = { slug: string; primary?: { file: string; source: string; placeholder?: boolean; w: number; h: number; alt: string; note?: string }; gallery?: { file: string; source: string; w: number; h: number; alt: string; placeholder?: boolean; note?: string }[] };
 
 // Datasheets withheld until the client confirms which version is current (catalogue-notes: FLP datasheets describe two different products).
 const WITHHOLD_DATASHEET = new Set(["flp"]);
@@ -82,8 +83,8 @@ function build() {
     const category = v.category ?? c.category;
     const fam = famOf(category);
     const images: Img[] = [];
-    if (m?.primary) images.push({ src: toMediaSrc(m.primary.file), w: m.primary.w, h: m.primary.h, alt: m.primary.alt, source: m.primary.source === "photo" ? "photo" : "render", placeholder: m.primary.placeholder ?? m.primary.source !== "photo" });
-    for (const gi of m?.gallery ?? []) images.push({ src: toMediaSrc(gi.file), w: gi.w, h: gi.h, alt: gi.alt, source: gi.source === "photo" ? "photo" : "render", placeholder: gi.placeholder ?? gi.source !== "photo" });
+    if (m?.primary) images.push({ src: toMediaSrc(m.primary.file), w: m.primary.w, h: m.primary.h, alt: m.primary.alt, source: m.primary.source === "photo" ? "photo" : "render", placeholder: m.primary.placeholder ?? m.primary.source !== "photo", ...(m.primary.note ? { note: m.primary.note } : {}) });
+    for (const gi of m?.gallery ?? []) images.push({ src: toMediaSrc(gi.file), w: gi.w, h: gi.h, alt: gi.alt, source: gi.source === "photo" ? "photo" : "render", placeholder: gi.placeholder ?? gi.source !== "photo", ...(gi.note ? { note: gi.note } : {}) });
     const name = v.name ?? c.name.replace(/^SMART\s+/i, "");
     return {
       slug: c.slug,

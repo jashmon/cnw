@@ -1672,14 +1672,45 @@
   "slug": "bc-l01",
   "model": "BC-L01",
   "primary": {
-   "file": "processed/products/bc-l01/primary.webp",
-   "source": "render",
-   "placeholder": true,
+   "file": "processed/products/bc-l01/photo-1-d34befa5.webp",
+   "source": "photo",
+   "placeholder": false,
    "w": 1600,
-   "h": 1097,
-   "alt": "SMART Weigh Log Bag Counter cum Totalizer (BC-L01): yellow-framed bag counter with count, totaliser and set displays and keypad"
+   "h": 678,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+   "note": "Representative unit: BCP-03",
+   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
   },
-  "gallery": [],
+  "gallery": [
+   {
+    "file": "processed/products/bc-l01/photo-2-abf32c9d.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 769,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front view of the LED display panel and keypad",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/02-front.webp"
+   },
+   {
+    "file": "processed/products/bc-l01/photo-3-f76e526e.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 794,
+    "h": 1600,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
+   },
+   {
+    "file": "processed/products/bc-l01/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 1097,
+    "alt": "SMART Weigh Log Bag Counter cum Totalizer (BC-L01): yellow-framed bag counter with count, totaliser and set displays and keypad"
+   }
+  ],
   "realPhotos": [
    "00-intake/voizlink/image/bagcounter_bc L01.png",
    "00-intake/voizlink/img/products/WEIGH_LOG_BAG_COUNTER_CUM_TOTALIZER_UNIT.jpg",
@@ -1692,20 +1723,50 @@
    "00-intake/voizlink/image/Bag-counter-L01.jpg": "unusable 300x167",
    "00-intake/voizlink/image/counter.jpg": "unusable 300x214"
   },
-  "notes": "voizlink/image/Bag-counter-L01.jpg 300x167: unusable (video thumbnail with player chrome) voizlink/image/counter.jpg 300x214: unusable (video thumbnail with player chrome)"
+  "notes": "Main photos: real BCP-03 unit (photo set photos/bcp-03). voizlink/image/Bag-counter-L01.jpg 300x167: unusable (video thumbnail with player chrome) voizlink/image/counter.jpg 300x214: unusable (video thumbnail with player chrome)"
  },
  {
   "slug": "bc-l02",
   "model": "BC-L02",
   "primary": {
-   "file": "processed/products/bc-l02/primary.webp",
-   "source": "render",
-   "placeholder": true,
+   "file": "processed/products/bc-l02/photo-1-d34befa5.webp",
+   "source": "photo",
+   "placeholder": false,
    "w": 1600,
-   "h": 1099,
-   "alt": "SMART Bag Counter cum Totalizer (BC-L02): yellow-framed bag counter with 5-digit count, totaliser display and keypad"
+   "h": 678,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+   "note": "Representative unit: BCP-03",
+   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l02/photo-2-abf32c9d.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 769,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front view of the LED display panel and keypad",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/02-front.webp"
+   },
+   {
+    "file": "processed/products/bc-l02/photo-3-f76e526e.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 794,
+    "h": 1600,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
+   },
+   {
+    "file": "processed/products/bc-l02/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 1099,
+    "alt": "SMART Bag Counter cum Totalizer (BC-L02): yellow-framed bag counter with 5-digit count, totaliser display and keypad"
+   },
    {
     "file": "processed/products/bc-l02/gallery-1.jpg",
     "source": "photo",
@@ -1725,20 +1786,50 @@
    "00-intake/voizlink/bagcounter_BC L02(2).jpg": "card 403x206",
    "00-intake/cnwcom/image/indexbag.jpg": "thumb 200x102"
   },
-  "notes": ""
+  "notes": "Main photos: real BCP-03 unit (photo set photos/bcp-03)."
  },
  {
   "slug": "bc-l03",
   "model": "BC-L03",
   "primary": {
-   "file": "processed/products/bc-l03/primary.webp",
-   "source": "render",
-   "placeholder": true,
+   "file": "processed/products/bc-l03/photo-1-d34befa5.webp",
+   "source": "photo",
+   "placeholder": false,
    "w": 1600,
-   "h": 1102,
-   "alt": "SMART Weigh Log Bag Counter cum Totalizer, Ultrasonic Sensor (BC-L03): white-framed bag counter with count, totaliser and set displays and keypad"
+   "h": 678,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+   "note": "Representative unit: BCP-03",
+   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l03/photo-2-abf32c9d.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 769,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front view of the LED display panel and keypad",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/02-front.webp"
+   },
+   {
+    "file": "processed/products/bc-l03/photo-3-f76e526e.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 794,
+    "h": 1600,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
+   },
+   {
+    "file": "processed/products/bc-l03/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 1102,
+    "alt": "SMART Weigh Log Bag Counter cum Totalizer, Ultrasonic Sensor (BC-L03): white-framed bag counter with count, totaliser and set displays and keypad"
+   },
    {
     "file": "processed/products/bc-l03/gallery-1.jpg",
     "source": "photo",
@@ -1754,40 +1845,101 @@
   "realPhotoGrades": {
    "00-intake/voizlink/image/bagcounter_BC L03.png": "card 434x206"
   },
-  "notes": ""
+  "notes": "Main photos: real BCP-03 unit (photo set photos/bcp-03)."
  },
  {
   "slug": "bc-l-03",
   "model": "BC-L-03",
   "primary": {
-   "file": "processed/products/bc-l-03/primary.webp",
-   "source": "render",
-   "placeholder": true,
+   "file": "processed/products/bc-l-03/photo-1-d34befa5.webp",
+   "source": "photo",
+   "placeholder": false,
    "w": 1600,
-   "h": 829,
-   "alt": "SMART Bag Counter with 3-Line LED Display (BC-L-03): white-framed bag counter with three-line LED display"
+   "h": 678,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+   "note": "Representative unit: BCP-03",
+   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
   },
-  "gallery": [],
+  "gallery": [
+   {
+    "file": "processed/products/bc-l-03/photo-2-abf32c9d.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 769,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front view of the LED display panel and keypad",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/02-front.webp"
+   },
+   {
+    "file": "processed/products/bc-l-03/photo-3-f76e526e.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 794,
+    "h": 1600,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
+   },
+   {
+    "file": "processed/products/bc-l-03/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 829,
+    "alt": "SMART Bag Counter with 3-Line LED Display (BC-L-03): white-framed bag counter with three-line LED display"
+   }
+  ],
   "realPhotos": [
    "00-intake/voizlink/image/bagcounter-bc-L-03.jpg"
   ],
   "realPhotoGrades": {
    "00-intake/voizlink/image/bagcounter-bc-L-03.jpg": "thumb 280x113"
   },
-  "notes": ""
+  "notes": "Main photos: real BCP-03 unit (photo set photos/bcp-03)."
  },
  {
   "slug": "bc-l03-m",
   "model": "BC-L03-M",
   "primary": {
-   "file": "processed/products/bc-l03-m/primary.webp",
-   "source": "render",
-   "placeholder": true,
+   "file": "processed/products/bc-l03-m/photo-1-d34befa5.webp",
+   "source": "photo",
+   "placeholder": false,
    "w": 1600,
-   "h": 973,
-   "alt": "SMART Bag Counter with 2-Line LED Display & RTC (BC L03-M) (BC-L03-M): yellow-framed bag counter with two-line LED display and keypad"
+   "h": 678,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+   "note": "Representative unit: BCP-03",
+   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l03-m/photo-2-abf32c9d.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 769,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front view of the LED display panel and keypad",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/02-front.webp"
+   },
+   {
+    "file": "processed/products/bc-l03-m/photo-3-f76e526e.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 794,
+    "h": 1600,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
+   },
+   {
+    "file": "processed/products/bc-l03-m/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 973,
+    "alt": "SMART Bag Counter with 2-Line LED Display & RTC (BC L03-M) (BC-L03-M): yellow-framed bag counter with two-line LED display and keypad"
+   },
    {
     "file": "processed/products/bc-l03-m/gallery-1.jpg",
     "source": "photo",
@@ -1803,20 +1955,50 @@
   "realPhotoGrades": {
    "00-intake/voizlink/image/BAGCOUNTER _BC-L03-M.jpg": "card 420x180"
   },
-  "notes": ""
+  "notes": "Main photos: real BCP-03 unit (photo set photos/bcp-03)."
  },
  {
   "slug": "bc-l-ss",
   "model": "BC-L-SS",
   "primary": {
-   "file": "processed/products/bc-l-ss/primary.webp",
-   "source": "render",
-   "placeholder": true,
+   "file": "processed/products/bc-l-ss/photo-1-d34befa5.webp",
+   "source": "photo",
+   "placeholder": false,
    "w": 1600,
-   "h": 718,
-   "alt": "SMART Bag Counter, 304 Stainless Steel (BC-L-SS): stainless steel bag counter with 6-digit display"
+   "h": 678,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+   "note": "Representative unit: BCP-03",
+   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l-ss/photo-2-abf32c9d.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 769,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front view of the LED display panel and keypad",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/02-front.webp"
+   },
+   {
+    "file": "processed/products/bc-l-ss/photo-3-f76e526e.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 794,
+    "h": 1600,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
+   },
+   {
+    "file": "processed/products/bc-l-ss/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 718,
+    "alt": "SMART Bag Counter, 304 Stainless Steel (BC-L-SS): stainless steel bag counter with 6-digit display"
+   },
    {
     "file": "processed/products/bc-l-ss/gallery-1.jpg",
     "source": "photo",
@@ -1832,20 +2014,50 @@
   "realPhotoGrades": {
    "00-intake/voizlink/image/bag_counter_ss.jpg": "card 500x177"
   },
-  "notes": ""
+  "notes": "Main photos: real BCP-03 unit (photo set photos/bcp-03)."
  },
  {
   "slug": "bc-l-nw-6",
   "model": "BC-L-NW-6",
   "primary": {
-   "file": "processed/products/bc-l-nw-6/primary.webp",
-   "source": "render",
-   "placeholder": true,
+   "file": "processed/products/bc-l-nw-6/photo-1-d34befa5.webp",
+   "source": "photo",
+   "placeholder": false,
    "w": 1600,
-   "h": 725,
-   "alt": "SMART Network Bag Counter, 6-Digit Mild Steel (BC-L-NW-6): grey powder-coated network bag counter with 6-digit display"
+   "h": 678,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+   "note": "Representative unit: BCP-03",
+   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l-nw-6/photo-2-abf32c9d.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 769,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front view of the LED display panel and keypad",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/02-front.webp"
+   },
+   {
+    "file": "processed/products/bc-l-nw-6/photo-3-f76e526e.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 794,
+    "h": 1600,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
+   },
+   {
+    "file": "processed/products/bc-l-nw-6/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 725,
+    "alt": "SMART Network Bag Counter, 6-Digit Mild Steel (BC-L-NW-6): grey powder-coated network bag counter with 6-digit display"
+   },
    {
     "file": "processed/products/bc-l-nw-6/gallery-1.jpg",
     "source": "photo",
@@ -1861,20 +2073,50 @@
   "realPhotoGrades": {
    "00-intake/voizlink/image/bag_counter_ss.png": "card 425x150"
   },
-  "notes": ""
+  "notes": "Main photos: real BCP-03 unit (photo set photos/bcp-03)."
  },
  {
   "slug": "bc-l-nw",
   "model": "BC-L-NW",
   "primary": {
-   "file": "processed/products/bc-l-nw/primary.webp",
-   "source": "render",
-   "placeholder": true,
+   "file": "processed/products/bc-l-nw/photo-1-d34befa5.webp",
+   "source": "photo",
+   "placeholder": false,
    "w": 1600,
-   "h": 1234,
-   "alt": "SMART Network Bag Counter (BC-L-NW): yellow-framed network bag counter with 4-digit count and set displays"
+   "h": 678,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+   "note": "Representative unit: BCP-03",
+   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-l-nw/photo-2-abf32c9d.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 769,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front view of the LED display panel and keypad",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/02-front.webp"
+   },
+   {
+    "file": "processed/products/bc-l-nw/photo-3-f76e526e.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 794,
+    "h": 1600,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
+   },
+   {
+    "file": "processed/products/bc-l-nw/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 1234,
+    "alt": "SMART Network Bag Counter (BC-L-NW): yellow-framed network bag counter with 4-digit count and set displays"
+   },
    {
     "file": "processed/products/bc-l-nw/gallery-1.jpg",
     "source": "photo",
@@ -1892,61 +2134,153 @@
    "00-intake/voizlink/image/network-bag.jpg": "card 500x232",
    "00-intake/voizlink/image/DO Bagcounter.png": "thumb 300x160"
   },
-  "notes": ""
+  "notes": "Main photos: real BCP-03 unit (photo set photos/bcp-03)."
  },
  {
   "slug": "bc-do",
   "model": "BC-DO",
   "primary": {
-   "file": "processed/products/bc-do/primary.webp",
-   "source": "render",
-   "placeholder": true,
+   "file": "processed/products/bc-do/photo-1-d34befa5.webp",
+   "source": "photo",
+   "placeholder": false,
    "w": 1600,
-   "h": 957,
-   "alt": "SMART Diffused Optic Sensor Bag Counter cum Totalizer (BC-DO): yellow-framed bag counter with displays, keypad and diffused optic sensor head"
+   "h": 678,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+   "note": "Representative unit: BCP-03",
+   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
   },
-  "gallery": [],
+  "gallery": [
+   {
+    "file": "processed/products/bc-do/photo-2-abf32c9d.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 769,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front view of the LED display panel and keypad",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/02-front.webp"
+   },
+   {
+    "file": "processed/products/bc-do/photo-3-f76e526e.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 794,
+    "h": 1600,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
+   },
+   {
+    "file": "processed/products/bc-do/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 957,
+    "alt": "SMART Diffused Optic Sensor Bag Counter cum Totalizer (BC-DO): yellow-framed bag counter with displays, keypad and diffused optic sensor head"
+   }
+  ],
   "realPhotos": [
    "00-intake/voizlink/image/DO Counter with keypad.png"
   ],
   "realPhotoGrades": {
    "00-intake/voizlink/image/DO Counter with keypad.png": "thumb 305x150"
   },
-  "notes": ""
+  "notes": "Main photos: real BCP-03 unit (photo set photos/bcp-03)."
  },
  {
   "slug": "bc-do-nw",
   "model": "BC-DO-NW",
   "primary": {
-   "file": "processed/products/bc-do-nw/primary.webp",
-   "source": "render",
-   "placeholder": true,
+   "file": "processed/products/bc-do-nw/photo-1-d34befa5.webp",
+   "source": "photo",
+   "placeholder": false,
    "w": 1600,
-   "h": 1033,
-   "alt": "SMART Diffused Optic Sensor Network Bag Counter (BC-DO-NW): yellow-framed network bag counter with diffused optic sensor head"
+   "h": 678,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+   "note": "Representative unit: BCP-03",
+   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
   },
-  "gallery": [],
+  "gallery": [
+   {
+    "file": "processed/products/bc-do-nw/photo-2-abf32c9d.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 769,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front view of the LED display panel and keypad",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/02-front.webp"
+   },
+   {
+    "file": "processed/products/bc-do-nw/photo-3-f76e526e.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 794,
+    "h": 1600,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
+   },
+   {
+    "file": "processed/products/bc-do-nw/primary.webp",
+    "source": "render",
+    "placeholder": true,
+    "w": 1600,
+    "h": 1033,
+    "alt": "SMART Diffused Optic Sensor Network Bag Counter (BC-DO-NW): yellow-framed network bag counter with diffused optic sensor head"
+   }
+  ],
   "realPhotos": [
    "00-intake/voizlink/image/DO Bagcounter.png"
   ],
   "realPhotoGrades": {
    "00-intake/voizlink/image/DO Bagcounter.png": "thumb 300x160"
   },
-  "notes": ""
+  "notes": "Main photos: real BCP-03 unit (photo set photos/bcp-03)."
  },
  {
   "slug": "bc-0",
   "model": "BC-0",
   "primary": {
-   "file": "processed/products/bc-0/primary.jpg",
+   "file": "processed/products/bc-0/photo-1-d34befa5.webp",
    "source": "photo",
    "placeholder": false,
    "w": 1600,
-   "h": 739,
-   "alt": "SMART Dual Optic Bag Counter (BC-0): grey bag counter panel with 4-digit display and MENU, UP, DOWN, RESET buttons",
-   "original": "00-intake/cnwcom/img/BAG COUNTER-DUAL OPTIC.JPG"
+   "h": 678,
+   "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front three-quarter view with the cable glands (ACC contact, 110/220 V AC, sensing head, Ethernet)",
+   "note": "Representative unit: BCP-03",
+   "original": "07-imagery/photos/bcp-03/01-front-three-quarter.webp"
   },
   "gallery": [
+   {
+    "file": "processed/products/bc-0/photo-2-abf32c9d.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 769,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): front view of the LED display panel and keypad",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/02-front.webp"
+   },
+   {
+    "file": "processed/products/bc-0/photo-3-f76e526e.webp",
+    "source": "photo",
+    "placeholder": false,
+    "w": 794,
+    "h": 1600,
+    "alt": "SMART bag counter unit (model BCP-03, shown as a representative unit): side panel with the SMART logo and model label",
+    "note": "Representative unit: BCP-03",
+    "original": "07-imagery/photos/bcp-03/03-side-model-label.webp"
+   },
+   {
+    "file": "processed/products/bc-0/primary.jpg",
+    "source": "photo",
+    "placeholder": false,
+    "w": 1600,
+    "h": 739,
+    "alt": "SMART Dual Optic Bag Counter (BC-0): grey bag counter panel with 4-digit display and MENU, UP, DOWN, RESET buttons",
+    "original": "00-intake/cnwcom/img/BAG COUNTER-DUAL OPTIC.JPG"
+   },
    {
     "file": "processed/products/bc-0/gallery-1.jpg",
     "source": "photo",
@@ -1974,7 +2308,7 @@
    "00-intake/voizlink/image/BAG COUNTER-DUAL OPTIC MODEL-BCDU.JPG": "card 640x296",
    "00-intake/voizlink/image/bag_counter_BC0.png": "card 470x226"
   },
-  "notes": "Photo primary matches the BC-0 page image."
+  "notes": "Main photos: real BCP-03 unit (photo set photos/bcp-03). Photo primary matches the BC-0 page image."
  },
  {
   "slug": "nsdu-44l",
