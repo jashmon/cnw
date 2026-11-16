@@ -33,7 +33,7 @@ const WHY = [
 export default function Home() {
   const fams = getFamilies();
   const all = getProducts();
-  const hero = getProduct("wmhs-iii");
+  const hero = getProduct("wmhs-ip-sip-phone");
   const heroImg = hero?.images.find((i) => i.source === "render") ?? { src: "/media/hero/wmhs-iii-render.png", w: 1161, h: 1499, alt: "SMART WMHS-III industrial telephone, 3D render", source: "render" as const, placeholder: true };
   const industries = getIndustries().map((i) => ({ slug: i.slug, name: i.name, intro: clean(i.intro), models: i.recommendedProducts.slice(0, 5).map((sl) => getProduct(sl)).filter((p): p is NonNullable<typeof p> => !!p).map((p) => ({ model: p.model, href: productHref(p) })) }));
   const featured = FEATURED.map((sl) => getProduct(sl)).filter((p): p is NonNullable<typeof p> => !!p);
